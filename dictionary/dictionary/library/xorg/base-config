@@ -1,0 +1,75 @@
+ ############################
+ XORG
+ #############################
+
+ prerequisites
+ -------------
+ Sometimes it is necessary your user to be in the "video" group.
+ 
+ installation
+ ------------ 
+ To install xorg-server you must type
+ ------------------------------------------------------------------------
+ | $ sudo apt-get install xserver-xorg					|
+ | $ sudo apt-get install xdm						|
+ | $ sudo apt-get install 						|
+ | $ sudo apt-get install xinit						|
+ | $ sudo apt-get install xterm						|
+ ------------------------------------------------------------------------
+ - to configuring type
+ ------------------------------------------------------------------------
+ | #Xorg -configure           						|
+ ------------------------------------------------------------------------
+
+ after that you must edit file 
+ ------------------------------------------------------------------------
+ | /$HOME/xorg.conf.new							|
+ ------------------------------------------------------------------------
+ which was generated automatically.
+
+ after editing this file you can try to test your configuration
+ ------------------------------------------------------------------------
+ | #Xorg -config xorg.conf.new   					|
+ ------------------------------------------------------------------------
+ to break the server, press Ctrl-Alt-Backspace
+ 
+ if all is allright you must copy you Xorg file
+ ------------------------------------------------------------------------
+ | #cp $HOME/xorg.conf.new /etc/X11/xorg.conf  				|
+ ------------------------------------------------------------------------
+
+ postrequisites
+ --------------
+ If something fail, you can watch log files
+ ------------------------------------------------------------------------
+ | var/log/Xorg.0.log							|
+ ------------------------------------------------------------------------
+
+ other
+ -----
+ For LCD Panel you can write something next in file
+ ------------------------------------------------------------------------
+ | /etc/X11/xorg.conf 							|
+ ------------------------------------------------------------------------
+ the next strings
+ ------------------------------------------------------------------------
+ | ...                                					|
+ | Section "Monitor"                  					|
+ |   Identifier ...                   					|
+ |   VendorName ...                   					|
+ |   ModelName  ...                   					|
+ |   ModelLine  ...                   					|
+ |   HorizSync  31.5 - 48.5           					|
+ |   VertRefresh 40.0 - 70.0          					|
+ |   ....                             					|
+ | Screen                             					|
+ |   ...                              					|
+ |   DefaultDepth 24                  					|
+ |   SubSection "Display"             					|
+ |         Viewport   0 0              					|
+ |         Depth      24               					|
+ |         Modes      "1920x1080_60.0" 					|
+ |   EndSubSection							|
+ |   ...								|
+ | ...									|
+ ------------------------------------------------------------------------

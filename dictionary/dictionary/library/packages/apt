@@ -1,0 +1,9 @@
+ ############################
+ APT INFO
+ ############################
+
+ This command will display information about the package
+ with name 'package_name'
+ ------------------------------------------------------------------------
+ | apt-cache search package_name 					|
+ ------------------------------------------------------------------------

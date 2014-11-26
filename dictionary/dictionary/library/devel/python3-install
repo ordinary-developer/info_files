@@ -1,0 +1,148 @@
+ ############################
+ PYTHON 3 INSTALLATION
+ ############################
+ pre-installation
+ -----------------
+
+ ------------------------------------------------------------------------
+ | $ sudo apt-get install build-essential libncursesw5-dev l		|	
+ |                        ibreadline5-dev libssl-dev libgdbm-dev 	|
+ |                        libc6-dev libsqlite3-dev tk-dev zlib1g-dev 	|
+ |                        liblzma-dev					|
+ ------------------------------------------------------------------------
+ 
+  sometimes it is necessary to install the next packages
+ ------------------------------------------------------------------------
+ | $ sudo apt-get install libsqlite3-dev sqlite3 bzip2 			|
+ |	                  libbz2-dev build-dep  			|
+ ------------------------------------------------------------------------       
+
+ fetch your python
+ ------------------------------------------------------------------------
+ | $ wget http://www.python.org/ftp/python/3.x/Python-3.x.tar.bz2       |
+ ------------------------------------------------------------------------
+
+ (you can fetch it in another way)  
+ extract it
+ ------------------------------------------------------------------------
+ | $ tar -xjf Python-3.xtar.bz2 cd Python-3.x  				|
+ ------------------------------------------------------------------------
+
+ for the proper installation of pip (very necessarily) you must build your
+ python sources with ssl support
+
+ you must install ssl
+ for example
+ ------------------------------------------------------------------------
+ | $ sudo apt-get install libssl-dev					|
+ ------------------------------------------------------------------------
+ or 
+ ------------------------------------------------------------------------
+ | $ sudo apt-get install openssl-devel					|
+ ------------------------------------------------------------------------
+
+ But you must remember your installation path
+ or you can compile your openssl from the site (www.openssl.org)
+
+ Let assume that you have the next installation path
+ /usr/local/openssl
+
+ Then in the file Modules/Setup.dist in the Python source
+ ----------------------------------------------------------------------------------------
+ |...										    	|	
+ | 											|
+ |# CSV file helper									|
+ | 207 #_csv _csv.c									|
+ | 208											|
+ |209 # Socket module helper for socket(2)						|
+ |210 _socket socketmodule.c								|
+ |211											|
+ |212 # Socket module helper for SSL support; you must comment out the other		|
+ |213 # socket line above, and possibly edit the SSL variable:				|
+ |214 SSL=/usr/local/ssl								|
+ |215 _ssl _ssl.c \									|
+ |216     -DUSE_SSL -I$(SSL)/include -I$(SSL)/include/openssl \				|
+ |217     -L$(SSL)/lib -lssl -lcrypto							|
+ |218											|
+ |219 # The crypt module is now disabled by default because it breaks builds		|
+ |220 # on many systems (where -lcrypt is needed), e.g. Linux (I believe).		|	
+ |221 #											|
+ |222 # First, look at Setup.config; configure may have set this for you.		|
+ |223											|
+ |224 #crypt cryptmodule.c # -lcrypt  # crypt(3); needs -lcrypt on some systems		|
+ ----------------------------------------------------------------------------------------
+
+ uncomment the line (210) (in your file may be anther digit)
+ in the line 214 you must write
+ ------------------------------------------------------------------------
+ | SSL=/usr/local/openssl						|
+ ------------------------------------------------------------------------ 
+ then uncoment 215-217  
+
+ installation
+ ------------
+
+ ------------------------------------------------------------------------
+ | $ sudo ./configure --prefix=/usr/local/python3     			|
+ | $ sudo make -j 2				       			| 
+ | $ sudo make install				       			|
+ ------------------------------------------------------------------------
+
+  Optionally you can create an alias
+ ------------------------------------------------------------------------
+ | $ echo 'alias py="/usr/local/python3/bin/python3.4"' >> .bashrc      |
+ ------------------------------------------------------------------------
+
+ 
+ alternative installtion
+ ----------------------- 
+ Your can your deasdnake PPA
+ ------------------------------------------------------------------------
+ | $ sudo apt-get install python-software-properties                    |
+ | $ sudo add-apt-repository ppa:fkrull/deadsnakes                      |
+ | $ sudo apt-get update                                                |
+ | $ sudo apt-get install python3.3                                     |
+ ------------------------------------------------------------------------
+
+ post-installation
+ ------------------
+
+ Create a Virtual Environment in your home:
+ ------------------------------------------------------------------------
+ | $ /usr/local/python3/bin/pyvenv ~/py3     				|
+ ------------------------------------------------------------------------
+
+ Activate the virtualenv:
+ ------------------------------------------------------------------------
+ | $ source ~/py3/bin/activate                                          |
+ ------------------------------------------------------------------------
+
+ Install distribute tools:
+ ------------------------------------------------------------------------
+ | $ wget http://python-distribute.org/distribute_setup.py     		|
+ |        python distribute_setup.py                           		|
+ ------------------------------------------------------------------------
+
+ Install pip:
+ ------------------------------------------------------------------------
+ | $ easy_install pip							|
+ ------------------------------------------------------------------------
+
+ Install any python packages you want (i.e. bottle) (optionally)
+ ------------------------------------------------------------------------
+ | $ pip install bottle             					|
+ ------------------------------------------------------------------------
+
+Other
+-----
+ If you have a message 
+ 'Ignoring ensurepip failure: pip 1.5.6 requires SSL/TLS'
+
+ If you do not need pip to be installed during installation, and just on the system, 
+ you can install it afterwards by downloading 
+ 'get-pip.py'
+ and running 
+ --------------------------------------
+ | $ /path/to/my/python get-pip.py    |
+ ---------------------------------------
+  

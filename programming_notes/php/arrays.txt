@@ -1,0 +1,10 @@
+An array is a collection of data values organized as an ordered collection of key-values pairs.
+
+There are two kinds of array in PHP: indexed and associative.
+The keys of indexed arrays are integers, beginning at 0.
+Associative arrays have strings as keys and behave more like two-column tables.
+
+PHP internally stores all arrays as associative arrays.
+
+Storing a value in an array will create the array if it didn't already exist,
+but trying to retrieve a value from an array that hasn't been defined won't create the array.

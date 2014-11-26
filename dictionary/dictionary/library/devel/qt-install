@@ -1,0 +1,70 @@
+ ############################
+ QT INSTALLATION
+ ############################
+
+ installation
+ ------------ 
+ To build from sources
+ enter your temp directory
+  ------------------------------------------------------------------------
+ | $ git clone git://gitorious.org/qt/qt5.git     			 |
+ | $ cd qt5								 |
+ | $ sudo ./init-repository						 |
+ | $ sudo ./configure -prefix $PWD/qtbase -opnesource			 |
+ | $ sudo make -j 2							 |
+ | $ sudo make install							 |
+ -------------------------------------------------------------------------
+
+ alternative installation
+ ------------------------
+ Copy from qt-project online installer
+
+ then print 
+ -------------------------------------------------------------------------
+ | $ chmod +x qt-linux-opensource-1.4.0-x86-online.ru			 |	
+ | $ ./qt-linux-opensource-1.4.0-x86-online.ru				 |
+ -------------------------------------------------------------------------
+
+ May be you need to install
+ -------------------------------------------------------------------------
+ | $ sudo apt-get install make g++ libglu1-mesa-dev			 |
+ -------------------------------------------------------------------------
+
+
+ compiling issues
+ ----------------
+ to compile a qt project you need
+ 
+ 1. Change <QtGui/WidgetName> to <QtWidget/WidgetName>
+ 2. Now <QtApplication> is situated in <QtWidgets>
+    and QSound is situated in <QtMultimedia>
+ 3. Open the .pro file after its creation and add at the end of the file
+	CONFIG = qt     
+	QT += widgets
+ 4. run 'qmake'
+
+ you can also use the next script
+ -------------------------------------------------------------------------
+ | cat qt4.sh								 |	
+ | #!/bin/bash								 |
+ | set -e 								 |	
+ | for a in *.{cpp,h}; do						 |
+ |   if [ -f $a ]; then							 |
+ |     sed 's/^#include <QtGui>/#include <QtWidgets>/' $a > /tmp/$a~;    |
+ |     sed 's/^#include </#include <QtWidgets\//' /tmp/$a~ > $a; rm /tmp/$a~; 
+ |   fi;								 |
+ | done									 |
+ -------------------------------------------------------------------------
+
+ the type
+ -------------------------------------------------------------------------
+ | qmake -project							 |
+ | cat >> *.pro <<-stop							 |
+ | CONFIG=qt								 |
+ | QT += widgets							 |
+ | stop									 |
+ | qmake *.pro								 |
+ | make									 |
+ -------------------------------------------------------------------------
+ you put this in .. and run it from the project’s directory: 
+ ../qt4.sh
