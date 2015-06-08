@@ -1,0 +1,32 @@
+ ###########################
+ HANDLING EVENTS
+ ###########################
+
+
+ EVENT HANDLERS
+ =======================
+ each node (and also the "window" object) 
+ has a method addEventListener()
+
+ The "addEventListener" function registers its second argument
+ to be called whenever the event described by its first argument occurs
+
+ The "removeEventListener" method removes a handler
+
+
+ Event handler functions are passed an argument: the event object.
+ This object gives us additional information about the event.
+
+ To stop receive events that happen in the children for parents nodes
+ use the "stopPropagation()" method of the event object.
+
+ To cancel a default action use the "preventDefault()" method
+ for the event object
+
+ "keydown", "keypress", "keyup" - key events
+ "mousedown", "mouseup", "click" - mouse events
+ "mouseout", "mousemove", "mouseover" - mouse motion events
+ "scroll" - scroll event
+ "focus", "blur" - focues event
+
+

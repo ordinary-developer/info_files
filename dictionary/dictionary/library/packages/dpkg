@@ -2,14 +2,18 @@
  DPKG INFO 
  ############################
 
+
  useful commands
- ---------------
- This command will install package_name.deb package (attention: package must be in the same folder)
+ ===============
+
+ This command will install package_name.deb package 
+ (attention: package must be in the same folder)
  ------------------------------------------------------------------------
  | dpkg --install package_name.deb 					|
  ------------------------------------------------------------------------
 
- Simpely installing process can be reduced to 2 manual actions: unpacking and configuring. 
+ Simpely installing process can be reduced to 2 manual actions: 
+ unpacking and configuring. 
  This command will unpack the package
  ------------------------------------------------------------------------
  | dpkg --unpack package_name.deb  					|
@@ -32,6 +36,12 @@
 
  Sometimes it is useful to use --force option
 
+ This command displays the list of packages known to the system and their
+ installation status
+ ------------------------------------------------------------------------
+ | dpkg --list                      					|
+ ------------------------------------------------------------------------
+
  This command lists the files installed by this package (package_name)
  ------------------------------------------------------------------------
  | dpkg --listfiles package_name  					|
@@ -46,12 +56,6 @@
  'installed_package' 
  ------------------------------------------------------------------------
  | dpkg --status installed_package    					|
- ------------------------------------------------------------------------
-
- This command displays the list of packages known to the system and their
- installation status
- ------------------------------------------------------------------------
- | dpkg --list                      					|
  ------------------------------------------------------------------------
 
  This command lists the files in the package with name 'file.deb'

@@ -2,6 +2,9 @@
  NET CONFIG
  ############################
 
+ base config
+ ===========
+
  To configure network it is necessary write next strings in file
   ------------------------------------------------------------------------
  | /etc/network/interfaces     						 |
@@ -53,10 +56,12 @@
  -------------------------------------------------------------------------
 
  -------------------------------------------------------------------------
- | domain kstu.kursk.ru                                                  |
- | search kstu.kursk.ru                                                  |
- | nameserver 91.226.116.132  						 |
- | nameserver 8.8.8.8         						 |
+ | domain kursk.puzzle.su                                                |
+ | search kursk.puzzle.su                                                |
+ | nameserver 176.194.192.1  						 |
+ | nameserver 212.1.224.6    						 |
+ | nameserver 212.1.244.6						 |
+ | nameserver 8.8.8.8							 |
  -------------------------------------------------------------------------
 
  auxiliary info
@@ -131,6 +136,11 @@
  to see routing by another commnad
  -------------------------------------------------------------------------
  | #netstat -r              						 |
+ -------------------------------------------------------------------------
+
+ to DNS servers you can see the next file
+ -------------------------------------------------------------------------
+ | /etc/resolv.conf							 |
  -------------------------------------------------------------------------
 
  to see messages of the kernel about interfaces

@@ -1,9 +1,9 @@
-apache-config - information about apache configuring
-apache-install - information about apache installation
-common-utils-install - information about apache pre-installation process
-mysql-config - information about mysql configuration
-mysql-install - information about mysql installation process
-php-config - information about php configuration
-php-install - information about php installation process
-postresql-config - information about postresql configuration
-workflow - information about common LAMP installation process
+apache-config		- info about apache configuring
+apache-install		- info about apache installation
+common-utils-install	- info about apache pre-installation process
+mysql-config		- info about mysql configuration
+mysql-install		- info about mysql installation process
+php-config		- info about php configuration
+php-install		- info about php installation process
+postresql-config	- info about postresql configuration
+workflow		- info about common LAMP installation process

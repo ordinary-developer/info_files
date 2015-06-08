@@ -1,5 +1,5 @@
-base-tuning - base tuning of vim
-compilation - info about vim compilation
-replace - infomation about replace in vim
-windows-control - information about window control in wim
-vundle - information about vundle
+base-config 	- info about base config of vim
+compilation 	- info about vim compilation
+replace 	- info about replace in vim
+windows-control - info about window control in vim
+vundle 		- info about vundle

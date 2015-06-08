@@ -1,0 +1,155 @@
+For starting mysql 
+msql --user root
+
+mysql 
+(anonymous mode)
+
+
+ creating and using a database
+ =============================
+
+ the next command show your databases
+ --------------------------------------------------------------------
+ | SHOW DATABASES;			                        				|
+ --------------------------------------------------------------------
+ 
+ to use a database
+ ------------------------------------------------------------------------
+ | USE DATABASE_NAME							|
+ ------------------------------------------------------------------------
+
+ to see which database is currently selected
+ ------------------------------------------------------------------------
+ | SELECT DATABASE();							|
+ ------------------------------------------------------------------------
+
+ to create a database
+ ------------------------------------------------------------------------
+ | CREATE DATABASE menagerie;						|
+ ------------------------------------------------------------------------
+
+ to see tables in your database
+ ------------------------------------------------------------------------
+ | SHOW TABLES;								|
+ ------------------------------------------------------------------------
+
+
+ 
+ creating a table
+ ===============
+ 
+to create a table
+ ------------------------------------------------------------------------
+ | CREATE TABLE pets (name VARCHAR(20), owner VARCHAR(20),		|
+ |	species VARCHAR(20), sex CHAR(1), birth DATE, death DATE	|
+ ------------------------------------------------------------------------
+
+ to verify that your table was created the way you expected, use a
+ DESCRIBE statment
+ ------------------------------------------------------------------------
+ | DESCRIBE pets;							|
+ ------------------------------------------------------------------------
+
+ MySQL expects dates in 'YYYY-MM-DD' format
+
+
+
+ loading data into a table
+ =========================
+
+ to load a text file into a table use
+ ------------------------------------------------------------------------
+ | LOAD DATA LOCAL INFILE '/path/file.txt INTO TABLE table_name;	|
+ ------------------------------------------------------------------------
+ or 
+ ------------------------------------------------------------------------
+ | LOAD DATA LOCAL INFILE '/path/file.txt INTO TABLE table_name		|	
+ |	FIELDS TERMINATED BY ',';					|
+ ------------------------------------------------------------------------
+
+ you could add a new record using an INSERT statement like this
+ ------------------------------------------------------------------------
+ | INSERT INTO table_name						|
+ | VALUES ('Puffball', 'Diane', 'hamster', 'f', '1999-03-30', NULL);	|
+ ------------------------------------------------------------------------
+
+ 
+ 
+ retrieving info from a table
+ ==================
+ 
+ to get all rows
+ ------------------------------------------------------------------------
+ | SELECT * FROM pets;							|
+ ------------------------------------------------------------------------
+
+ to delete all record (but not the table itself)
+ ------------------------------------------------------------------------
+ | DELETE FROM pets;							|
+ ------------------------------------------------------------------------
+
+ for deleting a table
+ ------------------------------------------------------------------------
+ | DROP TABLE table_name;						|
+ ------------------------------------------------------------------------
+ 
+ for updating a record
+ ------------------------------------------------------------------------
+ | UPDATE pets SET birth = '1989-08-31' WHERE name = 'Bowser'		|
+ ------------------------------------------------------------------------
+ 
+ to not see all row you can name the columns in which you are 
+ intersted
+ --------------------------------------------------------------------
+ | SELECT name, birth FROM pets;                                    |
+ --------------------------------------------------------------------
+
+ to retrieve only uniquq records use the next command
+ --------------------------------------------------------------------
+ | SELECT DISTINCT owner FROM pets;                                 |
+ --------------------------------------------------------------------
+
+ to sort your records use an "ORDER BY" statement
+ --------------------------------------------------------------------
+ | SELECT name, birth FROM pets ORDER BY birth                      |
+ --------------------------------------------------------------------
+ for a case-sensetive order use the "ORDER BY BINARY" statement
+ for a descensing order use the "DESC" appendix
+
+
+
+ NULL values
+ ===========
+
+ to test for NULL use "IS NULL" and "IS NOT NULL"
+ 0 and NULL means false, anything else means true
+ two NULL values are regared as equal in a "GROUP BY" statement
+ you can insert zero and empty string values to "NOT NULL" columns
+
+
+
+ Pattern matching
+ ================
+
+ use "LIKE" or "NOT LIKE" operators for pattern matching
+ "_" - for any single character
+ "%" - for an arbitrary number of characters
+
+ for more powerfull pattern matching use
+ "REGEXP" ("RLIKE") and "NOT REGEXP" ("NOT RLIKE") 
+
+ for case-sensitive matching use the "BINARY" keyword
+
+
+
+ Counting rows
+ =============
+ 
+ for counting rows use the "COUNT" statement
+ --------------------------------------------------------------------
+ | SELECT COUNT(*) FROM pets;                                       |
+ --------------------------------------------------------------------
+
+ for grouping records you can use the "GROUP BY" statetment
+ 
+ 

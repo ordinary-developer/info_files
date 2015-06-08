@@ -8,6 +8,8 @@
  Before using vundle you must have vim and git
  and make backup of your .vimrc and .vim directory
 
+ For all manipulations you must have git installed.
+
  installation
  ------------
  
@@ -49,6 +51,7 @@
  ------------------------------------------------------------------------
  | :PluginInstall   							|
  ------------------------------------------------------------------------
+ For all manipulation you must have git installed
 
  Exit by
  ------------------------------------------------------------------------

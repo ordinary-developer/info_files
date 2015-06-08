@@ -1,3 +1,3 @@
-common - common information about grub tuning
-grub-restore - some information about grub restore
-windows-tuning - some information about windows tuning
+grub-config		- info about grub config
+grub-restore		- info about grub restoring
+grub-windows-config	- info about windows config

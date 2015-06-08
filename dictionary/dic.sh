@@ -1,4 +1,3 @@
-#!/bin/bash
 # You can organize your library of dicitionaries
 # a dictionary is a direcotry 'dic' in ./dic/library direcotry
 # a chapter is a file with some contents

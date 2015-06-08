@@ -143,6 +143,8 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>POST and GET elements geting</li>
+
 </ul>
 </p>
 
@@ -5135,16 +5137,16 @@ Error message and password prompt
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div modified="20141126093642165" title="$:/state/showeditpreview">
+<div modified="20141126181736231" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div modified="20141126095929024" title="$:/state/sidebar">
+<div modified="20141126191256955" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
-<div modified="20141126093420385" title="$:/state/tab/sidebar--1835078512">
-<pre>$:/core/ui/SideBar/Tools</pre>
+<div modified="20141126181647455" title="$:/state/tab/sidebar--1835078512">
+<pre>$:/core/ui/SideBar/More</pre>
 </div>
-<div list="[[__eq__, __ne__]]" title="$:/StoryList">
+<div list="[[POST and GET elements geting]] GettingStarted" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -5161,7 +5163,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20141126093538584" modified="20141126093542317" title="$:/temp/NewTagName">
+<div created="20141126093538584" modified="20141126181731554" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="A clean theme that emphasises individual tiddlers" name="Snow White" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.4">
@@ -5240,6 +5242,44 @@ Error message and password prompt
         }
     }
 }</pre>
+</div>
+<div created="20141126181651060" modified="20141226111819195" tags="php" title="POST and GET elements geting">
+<pre>Sometimes to get elements for $_POST or $_GET arrays you can use the next code
+
+```
+if ($_POST['element_name']) {
+    ...
+}
+```
+When the data is send all is good, but the first time you see something like the following:
+
+&lt;i&gt;
+Notice: Undefined index: submitted in /usr/local/apache2/htdocs/host1/index.php on line 13&lt;/i&gt;
+
+&lt;hr&gt;
+&lt;hr /&gt;
+To eliminate this behavior you can use the next code snippet:
+
+```
+if (isset($_POST['element_name'])) {
+    ...
+}
+```
+&lt;hr /&gt;
+But you can enhance this behaviour
+
+```
+if (array_key_exists('submit', $_GET)) {
+    if (isset($_GET['your_field_name'])) {
+        ... // the field is not empty
+    }
+    else {
+        ... // the field is empty
+    }
+}
+```
+
+Here the 'submit' variable correlates with submit button.</pre>
 </div>
 
 </div>

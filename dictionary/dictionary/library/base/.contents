@@ -1,3 +1,7 @@
-alsa-config  -  information about alsa configuring
-mounting - information about mounting systems
-sudo-config - information about sudo configuring
+alsa-config  		- info about alsa configuring
+archives-commands	- info about archives using
+build-env 		- info about making build envrinment
+chroot-using 		- info about chroot using
+mounting-config		- info about mounting systems
+sudo-config 		- info about sudo configuring
+useful-commands		- info about useful commands

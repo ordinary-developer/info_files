@@ -2,23 +2,39 @@
  SUDO CONFIG
  ############################
 
- To install and config sudo
+ base configuration
+ =============
+
+ to install sudo
  ------------------------------------------------------------------------
  | #apt-get install sudo  						|
  ------------------------------------------------------------------------
-
  then in the file
  ------------------------------------------------------------------------
  | /etc/sudoers             						|
  ------------------------------------------------------------------------
-
  write
  ------------------------------------------------------------------------
  | %sudo ALL=(ALL) ALL   						|
  | ivan ALL=(ALL) ALL    						|
  ------------------------------------------------------------------------
 
- Common consideration
+
+ 
+ my contents of /etc/sudoers file
+ =============
+
+ ------------------------------------------------------------------------
+ | %sudo ALL = (ALL) ALL   						|
+ | ivan	ALL = (ALL) NOPASSWD: ALL   					|
+ ------------------------------------------------------------------------
+
+
+
+ common considerations
+ =============
+
+ a typical configuration line can be the next
  ------------------------------------------------------------------------
  | username hostname=(by_what_user) commandlist     			|
  ------------------------------------------------------------------------
@@ -32,9 +48,11 @@
     ivan can perform by vasya on only server command 
      'sudo -u vasya /bin/ls /home/vasya'
 
- auxiliary info
- --------------
 
+
+ auxiliary information
+ =============
+ 
  The string
  ------------------------------------------------------------------------
  | Defaults env_reset             					|

@@ -2,6 +2,13 @@
  VIM COMPILATION
  ############################  
 
+ base compile
+ ============
+
+ to compile vim
+ ------------------------------------------------------------------------ 
+ | ./configure --prefix=/usr/local --with-x --with-features=huge	|
+ ------------------------------------------------------------------------ 
  It is useful to compile vim, using the next option
  (for using the clipboard in X envirement)
  ------------------------------------------------------------------------

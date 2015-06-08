@@ -1,13 +1,20 @@
  ############################
- MOUNTING
+ WINE
  ############################
 
- To mount flash it is necessary to type next command
+
+ install 
+ ===========
+
+ to install wine
+ first run 
  ------------------------------------------------------------------------
- |#mount -t vfat /dev/sdc1 /media/flash -o iocharset=koi8-r,codepage=866 |
- ------------------------------------------------------------------------
- or
- ------------------------------------------------------------------------
- |# mount -t vfat /dev/sdc1 /mnt/flash 					|
+ | $ sudo apt-get install wine						|
  ------------------------------------------------------------------------
 
+ for running x32 applications on the  x64 architecture also type
+ ------------------------------------------------------------------------
+ | $ sudo dpkg --add-architecture i386 					|
+ | $ sudo apt-get update						|
+ | $ sudo apt-get install wine32					|
+ ------------------------------------------------------------------------

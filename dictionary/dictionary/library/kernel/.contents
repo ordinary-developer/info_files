@@ -1,3 +1,3 @@
-common-compiling - common information about kernel compiling
-debian-way-kernel-compiling - info about debian-way compiling
-true-debian-way-compiling - true debian way to compile the kernel
+common-compiling		- info about kernel compiling
+debian-way-kernel-compiling	- info about debian-way compiling
+true-debian-way-compiling	- true debian way to compile the kernel

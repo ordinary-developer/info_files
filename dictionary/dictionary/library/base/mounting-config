@@ -1,0 +1,151 @@
+ ############################
+ MOUNTING
+ ############################
+
+ manual mounting
+ ------------------
+
+ To mount flash it is necessary to type next command
+ ------------------------------------------------------------------------
+ |#mount -t vfat /dev/sdc1 /media/flash -o iocharset=koi8-r,codepage=866 |
+ ------------------------------------------------------------------------
+ or
+ ------------------------------------------------------------------------
+ |# mount -t vfat /dev/sdc1 /mnt/flash                                  |
+ ------------------------------------------------------------------------
+
+ To mount a usb-stick under a regular user
+ ------------------------------------------------------------------------
+ | $ sudo mount -t vfat -o uid=user,gid=group /dev/sdb1 /home/user/flash|
+ ------------------------------------------------------------------------
+
+ where group you can find from the next command
+ ------------------------------------------------------------------------
+ | $ groups                                                             |
+ ------------------------------------------------------------------------
+ This command syas which groups user who ran this command belongs to
+
+ or just for your options
+ ------------------------------------------------------------------------
+ | $ sudo mount -t vfat -o uid=ivan,gid=ivan /dev/sdb1 ~/flash          |
+ ------------------------------------------------------------------------
+
+
+ automate mounting
+ ------------------
+
+ To mount only your flashes in your folders
+ ------------------------------------------------------------------------
+ | $ sudo blkid /dev/sdb1                                               |
+ ------------------------------------------------------------------------
+ For example the result will be
+ /dev/sdb1: UUID="7A82-1B89" TYPE="vfat"
+
+ Now write in /etc/fstab
+ ------------------------------------------------------------------------
+ | UUID=7A82-1B89  /media/flash1  vfat  user,noauto,noatime,flush  0  0 | 
+ ------------------------------------------------------------------------
+ Here user may be your user ("ivan" and e.t.c)
+ Remember that in the end of you fstab file must be a new line
+
+ Then simply run
+ - to mount
+ ------------------------------------------------------------------------
+ | $ mount /media/flash1                                                |
+ ------------------------------------------------------------------------
+ - to unmount
+ ------------------------------------------------------------------------
+ | $ umount /media/flash1                                               |
+ ------------------------------------------------------------------------
+
+ Instead of /media/flash1 you can use /home/ivan/flash1
+ for receving rights to writing.
+
+ Also some options can be usefull
+ codepage=866, iocharset=koi8-r
+
+
+ scripting
+ ------------------
+
+ If you can't stop umount your flash you can use the next scripts
+
+ Brutal script
+ ------------------------------------------------------------------------
+ |#!/bin/sh                                                             |
+ |# try to kill all process politely                                    |
+ |fuser -k TERM -m /media/flash1                                        | 
+ |sleep 1                                                               |
+ |# if we have processes yet, we must kill the brutally                 |
+ |fuser -k KILL -m /media/flash1                                        |
+ |sleep 1                                                               |
+ |# and now unmount it                                                  |
+ ------------------------------------------------------------------------
+ But remember if your filesystem is not mounted then the kill procedure
+ will begin to kill all (e.g ROOT FILE SYSTEM), so you must be carefull
+ and you must always check "mountpoint"
+
+ the next script I think will be more polite
+
+ Polite script
+ ------------------------------------------------------------------------
+ | #!/bin/sh                                                            |
+ |                                                                      |
+ | if test "_$#" = '_1'                                                 |
+ | then                                                                 |
+ |     FS="$1"                                                          |
+ | else                                                                 |
+ |     echo 'Usage: ' $0 '/mount-point'                                 |
+ |     exit 1                                                           |
+ | fi                                                                   |
+ |                                                                      |  
+ | for sig in TERM KILL                                                 |
+ | do                                                                   |
+ |     if mountpoint -q "$FS"                                           |
+ |     then                                                             |
+ |         if fuser -m "$FS"                                            |
+ |         then                                                         |
+ |             fuser -k $sig -m "$FS"                                   |
+ |             sleep 1                                                  |
+ |         else                                                         |
+ |             break;                                                   |
+ |         fi                                                           |
+ |     else                                                             |
+ |         echo 'not mounted'                                           |
+ |         exit 0                                                       |
+ |     fi                                                               |
+ | done                                                                 |
+ |                                                                      |
+ | umount "$FS"                                                         |
+ ------------------------------------------------------------------------
+
+
+
+ other commands
+ ------------------
+
+ Manual mounting
+ ------------------------------------------------------------------------
+ | $ sudo mount -o git=users, fmask=133, dmask=002 /dev/sda1 /mnt/flash |   
+ ------------------------------------------------------------------------
+
+ /etc/fstab
+ ------------------------------------------------------------------------
+ | /dev/sda1 /mnt/flash vfat user,noauto,noatime,flush 0 0              |
+ ------------------------------------------------------------------------
+ or something like this
+ ------------------------------------------------------------------------
+ | /dev/sda1 /mnt/flash vfat users,noauto,uid=ivan,gid=users 0 0        |
+ ------------------------------------------------------------------------
+ 
+ and then 
+ ------------------------------------------------------------------------
+ | $ mount /mnt/flash                                                   |
+ ------------------------------------------------------------------------
+
+ or
+ ------------------------------------------------------------------------
+ | /dev/sda1 /mnt/flash vfat user,auto,noatime,flush 0 0                |
+ ------------------------------------------------------------------------
+ And all must be mount automatically
+

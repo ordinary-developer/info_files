@@ -1,0 +1,29 @@
+ ############################
+ GCC-INSTALL
+ ############################
+
+ gcc install
+ =============
+ 
+ it is not easy to compile your gcc without any compiler
+ so it is easier to install gcc (c compiler) from packages 
+ (your version may be not the same)
+ ------------------------------------------------------------------------
+ | $ sudo apt-get install gcc-4.9					|
+ ------------------------------------------------------------------------
+ to install g++ (c++ compiler)
+ (your version may be not the same)
+ ------------------------------------------------------------------------
+ | $ sudo apt-get install g++-4.9					|
+ ------------------------------------------------------------------------
+
+ 
+
+ gcc config
+ =============
+
+ to use the binary files in your bash you can create some sym links
+ ------------------------------------------------------------------------
+ | $ make links from /usr/bin/gcc-4.9 to ~/shorcuts/gcc			|
+ | $ make links from /usr/bin/g++-4.9 to ~/shorcuts/g++			|
+ ------------------------------------------------------------------------

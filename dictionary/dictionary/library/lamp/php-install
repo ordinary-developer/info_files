@@ -27,6 +27,7 @@
  | #apt-get install libxml2 libxml2-dev 				|
  ------------------------------------------------------------------------ 
 
+ It is also necessary to install XDEBUG.so extension (see in my Wiki)
 
  Installation
  ------------
@@ -55,7 +56,7 @@
  |                    --with-zlib-dir=/usr/local/zlib (may be /usr/local|
  |                    --with-zlib=/usr/local/zlib (may me /usr/local)	|
  |									|
-		      --enable-trans-id (not necessarily)		|
+		      --enable-trans-id 				|
  |                    --with-gettext 					|
  |                    --enable-ftp 					|
  |                    --enable-mbstring (not necessarily)		|

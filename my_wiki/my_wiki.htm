@@ -137,11 +137,17 @@ Error message and password prompt
 
 <li>$:/ShowEditPreview</li>
 
+<li>$:/state/showeditpreview</li>
+
+<li>$:/state/sidebar</li>
+
 <li>$:/state/tab/sidebar--1835078512</li>
 
 <li>$:/StoryList</li>
 
 <li>$:/temp/info-plugin</li>
+
+<li>$:/temp/NewTagName</li>
 
 <li>$:/theme</li>
 
@@ -153,37 +159,59 @@ Error message and password prompt
 
 <li>Adding JsonCpp to cpp project</li>
 
+<li>Application requirements</li>
+
 <li>Base git config</li>
 
 <li>Basic C++ linux environment</li>
 
 <li>Boost installing</li>
 
+<li>Commit guidlines</li>
+
 <li>Common git workflow</li>
 
 <li>Compile a basic Qt application</li>
 
-<li>Compiling a C++11 project</li>
+<li>Compiling a C++ project</li>
 
 <li>Creating a bitbucket repository</li>
 
 <li>Creating a github repository</li>
 
+<li>Creating a sphinx-doc project</li>
+
 <li>Disabling autorun</li>
 
-<li>Installing QT</li>
+<li>django installing</li>
+
+<li>github forking</li>
+
+<li>github README.md</li>
 
 <li>MySQL client running</li>
+
+<li>PEP 257</li>
 
 <li>PHPUnit installation</li>
 
 <li>PHPUnit running</li>
 
+<li>PyQt installation</li>
+
+<li>Python cli app creating</li>
+
+<li>Python logging</li>
+
 <li>python3 virtualenv making</li>
+
+<li>Qt installation</li>
 
 <li>Running JUnit</li>
 
 <li>Simple Google test project</li>
+
+<li>Sip installer</li>
 
 <li>To center any container</li>
 
@@ -5221,10 +5249,16 @@ Error message and password prompt
 <div title="$:/ShowEditPreview">
 <pre>yes</pre>
 </div>
-<div modified="20141126100342298" title="$:/state/tab/sidebar--1835078512">
-<pre>$:/core/ui/SideBar/Tools</pre>
+<div modified="20141203075826192" title="$:/state/showeditpreview">
+<pre>yes</pre>
 </div>
-<div list="GettingStarted" title="$:/StoryList">
+<div modified="20150605070651465" title="$:/state/sidebar">
+<pre>yes</pre>
+</div>
+<div modified="20150204083405288" title="$:/state/tab/sidebar--1835078512">
+<pre>$:/core/ui/SideBar/More</pre>
+</div>
+<div list="[[Compiling a C++ project]] [[New Tiddler]] GettingStarted" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -5240,6 +5274,9 @@ Error message and password prompt
         }
     }
 }</pre>
+</div>
+<div created="20141203080017635" modified="20150605062336656" title="$:/temp/NewTagName">
+<pre></pre>
 </div>
 <div modified="20141126100317098" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
@@ -5412,6 +5449,47 @@ then at the end to the file you must add
 target_link_libraries(test json_linux-gcc-4.7)
 ```</pre>
 </div>
+<div created="20150303152249118" modified="20150303153003442" tags="python" title="Application requirements">
+<pre>&lt;hr&gt;
+&lt;h2&gt;Docstrings&lt;/h2&gt;
+The next components must have docstrings:
+
+* files
+* classes
+* functions (methods)
+
+&lt;hr&gt;
+&lt;h2&gt;PEP-8&lt;/h2&gt;
+&lt;b&gt;&lt;i&gt;Indents&lt;/i&gt;&lt;/b&gt;: Four spaces for each indentation
+
+```
+def foo():
+    print &quot;Hello, World!&quot;
+```
+&lt;b&gt;&lt;i&gt;Maximum line length&lt;/i&gt;&lt;/b&gt;: 80 characters.
+
+&lt;b&gt;&lt;i&gt;Blank lines&lt;/i&gt;&lt;/b&gt;: Two between import, class, and function definitions. One between
+method definitions inside a class.
+
+&lt;b&gt;&lt;i&gt;Import statements&lt;/i&gt;&lt;/b&gt;: Should be one per line.
+
+```
+import os
+import sys
+```
+&lt;b&gt;&lt;i&gt;Class names&lt;/i&gt;&lt;/b&gt;: Should have capitals for the first letter of each word.
+
+```
+class MyClass(object):
+```
+
+&lt;b&gt;&lt;i&gt;Method names&lt;/i&gt;&lt;/b&gt;: Should use all lowercase and underscores to separate words.
+
+```
+def my_method_example():
+```
+&lt;hr&gt;</pre>
+</div>
 <div created="20141104085943643" modified="20141104090312284" tags="git" title="Base git config">
 <pre>To install git shell (it is sufficient for most purposes) in linux
 
@@ -5501,7 +5579,21 @@ You cans find some additional information [[here|http://ubuntuforums.org/showthr
 
 </pre>
 </div>
-<div created="20140301090318619" modified="20141115152559362" tags="git" title="Common git workflow" type="">
+<div created="20150204085105382" modified="20150204090036316" tags="git" title="Commit guidlines">
+<pre>You can check for whitespace errors. Then you can fix your errors.
+
+```
+$ git diff --check 
+```
+
+ As a general rule, your messages should start with a single line that’s no
+more than about 50 characters and that describes the changeset concisely, fol
+lowed by a blank line, followed by a more detailed explanation.
+It’s also a good idea to use the imperative present tense in
+these messages. In other words, use commands. Instead of “I added tests for”
+or “Adding tests for,” use “Add tests for.” </pre>
+</div>
+<div created="20140301090318619" modified="20150205081039545" tags="git" title="Common git workflow" type="">
 <pre>Here a common gitflow workflow is presented.
 
 The common git workflow is depicted on the next picture:
@@ -5570,6 +5662,7 @@ After adding a few commits, you can merge it into your local develop and push it
 
 ```
 $ git pull origin develop
+(git checkout develop; git fetch origin; (git fetch origin/develop); git merge origin/develop)
 $ git checkout develop
 $ git merge some-feature
 $ git push
@@ -5658,11 +5751,17 @@ $ make
 ```
 </pre>
 </div>
-<div created="20141023075827238" modified="20141023080129194" tags="C++" title="Compiling a C++11 project">
-<pre>To compile c++11 project it is neccessarily to type
+<div created="20141023075827238" modified="20150605070649917" tags="C++" title="Compiling a C++ project">
+<pre>To compile a c++11 project it is neccessarily to type
 
 ```
-$ g++ -std=c++11 -o testcode code1.cpp
+$ g++ -std=c++11 --output application *.hpp *.cpp
+```
+
+to compile a c++14 project use the next command
+
+```
+$ g++ -std=c++1y --ouput application *.hpp *.cpp
 ```
 
 A makefile is a simple text file with instructions about how to compile your program.
@@ -5739,6 +5838,61 @@ $ git clone https://github.com/tutov-e-b/your_repository
 ```
 And then you can work with this repository.</pre>
 </div>
+<div created="20150312124425758" modified="20150312173125719" tags="python sphinx-doc" title="Creating a sphinx-doc project">
+<pre>&lt;h2&gt;Prerequisites&lt;/h2&gt;
+To create your documentation you must 
+
+* have sphinx-doc already installed
+* have your project structure (see 'python cli app')
+* have doc strings in your sources (according to PEP-257 proposal)
+&lt;hr&gt;
+&lt;h2&gt;Workflow&lt;/h2&gt;
+in your root project directory under your envrinment
+
+```
+$ sphinx-quickinstart
+```
+This command will ask you some questions, your moust
+
+* install autodoc extension (for source code generating)
+* point your root doc directory (./src/doc)
+
+Then edit your ./src/doc/source/conf.py
+add the next strings
+
+```
+sys.path.insert(0, os.path.abspath('./../../app')
+```
+for module finding.
+
+Then in your doc-root-directory  (./src/doc) type
+
+```
+$ sphinx-apidoc --force -o ./source './../app'
+```
+to generate all data-file for modules
+then in your 'index.rst' the the next string
+
+```
+#...
+Contents
+.. toctree::
+   :maxdepth: 2
+
+   modules.rst
+#...
+```
+Then edit your ./src/doc/Makefile and add the next string
+
+```
+BUILDDIR = ./../../doc
+```
+Then in your doc-root-directory  (./src/doc) type
+
+```
+make html
+```</pre>
+</div>
 <div created="20141023080403907" modified="20141023082502018" tags="windows" title="Disabling autorun">
 <pre>To switch off the autorun you can use two ways
 
@@ -5778,19 +5932,153 @@ And then you can work with this repository.</pre>
 
    0xFF - disalbe autorun for all disks</pre>
 </div>
-<div created="20140228103847107" modified="20140308171845194" tags="C++ QT" title="Installing QT">
-<pre>To install QT, you must download it from [[here|http://download.qt-project.org/official_releases/qt/5.2/5.2.1/qt-opensource-linux-x86-5.2.1.run]].
+<div created="20141203080007152" modified="20150213101518937" tags="python" title="django installing">
+<pre>before jango installing you must have your sqlite3 (or some other db system) installed with your python
 
-Then type in the directory with QT installer
-
-```
-$ chmod +x qt-opensource-linux-x86-5.2.1.run
-```
-and then
+you can type
 
 ```
-$ ./qt-opensource-linux-x86-5.2.1.run
+$apt-get install libsqlite3-dev
+```
+
+and then you must recomplie your python.
+
+To install django you can create a virtual environment for it and then in this environment
+
+```
+pip install django
 ```</pre>
+</div>
+<div created="20150204071155868" modified="20150204082457089" tags="git github" title="github forking">
+<pre>If you want to contribute to an existing project to which you don’t have push
+access, you can “fork” the project.
+
+You can use the next steps
+
+* Create a topic branch from master.
+* Make some commits to improve the project.
+* Push this branch to your GitHub project.
+* Open a Pull Request on GitHub.
+* Discuss, and optionally continue committing.
+* The project owner merges or closes the Pull Request.
+
+&lt;hr&gt;
+&lt;h1&gt;Workflow&lt;/h1&gt;
+&lt;h2&gt;Forking&lt;/h2&gt;
+To fork a project, visit the project page and click the “&lt;i&gt;&lt;b&gt;Fork&lt;/b&gt;&lt;/i&gt;” button at the
+top-right of the page
+
+After that type in the console:
+
+```
+$ git clone https://github.com/your_account/copy_project
+# clone our fork of the project locally
+
+$ cd copy_project
+# enter the project directory
+
+$ git checkout -b our-topic-branch
+# create a descriptive topic branch
+
+... # make our changes to the code
+
+$ git diff --word-diff 
+# Check that the change is good
+
+$ git commit -a -m &quot;Some commit&quot;
+# commit out change to the topic branch
+
+$ git push origin our-topic-branch
+# push your new branch back up to out Github fork
+```
+&lt;h2&gt;Creating a pull request&lt;/h2&gt; 
+
+After that on your GitHub interface you can see a big green button &quot;&lt;b&gt;&lt;i&gt;Compare &amp; pull request&lt;/i&gt;&lt;/b&gt;&quot; or you can go to the &quot;Branches&quot; page at 
+&lt;i&gt;https://githbub.com/your_user/your_project/branches&lt;/i&gt; to locate your branch and open a new Pull Request from here.
+
+If we click that green button, we’ll see a screen that allows us to create a title
+and description for the change we would like to request so the project owner
+has a good reason to consider it.
+
+When you hit the &quot;&lt;i&gt;&lt;b&gt;Create pull request&lt;/b&gt;&lt;/i&gt;&quot; button on this screen, the owner of the
+project you forked will get a notification that someone is suggesting a change
+and will link to a page that has all of this information on it.
+
+&lt;h2&gt;Iterating on a Pull Request&lt;/h2&gt;
+
+At this point, the project owner can look at the suggested change and merge it,
+reject it or comment on it. Let’s say that he likes the idea, but would prefer a
+slightly longer time for the light to be off than on.
+
+Once the maintainer makes this comment, the person who opened the Pull
+Request (and indeed, anyone else watching the repository) will get a notifica-
+tion. (by email and on github)
+
+Now the contributor commented what he wants (in github interface). (Where over email
+you may have to re-roll your series and resubmit it to the mailing list,) with Git-
+Hub you simply &lt;b&gt;commit to the topic branch&lt;/b&gt; again and &lt;b&gt;push&lt;/b&gt;.
+
+```
+$ vim file_to_edit
+$ git add file_to_edit
+$ git commit
+# editing and committing the file
+
+$ git push origin our-topic-branch
+# push back up to the same topic branch
+```
+
+If your pull request can be trivially merged by the maintainer, you will see a big green information bar&quot;&lt;b&gt;&lt;i&gt;This pull request can be automatically merged&lt;/i&gt;&lt;/b&gt;.
+
+Else if your pull request can't be trivially merged you will get the next grey info box
+&lt;b&gt;&lt;i&gt;This pull request contains merge conflicts than must be resolved&lt;/i&gt;&lt;/b&gt;
+
+You have two main options in order to do this. You can either rebase your
+branch on top of whatever the target branch is (normally the master branch of
+the repository you forked), or you can merge the target branch into your
+branch.
+
+We shall use the last way.
+
+```
+$ git remote add upstream https://github.com/maintainer-user/project
+# Add the original repository as a remote named &quot;upstream&quot;
+
+$ git fetch upstream
+# fetch the newest work from that remote
+
+$ git merge upstream/muster
+# here we must be on our topic branch
+# merge the main branch to your topic branch
+# here a collision can be
+
+$ vim file_with_conflict
+$ git add file_with_conflict
+$ git commit
+# fix the conflict than occurred
+
+$ git push origin our-topic-branch
+# push back up to the same topic branch
+```
+Once you do that, the Pull Request will be automatically updated and re-
+checked to see if it merges cleanly.
+
+All other things the owner of the project must do.
+&lt;hr&gt;
+
+You can add commits to your new-branch many times and when you decide your code is ready, you can create a pull-request
+
+
+</pre>
+</div>
+<div created="20150605062317884" modified="20150605062510888" tags="git github" title="github README.md">
+<pre>A common &lt;b&gt;README.md&lt;/b&gt; file in your repository must contain the next sections
+
+* What the project is for
+* How to configure and install it
+* An example of how to use it or get it running
+* The license that the project is offered under
+* How to contribute to it</pre>
 </div>
 <div created="20140826145812251" modified="20140826150007752" tags="MySQL" title="MySQL client running">
 <pre>To run mysql client on linux type:
@@ -5803,6 +6091,238 @@ For running a script file type:
 
 ```
 mysql -u user -p password &lt; script.sql
+```</pre>
+</div>
+<div created="20150312174527198" modified="20150312174811363" tags="python" title="PEP 257">
+<pre>Here is an example of PEP 257 (Napoleon notation - used in Google)
+It was taken from here
+http://sphinxcontrib-napoleon.readthedocs.org/en/latest/example_google.html
+
+```
+# -*- coding: utf-8 -*-
+&quot;&quot;&quot;Example Google style docstrings.
+
+This module demonstrates documentation as specified by the `Google Python
+Style Guide`_. Docstrings may extend over multiple lines. Sections are created
+with a section header and a colon followed by a block of indented text.
+
+Example:
+  Examples can be given using either the ``Example`` or ``Examples``
+  sections. Sections support any reStructuredText formatting, including
+  literal blocks::
+
+      $ python example_google.py
+
+Section breaks are created by simply resuming unindented text. Section breaks
+are also implicitly created anytime a new section starts.
+
+Attributes:
+  module_level_variable (int): Module level variables may be documented in
+    either the ``Attributes`` section of the module docstring, or in an
+    inline docstring immediately following the variable.
+
+    Either form is acceptable, but the two should not be mixed. Choose
+    one convention to document module level variables and be consistent
+    with it.
+
+.. _Google Python Style Guide:
+   http://google-styleguide.googlecode.com/svn/trunk/pyguide.html
+
+&quot;&quot;&quot;
+
+module_level_variable = 12345
+
+
+def module_level_function(param1, param2=None, *args, **kwargs):
+    &quot;&quot;&quot;This is an example of a module level function.
+
+    Function parameters should be documented in the ``Args`` section. The name
+    of each parameter is required. The type and description of each parameter
+    is optional, but should be included if not obvious.
+
+    If the parameter itself is optional, it should be noted by adding
+    &quot;, optional&quot; to the type. If \*args or \*\*kwargs are accepted, they
+    should be listed as \*args and \*\*kwargs.
+
+    The format for a parameter is::
+
+        name (type): description
+          The description may span multiple lines. Following
+          lines should be indented.
+
+          Multiple paragraphs are supported in parameter
+          descriptions.
+
+    Args:
+      param1 (int): The first parameter.
+      param2 (str, optional): The second parameter. Defaults to None.
+        Second line of description should be indented.
+      *args: Variable length argument list.
+      **kwargs: Arbitrary keyword arguments.
+
+    Returns:
+      bool: True if successful, False otherwise.
+
+      The return type is optional and may be specified at the beginning of
+      the ``Returns`` section followed by a colon.
+
+      The ``Returns`` section may span multiple lines and paragraphs.
+      Following lines should be indented to match the first line.
+
+      The ``Returns`` section supports any reStructuredText formatting,
+      including literal blocks::
+
+          {
+              'param1': param1,
+              'param2': param2
+          }
+
+    Raises:
+      AttributeError: The ``Raises`` section is a list of all exceptions
+        that are relevant to the interface.
+      ValueError: If `param2` is equal to `param1`.
+
+    &quot;&quot;&quot;
+    if param1 == param2:
+        raise ValueError('param1 may not be equal to param2')
+    return True
+
+
+def example_generator(n):
+    &quot;&quot;&quot;Generators have a ``Yields`` section instead of a ``Returns`` section.
+
+    Args:
+      n (int): The upper limit of the range to generate, from 0 to `n` - 1
+
+    Yields:
+      int: The next number in the range of 0 to `n` - 1
+
+    Examples:
+      Examples should be written in doctest format, and should illustrate how
+      to use the function.
+
+      &gt;&gt;&gt; print [i for i in example_generator(4)]
+      [0, 1, 2, 3]
+
+    &quot;&quot;&quot;
+    for i in range(n):
+        yield i
+
+
+class ExampleError(Exception):
+    &quot;&quot;&quot;Exceptions are documented in the same way as classes.
+
+    The __init__ method may be documented in either the class level
+    docstring, or as a docstring on the __init__ method itself.
+
+    Either form is acceptable, but the two should not be mixed. Choose one
+    convention to document the __init__ method and be consistent with it.
+
+    Note:
+      Do not include the `self` parameter in the ``Args`` section.
+
+    Args:
+      msg (str): Human readable string describing the exception.
+      code (int, optional): Error code, defaults to 2.
+
+    Attributes:
+      msg (str): Human readable string describing the exception.
+      code (int): Exception error code.
+
+    &quot;&quot;&quot;
+    def __init__(self, msg, code=2):
+        self.msg = msg
+        self.code = code
+
+
+class ExampleClass(object):
+    &quot;&quot;&quot;The summary line for a class docstring should fit on one line.
+
+    If the class has public attributes, they should be documented here
+    in an ``Attributes`` section and follow the same formatting as a
+    function's ``Args`` section.
+
+    Attributes:
+      attr1 (str): Description of `attr1`.
+      attr2 (list of str): Description of `attr2`.
+      attr3 (int): Description of `attr3`.
+
+    &quot;&quot;&quot;
+    def __init__(self, param1, param2, param3=0):
+        &quot;&quot;&quot;Example of docstring on the __init__ method.
+
+        The __init__ method may be documented in either the class level
+        docstring, or as a docstring on the __init__ method itself.
+
+        Either form is acceptable, but the two should not be mixed. Choose one
+        convention to document the __init__ method and be consistent with it.
+
+        Note:
+          Do not include the `self` parameter in the ``Args`` section.
+
+        Args:
+          param1 (str): Description of `param1`.
+          param2 (list of str): Description of `param2`. Multiple
+            lines are supported.
+          param3 (int, optional): Description of `param3`, defaults to 0.
+
+        &quot;&quot;&quot;
+        self.attr1 = param1
+        self.attr2 = param2
+        self.attr3 = param3
+
+    def example_method(self, param1, param2):
+        &quot;&quot;&quot;Class methods are similar to regular functions.
+
+        Note:
+          Do not include the `self` parameter in the ``Args`` section.
+
+        Args:
+          param1: The first parameter.
+          param2: The second parameter.
+
+        Returns:
+          True if successful, False otherwise.
+
+        &quot;&quot;&quot;
+        return True
+
+    def __special__(self):
+        &quot;&quot;&quot;By default special members with docstrings are included.
+
+        Special members are any methods or attributes that start with and
+        end with a double underscore. Any special member with a docstring
+        will be included in the output.
+
+        This behavior can be disabled by changing the following setting in
+        Sphinx's conf.py::
+
+            napoleon_include_special_with_doc = False
+
+        &quot;&quot;&quot;
+        pass
+
+    def __special_without_docstring__(self):
+        pass
+
+    def _private(self):
+        &quot;&quot;&quot;By default private members are not included.
+
+        Private members are any methods or attributes that start with an
+        underscore and are *not* special. By default they are not included
+        in the output.
+
+        This behavior can be changed such that private members *are* included
+        by changing the following setting in Sphinx's conf.py::
+
+            napoleon_include_private_with_doc = True
+
+        &quot;&quot;&quot;
+        pass
+
+    def _private_without_docstring(self):
+        pass
+
 ```</pre>
 </div>
 <div created="20140721171644183" modified="20140721174803688" tags="php phpunit composer" title="PHPUnit installation">
@@ -5892,15 +6412,216 @@ $ export PATH=~/dashboard:$PATH
 $ vendor/bin/phpunit --colors --configuration test/phpunit.xml
 ```</pre>
 </div>
-<div created="20141025131658765" modified="20141116155239630" tags="python" title="python3 virtualenv making">
-<pre>To create a virtual environment in python3 you must type
+<div created="20150108143939910" modified="20150108150312674" tags="Qt PyQt" title="PyQt installation">
+<pre>To install PyQt from sources, you must
+
+- get souces [[here | file:///C:/Users/ivan/Desktop/linux_py_qt/info/py_qt_installing/info.htm]].
+
+- have sip (a python build system) already installed.
+
+- have Qt already installed
+
+- unpack your PyQt packags
+
+- enter the unpacked archive and run the next commands
+
+for normal config script running you must have 
+  
+
+* qmake
+* sip
+in your PATH variable.
 
 ```
-$ python pyvenv project_env
+$ python configure.py
 ```
+- and then (may be with root privelegies)
+
+```
+$ make -j 2
+$ make install
+```
+
+
+&lt;hr&gt;
+Useful links
+
+* [[official installation guide | http://pyqt.sourceforge.net/Docs/PyQt5/installation.html#]]</pre>
+</div>
+<div created="20150201094838757" modified="20150312172801517" tags="python" title="Python cli app creating">
+<pre>&lt;h2&gt;Creating an environment (sandbox)&lt;/h2&gt;
+To create a virtual environment in python3 you must type
+
+```
+$ python /usr/local/python3/bin/pyvenv project_env
+```
+
 
 where project_env is a directory, where your python files must be situated
 , 
+
+You must remember that python must be in your PATH environment variable.
+
+
+then you must activate your env
+
+```
+$ source /project/bin/activate
+```
+
+You can check pip points to the right place
+
+```
+(project_env) $ which pip
+```
+will show
+
+&lt;i&gt;/home/me/project_env/bin/pip&lt;/i&gt;
+
+Then you must install dependencies using pip
+&lt;h2&gt;Dependencies installation&lt;/h2&gt;
+
+- install nose
+
+```
+$ pip install nose
+```
+
+- install nose-cov (coverage instruments)
+
+```
+$ pip install nose-cov
+```
+
+- install rednose (for coloring test results)
+
+```
+$ pip install rednose
+```
+- install mock (mock objects)
+
+```
+$ pip install mock
+```
+
+- install behave (Behavior-driven test framework)
+
+```
+$ pip install behave
+```
+- install pylint
+
+```
+$ pip install pylint
+```
+- install sphinx (for documentation)
+
+```
+$ pip install sphinx
+```
+
+
+&lt;h2&gt;Creating the application structure&lt;/h2&gt;
+
+```
+/root-project
+|
+|----/bin
+|    
+|----/doc
+|
+|----/src
+|     |----/app
+|     |    |-----/logic
+|     |     |-----/db
+|     |     |-----/...
+|     |
+|     |----/test
+|     |    |----/acceptance (behave tests)
+|     |    |     |----/features
+|     |    |     |----/steps
+|     |    |
+|     |    |----/mock
+|     |    |----/integraion
+|     |    |----/unit
+|     |
+|     |----/doc
+|     |     |----/source
+|     |     |     |----index.rst
+|     |     |
+|     |     |----Makefile
+|     |    
+|     |---- pylintrc
+|
+|----README.md     
+```
+
+in your root-project directory
+
+To run unit tests
+
+
+```
+$ cd src
+$ nosetests --with-coverage --rednose ./test/unit
+```
+
+To run mock tests
+
+```
+$ cd ./src
+$  nosetests --with-coverage --rednose ./test/mock
+```
+
+To run acceptance tests
+
+```
+$ cd ./src
+$ behave ./test/acceptance
+```
+
+For pylint running you must create a file &lt;i&gt;pylintrc&lt;/i&gt; in your project root directory with the next content
+
+```
+[REPORTS]
+msg-template=&quot;{msg_id}({symbol}) - {obj} Line #{line}: {msg}&quot;
+```
+To run pylint
+
+```
+$ pylint ./src/app/*
+```</pre>
+</div>
+<div created="20150328141507290" modified="20150328141639253" tags="python" title="Python logging">
+<pre>To use logging in python
+
+```
+logging.basicConfig(format = &quot;%(levelname)s:[%(asctime)s] -&gt; %(message)s', level = logging.INFO)
+logging.info(&quot;starting a thread&quot;)
+logger = logging.getLogger('logger-name')
+logger.info('message')
+```
+
+And you can see more about logging here:
+https://docs.python.org/3/howto/logging.html#logging-basic-tutorial
+
+
+</pre>
+</div>
+<div created="20141025131658765" modified="20141203075956680" tags="python" title="python3 virtualenv making">
+<pre>To create a virtual environment in python3 you must type
+
+```
+$ python /usr/local/python3/bin/pyvenv project_env
+```
+
+
+where project_env is a directory, where your python files must be situated
+, 
+
+You must remember that python must be in your PATH environment variable.
+
+
 then you must activate your env
 
 ```
@@ -5941,6 +6662,109 @@ to create a simple django project
 (project_env) $ django-admin.py startproject newproject
 (project_env) $ pip freeze &gt; newproject/requirements.txt
 ```</pre>
+</div>
+<div created="20140228103847107" modified="20150109154213533" tags="C++ Qt" title="Qt installation">
+<pre>&lt;h2&gt;Install from a binary package&lt;/h2&gt;
+
+
+&lt;h3&gt;&lt;b&gt;Prerequisites&lt;/b&gt;&lt;/h3&gt;
+
+- You must have &lt;i&gt;libx11-xcb&lt;/i&gt; library
+
+```
+$ sudo apt-get install libx11-xcb-dev 
+```
+
+- Also it will be good to have &lt;i&gt;mesa&lt;/i&gt; libs
+
+```
+$ sudo apt-get install libgl1-mesa-dev libglu1-mesa-dev
+```
+&lt;h3&gt;&lt;b&gt;workflow&lt;/b&gt;&lt;/h3&gt;
+To install QT, you must download it from [[here|http://www.qt.io/download/]].
+
+Then type in the directory with QT installer
+
+```
+$ chmod +x qt-opensource-linux-x86-5.2.1.run
+```
+and then
+
+```
+$ sudo ./qt-opensource-linux-x86-5.2.1.run
+```
+If it doesn't work you can type
+
+```
+$ xhost +local:root   
+```
+where root is the local user you want to grant access to
+
+or 
+
+```
+$ export DISPLAY=:0.0
+$ ./qt-opensource-linux-x86-5.2.1.run
+```
+&lt;hr&gt;
+&lt;h2&gt;Building from sources&lt;/h2&gt;
+&lt;h3&gt;&lt;b&gt;Prerequisites&lt;/b&gt;&lt;/h3&gt;
+
+- For building from sources you must have instaleld a python (python 3 will suffice) and a perl interperters.
+
+ Then you must add paths to python and perl to your PATH environment variable
+
+```
+$ export PATH=$PATH:/path/to/your/python
+$ export PATH=$PATH:/path/to/you/perl
+```
+- You must have &lt;i&gt;libx11-xcb&lt;/i&gt; library
+
+```
+$ sudo apt-get install libx11-xcb-dev 
+```
+- Also it will be good to have &lt;i&gt;mesa&lt;/i&gt; libs
+
+```
+$ sudo apt-get install libgl1-mesa-dev libglu1-mesa-dev
+```
+&lt;h3&gt;&lt;b&gt;Workflow&lt;/b&gt;&lt;/h3&gt;
+After that you must type
+
+$PWD - it means present working directory, to you can copy you sources to /usr/local or to something else
+
+```
+git clone git://gitorious.org/qt/qt5.git
+cd qt5
+./init-repository
+./configure -prefix $PWD/qtbase -opensource
+```
+May be it is necessary
+
+- in “qt\qtdeclarative\src\qml”, check the file &lt;i&gt;RegExpJitTables.h&lt;/i&gt;
+if it’s empty, delete it (it’s autogenerated with python)
+
+```
+make -j4
+```
+
+&lt;hr&gt;
+another variant (I don't now if it works)
+
+```
+git clone https://git.gitorious.org/qt/qt5.git qt5
+cd qt5
+git checkout stable
+perl init-repository --no-webkit
+configure -prefix /usr/local/qtbase -qt-xcb -developer-build -opensource -nomake examples -nomake tests -opengl desktop
+```
+&lt;hr&gt;
+&lt;hr&gt;
+Useful links
+
+* [[building from sources | http://qt-project.org/wiki/Building_Qt_5_from_Git]]
+* [[another building manual | http://qmlbook.org/ch02/index.html#installing-qt-5-sdk]]
+</pre>
 </div>
 <div created="20140322163723460" modified="20140322164100602" tags="JUnit" title="Running JUnit">
 <pre>To create and run JUnit tests you must dowlonad junit from [[here|www.junit.org]].
@@ -6044,6 +6868,39 @@ $ make
 ```
 
 
+</pre>
+</div>
+<div created="20150107091203520" modified="20150107092357492" tags="python sip" title="Sip installer">
+<pre>Sip is a build system for python envirements.
+
+You can get the sources from here [[here | http://www.riverbankcomputing.com/software/sip/download]].
+
+&lt;i&gt;To install the sip you must have gcc, make etc. for building from sources.&lt;/i&gt;
+
+- Unpack the archive
+- type the next command
+
+```
+$ python configure.py
+```
+- then type
+
+```
+$ make
+```
+- and then
+
+```
+$ make install
+```
+
+&lt;i&gt;May be it is necessary to build software from the root privileges.&lt;/i&gt;
+
+&lt;hr&gt;
+Some useful links about the topic
+
+* [[official sip installation manual | http://pyqt.sourceforge.net/Docs/sip4/installation.html ]]
+* [[official sip reference guide | http://pyqt.sourceforge.net/Docs/sip4/]]
 </pre>
 </div>
 <div created="20140601155355233" modified="20140601160711351" tags="html css" title="To center any container">

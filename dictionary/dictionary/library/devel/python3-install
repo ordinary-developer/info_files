@@ -1,53 +1,30 @@
  ############################
  PYTHON 3 INSTALLATION
  ############################
- pre-installation
- -----------------
 
- ------------------------------------------------------------------------
- | $ sudo apt-get install build-essential libncursesw5-dev l		|	
- |                        ibreadline5-dev libssl-dev libgdbm-dev 	|
- |                        libc6-dev libsqlite3-dev tk-dev zlib1g-dev 	|
- |                        liblzma-dev					|
- ------------------------------------------------------------------------
- 
-  sometimes it is necessary to install the next packages
- ------------------------------------------------------------------------
- | $ sudo apt-get install libsqlite3-dev sqlite3 bzip2 			|
- |	                  libbz2-dev build-dep  			|
- ------------------------------------------------------------------------       
 
- fetch your python
- ------------------------------------------------------------------------
- | $ wget http://www.python.org/ftp/python/3.x/Python-3.x.tar.bz2       |
- ------------------------------------------------------------------------
+ pre-install
+ ===========
 
- (you can fetch it in another way)  
- extract it
+ it is neccessary to install some packages 
+ ------------------------------------------------------------------------
+ | $ sudo apt-get install libreadline-dev 				|
+ |                        openssl openssl-dev libssl-dev  		|
+ |                        libsqlite3-dev sqlite3			|
+ ------------------------------------------------------------------------
+  
+ "openssl" and "libssl-dev" are necessary for ssl support.
+ (And for the proper installation of pip)
+ You must remember that "openssl" package will install to "/usr"
+
+ "sqlite3" package is neccessary for django dev
+
+ extract it python sources
  ------------------------------------------------------------------------
  | $ tar -xjf Python-3.xtar.bz2 cd Python-3.x  				|
  ------------------------------------------------------------------------
 
- for the proper installation of pip (very necessarily) you must build your
- python sources with ssl support
-
- you must install ssl
- for example
- ------------------------------------------------------------------------
- | $ sudo apt-get install libssl-dev					|
- ------------------------------------------------------------------------
- or 
- ------------------------------------------------------------------------
- | $ sudo apt-get install openssl-devel					|
- ------------------------------------------------------------------------
-
- But you must remember your installation path
- or you can compile your openssl from the site (www.openssl.org)
-
- Let assume that you have the next installation path
- /usr/local/openssl
-
- Then in the file Modules/Setup.dist in the Python source
+ Then in the file 'Modules/Setup.dist' in the Python source
  ----------------------------------------------------------------------------------------
  |...										    	|	
  | 											|
@@ -72,30 +49,49 @@
  |224 #crypt cryptmodule.c # -lcrypt  # crypt(3); needs -lcrypt on some systems		|
  ----------------------------------------------------------------------------------------
 
- uncomment the line (210) (in your file may be anther digit)
+ uncomment the line (210) (in your file may be anther line)
  in the line 214 you must write
  ------------------------------------------------------------------------
- | SSL=/usr/local/openssl						|
+ | SSL=/usr								|
  ------------------------------------------------------------------------ 
+ (or something yours)
  then uncoment 215-217  
 
- installation
- ------------
-
+ After that you must see your python's 'setup.py'
+ and find the next strings
  ------------------------------------------------------------------------
- | $ sudo ./configure --prefix=/usr/local/python3     			|
+ |1047 sqlite_inc_path = [ '/usr/include',				|
+ |1048 			   '/usr/include/sqlite',			|
+ |1049			   '/usr/include/sqlite3',			|
+ |1050			   '/usr/local/include'				|
+ |1051			   '/usr/local/include/sqlite			|
+ |1052			   '/usr/local/include/sqlite3			|
+ |1053			 ]						|
+ ------------------------------------------------------------------------
+ And you must AUGMENT THIS PATH, if you have installed your sqlite manually
+
+
+
+ install
+ =======
+
+ to compile python
+ ------------------------------------------------------------------------
+ | $ sudo ./configure --prefix=/usr/local --exec-prefix=/usr/local	|
  | $ sudo make -j 2				       			| 
- | $ sudo make install				       			|
+ | $ sudo make install //("$ sudo checkinstall -D")			| 				       			
  ------------------------------------------------------------------------
 
-  Optionally you can create an alias
+ Optionally you can create an alias
  ------------------------------------------------------------------------
  | $ echo 'alias py="/usr/local/python3/bin/python3.4"' >> .bashrc      |
  ------------------------------------------------------------------------
 
+
  
- alternative installtion
- ----------------------- 
+ alternative install
+ ===================
+
  Your can your deasdnake PPA
  ------------------------------------------------------------------------
  | $ sudo apt-get install python-software-properties                    |
@@ -104,37 +100,40 @@
  | $ sudo apt-get install python3.3                                     |
  ------------------------------------------------------------------------
 
- post-installation
- ------------------
 
- Create a Virtual Environment in your home:
+
+ post-install
+ ============
+ 
+ create a virtual environment in your home:
  ------------------------------------------------------------------------
  | $ /usr/local/python3/bin/pyvenv ~/py3     				|
  ------------------------------------------------------------------------
-
- Activate the virtualenv:
+ activate the virtualenv:
  ------------------------------------------------------------------------
  | $ source ~/py3/bin/activate                                          |
  ------------------------------------------------------------------------
+ install any python packages you want (i.e. bottle) (optionally)
+ ------------------------------------------------------------------------
+ | $ pip install bottle             					|
+ ------------------------------------------------------------------------
+ 
 
- Install distribute tools:
+
+ auxiliary info
+ ==============
+
+ to install other tools
+ install distribute tools:
  ------------------------------------------------------------------------
  | $ wget http://python-distribute.org/distribute_setup.py     		|
  |        python distribute_setup.py                           		|
  ------------------------------------------------------------------------
-
- Install pip:
+ install pip:
  ------------------------------------------------------------------------
  | $ easy_install pip							|
  ------------------------------------------------------------------------
 
- Install any python packages you want (i.e. bottle) (optionally)
- ------------------------------------------------------------------------
- | $ pip install bottle             					|
- ------------------------------------------------------------------------
-
-Other
------
  If you have a message 
  'Ignoring ensurepip failure: pip 1.5.6 requires SSL/TLS'
 
@@ -145,4 +144,12 @@ Other
  --------------------------------------
  | $ /path/to/my/python get-pip.py    |
  ---------------------------------------
-  
+ 
+ packages sometimes neccessary for python install 
+ ------------------------------------------------------------------------
+ | $ sudo apt-get install build-essential libncursesw5-dev		| 
+			  bzip2 libbz2-dev build-dep			|	
+ |                        libreadline5-dev libssl-dev libgdbm-dev 	|
+ |                        libc6-dev libsqlite3-dev tk-dev zlib1g-dev 	|
+ |                        liblzma-dev					|
+ ------------------------------------------------------------------------

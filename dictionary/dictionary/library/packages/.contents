@@ -1,4 +1,5 @@
-apt - info about apt instrument
-aptitude - info about aptitude instrument
-common - info about coomon packages info
-dpkg - info about dpkg command
+apt			- info about apt instrument
+aptitude		- info about aptitude instrument
+common			- info about coomon packages info
+dpkg			- info about dpkg command
+package-creating   	- info about package creating

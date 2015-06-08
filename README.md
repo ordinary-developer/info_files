@@ -1,13 +1,28 @@
-dictionary       - info about linux
+INFO_FILES
+============
+[project information]
+------------
+This project contains some information sources especially useful for me.
 
+It contains
+- **dictionary** - an utility which contains useful tricks about Linux;
+- **erros** - a TiddlyWiki page which contains some typical programming errors;
+- **links** - a simple html page which contains userful URLs
+- **my_wiki** - a TiddlyWiki page which contains some useful information about programming;
+- **notes** - a consice synopsis of some IT books.
 
-errors           - info about errors (like Spolsky) (tidly-wiki)
+[installation]
+------------
+You can simply copy this project and use it without installation.
 
+[basic usage]
+------------
+Nothing to say yet.
 
-links            - useful links and online intruments
+[licence]
+--------
+The project is licensed under the MIT license.
 
-
-my_wiki          - wiki file about development (tidly-wiki)
-
-
-programing_notes - some notes about programming
+[contributing]
+-------------
+I think this project doesn't need any help, because it simply contains my data about IT.
