@@ -1,0 +1,14 @@
+ #########
+ databases
+ #########
+
+
+ common info
+ ===========
+
+ MongoDB groups collections into databases.
+
+ Database names can be any UTF-8 string, with a few restrictions.
+
+ By concatenating a database name with a collection in that database
+ you can get a fully qualified collection name called a namespace.

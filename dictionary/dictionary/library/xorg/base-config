@@ -11,8 +11,6 @@
  To install xorg-server you must type
  ------------------------------------------------------------------------
  | $ sudo apt-get install xserver-xorg					|
- | $ sudo apt-get install xdm						|
- | $ sudo apt-get install 						|
  | $ sudo apt-get install xinit						|
  | $ sudo apt-get install xterm						|
  ------------------------------------------------------------------------
@@ -32,11 +30,22 @@
  | #Xorg -config xorg.conf.new   					|
  ------------------------------------------------------------------------
  to break the server, press Ctrl-Alt-Backspace
+ (it will show only the black screen)
+
+  to launch with the retro optionis
+ -------------------------------------------------------------------------
+ | #Xorg -config xorg.conf.new -retro
+
  
  if all is allright you must copy you Xorg file
  ------------------------------------------------------------------------
  | #cp $HOME/xorg.conf.new /etc/X11/xorg.conf  				|
  ------------------------------------------------------------------------
+
+ If your Xorg doesn't start use 
+ --------------------------------------------------------------------
+ | $ sudo chmod u+s /usr/bin/Xorg				    |
+ --------------------------------------------------------------------	
 
  postrequisites
  --------------

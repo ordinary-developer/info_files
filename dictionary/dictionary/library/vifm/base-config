@@ -8,6 +8,9 @@
  vifm colorschemes
 ----------------------
 
+ for supporting colorschemes:
+ $ export TERM=xterm-256color
+
  put the colorscheme files to the next folder
  ------------------------------------------------------------------------
  | ~/.vifm/colors							|
@@ -22,6 +25,7 @@
  ------------------------------------------------------------------------
 
 
+ 
  
  useful tricks
  =============

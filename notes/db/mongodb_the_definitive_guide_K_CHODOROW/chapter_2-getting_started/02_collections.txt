@@ -1,0 +1,29 @@
+ ###########
+ collections
+ ###########
+
+ common info
+ ===========
+
+ A collection here is an analog of a table in relational databases.
+
+ A collection is a group of documents.
+
+ Collections have dynamic schemas. This means that the documents within
+ a single collection can have any number of different "shapes".
+ For example, both of the following documents could be stored 
+ in a single collection:
+ {"greeting" : "Hello, world!"}
+ {"foo" : 5}
+
+ Collection names can be any UTF-8 string, with a few restriction.
+
+
+
+ subcollections
+ ==============
+
+ One convention for organizing collections is to use namespaced
+ subcollections separated by the . character.
+
+

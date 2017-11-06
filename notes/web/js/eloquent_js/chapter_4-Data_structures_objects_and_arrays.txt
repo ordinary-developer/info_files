@@ -1,0 +1,65 @@
+ ###################################
+ Data structures: objects and arrays
+ ###################################
+
+
+ data sets
+ =========
+
+ JS provides a data type specifically for storing sequences of values.
+ It is called an array and is written as a list of values 
+ between square brackets, separated by commas.
+ --------------------------------------------------------------------
+ | var listOfNumbers = [1, 2, 3];                                   |
+ --------------------------------------------------------------------
+
+
+
+ properties
+ ==========
+
+ Allmost all JS values have properties.
+ The exceptions are null and undefined.
+
+ The two most common ways to access properties in JS are with a dot
+ and with square brackets.
+ When using a dot, the part after the dot must be a valid 
+ variable name, and it directly names the property.
+ When using square brackets, the expression between the brackets
+ is evaluated to get the property name;
+
+
+
+ methods
+ =======
+
+ Properties that contain functions are generally called methods 
+ of the value they belong to.
+
+
+
+ objects
+ =======
+
+ Values of the type object are arbitrary collections of properties.    
+
+ Reading a property that doesn't exist will produce the value undefined.
+
+ It is possible to assign a value to a property expression 
+ with the "=" operator. This will replace the property's value
+ if it already existed or create a new property on the object
+ if it didn't.
+
+ The binary "in" operator, when applied to a string and an object,
+ returns a Boolean value that indicates whether that object  
+ has that property.
+
+ 
+
+ mutability
+ ==========
+
+ JavaScript's "==" operator, when comparing objects, will return true
+ only if both objects are precisely the same value.
+ Comparing different objects will return false,
+ even if they have identical contents.

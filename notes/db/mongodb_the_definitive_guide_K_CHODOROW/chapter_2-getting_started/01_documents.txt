@@ -1,0 +1,22 @@
+ #########
+ documents
+ #########
+
+ common info
+ ===========
+
+ A document here is an analog of a row in relational databases.
+
+ A document is an ordered set of keys with associated values.
+ In javascript documents are represented as objects.
+ {"greeting" : "Hello, world!", "foo": 3}
+
+ The keys in a document are strings (UTF-8 encoding).
+
+ MongoDB is type-sensetive and case-sensitive.
+ MongoDB cannot contain duplicate keys.
+
+ Key/value pairs in documents are ordered.
+ But a field order does not usually matter and you should not design
+ your schema to depend on a certain ordering of fields 
+ (MongoDB may reorder them).

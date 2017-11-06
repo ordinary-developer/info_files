@@ -149,11 +149,15 @@ Error message and password prompt
 
 <li>$:/temp/NewTagName</li>
 
+<li>$:/temp/search</li>
+
 <li>$:/theme</li>
 
 <li>$:/themes/tiddlywiki/snowwhite</li>
 
 <li>$:/themes/tiddlywiki/vanilla</li>
+
+<li>add Disqus support to the Pelican blog</li>
 
 <li>Adding Curl to cpp project</li>
 
@@ -163,7 +167,9 @@ Error message and password prompt
 
 <li>Base git config</li>
 
-<li>Basic C++ linux environment</li>
+<li>Basic C++ Google Mock linux environment</li>
+
+<li>Boost installation</li>
 
 <li>Boost installing</li>
 
@@ -174,6 +180,8 @@ Error message and password prompt
 <li>Compile a basic Qt application</li>
 
 <li>Compiling a C++ project</li>
+
+<li>configuring locales and dates in pelican</li>
 
 <li>Creating a bitbucket repository</li>
 
@@ -189,7 +197,15 @@ Error message and password prompt
 
 <li>github README.md</li>
 
+<li>good wordpress themes</li>
+
+<li>install new theme for pelican</li>
+
 <li>MySQL client running</li>
+
+<li>pelican soder theme</li>
+
+<li>pelican-creating_a_blog</li>
 
 <li>PEP 257</li>
 
@@ -5252,13 +5268,13 @@ Error message and password prompt
 <div modified="20141203075826192" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div modified="20150605070651465" title="$:/state/sidebar">
+<div modified="20171105175546158" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div modified="20150204083405288" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/More</pre>
 </div>
-<div list="[[Compiling a C++ project]] [[New Tiddler]] GettingStarted" title="$:/StoryList">
+<div list="[[configuring locales and dates in pelican]] [[pelican soder theme]] [[install new theme for pelican]] pelican-creating_a_blog [[add Disqus support to the Pelican blog]] GettingStarted" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -5275,7 +5291,10 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20141203080017635" modified="20150605062336656" title="$:/temp/NewTagName">
+<div created="20141203080017635" modified="20170616162926129" title="$:/temp/NewTagName">
+<pre></pre>
+</div>
+<div created="20150712080825559" modified="20160927122221640" title="$:/temp/search">
 <pre></pre>
 </div>
 <div modified="20141126100317098" title="$:/theme">
@@ -5357,6 +5376,44 @@ Error message and password prompt
         }
     }
 }</pre>
+</div>
+<div created="20170616162908754" modified="20171105174612419" tags="pelican" title="add Disqus support to the Pelican blog">
+<pre>To add the disqus support to your blog,
+
+!!Registring in disqus
+* first register in disquas
+* select &quot;I want to install disqus on my site&quot;
+* on the next page
+   ** enter your web site name (NAME, not url) e.g. `ordinary-developer-github-io` (your unique disqus name will be `ordinary-developer-github-iodisqus.com`)
+  ** select the category &quot;Tech&quot; 
+  ** click &quot;Create Site&quot;
+* on the next page select &quot;Basic&quot; plan
+* on the next page select &quot;I don't see my platform listed, install manually with universal code&quot;
+* on the next page click &quot;configure&quot;
+* on the next page in the field Website URL enter `https://ordinary-developer.github.io`, click &quot;Complete Setup&quot;.
+
+&lt;h2&gt;Pelican config&lt;/h2&gt;
+&lt;p&gt;For corerct working you must have the next settings&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;in your blog repository add the next string to &lt;code&gt;src/pelicanconf.py&lt;/code&gt;:&lt;/li&gt;
+&lt;pre&gt;SITEURL = 'https://ordinary-developer.github.io'
+DISQUS_SITENAME = &quot;ordinary-developer-github-io&quot;&lt;/pre&gt;
+&lt;li&gt;in your blog repository add the next string to `src/publishconf.py`:&lt;/li&gt;
+&lt;pre&gt;#RELATIVE_URLS = False
+SITEURL = 'https://ordinary-developer.github.io'
+&lt;/pre&gt;
+may be you must use the next options
+&lt;pre&gt;RELATIVE_URLS = True&lt;/pre&gt;
+or
+&lt;pre&gt;RELATIVE_URLS = False&lt;/pre&gt;
+&lt;li&gt;regenerate the site, commit you changes, push to github&lt;/li&gt;
+&lt;/ul&gt;
+
+Important*
+
+//It is allowed 48 hours for your new DNS settings to propagate when switching hosts or domains. Even though your site's content is visible, our servers can't connect to your pages in the meantime.
+
+Here is a useful [[link|https://help.disqus.com/customer/portal/articles/472007-i-m-receiving-the-message-%22we-were-unable-to-load-disqus-%22]] for troubleshouting.</pre>
 </div>
 <div created="20140318171446542" modified="20140318172917790" tags="Curl C++" title="Adding Curl to cpp project">
 <pre>You can dowload curllib for this [[site|http://curl.haxx.se/download.html]]
@@ -5490,7 +5547,7 @@ def my_method_example():
 ```
 &lt;hr&gt;</pre>
 </div>
-<div created="20141104085943643" modified="20141104090312284" tags="git" title="Base git config">
+<div created="20141104085943643" modified="20170515100951655" tags="git" title="Base git config">
 <pre>To install git shell (it is sufficient for most purposes) in linux
 
 ```
@@ -5500,13 +5557,30 @@ $ sudo apt-get install git-sh
 After that you must config your git
 
 ```
-$ git config --global user.name &quot;ivan&quot;
+$ git config --global user.name &quot;ordinary-developer&quot;
 $ git config --global user.email ivanrussian@mail.ru
+($git config --global user.email merely.ordinary.developer@gmail.com)
 $ git config --global core.editor vim
 $ git config --global merge.tool vimdiff
+
+# optionally for enabling long names
+# (useful when working both from linux and windows on the same repository)
+$ git config --global  core.longpaths true
+```
+
+To see all settings
+
+```
+$ git config --list
+```
+
+To see only one setting
+
+```
+$ git config user.name
 ```</pre>
 </div>
-<div created="20140224142024436" modified="20140225111834568" tags="CMake C++ TTD [[Google Mock]]" title="Basic C++ linux environment">
+<div created="20140224142024436" modified="20151007165933992" tags="CMake C++ TTD [[Google Mock]]" title="Basic C++ Google Mock linux environment">
 <pre>First, it necessary to install g++
 
 ```
@@ -5523,18 +5597,18 @@ Then is is necessary to install Google Mock. It cab be found [[here|https://code
 Then unzip the installation zip file, perhaps to your home directory. After that is necessary to create an environment variable called GMOCK_HOME that refers to this directory. Here's and example (The version can differ)
 
 ```
-$ export GMOCK_HOME=/home/ivan/gmock-1.6.0
+$ export GMOCK_HOME=/home/ivan/libraries/gmock-1.7.0
 ```
 
 Then it is necessary to build google mock. From the root of your Google Mock installation ($GMOCK_HOME) do the following
 
 ```
-$ mkdir mybuild
-$ cd mybuild
-$ cmake
-$ make
+$ mkdir my_build
+$ cd my_build
+$ cmake ..
+$ make --jobs 4
 ```
-The build directory name mybuild is arbitrary. However, the build scripts used
+The &lt;i&gt;my_build&lt;/i&gt; directory name mybuild is arbitrary. However, the build scripts used
 by the examples in the book assume this name. If you change it, you’ll need
 to alter all of the CMakeLists.txt files.
 
@@ -5543,10 +5617,91 @@ You will also need to build Google Test, which is nested within Google Mock
 ```
 $ cd $GMOCK_HOME/gtest
 $ mkdir
-$ cd mybuild
+$ cd my_build
 $ cmake ..
-$ make
+$ make --jobs 4
 ```
+</pre>
+</div>
+<div created="20160927123509676" modified="20160927150314551" tags="boost C++" title="Boost installation">
+<pre>&lt;h2&gt;Prerequisites&lt;/h2&gt;
+
+First you must speficy in mind your boost_dir (where unpacked boost package will be placed and where final boost libraries will be placed).  In our case it is &lt;b&gt;~/libraries/boost_NNN&lt;/b&gt;
+&lt;hr /&gt;
+
+
+&lt;h2&gt;Headers-only installation&lt;/h2&gt;
+
+You can use it just now  (because in many cases it is sufficient to have only header files) then you can use it:
+
+```
+$ c++ -I path/to/boost yourfile.cpp -o your_application
+```
+or for gcc:
+
+```
+$ g++ -I path/to/boost yourfile.cpp -o your_application
+```
+&lt;hr /&gt;
+
+
+&lt;h2&gt;Full installation&lt;/h2&gt;
+Some files in boost (e.g. testing libraries) required building.
+
+- go to the directory &quot;tools/build&quot; (in boost_root (distr package))
+
+```
+  $ cd $boost_dir/tools/build  
+```
+
+- type
+
+```
+$ ./bootstrap.sh
+```
+
+- compile into a temp directory
+
+```
+$ b2 -j4 install --prefix=~/tmp/build-boost
+```
+
+- add PREFIX/bin to your PATH environment variable
+
+```
+$ PATH=$PATH:~/tmp/build-boost 
+```
+
+ - enter the boost_dir
+
+```
+$ cd $boost_dir    
+# ($cd ~/boost_1_59_0, &quot;$ cd ~/libraries/boost_1_59_0&quot; etc.)
+```
+
+ - type
+
+```
+$ b2 -j4 --build-dir=/tmp/build-boost toolset=gcc stage 
+```
+ (where &quot;stage&quot; is a directory inside you boost distr
+  where all bin libraries will be placed).
+
+That will build static and shared non-debug multi-threaded variants
+ of the libraries.
+
+To build all variants, pass the additional option, &lt;b&gt;--build-type=complete&lt;/b&gt;
+
+ Building the special stage target places Boost library binaries in the
+ &lt;i&gt;&quot;stage/lib/&quot;&lt;/i&gt; subdirectory of the Boost tree. 
+ To use a different directory pass the &lt;b&gt;--stagedir=directory&lt;/b&gt; option to b2.
+
+
+
+
+
+&lt;hr /&gt;
+
 </pre>
 </div>
 <div created="20140405143452834" modified="20140405145839801" tags="C++ boost" title="Boost installing">
@@ -5789,6 +5944,25 @@ can easily tweak your makefile to support a src, include and build directories.
 Edit : I modified the default c++ compiler, my version of g++ isn't up-to-date. With
 clang++ this makefile works fine.</pre>
 </div>
+<div created="20171105155612780" modified="20171105160152353" title="configuring locales and dates in pelican">
+<pre>&lt;p&gt;For showing correct date (assumes that dates must be in english)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+In file &lt;code&gt;/etc/locale.gen&lt;/code&gt; uncomment the next string:
+&lt;pre&gt;en_US.UTF8 UTF8&lt;/pre&gt;
+Then type in bash
+&lt;pre&gt;sudo locale-gen en_US.UTF-8&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+if the pelican config file type the next strings:
+&lt;pre&gt;LOCALE = ('en_US.UTF8')
+DATE_FORMATS = {
+    'en': '%d/%m/%Y'
+}&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+</div>
 <div created="20140219152757878" modified="20140328075647832" tags="Bitbucket git" title="Creating a bitbucket repository" type="">
 <pre>If you want to create  a repository from scratch
 
@@ -5838,11 +6012,15 @@ $ git clone https://github.com/tutov-e-b/your_repository
 ```
 And then you can work with this repository.</pre>
 </div>
-<div created="20150312124425758" modified="20150312173125719" tags="python sphinx-doc" title="Creating a sphinx-doc project">
+<div created="20150312124425758" modified="20160110182543519" tags="python sphinx-doc" title="Creating a sphinx-doc project">
 <pre>&lt;h2&gt;Prerequisites&lt;/h2&gt;
 To create your documentation you must 
 
-* have sphinx-doc already installed
+* have sphinx-doc already installed; you can install it by the next command:
+```
+pip install sphinx
+```
+
 * have your project structure (see 'python cli app')
 * have doc strings in your sources (according to PEP-257 proposal)
 &lt;hr&gt;
@@ -5858,7 +6036,7 @@ This command will ask you some questions, your moust
 * point your root doc directory (./src/doc)
 
 Then edit your ./src/doc/source/conf.py
-add the next strings
+add the next strings (better add it to the begining of the file)
 
 ```
 sys.path.insert(0, os.path.abspath('./../../app')
@@ -6071,14 +6249,30 @@ You can add commits to your new-branch many times and when you decide your code 
 
 </pre>
 </div>
-<div created="20150605062317884" modified="20150605062510888" tags="git github" title="github README.md">
+<div created="20150605062317884" modified="20150712081009212" tags="git github" title="github README.md">
 <pre>A common &lt;b&gt;README.md&lt;/b&gt; file in your repository must contain the next sections
 
-* What the project is for
-* How to configure and install it
-* An example of how to use it or get it running
-* The license that the project is offered under
-* How to contribute to it</pre>
+* What the project is for (&lt;b&gt;project information&lt;/b&gt;)
+* How to configure and install it (&lt;b&gt;installation and configuration&lt;/b&gt;)
+* An example of how to use it or get it running (&lt;b&gt;basic usage&lt;/b&gt;)
+* The license that the project is offered under (&lt;b&gt;license&lt;/b&gt;)
+* How to contribute to it (&lt;b&gt;contributing&lt;/b&gt;)</pre>
+</div>
+<div created="20150629172837862" modified="20150629173020955" tags="wordpress" title="good wordpress themes">
+<pre>&lt;h3&gt;Good themes for online version are&lt;/h3&gt;
+- twenty twelve</pre>
+</div>
+<div created="20171105141120712" modified="20171105143308909" title="install new theme for pelican">
+<pre>&lt;ul&gt;
+&lt;li&gt;Download a new theme (via github, or something else)&lt;/li&gt;
+&lt;li&gt;Create the &quot;themes&quot; directory inside your pelican root project&lt;/li&gt;
+&lt;li&gt;Create there a folder &quot;theme-name&quot; and put there the contents of your theme&lt;/li&gt;
+&lt;li&gt;edit your Pelican settings file to include this line:
+&lt;pre&gt;THEME = '/abs_path_to_your_theme/theme-name'&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+</pre>
 </div>
 <div created="20140826145812251" modified="20140826150007752" tags="MySQL" title="MySQL client running">
 <pre>To run mysql client on linux type:
@@ -6092,6 +6286,128 @@ For running a script file type:
 ```
 mysql -u user -p password &lt; script.sql
 ```</pre>
+</div>
+<div created="20171105151744828" modified="20171105175111902" title="pelican soder theme">
+<pre>&lt;p&gt;To show discus comments, you must in file &lt;code&gt;sober-theme/templates/article.html&lt;/code&gt; change the next string:
+&lt;pre&gt;sdq.src = 'http://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
+&lt;/pre&gt;
+to
+&lt;pre&gt;sdq.src = 'https://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
+&lt;/pre&gt;
+&lt;p&gt;After installing the pelican soder theme, you can use the next properties in your settings file&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+This option allows you to add a short About block in sidebar
+&lt;pre&gt;PELICAN_SOBER_ABOUT = &quot;My name is Brian&quot;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+This option allows you to set the sidebar fixed (following scroll and fading out)
+&lt;pre&gt;PELICAN_SOBER_STICKY_SIDEBAR = True | False&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+The author twitter account)
+&lt;pre&gt;PELICAN_SOBER_TWITTER_CARD_CREATOR = '__fle__'&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+The website/company twitter account
+&lt;pre&gt;PELICAN_SOBER_TWITTER_CARD_SITE&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+</pre>
+</div>
+<div created="20170528140320628" modified="20171105181642619" tags="pelican python" title="pelican-creating_a_blog">
+<pre>&lt;h3&gt;&lt;b&gt;Installing Pelican&lt;/b&gt;&lt;/h3&gt;
+First you must install Pelican on your system. The best way is to install it in a separate virtual environment.
+
+In Bash 
+
+```
+# enter the python sandbox directory
+$ cd  ~/sandboxes/python 
+# creating a virtual environment
+$ python pyvenv pelican
+```
+
+
+&lt;h3&gt;&lt;b&gt;Creating a blog&lt;/b&gt;&lt;/h3&gt;
+
+To create a blog, first you must create the repository for this blog. In my case I created in in Github. It has the next name: `ordinary-developer.github.io`
+
+in your work folder (here you blog repository will be created)
+
+```
+$ source ~/sandboxes/python/pelican/bin/activate
+(pelican) $ git clone git@github.com:ordinary-developer/ordinary-developer.github.io
+(pelican) $ cd ordinary-developer.github.io
+(pelican) $ pelican-quickstart
+# ... answer some questions
+# &gt; Where do you want to create your new web site? - Enter
+# &gt; What will be the title of this web site? - You title here (e.g. &quot;it blog&quot;)
+# &gt; Who will be he author of this web site? - You auther (e.g. &quot;great-developer&quot;)
+# &gt; What will be the default language of this web site? - en
+# &gt; Do you want to specify a URL prefix? e.g., http://example.com (Y/n) - n
+# &gt; Do you want to enable article pagination? (Y/n) - n
+# &gt; What is you time zone? [Europe/Paris] - Europe/Moscow
+# &gt; Do you want to generate a Fagfile/Makefile to automate generation and publishing (Y/n) - n
+# &gt; Do you want an auto-reload &amp; simpleHTTP script to assist with theme and site development? (Y/n) - n.
+```
+
+&lt;h3&gt;&lt;b&gt;Writing an article&lt;/b&gt;&lt;/h3&gt;
+To add an article in the folder `src/content` inside your repository create a file (e.g. `first_article.md`) with the next content:
+
+```
+Title: Hello, World!
+Date: 2017-04-05 13:04
+Modified: 2017-04-05 13:04
+
+This is a test blog post.
+```
+
+And then regenerate the site (you must be in the `src` directory)
+for disqus with 'relative url = false' you must use:  
+
+```
+(pelican) $ pelican --ignore-cache -o .. content
+```
+
+another command is the next  
+
+```
+(pelican) $ pelican --relative-urls --ignore-cache -o .. content
+```
+
+
+After that you can create a commit with new changes and push it to github to update the site
+
+```
+$ cd %blog_repository_root%
+$ git add *
+$ git commit 
+$ git push origin master
+```
+
+&lt;hr /&gt;
+&lt;p&gt;Is is also useful to create a script-generator &lt;code&gt;gen.sh&lt;/code&gt;:
+&lt;pre&gt;#!/bin/sh
+
+set -e
+
+rm ../*.html 2&gt;/dev/null || true
+rm -r ../author 2&gt;/dev/null || true
+rm -r ../category 2&gt;/dev/null || true
+rm -r ../rss 2&gt;/dev/null || true
+rm -r ../theme 2&gt;/dev/null || true
+
+pelican --ignore-cache -o .. content
+
+rm -r __pycache__ 2&gt;/dev/null || true
+&lt;/pre&gt;
+then put it to &lt;code&gt;src&lt;/code&gt; directory and start something like this:
+&lt;pre&gt;$ ./gen.sh&lt;/pre&gt;
+
+</pre>
 </div>
 <div created="20150312174527198" modified="20150312174811363" tags="python" title="PEP 257">
 <pre>Here is an example of PEP 257 (Napoleon notation - used in Google)
@@ -6448,7 +6764,7 @@ Useful links
 
 * [[official installation guide | http://pyqt.sourceforge.net/Docs/PyQt5/installation.html#]]</pre>
 </div>
-<div created="20150201094838757" modified="20150312172801517" tags="python" title="Python cli app creating">
+<div created="20150201094838757" modified="20160110183627511" tags="python" title="Python cli app creating">
 <pre>&lt;h2&gt;Creating an environment (sandbox)&lt;/h2&gt;
 To create a virtual environment in python3 you must type
 
@@ -6526,13 +6842,14 @@ $ pip install sphinx
 ```
 /root-project
 |
-|----/bin
-|    
 |----/doc
 |
+|----/pack
+|    |----/zip
+|    
 |----/src
 |     |----/app
-|     |    |-----/logic
+|     |     |-----/logic
 |     |     |-----/db
 |     |     |-----/...
 |     |
@@ -6542,7 +6859,7 @@ $ pip install sphinx
 |     |    |     |----/steps
 |     |    |
 |     |    |----/mock
-|     |    |----/integraion
+|     |    |----/integration
 |     |    |----/unit
 |     |
 |     |----/doc
@@ -6556,30 +6873,38 @@ $ pip install sphinx
 |----README.md     
 ```
 
-in your root-project directory
+&lt;h2&gt;running tests&lt;/h2&gt;
+in your &lt;i&gt;root-project directory&lt;/i&gt;
 
-To run unit tests
-
+&lt;i&gt;to run doctests&lt;/i&gt;
 
 ```
-$ cd src
-$ nosetests --with-coverage --rednose ./test/unit
+$ nosetests --with-doctest --rednose ./src/app --verbose
+```
+&lt;i&gt;to run unit tests&lt;/i&gt;
+
+```
+$ nosetests --with-coverage --rednose ./src/test/unit --verbose
+
+```
+&lt;i&gt;to run mock tests&lt;/i&gt;
+
+```
+$  nosetests --with-coverage --rednose ./src/test/mock --verbose
+```
+&lt;i&gt;to run integration tests&lt;/i&gt;
+
+```
+$  nosetests --with-coverage --rednose ./src/test/integration --verbose
 ```
 
-To run mock tests
+&lt;i&gt;to run acceptance tests&lt;/i&gt;
 
 ```
 $ cd ./src
-$  nosetests --with-coverage --rednose ./test/mock
+$ behave ./test/acceptance --verbose
 ```
-
-To run acceptance tests
-
-```
-$ cd ./src
-$ behave ./test/acceptance
-```
-
+&lt;h2&gt;runing pylint&lt;/h2&gt;
 For pylint running you must create a file &lt;i&gt;pylintrc&lt;/i&gt; in your project root directory with the next content
 
 ```
@@ -6590,6 +6915,99 @@ To run pylint
 
 ```
 $ pylint ./src/app/*
+```
+
+&lt;h2&gt;creating a documentation&lt;/h2&gt;
+you must have your sphinx envorionment initialized
+
+Then in your doc-root-directory (./src/doc) type
+
+```
+$ make html
+```
+
+
+&lt;h2&gt;packing to zip file&lt;/h2&gt;
+to create only one file in zip format
+(your must have the program &quot;zip&quot; to be install,
+and your app directory must contain the &lt;i&gt; &quot;_ _main_ _.py&quot;&lt;/i&gt; file
+
+```
+$ cd pack/zip
+$ zip app ./../../src/app/* -r
+```
+&lt;hr&gt;
+&lt;h2&gt;Paver using&lt;/h2&gt;
+all this you can do from paver
+
+to install paver
+
+```
+$ pip install paver
+```
+
+create the &quot;pavement.py&quot; file in the root of your project wit the next contents:
+
+```
+from paver.tasks import task, BuildFailure
+from paver.easy import *
+
+@task
+def run_doc_tests():
+    sh('nosetests --with-doctest --rednose ./src/app --verbose')
+
+@task
+def run_unit_tests():
+    sh('nosetests --with-coverage --rednose ./src/test/unit')
+
+@task
+def run_mock_tests():
+    sh('nosetests --with-coverage --rednose ./src/test/mock')
+
+@task
+def run_integration_tests():
+    sh('nosetests --with-coverage --rednose ./src/test/integration')
+
+@task
+def run_acceptance_tests():
+    sh('cd ./src; behave ./test/acceptance --verbose')
+
+@task
+def run_pylint():
+    try:
+        sh('pylint ./src/app/*')
+    except BuildFailure:
+        pass
+
+@task 
+def generate_docs():
+    sh(&quot;cd ./src/doc; sphinx-apidoc --force -o ./source './../app'&quot;)
+    sh(&quot;cd ./src/doc; make html&quot;)
+
+
+@task
+def create_zip_package():
+    sh('cd ./pack/zip; zip app ./../../src/app/* -r')
+
+
+@needs('run_doc_tests', 'run_unit_tests', 'run_mock_tests',
+       'run_integration_tests', 'run_acceptance_tests',
+       'run_pylint', 'generate_docs', 'create_zip_package')
+@task
+def default():
+    pass
+
+```
+to run a task
+
+```
+$ paver unit_tests
+```
+
+to run all tasks
+
+```
+$ paver
 ```</pre>
 </div>
 <div created="20150328141507290" modified="20150328141639253" tags="python" title="Python logging">
@@ -6782,7 +7200,7 @@ $ java -classpath .:junit-4.11.jar:hamcrest-core-1.3.jar \-&gt;
     org.junit.runner.JUnitCore TestClass
 ```</pre>
 </div>
-<div created="20140225111734401" modified="20140316180011361" tags="CMake [[Google Mock]] TTD" title="Simple Google test project">
+<div created="20140225111734401" modified="20151007165733904" tags="CMake [[Google Mock]] TTD" title="Simple Google test project">
 <pre>The contens of your //main.cpp// file
 
 ```
@@ -6812,8 +7230,8 @@ The contents of CMakeLists.txt may be following
 project(chapterFirstExample)
 cmake_minimum_required(VERSION 2.6)
 
-include_directories($ENV{GMOCK_HOME}/include  \\ $ENV{GMOCK_HOME}/gtest/include)
-link_directories($ENV{GMOCK_HOME}/mybuild $ENV{GMOCK_HOME}/gtest/mybuild)
+include_directories($ENV{GMOCK_HOME}/include $ENV{GMOCK_HOME}/gtest/include)
+link_directories($ENV{GMOCK_HOME}/my_build $ENV{GMOCK_HOME}/gtest/my_build)
 add_definitions(-std=c++0x)
 set(CMAKE_CXX_FLAGS &quot;${CMAXE_CXX_FLAGS} -Wall&quot;)
 
@@ -6833,8 +7251,13 @@ Sometimes it is necessary to point to ''c++11 ''standard
 add_definition(-std=c++11)
 ...
 ```
+or to &quot;c++14&quot; standard
 
-
+```
+...
+add_definition(-std=c++1y)
+...
+```
 for compiling it is necessary to add your src file to ''sources'' section
 
 ```
@@ -6847,7 +7270,7 @@ set(sources
 To compile you must export a variable 
 
 ```
-$ export GMOCK_HOME=/home/ivan/gmock-1.6.0
+$ export GMOCK_HOME=/home/ivan/libraries/gmock-1.7.0
 ```
 and then from you project directory run
 
@@ -6859,12 +7282,16 @@ and then run make
 ```
 $ make
 ```
+or
 
+```
+$ make --jobs 4
+```
 Or you can make it in another way. Create the directory //build// in your project directory, enter it and type
 
 ```
 $ cmake ..
-$ make
+$ make ($ make --jobs 4)
 ```
 
 

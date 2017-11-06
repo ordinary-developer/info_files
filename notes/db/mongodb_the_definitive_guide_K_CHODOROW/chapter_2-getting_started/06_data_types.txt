@@ -1,0 +1,111 @@
+ ##########
+ data types
+ ##########
+
+ basic data types 
+ ================
+
+ The only JSON's types are
+ null, boolean, numeric, string, array, object.
+
+ The most common types in mongodb are:
+ - null
+   {"x" : null}
+
+ - boolean
+   {"x" : true}
+
+ - number 
+   the shell defaults to using 64-bit floating point numbers.
+   {"x" : 3.14} or {"x" : 3}
+   for integers, use the "NumberInt" or "NumberLong" classes, which 
+   represent 4-byte or 8-byte intergers, respectively.
+   {"x" : NumberInt("3")} or {"x" : NumberLong("3")}
+
+ - string
+   {"x" : "foobar"} (any string of UTF-8 characters)
+
+ - date
+   {"x" : new Date()} (are stored as milliseconds since the epoch)
+
+ - regular expression
+   {"x" : /foobar/i}
+
+ - array
+   {"x" : ["a", "b", "c"]}
+
+ - embedded document
+   {"x" : {"foo" : "bar"}}
+
+ - object id
+   An object id is a 12-byte ID for documents.
+   {"x" : ObjectId()}
+
+ - binary data
+   Binary data is a string of arbitrary bytes. It cannot be manipulated
+   from the shell. Binary data is the only way to save non-UTF-8 strings
+   to the database.
+
+ - code
+   {"x" : function() { /* ... */}}
+    
+ 
+
+ dates
+ =====
+
+ In JavaScript, the "Date" class is used for MongoDB's date type.
+
+ When creating a new Date object, always call "new Date(...)",
+ not just "Date()". 
+ Calling the constructor as a function (that is, not including "new")
+ returns a string representation of the date, not an actual Date object.
+
+
+
+ arrays
+ ======
+
+ Arrays are the values that can interchangeably used for both 
+ orderd operations (as though they were lists, stacks, or queues)
+ and unordered operations (as though they were sets). 
+
+ For example
+ {"things" : ["pie", 3.14]}
+
+ MongoDB "understands" the structure of arrays.
+
+
+
+ embedded documents
+ ==================
+
+ Documents can be used as the value for a key. 
+ This is called an embedded document.
+
+ For example
+ {
+     "name" : "John Doe",
+     "address" : {
+         "street" : "123 Park Street",
+         "city" : "Anytown",
+         "state" : "NY"
+     }
+ }
+
+ MongoDB "understands" the structure of embedded documents.
+
+
+
+ _id and ObjectIds
+ =================
+
+ Every document stored in MongoDB must have an "_id" key.
+ The "_id" key's value can be any type, but it defaults 
+ (reverts automatically) to an ObjectId.
+ In a single collection, every document must have unique value 
+ for "_id", which ensures that every document in a collection
+ can be uniquely identified.
+
+ ObjectIds use 12 bytes for storing.
+

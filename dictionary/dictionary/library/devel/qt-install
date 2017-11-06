@@ -1,70 +1,86 @@
- ############################
+ ###############
  QT INSTALLATION
- ############################
+ ###############
 
- installation
- ------------ 
+ installation from sources
+ =========================
+
  To build from sources
  enter your temp directory
   ------------------------------------------------------------------------
- | $ git clone git://gitorious.org/qt/qt5.git     			 |
- | $ cd qt5								 |
- | $ sudo ./init-repository						 |
- | $ sudo ./configure -prefix $PWD/qtbase -opnesource			 |
- | $ sudo make -j 2							 |
- | $ sudo make install							 |
+ | $ git clone git://gitorious.org/qt/qt5.git     			             |
+ | $ cd qt5								                                 |
+ | $ sudo ./init-repository						                         |
+ | $ sudo ./configure -prefix $PWD/qtbase -opnesource			         |
+ | $ sudo make -j 4							                             |
+ | $ sudo make install							                         |
  -------------------------------------------------------------------------
 
- alternative installation
- ------------------------
+ 
+ installation from binaries
+ ==========================
+
  Copy from qt-project online installer
-
- then print 
+ then type (may be under root)
  -------------------------------------------------------------------------
- | $ chmod +x qt-linux-opensource-1.4.0-x86-online.ru			 |	
- | $ ./qt-linux-opensource-1.4.0-x86-online.ru				 |
+ | $ chmod +x qt-linux-opensource-1.4.0-x86-online.ru			         |	
+ | $ ./qt-linux-opensource-1.4.0-x86-online.ru				             |
  -------------------------------------------------------------------------
 
  May be you need to install
  -------------------------------------------------------------------------
- | $ sudo apt-get install make g++ libglu1-mesa-dev			 |
+ | $ sudo apt-get install make g++ libglu1-mesa-dev			             |
+ -------------------------------------------------------------------------
+ or
+ -------------------------------------------------------------------------
+ | $ sudo apt-get install libgl1-mesa-dev			                	 |
  -------------------------------------------------------------------------
 
 
- compiling issues
- ----------------
+ creating applications
+ =====================
+
  to compile a qt project you need
  
- 1. Change <QtGui/WidgetName> to <QtWidget/WidgetName>
- 2. Now <QtApplication> is situated in <QtWidgets>
-    and QSound is situated in <QtMultimedia>
- 3. Open the .pro file after its creation and add at the end of the file
+ 1. run 'qmake -project'
+ 2. Open the .pro file after its creation and add at the end of the file
 	CONFIG = qt     
 	QT += widgets
- 4. run 'qmake'
+ 3. run 'qmake Project.pro'
+ 4. run 'make'
 
- you can also use the next script
- -------------------------------------------------------------------------
- | cat qt4.sh								 |	
- | #!/bin/bash								 |
- | set -e 								 |	
- | for a in *.{cpp,h}; do						 |
- |   if [ -f $a ]; then							 |
- |     sed 's/^#include <QtGui>/#include <QtWidgets>/' $a > /tmp/$a~;    |
- |     sed 's/^#include </#include <QtWidgets\//' /tmp/$a~ > $a; rm /tmp/$a~; 
- |   fi;								 |
- | done									 |
- -------------------------------------------------------------------------
+ Notes*:
+ - May be it will be necessary in your source code 
+   change "<QtGui/WidgetName>" to "<QtWidget/WidgetName>"
+ - Now <QtApplication> is situated in <QtWidgets>
+   and QSound is situated in <QtMultimedia>
 
- the type
+
+ auxiliary notes
+ ===============
+ 
+ you can also use the next script for converting from qt4
  -------------------------------------------------------------------------
- | qmake -project							 |
- | cat >> *.pro <<-stop							 |
- | CONFIG=qt								 |
- | QT += widgets							 |
- | stop									 |
- | qmake *.pro								 |
- | make									 |
+ | cat qt4.sh								                             | 	
+ | #!/bin/bash								                             |
+ | set -e 								                                 |	
+ | for a in *.{cpp,h}; do						                         |
+ |  if [ -f $a ]; then							                         |
+ |   sed 's/^#include <QtGui>/#include <QtWidgets>/' $a > /tmp/$a~;      |
+ |   sed 's/^#include </#include <QtWidgets\//' /tmp/$a~ > $a; rm /tmp/$a~; 
+ |  fi;								                                     |
+ | done									                                 |
  -------------------------------------------------------------------------
- you put this in .. and run it from the project’s directory: 
- ../qt4.sh
+ you put this in ".." and run it from the project’s directory: 
+ "../qt4.sh"
+
+ for editing .pro file
+ -------------------------------------------------------------------------
+ | qmake -project				                            			 |
+ | cat >> *.pro <<-stop							                         |
+ | CONFIG=qt								                             |
+ | QT += widgets							                             |
+ | stop									                                 |
+ | qmake *.pro								                             |
+ | make									                                 |
+ -------------------------------------------------------------------------

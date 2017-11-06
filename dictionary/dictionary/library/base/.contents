@@ -2,6 +2,7 @@ alsa-config  		- info about alsa configuring
 archives-commands	- info about archives using
 build-env 		- info about making build envrinment
 chroot-using 		- info about chroot using
+font-installing         - info about font installation
 mounting-config		- info about mounting systems
 sudo-config 		- info about sudo configuring
 useful-commands		- info about useful commands

@@ -2,6 +2,10 @@
  BASH BASE CONFIG
  ############################
 
+ .bashrc
+ --------
+ TERM=xterm-256color
+
  environment variables
  -------------
 

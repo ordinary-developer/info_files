@@ -1,2 +1,3 @@
 base-config	- info about bash configuration
+tmux        - info about tmux
 xterm-config 	- info about xterm configuration

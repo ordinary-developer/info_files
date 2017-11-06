@@ -1,0 +1,63 @@
+ #################################
+ introduction to the mongodb shell
+ #################################
+
+ a mongodb client
+ ================
+
+ to see the database the global variable "db"
+ is currently assigned to 
+ --------------------------------------------------------------------
+ | > db                                                             |
+ --------------------------------------------------------------------
+
+ to select another database (for example, "foobar")
+ --------------------------------------------------------------------
+ | > use foobar                                                     |
+ --------------------------------------------------------------------
+
+ basic operations with the shell (CRUD)
+ ======================================
+
+ to CREATE a document use the "insert()" function
+ --------------------------------------------------------------------
+ | > post = { "title" : "My Blog Post" }                            |
+ --------------------------------------------------------------------
+ and then
+ --------------------------------------------------------------------
+ | > db.blog.insert(post)                                           |
+ --------------------------------------------------------------------
+
+ to READ some stuff use "find()" or "findOne()" functions
+ --------------------------------------------------------------------
+ | > db.blog.find()                                                 |
+ --------------------------------------------------------------------
+ for fetching only one document
+ --------------------------------------------------------------------
+ | > db.blog.findOne()                                              |
+ --------------------------------------------------------------------
+
+ to UPDATE a document use the "update" functions
+ first modify a variable (document)
+ --------------------------------------------------------------------
+ | > post.comments = []                                             |
+ --------------------------------------------------------------------
+ then perfom the update
+ --------------------------------------------------------------------
+ | > db.blog.update({title : "My Blog Post"}, post)                 |
+ --------------------------------------------------------------------
+ Where the first argument is the criteria to find 
+ which document to update, and the second is the new document
+
+ to DELETE a document use the "delete" statement:
+ Called with no parameters, it removes all documents from a collection.
+ It can also take a document specifying criteria for removal.
+ --------------------------------------------------------------------
+ | > db.blog.remove({title: "My Blob Post"})                        |
+ --------------------------------------------------------------------
+
+
+
+
+
+

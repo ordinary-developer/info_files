@@ -1,0 +1,29 @@
+ ################
+ starting mongodb
+ ################
+
+
+ common info
+ ===========
+
+ first it is necessary to create a folder "/data/db".
+ (may be "~/data/db")
+ and your user must have permissions to write to this folder
+ and then after the same user
+ --------------------------------------------------------------------
+ | $ mongod                                                         |
+ --------------------------------------------------------------------
+
+ If you enable the interface with the "--rest" option to mongod
+ --------------------------------------------------------------------
+ | $ mongod --rest                                                  |
+ --------------------------------------------------------------------
+ you may access it via a port that is 1000 more than the configured
+ mongod port. The default port for the HTTP interface is 28017. 
+
+ To access the HTTP interface an administrator may point a browser to
+ --------------------------------------------------------------------
+ | http://localhost:28017                                           |
+ --------------------------------------------------------------------
+ if mongod is running with the default port on the local machine.
+

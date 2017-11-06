@@ -1,20 +1,11 @@
- ############################
- BUILD ENV
- ############################
+BUILD ENV
+========
 
+Solution
+--------
 
- prerequisites 
- =============
-
- Sometimes it is necessary to install base utils
- ------------------------------------------------------------------------
- | $ sudo apt-get install build-essential autconf make 			|
- ------------------------------------------------------------------------
- for vim, vifm, mc use ncurses lib
- ------------------------------------------------------------------------
- | $ sudo apt-get install libncursesw5-dev				|
- ------------------------------------------------------------------------
- sometimes it is necceary to install cmake
- ------------------------------------------------------------------------
- | $ sudo apt-get install cmake						|
- ------------------------------------------------------------------------ 
+Sometimes it is necessary to install base environment
+for further cpp compilation:
+```
+$ sudo apt-get install build-essential autoconf make
+```
