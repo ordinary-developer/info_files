@@ -193,6 +193,8 @@ Error message and password prompt
 
 <li>django installing</li>
 
+<li>Draft of 'pelican-creating_a_blog'</li>
+
 <li>github forking</li>
 
 <li>github README.md</li>
@@ -234,6 +236,8 @@ Error message and password prompt
 <li>To center any container</li>
 
 <li>Travis-ci initialization</li>
+
+<li>Writing new arcticle</li>
 
 <li>Xdebug installation</li>
 
@@ -5270,13 +5274,13 @@ Error message and password prompt
 <div modified="20141203075826192" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div modified="20171203134542244" title="$:/state/sidebar">
+<div modified="20171203135950084" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div modified="20150204083405288" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/More</pre>
 </div>
-<div list="[[Simple Google test project]] [[Basic C++ Google Mock linux environment]] [[GoogleTest compiling]]" title="$:/StoryList">
+<div list="[[Writing new arcticle]] [[Draft of 'pelican-creating_a_blog']] [[Simple Google test project]] [[Basic C++ Google Mock linux environment]] [[GoogleTest compiling]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -5293,7 +5297,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20141203080017635" modified="20171203134618015" title="$:/temp/NewTagName">
+<div created="20141203080017635" modified="20171203135403063" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
 <div created="20150712080825559" modified="20160927122221640" title="$:/temp/search">
@@ -6128,6 +6132,46 @@ To install django you can create a virtual environment for it and then in this e
 ```
 pip install django
 ```</pre>
+</div>
+<div created="20170528140320628" draft.of="pelican-creating_a_blog" draft.title="pelican-creating_a_blog" modified="20171203135334832" tags="pelican python" title="Draft of 'pelican-creating_a_blog'">
+<pre>&lt;h3&gt;&lt;b&gt;Installing Pelican&lt;/b&gt;&lt;/h3&gt;
+First you must install Pelican on your system. The best way is to install it in a separate virtual environment.
+
+In Bash 
+
+```
+# enter the python sandbox directory
+$ cd  ~/sandboxes/python 
+# creating a virtual environment
+$ python pyvenv pelican
+```
+
+
+&lt;h3&gt;&lt;b&gt;Creating a blog&lt;/b&gt;&lt;/h3&gt;
+
+To create a blog, first you must create the repository for this blog. In my case I created in in Github. It has the next name: `ordinary-developer.github.io`
+
+in your work folder (here you blog repository will be created)
+
+```
+$ source ~/sandboxes/python/pelican/bin/activate
+(pelican) $ git clone git@github.com:ordinary-developer/ordinary-developer.github.io
+(pelican) $ cd ordinary-developer.github.io
+(pelican) $ pelican-quickstart
+# ... answer some questions
+# &gt; Where do you want to create your new web site? - Enter
+# &gt; What will be the title of this web site? - You title here (e.g. &quot;it blog&quot;)
+# &gt; Who will be he author of this web site? - You auther (e.g. &quot;great-developer&quot;)
+# &gt; What will be the default language of this web site? - en
+# &gt; Do you want to specify a URL prefix? e.g., http://example.com (Y/n) - n
+# &gt; Do you want to enable article pagination? (Y/n) - n
+# &gt; What is you time zone? [Europe/Paris] - Europe/Moscow
+# &gt; Do you want to generate a Fagfile/Makefile to automate generation and publishing (Y/n) - n
+# &gt; Do you want an auto-reload &amp; simpleHTTP script to assist with theme and site development? (Y/n) - n.
+```
+
+
+</pre>
 </div>
 <div created="20150204071155868" modified="20150204082457089" tags="git github" title="github forking">
 <pre>If you want to contribute to an existing project to which you don’t have push
@@ -7407,6 +7451,80 @@ Where 400px and 380px are the width and the height of the image respectively
     &lt;li&gt;create a file '.travis.yml' in your project&lt;/li&gt;
     &lt;li&gt;push your project to github&lt;/li&gt;
 &lt;/ul&gt;
+</pre>
+</div>
+<div created="20171203135344999" modified="20171203135948289" tags="pelican" title="Writing new arcticle">
+<pre>&lt;h3&gt;&lt;b&gt;Writing an article&lt;/b&gt;&lt;/h3&gt;
+To add an article in the folder `src/content` inside your repository create a file (e.g. `first_article.md`) with the next content:
+
+```
+Title: Hello, World!
+Date: 2017-04-05 13:04
+Modified: 2017-04-05 13:04
+
+This is a test blog post.
+```
+
+or for html
+
+```
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My super title&lt;/title&gt;
+        &lt;meta name=&quot;tags&quot; content=&quot;thats, awesome&quot; /&gt;
+        &lt;meta name=&quot;date&quot; content=&quot;2012-07-09 22:28&quot; /&gt;
+        &lt;meta name=&quot;modified&quot; content=&quot;2012-07-10 20:14&quot; /&gt;
+        &lt;meta name=&quot;category&quot; content=&quot;yeah&quot; /&gt;
+        &lt;meta name=&quot;authors&quot; content=&quot;Alexis Métaireau, Conan Doyle&quot; /&gt;
+        &lt;meta name=&quot;summary&quot; content=&quot;Short version for index and feeds&quot; /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        This is the content of my super blog post.
+    &lt;/body&gt;
+&lt;/html&gt;
+```
+
+And then regenerate the site (you must be in the `src` directory)
+for local testing (disqus will not be working):  
+
+```
+(pelican) $ pelican --ignore-cache -o .. content
+```
+
+and for site publishing (discus will work)
+
+```
+(pelican) $ pelican --relative-urls --ignore-cache -o .. content
+```
+
+
+After that you can create a commit with new changes and push it to github to update the site
+
+```
+$ cd %blog_repository_root%
+$ git add *
+$ git commit 
+$ git push origin master
+```
+
+&lt;hr /&gt;
+&lt;p&gt;Is is also useful to create a script-generator &lt;code&gt;gen.sh&lt;/code&gt;:
+&lt;pre&gt;#!/bin/sh
+
+set -e
+
+rm ../*.html 2&gt;/dev/null || true
+rm -r ../author 2&gt;/dev/null || true
+rm -r ../category 2&gt;/dev/null || true
+rm -r ../rss 2&gt;/dev/null || true
+rm -r ../theme 2&gt;/dev/null || true
+
+pelican --ignore-cache -o .. content
+
+rm -r __pycache__ 2&gt;/dev/null || true
+&lt;/pre&gt;
+then put it to &lt;code&gt;src&lt;/code&gt; directory and start something like this:
+&lt;pre&gt;$ ./gen.sh&lt;/pre&gt;
 </pre>
 </div>
 <div created="20140721173437880" modified="20140721174852528" tags="xdebug php" title="Xdebug installation">
