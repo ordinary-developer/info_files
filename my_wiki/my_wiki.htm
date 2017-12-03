@@ -199,6 +199,8 @@ Error message and password prompt
 
 <li>good wordpress themes</li>
 
+<li>GoogleTest compiling</li>
+
 <li>install new theme for pelican</li>
 
 <li>MySQL client running</li>
@@ -5268,13 +5270,13 @@ Error message and password prompt
 <div modified="20141203075826192" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div modified="20171105175546158" title="$:/state/sidebar">
+<div modified="20171203134542244" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div modified="20150204083405288" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/More</pre>
 </div>
-<div list="[[pelican soder theme]] [[install new theme for pelican]] [[configuring locales and dates in pelican]]" title="$:/StoryList">
+<div list="[[Simple Google test project]] [[Basic C++ Google Mock linux environment]] [[GoogleTest compiling]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -5291,7 +5293,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20141203080017635" modified="20171106161723621" title="$:/temp/NewTagName">
+<div created="20141203080017635" modified="20171203134618015" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
 <div created="20150712080825559" modified="20160927122221640" title="$:/temp/search">
@@ -6261,6 +6263,27 @@ You can add commits to your new-branch many times and when you decide your code 
 <div created="20150629172837862" modified="20150629173020955" tags="wordpress" title="good wordpress themes">
 <pre>&lt;h3&gt;Good themes for online version are&lt;/h3&gt;
 - twenty twelve</pre>
+</div>
+<div created="20171203125356893" modified="20171203134619646" tags="GoogleTest" title="GoogleTest compiling">
+<pre>&lt;h2&gt;Compiling google test&lt;/h2&gt;
+&lt;pre&gt;$ mkdir ~/tmp
+$ cd ~/tmp
+$ git clone https://github.com/google/googletest.git gtest
+$ cd test
+$ cmake .
+$ make --jobs 4
+$ sudo make install
+&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Including in project&lt;/h2&gt;
+&lt;p text-indent=&quot;10px&quot;&gt;
+compile your projects with tests by the next command:
+&lt;/p&gt;
+&lt;pre&gt;
+$ g++ -std=c++17 *.cpp -I/usr/local/include -L/usr/local/lib -lgtest -lpthread -o test_project
+&lt;/pre&gt;
+
+</pre>
 </div>
 <div created="20171105141120712" modified="20171106161711420" tags="pelican" title="install new theme for pelican">
 <pre>&lt;ul&gt;
