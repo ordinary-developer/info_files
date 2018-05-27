@@ -141,6 +141,8 @@ Error message and password prompt
 
 <li>$:/state/sidebar</li>
 
+<li>$:/state/tab/moresidebar-401116514</li>
+
 <li>$:/state/tab/sidebar--1835078512</li>
 
 <li>$:/StoryList</li>
@@ -173,6 +175,10 @@ Error message and password prompt
 
 <li>Boost installing</li>
 
+<li>change default user for source safe</li>
+
+<li>cmd tips and tricks</li>
+
 <li>Commit guidlines</li>
 
 <li>Common git workflow</li>
@@ -189,11 +195,17 @@ Error message and password prompt
 
 <li>Creating a sphinx-doc project</li>
 
+<li>creating visual studio offline installer</li>
+
 <li>Disabling autorun</li>
 
 <li>django installing</li>
 
 <li>Draft of 'pelican-creating_a_blog'</li>
+
+<li>git ssl key error</li>
+
+<li>git tips and tricks</li>
 
 <li>github forking</li>
 
@@ -229,6 +241,10 @@ Error message and password prompt
 
 <li>Running JUnit</li>
 
+<li>shared folder mounting in windows10 in virtualbox</li>
+
+<li>shutdown win from cli</li>
+
 <li>Simple Google test project</li>
 
 <li>Sip installer</li>
@@ -236,6 +252,14 @@ Error message and password prompt
 <li>To center any container</li>
 
 <li>Travis-ci initialization</li>
+
+<li>vim tips and tricks</li>
+
+<li>visual studio 6 tips and tricks</li>
+
+<li>vs6_debug_break_execution.png</li>
+
+<li>windows10 long time working disabling</li>
 
 <li>Writing new arcticle</li>
 
@@ -5232,32 +5256,7 @@ Error message and password prompt
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[$:/Import]]
-# [[$:/isEncrypted]]
-# [[$:/NewFieldName]]
-# [[$:/NewTagName]]
-# [[$:/ShowEditPreview]]
-# [[Adding Curl to cpp project]]
-# [[Adding JsonCpp to cpp project]]
-# [[Base git config]]
-# [[Basic C++ linux environment]]
-# [[Boost installing]]
-# [[Common git workflow]]
-# [[Compile a basic Qt application]]
-# [[Compiling a C++11 project]]
-# [[Creating a bitbucket repository]]
-# [[Creating a github repository]]
-# [[Disabling autorun]]
-# [[Installing QT]]
-# [[MySQL client running]]
-# [[PHPUnit installation]]
-# [[PHPUnit running]]
-# [[python3 virtualenv making]]
-# [[Running JUnit]]
-# [[Simple Google test project]]
-# [[To center any container]]
-# [[Travis-ci initialization]]
-# [[Xdebug installation]]</pre>
+# [[vs6_debug_break_execution.png]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -5274,13 +5273,16 @@ Error message and password prompt
 <div modified="20141203075826192" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div modified="20171203135950084" title="$:/state/sidebar">
+<div modified="20180526173159724" title="$:/state/sidebar">
 <pre>yes</pre>
+</div>
+<div modified="20180516102650200" title="$:/state/tab/moresidebar-401116514">
+<pre>$:/core/ui/MoreSideBar/Tags</pre>
 </div>
 <div modified="20150204083405288" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/More</pre>
 </div>
-<div list="[[Writing new arcticle]] [[Draft of 'pelican-creating_a_blog']] [[Simple Google test project]] [[Basic C++ Google Mock linux environment]] [[GoogleTest compiling]]" title="$:/StoryList">
+<div list="[[git ssl key error]] [[Base git config]] GettingStarted" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -5297,10 +5299,10 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20141203080017635" modified="20171203135403063" title="$:/temp/NewTagName">
+<div created="20141203080017635" modified="20180526172516270" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
-<div created="20150712080825559" modified="20160927122221640" title="$:/temp/search">
+<div created="20150712080825559" modified="20180516102649224" title="$:/temp/search">
 <pre></pre>
 </div>
 <div modified="20141126100317098" title="$:/theme">
@@ -5740,6 +5742,28 @@ You cans find some additional information [[here|http://ubuntuforums.org/showthr
 
 </pre>
 </div>
+<div created="20180516102022799" modified="20180516102048169" tags="sourcesafe" title="change default user for source safe">
+<pre>&lt;h3&gt;Chainging the default user for microsoft source safe&lt;/h3&gt;
+&lt;p&gt;To change the default user for the source safe you can use one of the next options:
+&lt;ul&gt;
+&lt;li&gt;You could set an environment variable &lt;b&gt;ssuser&lt;/b&gt; from the commnad line.&lt;br&gt;If you are running from a command line &lt;pre&gt;set ssuser=username&lt;/pre&gt; where &lt;i&gt;username&lt;/i&gt; is you user.&lt;br&gt;
+&lt;/li&gt;
+&lt;li&gt;You can set the environment variable &lt;b&gt;ssuser&lt;/b&gt; by write clicking on &lt;i&gt;&quot;My computer-&gt; Properties&quot;&lt;/i&gt; and the &lt;i&gt;&quot;advance&quot;&lt;/i&gt; tab and clicking on &lt;i&gt;&quot;environment variables&quot;&lt;/i&gt; and adding ssuser.
+&lt;/li&gt;
+&lt;li&gt;If you have a shortcut to SourceSafe explorer you can pass the user name with -y option in the target for the properties of the shortcut. &lt;pre&gt;C:\last6fix\ssexp.exe -yadmin&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+You can always change users in the explorer by  &lt;i&gt;&quot;File-&gt;Open&quot;&lt;/i&gt; sourceSafe database and typing in the username box a new user.&lt;br&gt;Normally the default user will match the user name you are loggrd into the box as.
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;</pre>
+</div>
+<div created="20180516102111753" modified="20180516102140791" tags="cmd" title="cmd tips and tricks">
+<pre>!!! To change the path environment variable in Windows:
+```
+&gt; set Path=%PATH%;your_dir_name
+```</pre>
+</div>
 <div created="20150204085105382" modified="20150204090036316" tags="git" title="Commit guidlines">
 <pre>You can check for whitespace errors. Then you can fix your errors.
 
@@ -6077,6 +6101,28 @@ Then in your doc-root-directory  (./src/doc) type
 make html
 ```</pre>
 </div>
+<div created="20180516102155875" modified="20180516102212051" tags="[[visual studio]]" title="creating visual studio offline installer">
+<pre>&lt;h3&gt;Creation a visual studio 2017 offline installer&lt;/h3&gt;
+&lt;p&gt;To create a visual studio 2017 offline installer: 
+&lt;ol&gt;
+&lt;li&gt;Download the online installer of a needed redaction (community, professional or enterprise) from &lt;a href=&quot;https://www.visualstudio.com/vs/&quot;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;To download the full distributive type in the command line (your exe file may be different):
+&lt;pre&gt;vs_enterprise.exe ----layout [path where to put files]
+&lt;/pre&gt;
+For example:
+&lt;pre&gt;&gt; vs_enterprise.exe ----layout c:\vs2017offline
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;All localazations will be downloaded by default. But it is possible to decrease the size of downloaded files by specifying only necessary. To do such a thing it is necessary to add a key:
+&lt;pre&gt;----lang [list of languages]&lt;/pre&gt;
+For example:
+&lt;pre&gt;&gt; vs_enterprise.exe --layout c:\vs2017offline --lang en-US ru-RU&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;After that run the installation file from the distributive folder.&lt;/li&gt;
+&lt;/ol&gt;
+This article is from &lt;a href=&quot;http://www.arutunyan.kharkiv.org/how-download-visual-studio-iso/&quot;&gt;here&lt;/a&gt;.
+&lt;/p&gt;</pre>
+</div>
 <div created="20141023080403907" modified="20141023082502018" tags="windows" title="Disabling autorun">
 <pre>To switch off the autorun you can use two ways
 
@@ -6171,6 +6217,122 @@ $ source ~/sandboxes/python/pelican/bin/activate
 ```
 
 
+</pre>
+</div>
+<div created="20180526172512689" modified="20180526173151237" tags="git" title="git ssl key error">
+<pre>&lt;p&gt;
+If you have something like this:
+&lt;blockquote&gt;unable to access  to 'your-repository'
+certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CLRFile:none
+&lt;/blockquote&gt;
+you can use two decisions. (from &lt;a href=&quot;https://stackoverflow.com/questions/35821245/github-server-certificate-verification-failed?utm_medium=organic&amp;utm_source=google_rich_qa&amp;utm_campaign=google_rich_qa&quot;&gt;here&lt;/a&gt;)
+&lt;/p&gt;
+
+&lt;h3&gt;First decision (simple)&lt;/h3&gt;
+&lt;p&gt;You can disable SSL verification, (if the project does not require a high level of security more then login/password) by typing :
+&lt;pre&gt;$ git config ----global http.sslverify false&lt;/pre&gt;
+&lt;/p&gt;
+
+&lt;h3&gt;Second desicion&lt;/h3&gt;
+&lt;p&gt;Make sure first that you have certificates installed on your Debian in /etc/ssl/certs.&lt;/p&gt;
+&lt;p&gt;If not, reinstall them:
+&lt;pre&gt;$ sudo apt-get install --reinstall ca-certificates&lt;/pre&gt;
+&lt;p&gt;Since that package does not include root certificates, add:&lt;/p&gt;
+&lt;pre&gt;$ sudo mkdir /usr/local/share/ca-certificates/cacert.org
+$ sudo wget -P /usr/local/share/ca-certificates/cacert.org \ http://www.cacert.org/certs/root.crt \ http://www.cacert.org/certs/class3.crt
+$ sudo update-ca-certificates&lt;/pre&gt;
+
+&lt;p&gt;Make sure your git does reference those CA:
+&lt;pre&gt;$ git config --global http.sslCAinfo /etc/ssl/certs/ca-certificates.crt
+&lt;/pre&gt;</pre>
+</div>
+<div created="20180508111610547" modified="20180516104721314" tags="git" title="git tips and tricks">
+<pre>!!! ''Renaming branches''
+if you want to rename a branch while pointed to any branch, do:
+
+```
+$ git branch -m &lt;oldname&gt; &lt;newname&gt;
+```
+If you want to rename the current branch, you can do:
+
+```
+$ git branch -m &lt;newname&gt;
+```
+&lt;br&gt;
+
+!!! ''Delete a remote branch''
+
+```
+$ git push origin :&lt;branch&gt;
+```
+
+or (since git 1.7.0)
+
+```
+$ git push origin --delete &lt;branch-name&gt;
+```
+
+&lt;h3&gt;&lt;b&gt;Push a branch to a server&lt;/b&gt;&lt;/h3&gt;
+&lt;p&gt;
+to push data when there is no such a branch on the server:
+&lt;pre&gt;git push origin branch_name&lt;/pre&gt;
+where &lt;i&gt;origin&lt;/i&gt; is a server name and &lt;i&gt;branch_name&lt;/i&gt; is a branch name
+to push new data over old data (a such branch already exists on the server)
+
+&lt;pre&gt;git push ----force-with lease origin branch_447&lt;/pre&gt;
+&lt;/p&gt;
+
+&lt;h3&gt;&lt;b&gt;Rebasing&lt;/b&gt;&lt;/h3&gt;
+&lt;p&gt;
+To rebase over a branch:
+&lt;pre&gt;$ git checkout branch_to_rebase
+$ git fetch origin
+$ git rebase origin/branch_to_rebase_over
+&lt;/pre&gt;
+where &lt;i&gt;branch_to_rebase&lt;/i&gt; is your current branch (over which you want to rebase) and &lt;i&gt;branch_to_rebase_over&lt;/i&gt; is a branch over which you want to rebase
+&lt;/p&gt;
+
+&lt;br&gt;
+
+!!! ''See all working branches (my case)''
+
+```
+$ git branch --list | grep -v 'solved'
+```
+&lt;br&gt;
+
+!!!''To see changes in the specific file by the specific user''
+
+```
+git log --author=your_teammate -- path/to/file
+```
+
+
+!!!''To see a commit info''
+
+to see info for the 5-th commit:
+
+```
+$ git show `git log --oneline -5 | awk 'FNR == 5 {print $1}'`
+```
+
+to see statistics for the 5-th commit:
+
+```
+$ git show `git log --oneline -5 | awk 'FNR == 5 {print $1}'` --stat
+```
+
+!!!''To see a commit info (2-nd variant)'' 
+
+```
+$ git log --oneline -5 | awk 'FNR == 5 {print $1}' | git show
+```
+
+to see statistics for the 5-th commit:
+
+```
+$ git log --oneline -5 | awk 'FNR == 5 {print $1}' | git show --stat
+```
 </pre>
 </div>
 <div created="20150204071155868" modified="20150204082457089" tags="git github" title="github forking">
@@ -7267,6 +7429,25 @@ $ java -classpath .:junit-4.11.jar:hamcrest-core-1.3.jar \-&gt;
     org.junit.runner.JUnitCore TestClass
 ```</pre>
 </div>
+<div created="20180508111709868" modified="20180508111749665" tags="virtualbox windows" title="shared folder mounting in windows10 in virtualbox">
+<pre>&lt;h3&gt;Mounting shared folders&lt;/h3&gt;
+&lt;p&gt;To mount a shared folder use the next command in the console&lt;/p&gt;
+&lt;pre&gt;net use x: \\vboxsvr\ShareName&lt;/pre&gt;
+&lt;p&gt;or use &quot;map network drive&quot; with the &quot;\\vboxsvr\ShareName&quot; shared folder
+
+&lt;p&gt;Of cause you must install VirtualBox additions&lt;/p&gt;
+</pre>
+</div>
+<div created="20180508111806763" modified="20180508111818859" tags="windows" title="shutdown win from cli">
+<pre>!!Restart windows
+```
+&gt; shutdown -t 0 -r -f
+```
+!!Shutdown windows
+```
+&gt; shutdown -t 0 -s -f
+```</pre>
+</div>
 <div created="20140225111734401" modified="20151007165733904" tags="CMake [[Google Mock]] TTD" title="Simple Google test project">
 <pre>The contens of your //main.cpp// file
 
@@ -7451,6 +7632,236 @@ Where 400px and 380px are the width and the height of the image respectively
     &lt;li&gt;create a file '.travis.yml' in your project&lt;/li&gt;
     &lt;li&gt;push your project to github&lt;/li&gt;
 &lt;/ul&gt;
+</pre>
+</div>
+<div created="20180508111830982" modified="20180516102705994" tags="vim" title="vim tips and tricks">
+<pre>&lt;h2&gt;To interact with the clipboard&lt;/h2&gt;
+&lt;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;b&gt;copiying:&lt;/b&gt;&lt;pre&gt;&quot;*yy&lt;/pre&gt;or &lt;pre&gt;&quot;+yy&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;pasting:&lt;/b&gt;&lt;pre&gt;&quot;*p&lt;/pre&gt;or&lt;pre&gt;&quot;+p&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;
+
+&lt;h2&gt;Replace operation&lt;/h2&gt;
+&lt;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;b&gt;:s/foo/bar/g&lt;/b&gt; - Change each 'foo' to 'bar' in the current line.
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;b&gt;:%s/foo/bar/g&lt;/b&gt; - Change each 'foo' to 'bar' in all the lines.
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;b&gt;:5,12s/foo/bar/g&lt;/b&gt; - Change each 'foo' to 'bar' for all lines from line 5 to line 12 (inclusive).
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;b&gt;:'a,'bs/foo/bar/g&lt;/b&gt; - Change each 'foo' to 'bar' for all lines from mark a to mark b inclusive (see Note below).
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;b&gt;:'&lt;,'&gt;s/foo/bar/g&lt;/b&gt; - When compiled with +visual, change each 'foo' to 'bar' for all lines within a visual selection. Vim automatically 
+appends the visual selection range ('&lt;,'&gt;) for any ex command when you select an area and enter :. Also, see Note below.
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;b&gt;:.,$s/foo/bar/g&lt;/b&gt; - Change each 'foo' to 'bar' for all lines from the current line (.) to the last line ($) inclusive.
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;b&gt;:.,+2s/foo/bar/g&lt;/b&gt; - Change each 'foo' to 'bar' for the current line (.) and the two next lines (+2).
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;b&gt;:g/^baz/s/foo/bar/g&lt;/b&gt; - Change each 'foo' to 'bar' in each line starting with 'baz'.
+&lt;/li&gt;
+
+&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;h2&gt;Marks&lt;/h2&gt;
+&lt;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;b&gt;ma&lt;/b&gt; - set mark a at current cursor location
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;b&gt;'a&lt;/b&gt; - jump to line of mark a (first non-blank character in line)
+&lt;/li&gt;
+
+
+&lt;li&gt;
+&lt;b&gt;d'a&lt;/b&gt; - delete from current line to line of mark a
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;b&gt;c'a&lt;/b&gt; - change text from current line to line of mark a
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;b&gt;y'a&lt;/b&gt; - yank text to unnamed buffer from cursor to position of mark a
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;b&gt;:marks&lt;/b&gt; - list all the current marks
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;b&gt;:marks aB&lt;/b&gt; - list marks a, B
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;b&gt;:delmarks a&lt;/b&gt; - delete mark a
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;b&gt;:delmarks a-d&lt;/b&gt; - delete marks a, b, c, d
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;b&gt;:delmarks abxy&lt;/b&gt; - delete marks a, b, x, y
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;b&gt;:delmarks aA&lt;/b&gt; - delete marks a, A
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;b&gt;:delmarks!&lt;/b&gt; - delete all lowercase marks for the current buffer (a-z)
+&lt;/li&gt;
+
+&lt;/ul&gt;
+&lt;/p&gt;</pre>
+</div>
+<div created="20180428063241211" modified="20180515151142765" tags="[[visual studio]]" title="visual studio 6 tips and tricks">
+<pre>&lt;h2&gt;Editing&lt;/h2&gt;
+&lt;p&gt;Some useful shortcuts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;b&gt;Alt-F8&lt;/b&gt; - Format Selection
+&lt;/li&gt;
+&lt;li&gt;
+&lt;b&gt;Ctr-Shit-8&lt;/b&gt; View whitespaces
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Code navigation&lt;/h2&gt;
+&lt;h3&gt;Base navigation&lt;/h3&gt;
+&lt;p&gt;To navigate by a pharse, select the phrase in an editor and then
+&lt;ul&gt;
+&lt;li&gt;
+&lt;b&gt;Ctrl-F3&lt;/b&gt; - find next
+&lt;/li&gt;
+&lt;li&gt;
+&lt;b&gt;Shift-F3&lt;/b&gt; - find previous
+&lt;/li&gt;
+&lt;li&gt;
+&lt;b&gt;Ctrl-d&lt;/b&gt; - find the text under the cursor (without need to select the text)
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;h3&gt;Bookmarks&lt;/h3&gt;
+&lt;p&gt;Some useful bookmark shortcuts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;b&gt;Ctrl-F2&lt;/b&gt; - toggle bookmark
+&lt;/li&gt;
+&lt;li&gt;
+&lt;b&gt;F2&lt;/b&gt; - next bookmark
+&lt;/li&gt;
+&lt;li&gt;
+&lt;b&gt;Shift - F2&lt;/b&gt; - previous bookmark
+&lt;/li&gt;
+&lt;li&gt;
+&lt;b&gt;Ctrl-Shift-F2&lt;/b&gt; - clear all bookmarks
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;File navigation&lt;/h2&gt;
+&lt;p&gt;
+To go to a header file:
+&lt;ul&gt;
+&lt;li&gt;
+when on a header file inclusion string press &lt;b&gt;Ctrl-Shift-G&lt;/b&gt;;
+&lt;/li&gt;
+&lt;li&gt;
+select by a mouse all the header file in a header file include string, click the right mouse button and select &lt;b&gt;Go to a header ...&lt;/b&gt;;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+To go to a corresponding cpp file (from a header file)
+&lt;ul&gt;
+&lt;li&gt;
+in a header file press &lt;b&gt;Ctrl-F6&lt;/b&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+To go to a source dialog file (mfc):
+&lt;ul&gt;
+&lt;li&gt;
+on the dialog window press &lt;b&gt;Ctrl-W&lt;/b&gt;;
+&lt;/li&gt;
+&lt;li&gt;
+double click the left mouse button.
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;h2&gt;Debug&lt;/h2&gt;
+
+&lt;h3&gt;Breakpoints&lt;/h3&gt;
+&lt;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;b&gt;F9&lt;/b&gt; - set a breakpoint;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;b&gt;Ctrl-Shift-F9&lt;/b&gt; - delete all breakpoints in a project.
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;h3&gt;Execution Flow&lt;/h3&gt;
+&lt;p&gt;To see where the needed code is
+&lt;ol&gt;
+&lt;li&gt;
+Start the debugger
+&lt;/li&gt;
+&lt;li&gt;
+click (as a user) on necessary buttons
+&lt;/li&gt;
+&lt;li&gt;
+In a debug mode break the execution (from the Main Menu &lt;b&gt;Debug&lt;/b&gt;-&gt;&lt;b&gt;Break&lt;/b&gt;) or clicking the button on a bar
+[img[vs6_debug_break_execution.png]]
+&lt;/li&gt;
+&lt;li&gt;
+In a debug mode select the necessary window thread (from the Main menu &lt;b&gt;Debug&lt;/b&gt;-&gt;&lt;b&gt;Threads&lt;/b&gt;)
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;
+
+</pre>
+</div>
+<div created="20180508101925152" modified="20180508101925152" tags="images" title="vs6_debug_break_execution.png" type="image/png">
+<pre>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</pre>
+</div>
+<div created="20180508111904257" modified="20180508111921133" tags="windows10" title="windows10 long time working disabling">
+<pre>&lt;h3&gt;To enhance UI speed in windows10&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Win-R -&gt; &quot;services.msc&quot;&lt;/li&gt;
+&lt;li&gt;Look for &quot;Windows Search&quot; and &quot;Superfetch.&quot;&lt;/li&gt;
+&lt;li&gt;Go to each of these entries. Right click on one and select &quot;Properties.&quot; In the dropdown box labeled &quot;Startup type,&quot; choose Disabled. &lt;/li&gt;
+&lt;li&gt;After leaving the properties window, press &quot;Stop&quot; in the upper left corner. Do this for both.&lt;/li&gt;
+&lt;/ul&gt;
+
 </pre>
 </div>
 <div created="20171203135344999" modified="20171203135948289" tags="pelican" title="Writing new arcticle">
