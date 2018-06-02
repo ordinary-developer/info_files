@@ -1,5 +1,4 @@
-base-utils	- info about base utils
-locales-config	- info about locales in Linux
-system-info	- info about system
-monitor-changes	- info about monitoring changes
-system-info 	- info about the system
+base_utils           - info about base utils
+locale_config        - info about locales in Linux
+monitor_file_changes - info about monitoring filesystem changes
+system_info          - info about the system
