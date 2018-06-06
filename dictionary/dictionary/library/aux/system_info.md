@@ -1,25 +1,34 @@
- ############################
- SYSTEM INFO
- ############################
+# system info
 
- To get information about system you must use the next commands
+## memory
+common info:
+```sh
+$ cat /proc/meminfo 
+$ less /proc/meminfo
+```
 
- Memory
- ------
- ------------------------------------------------------------------------
- | $ cat /proc/meminfo (less /proc/meminfo)				|
- |									|
- | $ free								|		
- | $ free -m								|
- | $ free -mt								|
- | $ free -gt								|	
- |									|
- | $ top (about process)						|		
- | $ pstree (tree for processes)					|
- | $ ps -aux (information about processes)				|
- | $ pmap -d pidnumber (info about the process with pid=pidnumber)	|	
- ------------------------------------------------------------------------
+free memory info:
+```sh
+$ free
+$ free -m
+$ free -mt
+$ free -gt
+```
 
+process info:
+```sh
+# info about processes
+$ top 
+
+# tree for processes
+$ pstree
+
+# info about processes
+$ ps -aux
+
+# info about the process with the specified pid
+$ pmap -d <pidnumber>
+```
 
   CPU
  ---
