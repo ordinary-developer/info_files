@@ -30,12 +30,12 @@ $ ps -aux
 $ pmap -d <pidnumber>
 ```
 
-  CPU
- ---
- ------------------------------------------------------------------------
- | $ cat /proc/cpuinfo (less /proc/cpuinfo)				|
- | $ lscpu								|
- ------------------------------------------------------------------------
+
+## cpu
+```sh
+$ cat /proc/cpuinfo
+$ lscpu
+```
 
 
  SYSTEM SOFTWARE
