@@ -38,20 +38,34 @@ $ lscpu
 ```
 
 
- SYSTEM SOFTWARE
- ---------------
- ------------------------------------------------------------------------
- | $ cat /proc/version							|
- | $ uname -mrs								|
- | $ uname -a								|
- |									|
- | $ lsb_release -a							|
- | $ cat /etc/*release*							|
- |									|	
- | $ id username (information about user with username)			|
- | $ uptime (how much the system is running)				|
- | $ dmesg (system loading information)					|
- ------------------------------------------------------------------------
+## distrib and credentials
+linux kernel info:
+```sh
+$ cat /proc/version
+$ uname -mrs
+$ uname -a
+```
+
+linux distrib info:
+```sh
+$ lsb_release -a
+$ cat /etc/*release*
+```
+
+info about user:
+```sh
+$ id <username> 
+```
+
+info about system uptime:
+```sh
+$ uptime 
+```
+
+system loading info:
+```sh
+$ dmesg (system loading information)
+```
 
 
  PCI
