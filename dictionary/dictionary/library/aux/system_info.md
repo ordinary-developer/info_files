@@ -85,13 +85,21 @@ $ lsblk
 ```
 
 
- HARD DRIVES
- -----------
- ------------------------------------------------------------------------
- | $ fdisk -l (about disks)						|
- | $ du -hs /home (for space)						|
- | $ df -h (info about disk)						|
- ------------------------------------------------------------------------
+## hard drives
+info about disks:
+```sh
+$ fdisk -l
+```
+
+info about disk usage
+```sh
+$ du -hs /home
+```
+
+info about free space:
+```sh
+$ df -h
+```
 
 
  ALL HARDWARE
