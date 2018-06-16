@@ -1,4 +1,5 @@
 # system info
+
 ## memory
 common info:
 ```sh
@@ -14,18 +15,23 @@ $ free -mt
 $ free -gt
 ```
 
-process info:
+info about processes:
 ```sh
-# info about processes
 $ top 
+```
 
-# tree for processes
+tree for processes:
+```sh
 $ pstree
+```
 
-# info about processes
+info about processes:
+```sh
 $ ps -aux
+```
 
-# info about the process with the specified pid
+info about the process with the specified pid:
+```sh
 $ pmap -d <pidnumber>
 ```
 
@@ -91,7 +97,7 @@ info about disks:
 $ fdisk -l
 ```
 
-info about disk usage
+info about disk usage:
 ```sh
 $ du -hs /home
 ```
@@ -138,7 +144,7 @@ scanning all hosts:
 $ nmap -sP 192.168.1.1-200 
 ```
 
-scanning all the net on the port 23 and showing where it is open
+scanning all the net on the port 23 and showing where it is open:
 ```sh
 $ nmap -n -p 23 10.0.0.1-254 | grep open -A 2 -B 3
 ```
