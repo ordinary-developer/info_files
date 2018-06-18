@@ -1,7 +1,7 @@
 # common info
 
 ## common building
-For common building you must install the next packages (in Debian):
+for common building you must install the next packages (in Debian):
 ```sh
 $ apt-get install build-essential autoconf cmake
                   libncurses5 libncurses5-dev libncursesw5-dev
