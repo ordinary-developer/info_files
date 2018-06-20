@@ -7,7 +7,7 @@ before installing type:
 # find / | grep -v -e ^/proc -e ^/tmp -e ^/dev > joe_preinstall.list 
 ```
 
-after installing type
+after installing type:
 ```sh
 # find / | grep -v -e ^/proc -e ^/tmp -e ^/dev > joe_postinstall.list
 ```
