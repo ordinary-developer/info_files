@@ -1,27 +1,22 @@
- ############################
- ALSA CONFIG
- ############################
+# alsa config 
 
- To identify the model of sound driver, 
- in the file 
- ------------------------------------------------------------------------
- | /etc/modprobe.d/alsa-base.conf					|
- ------------------------------------------------------------------------
- (but it is for my card)
- ------------------------------------------------------------------------
- | ....                               					|
- | options snd-hda intel model=auto   					|
- ------------------------------------------------------------------------
+to identify the model of sound driver, in the file
+`/etc/modprobe.d/alsa-base.conf` write something next (for my card):
+```sh
+.... 
+ options snd-hda intel model=auto 
+``` 
  
- - To switch on the sound type
- ------------------------------------------------------------------------
- | $alasmixer    							|
- ------------------------------------------------------------------------
- select in alsamixer "Front" in increment it
+to switch on the sound type:
+```sh
+$ alasmixer 
+```
+and select in alsamixer "Front" in increment it
 
- some times, in debian it is useful to do the next
- ------------------------------------------------------------------------
- | $sudo rm /var/lib/alsa/asound.state    				|
- | $sudo aumix                            				|
- | $sudo alsactl store                    				|
- ------------------------------------------------------------------------
+useful commands (in Debian):
+```sh
+$ sudo rm /var/lib/alsa/asound.state 
+$ sudo aumix 
+$ sudo alsactl store                    				|
+```
+
