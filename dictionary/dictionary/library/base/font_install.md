@@ -1,14 +1,3 @@
- ############################
- FONTS
- ############################
-
-
- installtion
- ==========
-
- to install a font simply put it (.ttf file) to the next folder
- 
- ------------------------------------------------------------------------
- | ~/.fonts								|
- ------------------------------------------------------------------------
+# font installation
+to install a font simply put it (.ttf file) to the folder `~/.fonts`
 
