@@ -1,46 +1,41 @@
 # mount config
 
- manual mounting
- ------------------
+## manual mounting
+to mount flash it is necessary to type next command:
+```sh
+# mount -t vfat /dev/sdc1 /media/flash -o iocharset=koi8-r,codepage=866 
+```
 
- To mount flash it is necessary to type next command
- ------------------------------------------------------------------------
- |#mount -t vfat /dev/sdc1 /media/flash -o iocharset=koi8-r,codepage=866 |
- ------------------------------------------------------------------------
- or
- ------------------------------------------------------------------------
- |# mount -t vfat /dev/sdc1 /mnt/flash                                  |
- ------------------------------------------------------------------------
+or
+```sh
+# mount -t vfat /dev/sdc1 /mnt/flash 
+```
 
- To mount a usb-stick under a regular user
- ------------------------------------------------------------------------
- | $ sudo mount -t vfat -o uid=user,gid=group /dev/sdb1 /home/user/flash|
- ------------------------------------------------------------------------
+to mount a usb-stick under a regular user:
+```sh
+$ sudo mount -t vfat -o uid=user,gid=group /dev/sdb1 /home/user/flash
+```
 
-                                                                    
-                                                                    
-                                                                    
+where group you can find from the next command:
+(this command says which groups user who ran this command belongs to)
+```sh
+$ groups                                                             
+```
 
- where group you can find from the next command
- ------------------------------------------------------------------------
- | $ groups                                                             |
- ------------------------------------------------------------------------
- This command syas which groups user who ran this command belongs to
+or just for your options:
+```sh
+$ sudo mount -t vfat -o uid=ivan,gid=ivan /dev/sdb1 ~/flash          |
+```
 
- or just for your options
- ------------------------------------------------------------------------
- | $ sudo mount -t vfat -o uid=ivan,gid=ivan /dev/sdb1 ~/flash          |
- ------------------------------------------------------------------------
+also to see your id and gid use:
+```sh
+$ id
+```
 
- Also to see your id and gid use
- --------------------------------
- | $ id                         |   
- --------------------------------
-
- To mount usb for all
- --------------------------------------------------------------------
- | $ sudo mount --type vfat --option umask=000 /dev/sdb1 /mnt/flash1|
- --------------------------------------------------------------------
+to mount usb for all users:
+```sh
+$ sudo mount --type vfat --option umask=000 /dev/sdb1 /mnt/flash1
+```
 
 
  automate mounting
