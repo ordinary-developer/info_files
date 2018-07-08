@@ -38,38 +38,31 @@ $ sudo mount --type vfat --option umask=000 /dev/sdb1 /mnt/flash1
 ```
 
 
- automate mounting
- ------------------
+## auto mounting
+to mount only your flashes in your folders:
+```sh
+$ sudo blkid /dev/sdb1                                               
+```
 
- To mount only your flashes in your folders
- ------------------------------------------------------------------------
- | $ sudo blkid /dev/sdb1                                               |
- ------------------------------------------------------------------------
- For example the result will be
- /dev/sdb1: UUID="7A82-1B89" TYPE="vfat"
+for example the result will be
+/dev/sdb1: UUID="7A82-1B89" TYPE="vfat"
 
- Now write in /etc/fstab
- ------------------------------------------------------------------------
- | UUID=7A82-1B89  /media/flash1  vfat  user,noauto,noatime,flush  0  0 | 
- ------------------------------------------------------------------------
- Here user may be your user ("ivan" and e.t.c)
- Remember that in the end of you fstab file must be a new line
+now write in '/etc/fstab'
+```sh
+UUID=7A82-1B89  /media/flash1  vfat  user,noauto,noatime,flush  0  0 
+```
+here user may be your user ("ivan" and e.t.c)
+remember that in the end of you fstab file must be a new line
 
- Then simply run
- - to mount
- ------------------------------------------------------------------------
- | $ mount /media/flash1                                                |
- ------------------------------------------------------------------------
- - to unmount
- ------------------------------------------------------------------------
- | $ umount /media/flash1                                               |
- ------------------------------------------------------------------------
+then simply run:
 
- Instead of /media/flash1 you can use /home/ivan/flash1
- for receving rights to writing.
+- to mount:   `$ mount /media/flash1`
+- to unmount: `$ umount /media/flash1`
 
- Also some options can be usefull
- codepage=866, iocharset=koi8-r
+instead of /media/flash1 you can use /home/ivan/flash1
+for receving rights to writing.
+
+also some options can be usefull: `codepage=866, iocharset=koi8-r`
 
 
  scripting
