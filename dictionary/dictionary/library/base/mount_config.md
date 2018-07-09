@@ -15,26 +15,17 @@ to mount a usb-stick under a regular user:
 ```sh
 $ sudo mount -t vfat -o uid=user,gid=group /dev/sdb1 /home/user/flash
 ```
+to find id for your user: `$ id`
+to find gid (group id) for your user: `$ groups`,
 
-where group you can find from the next command:
-(this command says which groups user who ran this command belongs to)
+to mount usb for all users:
 ```sh
-$ groups                                                             
+$ sudo mount --type vfat --option umask=000 /dev/sdb1 /mnt/flash1
 ```
 
 or just for your options:
 ```sh
 $ sudo mount -t vfat -o uid=ivan,gid=ivan /dev/sdb1 ~/flash          |
-```
-
-also to see your id and gid use:
-```sh
-$ id
-```
-
-to mount usb for all users:
-```sh
-$ sudo mount --type vfat --option umask=000 /dev/sdb1 /mnt/flash1
 ```
 
 
