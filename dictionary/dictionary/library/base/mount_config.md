@@ -56,60 +56,57 @@ for receving rights to writing.
 also some options can be usefull: `codepage=866, iocharset=koi8-r`
 
 
- scripting
- ------------------
+## scripting
+if you can't stop umount your flash you can use the next scripts:
 
- If you can't stop umount your flash you can use the next scripts
+brutal script:
+```sh
+#!/bin/sh                                                            
+# try to kill all process politely                                    
+fuser -k TERM -m /media/flash1                                         
+sleep 1                                                              
+# if we have processes yet, we must kill the brutally                 
+fuser -k KILL -m /media/flash1                                        
+sleep 1                                                               
+# and now unmount it                                                  
+```
 
- Brutal script
- ------------------------------------------------------------------------
- |#!/bin/sh                                                             |
- |# try to kill all process politely                                    |
- |fuser -k TERM -m /media/flash1                                        | 
- |sleep 1                                                               |
- |# if we have processes yet, we must kill the brutally                 |
- |fuser -k KILL -m /media/flash1                                        |
- |sleep 1                                                               |
- |# and now unmount it                                                  |
- ------------------------------------------------------------------------
- But remember if your filesystem is not mounted then the kill procedure
- will begin to kill all (e.g ROOT FILE SYSTEM), so you must be carefull
- and you must always check "mountpoint"
+but remember if your filesystem is not mounted then the kill procedure
+will begin to kill all (e.g ROOT FILE SYSTEM), so you must be carefull
+and you must always check "mountpoint"
 
- the next script I think will be more polite
+the next script I think will be more polite
+polite script:
+```sh
+#!/bin/sh                                                            
+                                                                    
+if test "_$#" = '_1'                                                 
+then                                                                 
+    FS="$1"                                                          
+else                                                                 
+    echo 'Usage: ' $0 '/mount-point'                                 
+    exit 1                                                           
+fi                                                                   
 
- Polite script
- ------------------------------------------------------------------------
- | #!/bin/sh                                                            |
- |                                                                      |
- | if test "_$#" = '_1'                                                 |
- | then                                                                 |
- |     FS="$1"                                                          |
- | else                                                                 |
- |     echo 'Usage: ' $0 '/mount-point'                                 |
- |     exit 1                                                           |
- | fi                                                                   |
- |                                                                      |  
- | for sig in TERM KILL                                                 |
- | do                                                                   |
- |     if mountpoint -q "$FS"                                           |
- |     then                                                             |
- |         if fuser -m "$FS"                                            |
- |         then                                                         |
- |             fuser -k $sig -m "$FS"                                   |
- |             sleep 1                                                  |
- |         else                                                         |
- |             break;                                                   |
- |         fi                                                           |
- |     else                                                             |
- |         echo 'not mounted'                                           |
- |         exit 0                                                       |
- |     fi                                                               |
- | done                                                                 |
- |                                                                      |
- | umount "$FS"                                                         |
- ------------------------------------------------------------------------
-
+for sig in TERM KILL                                                 
+do                                                                   
+    if mountpoint -q "$FS"                                           
+    then                                                             
+        if fuser -m "$FS"                                            
+        then                                                         
+            fuser -k $sig -m "$FS"                                   
+            sleep 1                                                  
+        else                                                         
+            break;                                                   
+        fi                                                           
+    else                                                             
+        echo 'not mounted'                                           
+        exit 0                                                      
+    fi                                                               
+done                                                                 
+                                                                      
+umount "$FS"                                                         
+```
 
 
  other commands
