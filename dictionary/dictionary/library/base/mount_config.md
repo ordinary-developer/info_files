@@ -109,31 +109,24 @@ umount "$FS"
 ```
 
 
- other commands
- ------------------
+## other commands
+to mount manually:
+```sh
+$ sudo mount -o git=users, fmask=133, dmask=002 /dev/sda1 /mnt/flash 
+```
 
- Manual mounting
- ------------------------------------------------------------------------
- | $ sudo mount -o git=users, fmask=133, dmask=002 /dev/sda1 /mnt/flash |   
- ------------------------------------------------------------------------
-
- /etc/fstab
- ------------------------------------------------------------------------
- | /dev/sda1 /mnt/flash vfat user,noauto,noatime,flush 0 0              |
- ------------------------------------------------------------------------
- or something like this
- ------------------------------------------------------------------------
- | /dev/sda1 /mnt/flash vfat users,noauto,uid=ivan,gid=users 0 0        |
- ------------------------------------------------------------------------
+or you can add the next string to /etc/fstab:
+```sh
+/dev/sda1 /mnt/flash vfat user,noauto,noatime,flush 0 0 
+```
+or
+```sh
+/dev/sda1 /mnt/flash vfat users,noauto,uid=ivan,gid=users 0 0 
+```
  
- and then 
- ------------------------------------------------------------------------
- | $ mount /mnt/flash                                                   |
- ------------------------------------------------------------------------
-
- or
- ------------------------------------------------------------------------
- | /dev/sda1 /mnt/flash vfat user,auto,noatime,flush 0 0                |
- ------------------------------------------------------------------------
- And all must be mount automatically
+and type in bash:
+```sh
+$ mount /mnt/flash                                                   |
+```
+and all must be mount automatically
 
