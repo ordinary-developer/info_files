@@ -1,4 +1,4 @@
-# sudo config
+#sudo config
 
 ## base config
 to install sudo
@@ -13,14 +13,11 @@ ivan ALL=(ALL) ALL
 ```
 
  
- my contents of /etc/sudoers file
- =============
-
- ------------------------------------------------------------------------
- | %sudo ALL = (ALL) ALL   						|
- | ivan	ALL = (ALL) NOPASSWD: ALL   					|
- ------------------------------------------------------------------------
-
+## my /etc/sudoers file contents
+```
+%sudo ALL = (ALL) ALL 
+ivan  ALL = (ALL) NOPASSWD: ALL  
+```
 
 
  common considerations
