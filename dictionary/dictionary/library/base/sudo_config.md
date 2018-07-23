@@ -20,22 +20,22 @@ ivan  ALL = (ALL) NOPASSWD: ALL
 ```
 
 
- common considerations
- =============
+## common info
+a typical configuration line can be the next:
+```
+username hostname=(by_what_user) commandlist  
+```
 
- a typical configuration line can be the next
- ------------------------------------------------------------------------
- | username hostname=(by_what_user) commandlist     			|
- ------------------------------------------------------------------------
+examples are:
+- ivan can perform by root on any host the command 'more /var/log/messages'
+```
+ivan ALL=/bin/more /var/log/messages
+```
 
- * for example
-  - ivan ALL=/bin/more /var/log/messages
-    ivan can perform by root on any host the command
-     'more /var/log/messages'
-
-  - ivan server=(vasya) /bin/ls /home/vasya       
-    ivan can perform by vasya on only server command 
-     'sudo -u vasya /bin/ls /home/vasya'
+- ivan can perform by vasya on only server command 'sudo -u vasya /bin/ls /home/vasya'
+```
+ivan server=(vasya) /bin/ls /home/vasya       
+```
 
 
 
