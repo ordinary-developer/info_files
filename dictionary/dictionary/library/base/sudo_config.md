@@ -38,18 +38,16 @@ ivan server=(vasya) /bin/ls /home/vasya
 ```
 
 
-
- auxiliary information
- =============
- 
- The string
- ------------------------------------------------------------------------
- | Defaults env_reset             					|
- ------------------------------------------------------------------------
- in the file /etc/sudoers says us that,
- All user variables (HOME,PATH etc) (for concrete user) are forbided.
- Only root variables are availiable. Security level is higher, but
- sometimes it can be some prombles with compatibility
+## aux info
+the string:
+```
+Defaults env_reset 
+```
+in the file /etc/sudoers says us
+that all user variables (HOME,PATH etc) (for concrete user) are forbided;
+only root variables are availiable;
+security level is higher, 
+but sometimes it can be some prombles with compatibility.
 
  If it is necessary to add such feature you can write in the file
 -------------------------------------------------------------------------
