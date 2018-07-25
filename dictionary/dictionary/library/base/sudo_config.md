@@ -49,12 +49,12 @@ only root variables are availiable;
 security level is higher, 
 but sometimes it can be some prombles with compatibility.
 
- If it is necessary to add such feature you can write in the file
--------------------------------------------------------------------------
- | Defaults: %admin !env_reset     					|
- ------------------------------------------------------------------------
- where is admin - is the group for which you want to add some priviledge
- and !env_reset allows to use user varialbes
+if it is necessary to add such feature you can write in the file:
+```
+Defaults: %admin !env_reset 
+```
+where is 'admin' - is the group for which you want to add some priviledge
+and '!env_reset' allows to use user varialbes
 
  You also can write something following
  ------------------------------------------------------------------------
