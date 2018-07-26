@@ -56,12 +56,12 @@ Defaults: %admin !env_reset
 where is 'admin' - is the group for which you want to add some priviledge
 and '!env_reset' allows to use user varialbes
 
- You also can write something following
- ------------------------------------------------------------------------
- | Defaults: user env_keep=TZ        					|
- ------------------------------------------------------------------------
- where is user - it is the name of user
- env_keep=TZ allow to use TZ variable for this user
+You also can write something following:
+```
+Defaults: user env_keep=TZ 
+```
+where 'user' - is the name of user
+'env_keep=TZ' allow to use TZ variable for this user
 
 
  Next string allow to use sudo for command /bin/kill without the password
