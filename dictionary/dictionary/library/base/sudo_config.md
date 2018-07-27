@@ -64,16 +64,17 @@ where 'user' - is the name of user
 'env_keep=TZ' allow to use TZ variable for this user
 
 
- Next string allow to use sudo for command /bin/kill without the password
- ------------------------------------------------------------------------
- | user mycomp= NOPASSWD: /bin/kill 					|
- ------------------------------------------------------------------------
- Sometimes for launching X-programs you must write
- ------------------------------------------------------------------------
- | Defaults env_check+="HOME DISPLAY"  					|
- | Defaults env_keep+="HOME DISPLAY"   					|
- | Defaults env_reset                  					|
- ------------------------------------------------------------------------
+the next string allow to use sudo for command /bin/kill without the password:
+```
+user mycomp= NOPASSWD: /bin/kill 
+```
+
+sometimes for launching X-programs you must write:
+```
+Defaults env_check+="HOME DISPLAY"
+Defaults env_keep+="HOME DISPLAY"  
+Defaults env_reset                  
+```
 
  Next, the string 
  ------------------------------------------------------------------------
