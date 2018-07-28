@@ -76,12 +76,13 @@ Defaults env_keep+="HOME DISPLAY"
 Defaults env_reset                  
 ```
 
- Next, the string 
- ------------------------------------------------------------------------
- | Defaults: user timestamp_timeout=0 					|
- ------------------------------------------------------------------------
- does not remember the password for user - user
- and so user must all times enter his password
+next, the string: 
+```
+Defaults: user timestamp_timeout=0 
+```
+allow not to remember the password for the user `user`
+and so user must all times enter his password
+
 
  Sometimes it is usefull to use aliaces
  ------------------------------------------------------------------------
