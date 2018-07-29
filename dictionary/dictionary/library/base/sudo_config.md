@@ -81,15 +81,14 @@ next, the string:
 Defaults: user timestamp_timeout=0 
 ```
 allow not to remember the password for the user `user`
-and so user must all times enter his password
+and so user must all times enter his password;
 
-
- Sometimes it is usefull to use aliaces
- ------------------------------------------------------------------------
- | Cmnd_Alias command_alias=command1,2.... 				|
- | Host_Alias host_alias=hostname1,2....   				|
- | User_alias user_alias=user1,2,...       				|
- ------------------------------------------------------------------------
+sometimes it is usefull to use aliaces:
+```
+Cmnd_Alias command_alias=command1,2....
+Host_Alias host_alias=hostname1,2.... 
+User_alias user_alias=user1,2,...      
+```
  
  Commands in file /etc/sudoers can be represent by follow
  ------------------------------------------------------------------------
