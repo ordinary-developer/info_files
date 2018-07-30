@@ -90,18 +90,20 @@ Host_Alias host_alias=hostname1,2....
 User_alias user_alias=user1,2,...      
 ```
  
- Commands in file /etc/sudoers can be represent by follow
- ------------------------------------------------------------------------
- | user host=command        						|
- ------------------------------------------------------------------------
- for exmaple
- ------------------------------------------------------------------------
- | user ALL=/bin/mount,/bin/kill    					|
- ------------------------------------------------------------------------ 
- for group admin you can write
- ------------------------------------------------------------------------
- | %admin ALL=(ALL) ALL           					|
- ------------------------------------------------------------------------
+commands in file /etc/sudoers can be represent by follow:
+```
+user host=command        
+```
+
+for examplef for all users:
+```
+user ALL=/bin/mount,/bin/kill
+```
+
+for group admin you can write:
+```
+%admin ALL=(ALL) ALL 
+```
  
  My /etc/sudoers
  ------------------------------------------------------------------------
