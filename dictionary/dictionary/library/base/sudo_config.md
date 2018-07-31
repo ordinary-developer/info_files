@@ -105,14 +105,14 @@ for group admin you can write:
 %admin ALL=(ALL) ALL 
 ```
  
- My /etc/sudoers
- ------------------------------------------------------------------------
- |Defaults env_check+="HOME DISPLAY"       				|
- |Defaults env_keep+="HOME DISPLAY"        				|
- |Defaults env_reset                       				|
- |%sudo ALL=(ALL) ALL                      				|
- |ivan ALL=(ALL) ALL                       				|
- ------------------------------------------------------------------------
+## my more elaborate /etc/sudoers
+```sh
+Defaults env_check+="HOME DISPLAY"
+Defaults env_keep+="HOME DISPLAY"
+Defaults env_reset
+%sudo ALL=(ALL) ALL                     
+ivan ALL=(ALL) ALL                       
+```
 
  the format of config file is following
  ------------------------------------------------------------------------
