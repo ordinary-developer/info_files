@@ -106,7 +106,7 @@ for group admin you can write:
 ```
  
 ## my more elaborate /etc/sudoers
-```sh
+```
 Defaults env_check+="HOME DISPLAY"
 Defaults env_keep+="HOME DISPLAY"
 Defaults env_reset
