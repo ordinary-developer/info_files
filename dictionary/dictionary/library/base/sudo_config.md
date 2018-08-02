@@ -114,9 +114,9 @@ Defaults env_reset
 ivan ALL=(ALL) ALL                       
 ```
 
- the format of config file is following
- ------------------------------------------------------------------------
- | user	host = (user)	command						|
- |									|
- | ivan	ALL  = (ALL)    ALL						|
- ------------------------------------------------------------------------
+the format of config file is following:
+```
+user	host = (user)	command
+ivan	ALL  = (ALL)    ALL
+```
+
