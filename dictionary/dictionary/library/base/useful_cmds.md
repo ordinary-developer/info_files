@@ -1,12 +1,8 @@
- ############################
- USEFUL COMMANDS
- ############################
+# useful cmds
 
- ln command
- ==========
-
- To create a symbolic link to the file
- ------------------------------------------------------------------------
- | $ ln --symoblic file reference					|
- ------------------------------------------------------------------------
+## ln command
+to create a symbolic link to the file:
+```sh
+$ ln --symoblic file reference
+```
 
