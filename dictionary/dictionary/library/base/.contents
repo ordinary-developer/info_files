@@ -1,8 +1,10 @@
-alsa-config  		- info about alsa configuring
-archives-commands	- info about archives using
-build-env 		- info about making build envrinment
-chroot-using 		- info about chroot using
-font-installing         - info about font installation
-mounting-config		- info about mounting systems
-sudo-config 		- info about sudo configuring
-useful-commands		- info about useful commands
+alsa_config.md   - info about alsa configuration
+archive_cmd.md   - info about archives using
+build_env.md     - info about making build environment
+chroot_use.md    - info about chroot using
+font_install.md  - info about font installation
+locale_config.md - info about locale configuration
+mount-config.md  - info about mounting systems
+sudo_config.md   - info about sudo configuring
+useful_cmds      - info about useful commands
+
