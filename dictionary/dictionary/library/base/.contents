@@ -1,5 +1,5 @@
 alsa_config.md   - info about alsa configuration
-archive_cmd.md   - info about archives using
+arch_cmds.md     - info about archives using
 build_env.md     - info about making build environment
 chroot_use.md    - info about chroot using
 font_install.md  - info about font installation
