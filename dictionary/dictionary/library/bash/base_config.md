@@ -1,8 +1,10 @@
 # bash base config
 
- .bashrc
- --------
- TERM=xterm-256color
+## .bashrc
+to add supporting multicoloring add to your '.bashrc' file
+```
+TERM=xterm-256color
+```
 
  environment variables
  -------------
