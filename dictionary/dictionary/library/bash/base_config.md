@@ -6,21 +6,23 @@ to add supporting multicoloring add to your '.bashrc' file
 TERM=xterm-256color
 ```
 
- environment variables
- -------------
 
- to export a variable for current session
- ------------------------------------------------------------------------
- | $ export GMOCK=/home/ivan/gmock-1.6					|
- ------------------------------------------------------------------------
- to permanently have a variable
- ------------------------------------------------------------------------
- | $ echo 'GMOCK="/home/ivan/gmock-1.6"' >> ~/.bashrc			|
- ------------------------------------------------------------------------
- to change path variable
- ------------------------------------------------------------------------
- | export PATH=$PATH:your/path/for/program				|
- ------------------------------------------------------------------------	
+## env vars
+to export a variable for the current session:
+```sh
+$ export GMOCK=/home/ivan/gmock-1.6
+```
+
+to permanently have a variable:
+```sh
+$ echo 'GMOCK="/home/ivan/gmock-1.6"' >> ~/.bashrc
+```
+
+to change the path variable:
+```sh
+export PATH=$PATH:your/path/for/program
+```
+
 
  bash command prompt
  -------------
