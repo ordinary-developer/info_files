@@ -24,41 +24,40 @@ export PATH=$PATH:your/path/for/program
 ```
 
 
- bash command prompt
- -------------
+## base command prompt
+to make a good command promt type:
+```sh
+$ export PS1="[\u] "
+```
+and you will get:
+*[ivan] ...*
 
- to make a good command promt type
- ------------------------------------------------------------------------
- | $ export PS1="[\u] "							|
- ------------------------------------------------------------------------
- And you will get
- [ivan] ...
+or you can use for: 
+user = \u
+host = \h
+directory info = \w
+new line = \n
+cariage return = \r
+e.t.c
 
- or you can use for 
- user = \u
- host = \h
- directory info = \w
- new line = \n
- cariage return = \r
- e.t.c
+to make a more complicated command prompt:
+```sh
+$ export PS1="[\h@\u | \w]\n==> "
+```
+and you will get:
+*[host@ivan | /home]
+ ==>*
 
- to make a more complicated command prompt
- ------------------------------------------------------------------------
- | $ export PS1="[\h@\u | \w]\n==> "					|
- ------------------------------------------------------------------------
- and you will get
- [host@ivan | /home]
- ==>
+for a simple line:
+```sh
+$ export PS1="$ "
+```
+and you will get:
+*$*
 
- for a simple line
- ------------------------------------------------------------------------ 
- | $ export PS1="$ "							|
- ------------------------------------------------------------------------
- and you will get
- $
+after that you can add this string to your ~/.bashrc file manually
+or by the next command:
+```sh
+$ echo PS1="$ "
+```
 
- After that you can add this string to your ~/.bashrc file manually or
- by the next command
- ------------------------------------------------------------------------
- | $ echo PS1="$ "							|
- ------------------------------------------------------------------------
