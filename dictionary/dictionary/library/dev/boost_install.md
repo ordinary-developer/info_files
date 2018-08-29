@@ -1,15 +1,11 @@
- #############
- BOOST-INSTALL
- #############
+# boost install
 
- common
- ======
+## common
+First you must speficy in mind your boost_dir 
+(where unpacked boost package will be placed
+ and where final boost libraries will be placed).
  
- First you must speficy in mind your boost_dir 
- (where unpacked boost package will be placed
-  and where final boost libraries will be placed)
- 
- In out case it is "~/libraries/boost_NNN"
+In out case it is "~/libraries/boost_NNN".
 
 
  headers-only install
