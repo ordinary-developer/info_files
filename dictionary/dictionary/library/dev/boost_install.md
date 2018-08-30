@@ -8,23 +8,22 @@ First you must speficy in mind your boost_dir
 In out case it is "~/libraries/boost_NNN".
 
 
- headers-only install
- ====================
- 
- - download bootstrap
- - unpack it to for example ~/libraries
+## headers-only install
+To install headeers only
+- download bootstrap
+- unpack it to for example ~/libraries
 
- Now you can use it
- (because in many cases it is sufficient to have only header files)
- then you can use it:
- ------------------------------------------------------------------------
- | $ c++ -I path/to/boost yourfile.cpp -o your_application	        	|
- ------------------------------------------------------------------------
+Now you can use it
+(because in many cases it is sufficient to have only header files)
+then you can use it:
+```sh
+$ c++ -I path/to/boost yourfile.cpp -o your_application	
+```
 
- for gcc:
- ------------------------------------------------------------------------
- | $ g++ -I path/to/boost yourfile.cpp -o your_application	        	|
- ------------------------------------------------------------------------
+for gcc:
+```sh
+$ g++ -I path/to/boost yourfile.cpp -o your_application	
+```
 
 
  full install
