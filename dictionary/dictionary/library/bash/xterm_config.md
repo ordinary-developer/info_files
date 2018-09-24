@@ -1,16 +1,13 @@
- ############################
- XTERM CONFIG
- ############################
+# xterm config
 
-  To configure XTerm create the file 
- ------------------------------------------------------------------------
- | ~/XTerm								|
- ------------------------------------------------------------------------
+## common issues
 
- add there the next strings
- ------------------------------------------------------------------------
- | XTerm*background: white        					|
- | XTerm*foreground: black        					|
- | XTerm*faceName: DroidSansMono  					|
- | XTerm*faceSize: 11             					|
- ------------------------------------------------------------------------
+to configure XTerm create the file '~/XTerm'
+and add there the next strings:
+```sh
+XTerm*background: white        					
+XTerm*foreground: black        					
+XTerm*faceName: DroidSansMono  					
+XTerm*faceSize: 11             					
+```
+
