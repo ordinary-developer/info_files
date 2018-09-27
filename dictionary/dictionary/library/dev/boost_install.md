@@ -26,51 +26,50 @@ $ g++ -I path/to/boost yourfile.cpp -o your_application
 ```
 
 
- full install
- =============
+## full install
+Some files in boost (e.g. testing libraries) required building.
 
- Some files in boost (e.g. testing libraries) required building.
+go to the directory "tools/build" (in boost_root (distr package)):
+```sh
+$ cd  $boost_dir/tools/build                                         
+```
 
- - go to the directory "tools/build" (in boost_root (distr package)),
- ------------------------------------------------------------------------
- | $ cd  $boost_dir/tools/build                                         |
- ------------------------------------------------------------------------
-
- - type
- ------------------------------------------------------------------------
- | $ ./bootstrap.sh                                                     |
- ------------------------------------------------------------------------
+the type:
+```sh
+$ ./bootstrap.sh                                                     
+```
  
- - compile into a temp directory
- ------------------------------------------------------------------------
- | $ b2 -j4 install --prefix=~/tmp/build-boost                          |
- ------------------------------------------------------------------------
+the compile into a temp directory:
+```sh
+$ b2 -j4 install --prefix=~/tmp/build-boost
+```
 
- - add PREFIX/bin to your PATH environment variable
- ------------------------------------------------------------------------
- | $ PATH=$PATH:~/tmp/build-boost                                       |
- ------------------------------------------------------------------------
+then add PREFIX/bin to your PATH environment variable:
+```sh
+$ PATH=$PATH:~/tmp/build-boost                                       
+```
 
- - enter the boost_dir
- ------------------------------------------------------------------------
- | $ cd $boost_dir                                                      |
- ------------------------------------------------------------------------
-  ("$cd ~/boost_1_59_0", "$ cd ~/libraries/boost_1_59_0" etc.)
+then enter the boost_dir:
+```sh
+$ cd $boost_dir                                                      
+```
+or something like this: ("cd ~/boost_1_59_0", etc.)
 
- - type
- ------------------------------------------------------------------------
- | $ b2 -j4 --build-dir=/tmp/build-boost toolset=gcc stage              |
- ------------------------------------------------------------------------
- (where "stage" is a directory inside you boost distr
-  where all bin libraries will be placed)
+then type:
+```sh
+$ b2 -j4 --build-dir=/tmp/build-boost toolset=gcc stage              
+```
+(where "stage" is a directory inside you boost distr
+where all bin libraries will be placed)
 
- that will build static and shared non-debug multi-threaded variants
- of the libraries.
- To build all variants, pass the additional option, "--build-type=complete"
+that will build static and shared non-debug multi-threaded variants
+of the libraries.
+To build all variants, pass the additional option *"--build-type=complete"*
 
- Building the special stage target places Boost library binaries in the
- "stage/lib/" subdirectory of the Boost tree. 
- To use a different directory pass the "--stagedir=directory" option to b2.
+Building the special stage target places Boost library binaries
+ in the *"stage/lib/"* subdirectory of the Boost tree. 
+To use a different directory
+pass the *"--stagedir=directory"* option to b2.
 
  
  build libraries using 
