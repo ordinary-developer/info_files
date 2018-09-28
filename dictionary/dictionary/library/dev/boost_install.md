@@ -72,8 +72,7 @@ To use a different directory
 pass the *"--stagedir=directory"* option to b2.
 
  
- build libraries using 
- =====================
+## build libraries using 
 
  There are two main challenges associated with linking:
 
