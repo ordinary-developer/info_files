@@ -107,29 +107,35 @@ unless you pass a special option
 such as -static on the command line.
 
  
- auxiliary build
- ===============
+## aux build
+Your headers must be for example in ~/libraries
+then copy your boost distrib to for example ~/sources
+and from there
+```sh
+$ cd ~/sources
+$ ./boostrap.sh --prefix=path/to/installation/prefix
+$ sudo ./b2 -j4 install
+```
 
- your headers must be for example in ~/libraries
- then copy your boost distrib to for example ~/sources
- and from there
- $ cd ~/sources
- $ ./boostrap.sh --prefix=path/to/installation/prefix (in my case /usr/local)
- $ sudo ./b2 -j4 install
- (other command is for example
- ( "./b2 -a -j8 toolset=clang-osx link=static threading=multi \ 
-                --layout=tagged --with-thread")
+other command: 
+```sh
+./b2 -a -j8 toolset=clang-osx link=static threading=multi \ 
+     --layout=tagged --with-thread
+```
 
- to link your files
- you can specify the full path to each library:
+to link your files
+you can specify the full path to each library:
+```sh
+$ c++ -I path/to/boost_1_59_0 example.cpp -o example \
+      ~/boost/stage/lib/libboost_regex-gcc34-mt-d-1_36.a
+```
 
- $ c++ -I path/to/boost_1_59_0 example.cpp -o example \
-   ~/boost/stage/lib/libboost_regex-gcc34-mt-d-1_36.a
+You can separately specify a directory to search (with -Ldirectory)
+and a library name to search for 
+(with -llibrary,2 dropping the filename's leading lib 
+and trailing suffix) (.a in this case):
+```sh 
+$ c++ -I path/to/boost_1_59_0 example.cpp -o example \
+      -L~/boost/stage/lib/ -lboost_regex-gcc34-mt-d-1_36
+```
 
- You can separately specify a directory to search (with -Ldirectory)
- and a library name to search for 
- (with -llibrary,2 dropping the filename's leading lib and trailing suffix)
- (.a in this case):
- 
- $ c++ -I path/to/boost_1_59_0 example.cpp -o example \
-   -L~/boost/stage/lib/ -lboost_regex-gcc34-mt-d-1_36
