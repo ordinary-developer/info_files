@@ -1,7 +1,4 @@
- ############################
- PYTHON 3 INSTALLATION
- ############################
-
+# python 3 install
 
  pre-install
  ===========
