@@ -1,10 +1,10 @@
 # python 3 install
 
 ## pre-install
- may be it is necessary to install the next packages:
- --------------------------------------------------------------------
- | $ sudo apt-get install libxslt-dev libxml2-dev libevent-dev      |
- --------------------------------------------------------------------
+may be it is necessary to install the next packages:
+```sh
+$ sudo apt-get install libxslt-dev libxml2-dev libevent-dev 
+```
 
  it is neccessary to install some packages 
  ------------------------------------------------------------------------
