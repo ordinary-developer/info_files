@@ -6,13 +6,12 @@ may be it is necessary to install the next packages:
 $ sudo apt-get install libxslt-dev libxml2-dev libevent-dev 
 ```
 
- it is neccessary to install some packages 
- ------------------------------------------------------------------------
- | $ sudo apt-get install libreadline-dev               				|
- |                        openssl libssl-dev          		|
- |                        libsqlite3-dev sqlite3			            |
- ------------------------------------------------------------------------
-  
+for correct installation it is neccessary to install some packages:
+```sh
+$ sudo apt-get install
+    libreadline-dev openssl libssl-dev libsqlite3-dev sqlite3
+```
+
  "openssl" and "libssl-dev" are necessary for ssl support.
  (And for the proper installation of pip)
  You must remember that "openssl" package will install to "/usr"
