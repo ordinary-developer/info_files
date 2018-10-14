@@ -1,8 +1,8 @@
 boost_install.md   - info about boot installation
 gcc_install.md     - info about gcc installation
 mongodb_install.md - info about mongo db installation
+py3_install.md     - info about python3 installation
 pyqt_install.md    - info about pyqt installation
-python3_install.md - info about python3 installation
 qt_install.md 	   - info about qt5 installation
 tcl_tk_install.md  - info about tcl-tk installing
 xampp_install.md   - info about xampp
