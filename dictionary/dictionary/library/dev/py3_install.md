@@ -12,11 +12,12 @@ $ sudo apt-get install
     libreadline-dev openssl libssl-dev libsqlite3-dev sqlite3
 ```
 
- "openssl" and "libssl-dev" are necessary for ssl support.
- (And for the proper installation of pip)
- You must remember that "openssl" package will install to "/usr"
+*Remark:*
+The "openssl" and "libssl-dev" pacages are necessary for ssl support
+(and for the proper installation of pip).
+The "openssl" package will be installed to "/usr".
+The "sqlite3" package is neccessary for development with django.
 
- "sqlite3" package is neccessary for django dev
 
  extract it python sources
  ------------------------------------------------------------------------
