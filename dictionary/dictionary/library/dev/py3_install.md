@@ -18,11 +18,10 @@ The "openssl" and "libssl-dev" pacages are necessary for ssl support
 The "openssl" package will be installed to "/usr".
 The "sqlite3" package is neccessary for development with django.
 
-
- extract it python sources
- ------------------------------------------------------------------------
- | $ tar -xjf Python-3.xtar.bz2 cd Python-3.x  				|
- ------------------------------------------------------------------------
+Extract it python sources:
+```sh
+$ tar -xjf Python-3.xtar.bz2 cd Python-3.x  
+```
 
  Then in the file 'Modules/Setup.dist' in the Python source
  ----------------------------------------------------------------------------------------
