@@ -23,30 +23,28 @@ Extract it python sources:
 $ tar -xjf Python-3.xtar.bz2 cd Python-3.x  
 ```
 
- Then in the file 'Modules/Setup.dist' in the Python source
- ----------------------------------------------------------------------------------------
- |...										    	|	
- | 											|
- |# CSV file helper									|
- | 207 #_csv _csv.c									|
- | 208											|
- |209 # Socket module helper for socket(2)						|
- |210 _socket socketmodule.c								|
- |211											|
- |212 # Socket module helper for SSL support; you must comment out the other		|
- |213 # socket line above, and possibly edit the SSL variable:				|
- |214 SSL=/usr/local/ssl								|
- |215 _ssl _ssl.c \									|
- |216     -DUSE_SSL -I$(SSL)/include -I$(SSL)/include/openssl \				|
- |217     -L$(SSL)/lib -lssl -lcrypto							|
- |218											|
- |219 # The crypt module is now disabled by default because it breaks builds		|
- |220 # on many systems (where -lcrypt is needed), e.g. Linux (I believe).		|	
- |221 #											|
- |222 # First, look at Setup.config; configure may have set this for you.		|
- |223											|
- |224 #crypt cryptmodule.c # -lcrypt  # crypt(3); needs -lcrypt on some systems		|
- ----------------------------------------------------------------------------------------
+Then in the file 'Modules/Setup.dist' in the Python source:
+```
+# CSV file helper
+207 #_csv _csv.c							
+208	
+209 # Socket module helper for socket(2)
+210 _socket socketmodule.c	
+211	
+212 # Socket module helper for SSL support; you must comment out the other
+213 # socket line above, and possibly edit the SSL variable:
+214 SSL=/usr/local/ssl	
+215 _ssl _ssl.c \	
+216     -DUSE_SSL -I$(SSL)/include -I$(SSL)/include/openssl \
+217     -L$(SSL)/lib -lssl -lcrypto	
+218	
+219 # The crypt module is now disabled by default because it breaks builds
+220 # on many systems (where -lcrypt is needed), e.g. Linux (I believe)
+221 #											|
+222 # First, look at Setup.config; configure may have set this for you.
+223
+224 #crypt cryptmodule.c # -lcrypt  # crypt(3); needs -lcrypt on some systems	
+```
 
  uncomment the line (210) (in your file may be anther line)
  in the line 214 you must write
