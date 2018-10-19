@@ -43,16 +43,15 @@ Then in the file 'Modules/Setup.dist' in the Python source:
 221 #											|
 222 # First, look at Setup.config; configure may have set this for you.
 223
-224 #crypt cryptmodule.c # -lcrypt  # crypt(3); needs -lcrypt on some systems	
+224 #crypt cryptmodule.c # -lcrypt  # crypt(3); needs -lcrypt on some systems
 ```
 
- uncomment the line (210) (in your file may be anther line)
- in the line 214 you must write
- ------------------------------------------------------------------------
- | SSL=/usr								|
- ------------------------------------------------------------------------ 
- (or something yours)
- then uncoment 215-217  
+Then uncomment the line (210) (in your file may be anther line)
+in the line 214 you must write:
+```
+SSL=/usr
+```
+(or something yours), then uncomment the lines 215, 216 and 217.
 
  After that you must see your python's 'setup.py'
  and find the next strings
