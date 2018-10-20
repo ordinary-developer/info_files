@@ -53,19 +53,18 @@ SSL=/usr
 ```
 (or something yours), then uncomment the lines 215, 216 and 217.
 
- After that you must see your python's 'setup.py'
- and find the next strings
- ------------------------------------------------------------------------
- |1047 sqlite_inc_path = [ '/usr/include',				|
- |1048 			   '/usr/include/sqlite',			|
- |1049			   '/usr/include/sqlite3',			|
- |1050			   '/usr/local/include'				|
- |1051			   '/usr/local/include/sqlite			|
- |1052			   '/usr/local/include/sqlite3			|
- |1053			 ]						|
- ------------------------------------------------------------------------
- And you must AUGMENT THIS PATH, if you have installed your sqlite manually
-
+After that you must see your python's 'setup.py'
+and find the next strings:
+```
+1047 sqlite_inc_path = [ '/usr/include',
+1048 			   '/usr/include/sqlite',
+1049			   '/usr/include/sqlite3',
+1050			   '/usr/local/include'
+1051			   '/usr/local/include/sqlite
+1052			   '/usr/local/include/sqlite3
+1053			 ]
+```
+And you must AUGMENT THIS PATH, if you have installed your sqlite manually.
 
 
  install
