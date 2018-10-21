@@ -67,8 +67,7 @@ and find the next strings:
 And you must AUGMENT THIS PATH, if you have installed your sqlite manually.
 
 
- install
- =======
+## install
 
  to compile python
  ------------------------------------------------------------------------
