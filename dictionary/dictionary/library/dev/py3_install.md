@@ -69,17 +69,17 @@ And you must AUGMENT THIS PATH, if you have installed your sqlite manually.
 
 ## install
 
- to compile python
- ------------------------------------------------------------------------
- | $ sudo ./configure --prefix=/usr/local --exec-prefix=/usr/local	|
- | $ sudo make -j 2				       			| 
- | $ sudo make install //("$ sudo checkinstall -D")			| 				       			
- ------------------------------------------------------------------------
+to compile python:
+```sh
+$ sudo ./configure --prefix=/usr/local --exec-prefix=/usr/local	
+$ sudo make -j 2				       	
+$ sudo make install //("$ sudo checkinstall -D")
+```
 
- Optionally you can create an alias
- ------------------------------------------------------------------------
- | $ echo 'alias py="/usr/local/python3/bin/python3.4"' >> .bashrc      |
- ------------------------------------------------------------------------
+Optionally you can create an alias:
+```sh
+$ echo 'alias py="/usr/local/python3/bin/python3.4"' >> .bashrc      
+```
 
 
  
