@@ -82,18 +82,14 @@ $ echo 'alias py="/usr/local/python3/bin/python3.4"' >> .bashrc
 ```
 
 
- 
- alternative install
- ===================
-
- Your can your deasdnake PPA
- ------------------------------------------------------------------------
- | $ sudo apt-get install python-software-properties                    |
- | $ sudo add-apt-repository ppa:fkrull/deadsnakes                      |
- | $ sudo apt-get update                                                |
- | $ sudo apt-get install python3.3                                     |
- ------------------------------------------------------------------------
-
+## alternative installation
+Your can your deasdnake PPA:
+```sh
+$ sudo apt-get install python-software-properties                    
+$ sudo add-apt-repository ppa:fkrull/deadsnakes                  
+$ sudo apt-get update                                               
+$ sudo apt-get install python3.3                                     
+```
 
 
  post-install
