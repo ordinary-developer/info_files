@@ -92,8 +92,7 @@ $ sudo apt-get install python3.3
 ```
 
 
- post-install
- ============
+## post-install
  
  create a virtual environment in your home:
  ------------------------------------------------------------------------
