@@ -93,20 +93,20 @@ $ sudo apt-get install python3.3
 
 
 ## post-install
- 
- create a virtual environment in your home:
- ------------------------------------------------------------------------
- | $ /usr/local/python3/bin/pyvenv ~/py3     				|
- ------------------------------------------------------------------------
- activate the virtualenv:
- ------------------------------------------------------------------------
- | $ source ~/py3/bin/activate                                          |
- ------------------------------------------------------------------------
- install any python packages you want (i.e. bottle) (optionally)
- ------------------------------------------------------------------------
- | $ pip install bottle             					|
- ------------------------------------------------------------------------
- 
+Create a virtual environment in your home:
+```sh
+$ /usr/local/python3/bin/pyvenv ~/py3 
+```
+
+activate the virtualenv:
+```sh
+$ source ~/py3/bin/activate                                          
+```
+
+install any python packages you want (i.e. bottle) (optionally):
+```sh
+$ pip install bottle 
+```
 
 
  auxiliary info
