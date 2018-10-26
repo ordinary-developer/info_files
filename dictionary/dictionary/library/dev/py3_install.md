@@ -109,9 +109,7 @@ $ pip install bottle
 ```
 
 
- auxiliary info
- ==============
-
+## aux info
  to install other tools
  install distribute tools:
  ------------------------------------------------------------------------
