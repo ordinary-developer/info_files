@@ -110,33 +110,32 @@ $ pip install bottle
 
 
 ## aux info
- to install other tools
- install distribute tools:
- ------------------------------------------------------------------------
- | $ wget http://python-distribute.org/distribute_setup.py     		|
- |        python distribute_setup.py                           		|
- ------------------------------------------------------------------------
- install pip:
- ------------------------------------------------------------------------
- | $ easy_install pip							|
- ------------------------------------------------------------------------
+To install other tools install distribute tools:
+```sh
+$ wget http://python-distribute.org/distribute_setup.py     
+    python distribute_setup.py                     
+```
 
- If you have a message 
- 'Ignoring ensurepip failure: pip 1.5.6 requires SSL/TLS'
+install pip:
+```sh
+$ easy_install pip
+```
 
- If you do not need pip to be installed during installation, and just on the system, 
- you can install it afterwards by downloading 
- 'get-pip.py'
- and running 
- --------------------------------------
- | $ /path/to/my/python get-pip.py    |
- ---------------------------------------
- 
- packages sometimes neccessary for python install 
- ------------------------------------------------------------------------
- | $ sudo apt-get install build-essential libncursesw5-dev		| 
-			  bzip2 libbz2-dev build-dep			|	
- |                        libreadline5-dev libssl-dev libgdbm-dev 	|
- |                        libc6-dev libsqlite3-dev tk-dev zlib1g-dev 	|
- |                        liblzma-dev					|
- ------------------------------------------------------------------------
+If you have a message 
+*'Ignoring ensurepip failure: pip 1.5.6 requires SSL/TLS'*
+
+If you do not need pip to be installed during installation,
+and just on the system, you can install it afterwards 
+by downloading 'get-pip.py' and running:
+```sh
+$ /path/to/my/python get-pip.py
+```
+
+Packages sometimes neccessary for python install:
+```sh
+$ sudo apt-get install build-essential libncursesw5-dev	
+    bzip2 libbz2-dev build-dep	
+    libreadline5-dev libssl-dev libgdbm-dev 
+    libc6-dev libsqlite3-dev tk-dev zlib1g-dev 
+    liblzma-dev
+```
