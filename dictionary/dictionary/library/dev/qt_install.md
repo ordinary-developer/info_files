@@ -1,6 +1,4 @@
- ###############
- QT INSTALLATION
- ###############
+# qt install
 
  installation from sources
  =========================
