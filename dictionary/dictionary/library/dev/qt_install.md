@@ -1,7 +1,6 @@
 # qt install
 
- installation from sources
- =========================
+## install from sources
 
  To build from sources
  enter your temp directory
