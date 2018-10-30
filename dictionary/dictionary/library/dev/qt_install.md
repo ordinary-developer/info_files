@@ -1,17 +1,16 @@
 # qt install
 
 ## install from sources
+To build from sources enter your temp directory:
+```sh
+$ git clone git://gitorious.org/qt/qt5.git    
+$ cd qt5								                                 
+$ sudo ./init-repository						                         
+$ sudo ./configure -prefix $PWD/qtbase -opnesource			         
+$ sudo make -j 4							                             
+$ sudo make install							                         
+```
 
- To build from sources
- enter your temp directory
-  ------------------------------------------------------------------------
- | $ git clone git://gitorious.org/qt/qt5.git     			             |
- | $ cd qt5								                                 |
- | $ sudo ./init-repository						                         |
- | $ sudo ./configure -prefix $PWD/qtbase -opnesource			         |
- | $ sudo make -j 4							                             |
- | $ sudo make install							                         |
- -------------------------------------------------------------------------
 
  
  installation from binaries
