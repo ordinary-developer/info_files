@@ -11,11 +11,7 @@ $ sudo make -j 4
 $ sudo make install							                         
 ```
 
-
- 
- installation from binaries
- ==========================
-
+## install from binaries
  Copy from qt-project online installer
  then type (may be under root)
  -------------------------------------------------------------------------
