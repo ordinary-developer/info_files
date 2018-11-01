@@ -12,21 +12,21 @@ $ sudo make install
 ```
 
 ## install from binaries
- Copy from qt-project online installer
- then type (may be under root)
- -------------------------------------------------------------------------
- | $ chmod +x qt-linux-opensource-1.4.0-x86-online.ru			         |	
- | $ ./qt-linux-opensource-1.4.0-x86-online.ru				             |
- -------------------------------------------------------------------------
+Copy from qt-project online installer
+then type (may be under root):
+```sh
+$ chmod +x qt-linux-opensource-1.4.0-x86-online.ru			         
+$ ./qt-linux-opensource-1.4.0-x86-online.ru				             
+``
 
- May be you need to install
- -------------------------------------------------------------------------
- | $ sudo apt-get install make g++ libglu1-mesa-dev			             |
- -------------------------------------------------------------------------
- or
- -------------------------------------------------------------------------
- | $ sudo apt-get install libgl1-mesa-dev			                	 |
- -------------------------------------------------------------------------
+May be you need to install
+```sh
+$ sudo apt-get install make g++ libglu1-mesa-dev
+```
+or
+```sh
+$ sudo apt-get install libgl1-mesa-dev			                	 
+```
 
 
  creating applications
