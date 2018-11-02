@@ -28,9 +28,7 @@ or
 $ sudo apt-get install libgl1-mesa-dev			                	 
 ```
 
-
- creating applications
- =====================
+## creating qt apps
 
  to compile a qt project you need
  
