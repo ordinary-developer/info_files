@@ -29,21 +29,30 @@ $ sudo apt-get install libgl1-mesa-dev
 ```
 
 ## creating qt apps
+to compile a qt project you need
+1. run 
+   ```sh
+   qmake -project
+   ```
+2. open the .pro file after its creation and add at the end of the file
+   ```
+   CONFIG = qt     
+   QT += widgets
+   ```
+3. run 
+   ```sh
+   qmake Project.pro
+   ```
+4. run 
+   ```sh
+   make
+   ```
 
- to compile a qt project you need
- 
- 1. run 'qmake -project'
- 2. Open the .pro file after its creation and add at the end of the file
-	CONFIG = qt     
-	QT += widgets
- 3. run 'qmake Project.pro'
- 4. run 'make'
-
- Notes*:
- - May be it will be necessary in your source code 
-   change "<QtGui/WidgetName>" to "<QtWidget/WidgetName>"
- - Now <QtApplication> is situated in <QtWidgets>
-   and QSound is situated in <QtMultimedia>
+_notes_:
+- may be it will be necessary in your source code 
+  change "<QtGui/WidgetName>" to "<QtWidget/WidgetName>"
+- now <QtApplication> is located in <QtWidgets>
+  and QSound is situated in <QtMultimedia>
 
 
  auxiliary notes
