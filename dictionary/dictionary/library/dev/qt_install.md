@@ -55,8 +55,7 @@ _notes_:
   and QSound is situated in <QtMultimedia>
 
 
- auxiliary notes
- ===============
+## aux notes
  
  you can also use the next script for converting from qt4
  -------------------------------------------------------------------------
