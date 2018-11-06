@@ -56,29 +56,30 @@ _notes_:
 
 
 ## aux notes
- 
- you can also use the next script for converting from qt4
- -------------------------------------------------------------------------
- | cat qt4.sh								                             | 	
- | #!/bin/bash								                             |
- | set -e 								                                 |	
- | for a in *.{cpp,h}; do						                         |
- |  if [ -f $a ]; then							                         |
- |   sed 's/^#include <QtGui>/#include <QtWidgets>/' $a > /tmp/$a~;      |
- |   sed 's/^#include </#include <QtWidgets\//' /tmp/$a~ > $a; rm /tmp/$a~; 
- |  fi;								                                     |
- | done									                                 |
- -------------------------------------------------------------------------
- you put this in ".." and run it from the project’s directory: 
- "../qt4.sh"
+you can also use the next script for converting from qt4:
+```sh
+cat qt4.sh								                             
+#!/bin/bash								                             
+set -e 								                                	
+for a in *.{cpp,h}; do						                         
+  if [ -f $a ]; then							                         
+   sed 's/^#include <QtGui>/#include <QtWidgets>/' $a > /tmp/$a~;      
+   sed 's/^#include </#include <QtWidgets\//' /tmp/$a~ > $a; rm /tmp/$a~; 
+  fi;								                                     
+done									                                 
+```
 
- for editing .pro file
- -------------------------------------------------------------------------
- | qmake -project				                            			 |
- | cat >> *.pro <<-stop							                         |
- | CONFIG=qt								                             |
- | QT += widgets							                             |
- | stop									                                 |
- | qmake *.pro								                             |
- | make									                                 |
- -------------------------------------------------------------------------
+you put this in ".." and run it from the project's directory: 
+"../qt4.sh"
+
+for editing .pro file:
+```sh
+qmake -project				                            			 
+cat >> *.pro <<-stop							                         
+CONFIG=qt								                             
+QT += widgets							                             
+stop									                                 
+qmake *.pro								                             
+make									                                 
+```
+
