@@ -1,7 +1,6 @@
 # tck tk install
 
- tcl install
- ===========
+## tcl install
 
  it is possibly to install tcl from sources
  ------------------------------------------------------------------------
