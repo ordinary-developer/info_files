@@ -10,8 +10,7 @@ $ sudo make install (# or "$ sudo checkinstall -D")
 ```
 
 
- tk install
- ==========
+## tk install
 
  to install tk from sources
  ------------------------------------------------------------------------
