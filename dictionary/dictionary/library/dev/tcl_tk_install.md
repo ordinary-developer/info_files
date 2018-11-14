@@ -11,14 +11,13 @@ $ sudo make install (# or "$ sudo checkinstall -D")
 
 
 ## tk install
-
- to install tk from sources
- ------------------------------------------------------------------------
- | $ ./configure --prefix=/usr/local --exec-prefix=/usr/local		|
- |		 --with-tcl=/usr/local					|
- |               --enable-threads --enable-64bit			|
- ------------------------------------------------------------------------
- where "--with-tcl" flag poits to your tcl installation path
+to install tk from sources:
+```sh
+$ ./configure --prefix=/usr/local --exec-prefix=/usr/local
+    --with-tcl=/usr/local
+    --enable-threads --enable-64bit	
+```
+where "--with-tcl" flag poits to your tcl installation path
 
 
 
