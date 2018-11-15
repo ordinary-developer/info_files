@@ -20,11 +20,9 @@ $ ./configure --prefix=/usr/local --exec-prefix=/usr/local
 where "--with-tcl" flag poits to your tcl installation path
 
 
+## installation from packages
+to install tk from packages:
+```sh
+$ sudo apt-get install tk tk-dev
+```
 
- installation from packages
- ==========================
-
- to install tk from packages 
- ------------------------------------------------------------------------
- | $ sudo apt-get install tk tk-dev					|
- ------------------------------------------------------------------------
