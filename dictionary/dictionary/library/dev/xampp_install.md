@@ -1,7 +1,6 @@
 # XAMPP
  
- install
- =======
+## install
 
  first download the installer from internet https://www.apachefriends.org
  change the permissions to the installer
