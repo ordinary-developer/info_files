@@ -1,35 +1,34 @@
 # XAMPP
  
 ## install
-
- first download the installer from internet https://www.apachefriends.org
- change the permissions to the installer
- ------------------------------------------------------------------------
- | chmod 755 xampp-linux-*-installer.run				|
- ------------------------------------------------------------------------
+first download the installer from internet https://www.apachefriends.org
+then change the permissions to the installer:
+```sh
+$ chmod 755 xampp-linux-*-installer.run
+```
  
- then run the installer
- ------------------------------------------------------------------------
- | sudo ./xampp-linux-*-installer.run					|
- ------------------------------------------------------------------------
+then run the installer:
+```sh
+$ sudo ./xampp-linux-*-installer.run
+```
 
- for starting
- ------------------------------------------------------------------------
- | sudo /opt/lampp/lampp start						|
- ------------------------------------------------------------------------
+for starting:
+```sh
+$ sudo /opt/lampp/lampp start
+```
 
- for stopping
- ------------------------------------------------------------------------
- | sudo /opt/lampp/lampp stop						|
- ------------------------------------------------------------------------
+for stopping:
+```sh
+$ sudo /opt/lampp/lampp stop
+```
 
- Also, note that there is a graphical tool that you can use to manage your servers easily. 
- You can start this tool with the following commands:
- ------------------------------------------------------------------------
- | cd /opt/lampp							|
- | sudo ./manager-linux.run (or manager-linux-x64.run)			|
- ------------------------------------------------------------------------
-
+also, note that there is a graphical tool that you can use 
+to manage your servers easily;
+you can start this tool with the following commands:
+```sh
+$ cd /opt/lampp	
+$ sudo ./manager-linux.run (or manager-linux-x64.run)
+```
 
 
  config
