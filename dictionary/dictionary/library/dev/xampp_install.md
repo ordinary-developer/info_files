@@ -31,8 +31,7 @@ $ sudo ./manager-linux.run (or manager-linux-x64.run)
 ```
 
 
- config
- =======
+## config
 
  To allow an access from other machine (not from local machine only)
  edit the file
