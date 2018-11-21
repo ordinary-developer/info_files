@@ -32,33 +32,24 @@ $ sudo ./manager-linux.run (or manager-linux-x64.run)
 
 
 ## config
+to allow an access from other machine (not from local machine only)
+edit the file `/opt/lampp/etc/extra/httpd-xampp.conf`
+```
+<LocationMatch "^/(?i:(?:xampp|security|licenses|phpmyadmin|webalizer|server-status|server-info))">
+    Require local    
+        ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
+</LocationMatch>
+```
 
- To allow an access from other machine (not from local machine only)
- edit the file
- ------------------------------------------------------------------------
- | /opt/lampp/etc/extra/httpd-xampp.conf				|
- ------------------------------------------------------------------------
+comment the string "require local"
+and the insert after the string "#Require local"
+```
+Allow from ::1 192.168.255.1
+```
+or some other ip 
 
- ------------------------------------------------------------------------
- | <LocationMatch "^/(?i:(?:xampp|security|licenses|phpmyadmin|webalizer|server-status|server-info))">
- | 	Require local    
- |      ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
- | </LocationMatch>
- ------------------------------------------------------------------------
-
- comment the string "require local"
- and the insert after the string "#Require local"
- ------------------------------------------------------------------------
- | Allow from ::1 192.168.255.1						|
- ------------------------------------------------------------------------
- or some other ip 
-
- to put the files to server use the next folder
- ------------------------------------------------------------------------
- | /opt/lampp/htdocs							|
- ------------------------------------------------------------------------
- 
- 
+to put the files to server use the next folder:
+`/opt/lampp/htdocs`
 
 
 
