@@ -1,6 +1,4 @@
- ############################
- COMMON GRUB INFO
- ############################
+# grub info
 
  For installing your linux version above the windows 
  You must have the next options in your BIOS
