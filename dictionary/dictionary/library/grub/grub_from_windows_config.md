@@ -1,6 +1,4 @@
- ############################
- WINDOWS GRUG CONFIG
- ############################
+# windows grub config
 
  to start simultaneosly 3 OS (WindowsXP, Windows7, Linux_Debian) it is necessary
  to edit file 
