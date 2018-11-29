@@ -1,22 +1,17 @@
 # windows grub config
-
- to start simultaneosly 3 OS (WindowsXP, Windows7, Linux_Debian) it is necessary
- to edit file 
- ------------------------------------------------------------------------
- | /boot/grub/grub.cfg         						|
- ------------------------------------------------------------------------
- and to add 2 lines for each "window" item
- 
- - for "WindowsXP" item
- ------------------------------------------------------------------------
- | parttool (hd0,msdos1) hidden- 					|
- | parttool (hd0,msdos2) hidden+ 					|
- ------------------------------------------------------------------------
- - for "Windows7" item
- ------------------------------------------------------------------------
- | parttool (hd0,msdos1) hidden+ 					|
- | parttool (hd0,msdos2) hidden- 					|
- ------------------------------------------------------------------------
+To start simultaneosly 3 OS (WindowsXP, Windows7, Linux_Debian)
+it is necessary to edit file `/boot/grub/grub.cfg` 
+and to add 2 lines for each "window" item:
+- for "WindowsXP" item:
+  ```
+  parttool (hd0,msdos1) hidden-
+  parttool (hd0,msdos2) hidden+ 
+  ```
+- for "Windows7" item:
+  ```
+  parttool (hd0,msdos1) hidden+ 
+  parttool (hd0,msdos2) hidden- 
+  ```
 
  --------------------
   grub file contents
