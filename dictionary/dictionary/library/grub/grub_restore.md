@@ -1,6 +1,4 @@
- ############################
-  GRUB RESTORING
- ############################
+# grub restore
  To restore grub loader you must load your LiveCD
  
  for identifying hard disks
