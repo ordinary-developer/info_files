@@ -1,5 +1,4 @@
- PPPoE
- #####
+# PPPoE config
 
  simple way 
  ==========
