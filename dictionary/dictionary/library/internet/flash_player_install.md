@@ -1,5 +1,7 @@
 # Flash player install
 
+## install flash player for chromium
+
  To install flash plaeyer for google chomium first
  download it from the site 
  ------------------------------------------------------------------------
