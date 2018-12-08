@@ -1,7 +1,6 @@
 # PPPoE config
 
- simple way 
- ==========
+# simple config
 
  to connect to internet via pppoe:
  - install pppoeconf
