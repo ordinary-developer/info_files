@@ -1,35 +1,22 @@
 # Flash player install
 
 ## install flash player for chromium
+To install flash plaeyer for google chomium first
+download it from the site 
+```
+www.adobe.com/support/flashplayer/download.html 
+```
 
- To install flash plaeyer for google chomium first
- download it from the site 
- ------------------------------------------------------------------------
- | www.adobe.com/support/flashplayer/download.html     			        |
- ------------------------------------------------------------------------ 
+unpack it:
+```sh
+$tar xvf flashplaery_11_plugin_debug.i386.tar.gz    
+```
 
- to unpack it 
- ------------------------------------------------------------------------ 
- | $tar xvf flashplaery_11_plugin_debug.i386.tar.gz    			|
- ------------------------------------------------------------------------
-
- to copy file 
- ------------------------------------------------------------------------
- | /usr/lib/kde4/libflashplayer.so                 			|
- ------------------------------------------------------------------------
-
- to directory (for chrome)
- ------------------------------------------------------------------------
- | /usr/lib/chromium-browser/plugins/            			|
- ------------------------------------------------------------------------
- or 
- ------------------------------------------------------------------------
- | /opt/google/chrome/plugins/                   			|
- ------------------------------------------------------------------------
- (for opera)
- ------------------------------------------------------------------------
- | /usr/lib/opera/plugins                       			|
- ------------------------------------------------------------------------
+copy file */usr/lib/kde4/libflashplayer.so*
+to a directory:
+- (for chrome) */usr/lib/chromium-browser/plugins/*
+  or */opt/google/chrome/plugins/*
+- (for opera) */usr/lib/opera/plugins* 
  
 
  mozilla
