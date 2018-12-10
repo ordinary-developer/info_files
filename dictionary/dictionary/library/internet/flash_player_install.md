@@ -19,28 +19,20 @@ to a directory:
 - (for opera) */usr/lib/opera/plugins* 
  
 
- mozilla
- -------
- 
- unpack your archive,
- then in the unpacked folder type
- ------------------------------------------------------------------------
- | # cp /usr/* -r /usr							|
- ------------------------------------------------------------------------
- find the flashplayer file in the archive
- 
- first change the rigths for the file  
- ------------------------------------------------------------------------
- | $ chmod +x libflashplayer						|
- ------------------------------------------------------------------------
- then copy this file to local firefox config folder
- ------------------------------------------------------------------------
- | $ cp libflashplayer ~/.mozilla					|
- ------------------------------------------------------------------------
+## mozilla
+unpack your archive, then in the unpacked folder type
+```sh
+# cp /usr/* -r /usr
+```
 
- 
+find the flashplayer file in the archive,
+then change the rigths for the file  
+```sh
+$ chmod +x libflashplayer
+```
 
-  
- 
- 
+then copy this file to local firefox config folder:
+```sh
+$ cp libflashplayer ~/.mozilla
+```
 
