@@ -1,34 +1,32 @@
 # PPPoE config
 
 # simple config
+to install pppoeconf:
+- install a package
+  (standard debian distr contains it)
+  ```sh
+  $ sudo apt-get install pppoeconf 
+  ```
 
- to connect to internet via pppoe:
- - install pppoeconf
-   (standard debian distr contains it)
- --------------------------------------------------------------------
- | $ sudo apt-get install pppoeconf                                 |
- --------------------------------------------------------------------
+- run this program
+  ```sh
+  $ sudo pppoeconf                                                 
+  ```
+  in many cases it is sufficient to answer "Yes",
+  and you must input your login and password
+  (from provider)
 
- Also a module "pppld" must be in the memory. (Here troubles can be)
- (or may be rp-pppoe.so module - a kernel module must be in the memory)
+to connect:
+```sh
+$ sudo pon dsl-provider                                            
+```
+
+to disconnect:
+```sh
+sudo poff                                                       
+```
  
- - run this program
- --------------------------------------------------------------------
- | $ sudo pppoeconf                                                 |
- --------------------------------------------------------------------
-
- In many cases it is sufficient to answer "Yes",
- and you must input your login and password
- (from provider)
-
- - to connect
- --------------------------------------------------------------------
- | sudo pon dsl-provider                                            |
- --------------------------------------------------------------------
-
- - to disconnect
- --------------------------------------------------------------------
- | sudo poff                                                        |                                                                    
- --------------------------------------------------------------------
- 
+remark: also a module "pppld" must be in the memory; 
+(here troubles can be)
+or may be rp-pppoe.so module - a kernel module must be in the memory)
  
