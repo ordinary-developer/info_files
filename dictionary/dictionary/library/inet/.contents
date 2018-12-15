@@ -1,2 +1,3 @@
-flash-player - info about flash player installation
-pppoeconf    - info about pppoe internet connection
+chrome_install.md       - info about chrome installation
+flash_player_install.md - info about flash player installation
+pppoe_config.md         - info about pppoe internet connection config
