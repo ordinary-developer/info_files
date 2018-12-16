@@ -1,6 +1,4 @@
- ###############################
- unix-way of kernel installation
- ###############################
+## kernel installation unix way
 
  update lists of packets
  ------------------------------------------------------------------------
