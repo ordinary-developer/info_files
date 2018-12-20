@@ -55,9 +55,8 @@
  and before a successful rebooting
  DON'T DELETE OLD VERSIONS OF THE KERNEL!!!
 
- ############################
- debian-way compiling 
- ############################
+
+## debian-way compiling 
  (not necessarily)
 
  But you can use packets creation instead of 3 last commands
