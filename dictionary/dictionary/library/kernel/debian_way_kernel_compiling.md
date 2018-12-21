@@ -1,6 +1,4 @@
- ############################
- DEBIAN WAY KERNEL COMPILING
- ############################
+# kernel compiling debian way 
 
  Traditional way of kernel installation
 
