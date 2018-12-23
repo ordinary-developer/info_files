@@ -1,59 +1,62 @@
 ## kernel installation unix way
+- update lists of packets
+  ```sh
+  # apt-get update 
+  ```
 
- update lists of packets
- ------------------------------------------------------------------------
- | # apt-get update       						|
- ------------------------------------------------------------------------
- Install needed packets
- ------------------------------------------------------------------------
- | # apt-get install kernel-package libncurses5-dev fakeroot wget bzip2 |
- |                   build-essential bc					|
- ------------------------------------------------------------------------
+- install needed packets
+  ```sh
+  # apt-get install kernel-package libncurses5-dev fakeroot wget bzip2 
+                    build-essential bc
+  ```
 
- Download sources of the kernel from site www.kernel.org
- ------------------------------------------------------------------------
- | # cd /usr/src                                                         |
- | # wget 								 |
-       https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.10.1.tar.xz  |
- -------------------------------------------------------------------------
- Unpack sources and create symbolic links
- ------------------------------------------------------------------------
- | # tar xJf linux-3.10.1.tar.xz				        |         
- | # rm linux (deletion of prvious symlink)				| 
- | # ln -s linux-3.10.1 linux               				|
- | # cd /usr/src/linux                      				|
- ------------------------------------------------------------------------
+- download sources of the kernel from site www.kernel.org
+  ```sh
+  # cd /usr/src                                                         
+  # wget 								 
+     https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.10.1.tar.xz  
+  ```
 
- The we must configure the kernel
- copy the old configuration to /usr/src/linux
- ------------------------------------------------------------------------
- | # make clean && make mrproper				        |
- | # cp /boot/config-`uname -r` ./.config                               |
- ------------------------------------------------------------------------ 
- The type the command
- ------------------------------------------------------------------------
- | # make menuconfig                                                    |
- ------------------------------------------------------------------------
- Compiling the kernel
- ------------------------------------------------------------------------
- | # make all                        					|  
- | # make modules_install            					|
- | # make install                    					| 
- ------------------------------------------------------------------------
+- unpack sources and create symbolic links
+  ```sh 
+  # tar xJf linux-3.10.1.tar.xz				              
+  # rm linux (deletion of prvious symlink)				 
+  # ln -s linux-3.10.1 linux               				
+  # cd /usr/src/linux                      				
+  ```
+
+- then we must configure the kernel
+   copy the old configuration to /usr/src/linux
+   ```sh
+   # make clean && make mrproper				        
+   # cp /boot/config-`uname -r` ./.config                               
+   ```
+
+- then type the command
+  ```sh
+  # make menuconfig                                                    
+  ```
+
+- compile the kernel
+  ```sh
+  # make all                        					
+  # make modules_install            					
+  # make install                    					 
+  ```
  (# make -j N all) - where N = 2-3 for 2 cores and 4-6 for 4 cores
 
- or 
- ------------------------------------------------------------------------
- | # make all && make modules_install && make install 			|
- ------------------------------------------------------------------------
+  or 
+  ```sh
+  # make all && make modules_install && make install 			
+  ```
  
- or 
- ------------------------------------------------------------------------
- | # make -j 2 all && make modules_install && make install 		|
- ------------------------------------------------------------------------
+  or 
+  ```sh
+  # make -j 2 all && make modules_install && make install 		
+  ```
 
- and before a successful rebooting
- DON'T DELETE OLD VERSIONS OF THE KERNEL!!!
+and before a successful rebooting
+DON'T DELETE OLD VERSIONS OF THE KERNEL!!!
 
 
 ## debian-way compiling 
