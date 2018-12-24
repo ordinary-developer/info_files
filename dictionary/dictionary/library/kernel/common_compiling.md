@@ -60,37 +60,38 @@ DON'T DELETE OLD VERSIONS OF THE KERNEL!!!
 
 
 ## debian-way compiling 
- (not necessarily)
+but you can use packets creation instead of 3 last commands:
+```sh
+# make all              
+# make deb-pkg          						
+```
 
- But you can use packets creation instead of 3 last commands
- ------------------------------------------------------------------------
- | # make all              						|
- | # make deb-pkg          						|
- -----------------------------------------------------------------------
+then in the folder /usr/src we have two files:
+```sh
+Linux-2.6.27.10_2.6.27.10-1_amd64.deb     				
+linux-firmware-image_2.6.27.10-1_all.deb  				
+```
 
- then in the folder /usr/src we have two files
- ------------------------------------------------------------------------
- | Linux-2.6.27.10_2.6.27.10-1_amd64.deb     				|
- | linux-firmware-image_2.6.27.10-1_all.deb  				|
- -----------------------------------------------------------------------
+then ve can install them:
+```sh
+# dpkg -i linux-2.6.27.10_2.6.27.10-1_amd64.db 			
+```
 
- Then ve can install them
- ------------------------------------------------------------------------
- | # dpkg -i linux-2.6.27.10_2.6.27.10-1_amd64.db 			|
- ------------------------------------------------------------------------
+next steps //all this already have been done
+we must create RAM-disk and update grub:
+```sh
+# depmod 2.6.23.1   (// 3.10.1)					
+# apt-get install yaird   						
+```
 
- Next steps //all this already have been done
- we must create RAM-disk and update grub
- ------------------------------------------------------------------------
- | # depmod 2.6.23.1   (// 3.10.1)					|
- | # apt-get install yaird   						|
- ------------------------------------------------------------------------
- then
- ------------------------------------------------------------------------
- | # mkinitrd.yaird -o /boot/initrd.img-2.6.23.1 2.6.23.1 		|
- ------------------------------------------------------------------------
- then update grub
- ------------------------------------------------------------------------
- | # update-grub 							|
- ------------------------------------------------------------------------
- and reboot
+then:
+```sh
+# mkinitrd.yaird -o /boot/initrd.img-2.6.23.1 2.6.23.1 		
+```
+
+then update grub:
+```sh
+# update-grub 							
+```
+
+and reboot
