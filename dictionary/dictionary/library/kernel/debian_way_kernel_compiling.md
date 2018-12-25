@@ -1,31 +1,30 @@
 # kernel compiling debian way 
 
- Traditional way of kernel installation
+traditional way of kernel installation:
 
- update lists of packets
- ------------------------------------------------------------------------
- | # apt-get update       						|
- ------------------------------------------------------------------------
+- update lists of packets
+  ```sh
+  # apt-get update 
+  ```
 
- Install needed packets
- ------------------------------------------------------------------------
- | # apt-get install kernel-package libncurses5-dev fakeroot wget bzip2 |
- |		     build-essential bc					|
- ------------------------------------------------------------------------
+- install needed packets:
+  ```sh 
+  # apt-get install kernel-package libncurses5-dev fakeroot wget bzip2 
+ 		     build-essential bc					
+  ```
 
- Download sources of the kernel from site www.kernel.org
- ------------------------------------------------------------------------
- | # cd /usr/src                                                        |
- | # wget https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.10.1.tar.xz  
- ------------------------------------------------------------------------
+- download sources of the kernel from site www.kernel.org:
+  ```sh
+  # cd /usr/src                                                        
+  # wget https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.10.1.tar.xz  
 
- Unpack sources and create symbolic links
- ------------------------------------------------------------------------
- | # tar xJf linux-3.10.1.tar.xz            				|         
- | # rm linux (deletion of prvious symlink) 				| 
- | # ln -s linux-3.10.1 linux               				|
- | # cd /usr/src/linux                      				|
- ------------------------------------------------------------------------
+- unpack sources and create symbolic links:
+  ```sh
+  # tar xJf linux-3.10.1.tar.xz            				      
+  # rm linux (deletion of prvious symlink) 				 
+  # ln -s linux-3.10.1 linux               				
+  # cd /usr/src/linux                      				
+  ```
 
 # patching (not necessarily)
 # --------------------------
