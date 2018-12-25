@@ -1,5 +1,4 @@
 # kernel compiling debian way 
-
 traditional way of kernel installation:
 
 - update lists of packets
