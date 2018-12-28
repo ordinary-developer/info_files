@@ -44,8 +44,7 @@ so, common actions are:
 # bzip2 -dc /usr/src/patch-2.6.23.8.bz2 | patch -p1                  
 ```
  
- continuing
- -----------
+## continuing
  The we must configure the kernel
  copy the old configuration to /usr/src/linux
  ------------------------------------------------------------------------
