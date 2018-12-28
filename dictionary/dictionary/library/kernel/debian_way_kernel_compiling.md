@@ -26,25 +26,23 @@ traditional way of kernel installation:
   ```
 
 # patching (not necessarily)
-# --------------------------
-# Patching process
-# You have download patch (for example, patch.bz2) into /usr/src.
-# Now we are in /usr/src/linux
-# type the next strings
-# ------------------------------------------------------------------------
-# | # bzip2 -dc /usr/src/patch.bz2 | patch -p1 --dry-run 		|
-# | # bzip2 -dc /usr/src/patch.bz2 | patch -p1           		|
-# ------------------------------------------------------------------------
-# first string is only a test , if first command has no errors you can type the second one
-# 
-# So, common actions are
-# ------------------------------------------------------------------------
-# | # cd /usr/src                                                        |
-# | # wget http://www.kernel.org/pub/linux/kernel/v2.6/patch-2.6.22.8.bz2|
-# | # cd /usr/src/linux                                                  |
-# | # bzip2 -dc /usr/src/patch-2.6.23.8.bz2 | patch -p1 --dry-run        |
-# | # bzip2 -dc /usr/src/patch-2.6.23.8.bz2 | patch -p1                  |
-# ------------------------------------------------------------------------
+you have download patch (for example, patch.bz2) into /usr/src.
+now we are in /usr/src/linux
+type the next strings:
+```sh
+# bzip2 -dc /usr/src/patch.bz2 | patch -p1 --dry-run 		
+# bzip2 -dc /usr/src/patch.bz2 | patch -p1          
+```
+ first string is only a test , if first command has no errors you can type the second one
+ 
+so, common actions are:
+```sh
+# cd /usr/src                                                        
+# wget http://www.kernel.org/pub/linux/kernel/v2.6/patch-2.6.22.8.bz2
+# cd /usr/src/linux                                                  
+# bzip2 -dc /usr/src/patch-2.6.23.8.bz2 | patch -p1 --dry-run        
+# bzip2 -dc /usr/src/patch-2.6.23.8.bz2 | patch -p1                  
+```
  
  continuing
  -----------
