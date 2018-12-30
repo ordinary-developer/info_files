@@ -45,37 +45,40 @@ so, common actions are:
 ```
  
 ## continuing
- The we must configure the kernel
- copy the old configuration to /usr/src/linux
- ------------------------------------------------------------------------
- | # make clean && make mrproper            				|
- | # cp /boot/config-`uname -r` ./.config   				|
- ------------------------------------------------------------------------ 
- The type the command
- ------------------------------------------------------------------------
- | # make menuconfig                   					|
- ------------------------------------------------------------------------
- Compiling the kernel
- ------------------------------------------------------------------------
- | # make-kpkg clean                                                    |	
- | # fakeroot make-kpkg --initrd 					|
- |            --append-to-version=-cybermind kernel_image kernel_headers|
- ------------------------------------------------------------------------
- 
- After --append-to-version= you can write anything, 
- but it must have first '-' and must have no spaces
+then we must configure the kernel
+copy the old configuration to /usr/src/linux:
+```sh
+# make clean && make mrproper            				
+# cp /boot/config-`uname -r` ./.config   				
+```
 
- Sometimes it may be a bug, so you must create initrd.img manually
- ------------------------------------------------------------------------
- |# update-initramfs -c -k <full-verion-of-the-kernel> 			|
- ------------------------------------------------------------------------
+then type the command:
+```sh
+# make menuconfig                   					
+```
+
+compile the kernel:
+```sh
+# make-kpkg clean                                                    
+# fakeroot make-kpkg --initrd 
+          --append-to-version=-cybermind kernel_image kernel_headers
+```
  
- for decisioning problem on future comment the second string in file
- /etc/kernel/postinst.d/initramfs-tools:
- -------------------------------------------------------------------------------
- | # kernel-package passes an extra arg; hack to not run under kernel-package  |
- | #[ -z "$2" ] || exit 0                                                      |
- -------------------------------------------------------------------------------
+after --append-to-version= you can write anything, 
+but it must have first '-' and must have no spaces
+
+sometimes it may be a bug, so you must create initrd.img manually:
+```sh
+# update-initramfs -c -k <full-verion-of-the-kernel> 
+```
+ 
+for decisioning problem on future comment the second string in file
+`/etc/kernel/postinst.d/initramfs-tools`:
+```sh
+# kernel-package passes an extra arg; hack to not run under kernel-package  
+#[ -z "$2" ] || exit 0                                                      
+```
+
  
  Installing of the new kernel
 ---------------------------------------------------------------------------------
