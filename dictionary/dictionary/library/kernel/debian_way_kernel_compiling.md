@@ -80,21 +80,21 @@ for decisioning problem on future comment the second string in file
 ```
 
  
- Installing of the new kernel
----------------------------------------------------------------------------------
- | # cd /usr/src    							 	|
- | # ls -l          								| 
- --------------------------------------------------------------------------------
+## installing a new kernel
+```sh
+# cd /usr/src  
+# ls -l  
+```
 
- and then install two packets
- --------------------------------------------------------------------------------
- | # dpkg -i linux-image-2.6.23.1-cybermind_2.6.23.1-cybermind-10.00.Custom_i386.deb     
- | # dpkg -i linux-headers-2.6.23.1-cybermind_2.6.23.1-cybermind-10.00.Custom_i386.deb   
- ---------------------------------------------------------------------------------
+and then install two packages:
+```sh
+# dpkg -i linux-image-2.6.23.1-cybermind_2.6.23.1-cybermind-10.00.Custom_i386.deb     
+# dpkg -i linux-headers-2.6.23.1-cybermind_2.6.23.1-cybermind-10.00.Custom_i386.deb   
+```
+and rebooting
 
- and rebooting
- useful logs
 
- /var/log/syslog
- /var/log/kernel
- /var/log/dmesg
+## useful logs
+- /var/log/syslog
+- /var/log/kernel
+- /var/log/dmesg
