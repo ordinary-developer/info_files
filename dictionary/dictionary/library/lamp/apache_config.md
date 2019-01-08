@@ -1,56 +1,56 @@
 # apache config
 
- openssl
- -------
- create key
+## openssl
+create key
   
- Create a private key and place it into directory /home/ssl:
- ------------------------------------------------------------------------
- | $mkdir /home/ssl							|
- | $cd /home/ssl							|
- | $/usr/local/openssl/bin/openssl genrsa -des3 -rand			|
- |	  			   some_big_file_1:some_big_file_2 	|
- |				  -out localhost.key 1024		|
- ------------------------------------------------------------------------
- Then you must enter your password phrase (you must REMEMBER it)
+create a private key and place it into directory /home/ssl:
+```sh
+$ mkdir /home/ssl
+$ cd /home/ssl
+$ /usr/local/openssl/bin/openssl genrsa 
+    -des3 
+    -rand some_big_file_1:some_big_file_2 
+    -out localhost.key 1024
+```
 
- Next, we will create a private key without a pass-phrase, this is less secure, 
- but it allows us to bootup the server without manually entering the pass-phrase every time…
- ------------------------------------------------------------------------
- | $/usr/local/openssl/bin/openssl rsa 					|
- |   			           -in localhost.key 			|
- |				   -out localhost.key.unsecure		|
- ------------------------------------------------------------------------
- Then you must again enter the password phrase
+then you must enter your password phrase (you must REMEMBER it)
 
- We will also create a request file that will be emailed to proper certification authority 
- for getting a trusted SSL certificate (if needed) under file localhost.key.csr:
- ------------------------------------------------------------------------
- | $/usr/local/openssl/bin/openssl req -new 				|
- |				  -key localhost.key 			|
- |				  -out localhost.key.csr		|
- ------------------------------------------------------------------------
+next, we will create a private key without a pass-phrase, this is less secure, 
+but it allows us to bootup the server without manually entering the pass-phrase every time
+```sh
+$ /usr/local/openssl/bin/openssl rsa 
+    -in localhost.key
+    -out localhost.key.unsecure
+```
 
-   Then you must enter you password phrase, coutnry code (optionally), state name (optionally),
-  locality name (optionally), organization name (optionally), oganazation unit name (optionally)
-  common name - HERE MUST BE YOUR SERVER ADDRESS (or FQDN) (e.g. www.site.com) localhost
+then you must again enter the password phrase
+
+we will also create a request file that will be emailed to proper certification authority 
+for getting a trusted SSL certificate (if needed) under file localhost.key.csr:
+```sh
+$ /usr/local/openssl/bin/openssl req -new -key localhost.key -out localhost.key.csr
+```
+
+then you must enter you password phrase, coutnry code (optionally), state name (optionally),
+locality name (optionally), organization name (optionally), oganazation unit name (optionally)
+common name - HERE MUST BE YOUR SERVER ADDRESS (or FQDN) (e.g. www.site.com) localhost
  
 
 
-  While waiting for the certification authority, we can create a temporary self-signed certificate,
-  good for 30 (or more) days: 
- ------------------------------------------------------------------------
- | $/usr/local/openssl/bin/openssl req -new 				|
- | $/usr/local/openssl/bin/openssl x509 -req 				|
- |			  	  -days 30 				|
- |				  -in localhost.key.csr 		|
- |				  -signkey localhost.key 		|
- |				  -out localhost.cert 			|
- | $chmod 400 localhost.cert						|
- | $chmod 400 localhost.key						|
- | $chmod 400 localhost.key.unsecure					|
- ------------------------------------------------------------------------
-  Then you must enter the main password-phrase
+while waiting for the certification authority, we can create a temporary self-signed certificate,
+good for 30 (or more) days: 
+```sh
+$ /usr/local/openssl/bin/openssl req -new 
+$ /usr/local/openssl/bin/openssl x509 -req 
+    -days 30 
+    -in localhost.key.csr 
+    -signkey localhost.key 
+    -out localhost.cert 
+$ chmod 400 localhost.cert
+$ chmod 400 localhost.key
+$ chmod 400 localhost.key.unsecure
+```
+then you must enter the main password-phrase
 
 
  apache opnessl config
