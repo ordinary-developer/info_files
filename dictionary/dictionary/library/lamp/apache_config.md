@@ -53,8 +53,7 @@ $ chmod 400 localhost.key.unsecure
 then you must enter the main password-phrase
 
 
- apache opnessl config
- ---------------------
+## apache opnessl config
 
  in file
  ------------------------------------------------------------------------
