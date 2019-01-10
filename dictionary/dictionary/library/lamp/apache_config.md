@@ -54,35 +54,31 @@ then you must enter the main password-phrase
 
 
 ## apache opnessl config
+in file *httpd.conf* uncomment the next string:
+```
+LoadModule ssl_module modules/mod_ssl.so
+```
 
- in file
- ------------------------------------------------------------------------
- | httpd.conf								|
- ------------------------------------------------------------------------
- uncomment the next string
- ------------------------------------------------------------------------ 
- | LoadModule ssl_module modules/mod_ssl.so				|
- ------------------------------------------------------------------------
- and the next string
- ------------------------------------------------------------------------
- | LoadModule socache_shmcb_module modules/mod_socache_shmcb.so		|
- ------------------------------------------------------------------------
- and the next string
- ------------------------------------------------------------------------
- | Include conf/extra/httpd-ssl.conf					|
- ------------------------------------------------------------------------
+and the next string:
+```
+LoadModule socache_shmcb_module modules/mod_socache_shmcb.so
+```
 
- modify file /usr/local/apache2/conf/extra/ssl.conf
- ------------------------------------------------------------------------
- | Listen 443								|
- | <VirtualHost _default_:443>						|
- |   ServerName localhost						|
- |   SSLEngine on							|
- |   SSLCertificateFile /home/ssl/localhost.cert			|
- |   SSLCertificateKeyFile /home/ssl/localhost.key.unsecure		|
- | </VirtualHost>							|
- ------------------------------------------------------------------------
- 
+and the next string:
+```
+Include conf/extra/httpd-ssl.conf
+```
+
+modify file /usr/local/apache2/conf/extra/ssl.conf:
+```
+Listen 443
+<VirtualHost _default_:443>
+  ServerName localhost
+  SSLEngine on
+  SSLCertificateFile /home/ssl/localhost.cert
+  SSLCertificateKeyFile /home/ssl/localhost.key.unsecure
+</VirtualHost>
+``` 
 
  
  apache base config
