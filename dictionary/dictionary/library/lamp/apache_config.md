@@ -34,8 +34,6 @@ $ /usr/local/openssl/bin/openssl req -new -key localhost.key -out localhost.key.
 then you must enter you password phrase, coutnry code (optionally), state name (optionally),
 locality name (optionally), organization name (optionally), oganazation unit name (optionally)
 common name - HERE MUST BE YOUR SERVER ADDRESS (or FQDN) (e.g. www.site.com) localhost
- 
-
 
 while waiting for the certification authority, we can create a temporary self-signed certificate,
 good for 30 (or more) days: 
