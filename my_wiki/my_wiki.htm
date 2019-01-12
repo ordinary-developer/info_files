@@ -201,8 +201,6 @@ Error message and password prompt
 
 <li>django installing</li>
 
-<li>Draft of 'pelican-creating_a_blog'</li>
-
 <li>git ssl key error</li>
 
 <li>git tips and tricks</li>
@@ -5273,7 +5271,7 @@ Error message and password prompt
 <div modified="20141203075826192" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div modified="20180526173159724" title="$:/state/sidebar">
+<div modified="20190104131351762" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div modified="20180516102650200" title="$:/state/tab/moresidebar-401116514">
@@ -5282,7 +5280,7 @@ Error message and password prompt
 <div modified="20150204083405288" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/More</pre>
 </div>
-<div list="[[git ssl key error]] [[Base git config]] GettingStarted" title="$:/StoryList">
+<div list="pelican-creating_a_blog GettingStarted" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -6179,46 +6177,6 @@ To install django you can create a virtual environment for it and then in this e
 pip install django
 ```</pre>
 </div>
-<div created="20170528140320628" draft.of="pelican-creating_a_blog" draft.title="pelican-creating_a_blog" modified="20171203135334832" tags="pelican python" title="Draft of 'pelican-creating_a_blog'">
-<pre>&lt;h3&gt;&lt;b&gt;Installing Pelican&lt;/b&gt;&lt;/h3&gt;
-First you must install Pelican on your system. The best way is to install it in a separate virtual environment.
-
-In Bash 
-
-```
-# enter the python sandbox directory
-$ cd  ~/sandboxes/python 
-# creating a virtual environment
-$ python pyvenv pelican
-```
-
-
-&lt;h3&gt;&lt;b&gt;Creating a blog&lt;/b&gt;&lt;/h3&gt;
-
-To create a blog, first you must create the repository for this blog. In my case I created in in Github. It has the next name: `ordinary-developer.github.io`
-
-in your work folder (here you blog repository will be created)
-
-```
-$ source ~/sandboxes/python/pelican/bin/activate
-(pelican) $ git clone git@github.com:ordinary-developer/ordinary-developer.github.io
-(pelican) $ cd ordinary-developer.github.io
-(pelican) $ pelican-quickstart
-# ... answer some questions
-# &gt; Where do you want to create your new web site? - Enter
-# &gt; What will be the title of this web site? - You title here (e.g. &quot;it blog&quot;)
-# &gt; Who will be he author of this web site? - You auther (e.g. &quot;great-developer&quot;)
-# &gt; What will be the default language of this web site? - en
-# &gt; Do you want to specify a URL prefix? e.g., http://example.com (Y/n) - n
-# &gt; Do you want to enable article pagination? (Y/n) - n
-# &gt; What is you time zone? [Europe/Paris] - Europe/Moscow
-# &gt; Do you want to generate a Fagfile/Makefile to automate generation and publishing (Y/n) - n
-# &gt; Do you want an auto-reload &amp; simpleHTTP script to assist with theme and site development? (Y/n) - n.
-```
-
-
-</pre>
-</div>
 <div created="20180526172512689" modified="20180526173151237" tags="git" title="git ssl key error">
 <pre>&lt;p&gt;
 If you have something like this:
@@ -6546,18 +6504,26 @@ The website/company twitter account
 
 </pre>
 </div>
-<div created="20170528140320628" modified="20171105181642619" tags="pelican python" title="pelican-creating_a_blog">
+<div created="20170528140320628" modified="20190104140351646" tags="pelican python" title="pelican-creating_a_blog">
 <pre>&lt;h3&gt;&lt;b&gt;Installing Pelican&lt;/b&gt;&lt;/h3&gt;
 First you must install Pelican on your system. The best way is to install it in a separate virtual environment.
 
-In Bash 
+In Bash - for creating a virtual env
 
 ```
 # enter the python sandbox directory
-$ cd  ~/sandboxes/python 
-# creating a virtual environment
-$ python pyvenv pelican
+$ cd  ~/sandboxes/python
+$ python pyenv pelican
+$ pip install pelican markdown
 ```
+
+In Bash - for using a virtual env:
+
+```
+$ cd ~/sandboxes/python
+$ source ~/sandboxes/python/pelican/bin/activate
+```
+
 
 
 &lt;h3&gt;&lt;b&gt;Creating a blog&lt;/b&gt;&lt;/h3&gt;
@@ -6583,58 +6549,6 @@ $ source ~/sandboxes/python/pelican/bin/activate
 # &gt; Do you want an auto-reload &amp; simpleHTTP script to assist with theme and site development? (Y/n) - n.
 ```
 
-&lt;h3&gt;&lt;b&gt;Writing an article&lt;/b&gt;&lt;/h3&gt;
-To add an article in the folder `src/content` inside your repository create a file (e.g. `first_article.md`) with the next content:
-
-```
-Title: Hello, World!
-Date: 2017-04-05 13:04
-Modified: 2017-04-05 13:04
-
-This is a test blog post.
-```
-
-And then regenerate the site (you must be in the `src` directory)
-for disqus with 'relative url = false' you must use:  
-
-```
-(pelican) $ pelican --ignore-cache -o .. content
-```
-
-another command is the next  
-
-```
-(pelican) $ pelican --relative-urls --ignore-cache -o .. content
-```
-
-
-After that you can create a commit with new changes and push it to github to update the site
-
-```
-$ cd %blog_repository_root%
-$ git add *
-$ git commit 
-$ git push origin master
-```
-
-&lt;hr /&gt;
-&lt;p&gt;Is is also useful to create a script-generator &lt;code&gt;gen.sh&lt;/code&gt;:
-&lt;pre&gt;#!/bin/sh
-
-set -e
-
-rm ../*.html 2&gt;/dev/null || true
-rm -r ../author 2&gt;/dev/null || true
-rm -r ../category 2&gt;/dev/null || true
-rm -r ../rss 2&gt;/dev/null || true
-rm -r ../theme 2&gt;/dev/null || true
-
-pelican --ignore-cache -o .. content
-
-rm -r __pycache__ 2&gt;/dev/null || true
-&lt;/pre&gt;
-then put it to &lt;code&gt;src&lt;/code&gt; directory and start something like this:
-&lt;pre&gt;$ ./gen.sh&lt;/pre&gt;
 
 </pre>
 </div>
@@ -7737,7 +7651,7 @@ appends the visual selection range ('&lt;,'&gt;) for any ex command when you sel
 &lt;/ul&gt;
 &lt;/p&gt;</pre>
 </div>
-<div created="20180428063241211" modified="20180515151142765" tags="[[visual studio]]" title="visual studio 6 tips and tricks">
+<div created="20180428063241211" modified="20181202131417628" tags="[[visual studio]]" title="visual studio 6 tips and tricks">
 <pre>&lt;h2&gt;Editing&lt;/h2&gt;
 &lt;p&gt;Some useful shortcuts:&lt;/p&gt;
 &lt;ul&gt;
@@ -7754,13 +7668,13 @@ appends the visual selection range ('&lt;,'&gt;) for any ex command when you sel
 &lt;p&gt;To navigate by a pharse, select the phrase in an editor and then
 &lt;ul&gt;
 &lt;li&gt;
+&lt;b&gt;F3&lt;/b&gt; - simply find
+&lt;/li&gt;
+&lt;li&gt;
 &lt;b&gt;Ctrl-F3&lt;/b&gt; - find next
 &lt;/li&gt;
 &lt;li&gt;
 &lt;b&gt;Shift-F3&lt;/b&gt; - find previous
-&lt;/li&gt;
-&lt;li&gt;
-&lt;b&gt;Ctrl-d&lt;/b&gt; - find the text under the cursor (without need to select the text)
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/p&gt;
@@ -7768,6 +7682,9 @@ appends the visual selection range ('&lt;,'&gt;) for any ex command when you sel
 &lt;h3&gt;Bookmarks&lt;/h3&gt;
 &lt;p&gt;Some useful bookmark shortcuts:&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;
+&lt;b&gt;Alt-F2&lt;/b&gt; - show all bookmarks
+&lt;/li&gt;
 &lt;li&gt;
 &lt;b&gt;Ctrl-F2&lt;/b&gt; - toggle bookmark
 &lt;/li&gt;
@@ -7795,13 +7712,11 @@ select by a mouse all the header file in a header file include string, click the
 &lt;/p&gt;
 
 &lt;p&gt;
-To go to a corresponding cpp file (from a header file)
+To go to another file (that is already opened) in visual studio
 &lt;ul&gt;
-&lt;li&gt;
-in a header file press &lt;b&gt;Ctrl-F6&lt;/b&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Ctrl - Tab&lt;/b&gt; - will go to the next file&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Main menu -&gt; Windows -&gt; 1, 2, etc&lt;/b&gt; - got the file with such numbers&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/p&gt;
 
 &lt;p&gt;
 To go to a source dialog file (mfc):
@@ -7821,10 +7736,34 @@ double click the left mouse button.
 &lt;p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;b&gt;F9&lt;/b&gt; - set a breakpoint;
+&lt;b&gt;Alt-F9&lt;/b&gt; or &lt;b&gt;Ctrl-b&lt;/b&gt; - show all breakpoints (allow to set &lt;i&gt;conditional&lt;/i&gt; breakpoints)
 &lt;/li&gt;
 &lt;li&gt;
+&lt;b&gt;F9&lt;/b&gt; - set/unser a breakpoint;
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Ctrl - F9&lt;/b&gt; - enable / disable a breakpoint&lt;/li&gt;
+&lt;li&gt;
 &lt;b&gt;Ctrl-Shift-F9&lt;/b&gt; - delete all breakpoints in a project.
+&lt;/li&gt;
+&lt;li&gt;
+&lt;b&gt;F5&lt;/b&gt; - resume execution after reaching a breakpoint
+&lt;/li&gt;
+&lt;li&gt;
+&lt;b&gt;F11&lt;/b&gt; - step into
+&lt;/li&gt;
+&lt;li&gt;
+&lt;b&gt;F10&lt;/b&gt; - step over
+&lt;/li&gt;
+&lt;li&gt;
+&lt;b&gt;Shift-F11&lt;/b&gt; - step out (of context, function, method, unnamed context)
+&lt;/li&gt;
+&lt;li&gt;
+&lt;b&gt;Ctrl-F10&lt;/b&gt; - go to the cursor (set the cursor and go to its position)
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Debug-&gt;Quick Watch&lt;/b&gt; or &lt;b&gt;Shif-F9&lt;/b&gt; - evaluate a parameter via QuickWatch, there you can insert (by Ctrl-C and Ctrl-V) an expression
+&lt;/li&gt;
+&lt;li&gt;
+&lt;b&gt;Alt-F10&lt;/b&gt; - apply code changes and automatically start the app
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/p&gt;
@@ -7846,9 +7785,7 @@ In a debug mode break the execution (from the Main Menu &lt;b&gt;Debug&lt;/b&gt;
 In a debug mode select the necessary window thread (from the Main menu &lt;b&gt;Debug&lt;/b&gt;-&gt;&lt;b&gt;Threads&lt;/b&gt;)
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/p&gt;
-
-</pre>
+&lt;/p&gt;</pre>
 </div>
 <div created="20180508101925152" modified="20180508101925152" tags="images" title="vs6_debug_break_execution.png" type="image/png">
 <pre>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</pre>
