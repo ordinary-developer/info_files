@@ -79,8 +79,7 @@ Listen 443
 ``` 
 
  
- apache base config
- ------------------
+## apache base config
  
  edit the file /usr/local/apache2/conf/httpd.conf
  add the next strings
