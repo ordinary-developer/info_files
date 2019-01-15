@@ -80,28 +80,27 @@ Listen 443
 
  
 ## apache base config
+edit the file /usr/local/apache2/conf/httpd.conf
+add the next strings
+```
+DocumentRoot "/home/www"
+# allow / create basic mod_rewrite rules	
+<Directory "/home/www">	
+   Options Indexes Includes FollowSymLinks MultiViews
+     AllowOverride All
+     Order allow,deny							
+     Allow from all
+</Directory>
  
- edit the file /usr/local/apache2/conf/httpd.conf
- add the next strings
- ------------------------------------------------------------------------
- | DocumentRoot "/home/www"						|
- | # allow / create basic mod_rewrite rules				|
- | <Directory "/home/www">						|
- |   Options Indexes Includes FollowSymLinks MultiViews			|
- |   AllowOverride All							|
- |   Order allow,deny							|
- |   Allow from all							|
- | </Directory>								|
- ------------------------------------------------------------------------
- 
- And dissalow clients to access .htaccess:
- ------------------------------------------------------------------------
- | <Files ~ "^.ht">							|
- |   Order allow,deny							|
- |   Deny from all							|
- | </Files>								|
- ------------------------------------------------------------------------
- 
+And dissalow clients to access .htaccess:
+```
+<Files ~ "^.ht">
+    Order allow,deny
+    Deny from all
+</Files>
+```  
+
+
  apache php config
  -----------------
 
