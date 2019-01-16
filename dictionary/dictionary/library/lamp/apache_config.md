@@ -91,6 +91,7 @@ DocumentRoot "/home/www"
      Order allow,deny							
      Allow from all
 </Directory>
+```
  
 And dissalow clients to access .htaccess:
 ```
