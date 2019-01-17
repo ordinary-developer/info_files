@@ -102,8 +102,7 @@ And dissalow clients to access .htaccess:
 ```  
 
 
- apache php config
- -----------------
+## apache php config
 
  edit the file /usr/local/apaceh2/conf/httpd.conf
  add the next string
