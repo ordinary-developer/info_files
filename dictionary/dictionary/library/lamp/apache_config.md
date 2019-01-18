@@ -103,64 +103,59 @@ And dissalow clients to access .htaccess:
 
 
 ## apache php config
+edit the file /usr/local/apaceh2/conf/httpd.conf
+add the next string:
+```
+LoadModule php5_module modules/libphp5.so)
+```
 
- edit the file /usr/local/apaceh2/conf/httpd.conf
- add the next string
- ------------------------------------------------------------------------
- | LoadModule php5_module modules/libphp5.so)				|
- ------------------------------------------------------------------------
- then add to the end of /usr/local/apache2/conf/httpd.conf
- ------------------------------------------------------------------------
- | <FilesMatch \.php$>							|
- |     SetHandler application/x-httpd-php 				|
- | </FilesMatch>							|
- |									|
- | DirectoryIndex index.html index.htm index.php 			|
- | AddType application/x-httpd-php .php					|
- | AddType application/x-httpd-php-source .phps				|
- ------------------------------------------------------------------------
+then add to the end of /usr/local/apache2/conf/httpd.conf:
+```
+<FilesMatch \.php$>	
+  SetHandler application/x-httpd-php 
+</FilesMatch>
+ 
+DirectoryIndex index.html index.htm index.php 
+AddType application/x-httpd-php .php
+AddType application/x-httpd-php-source .phps
+```
 
- in file 
- ------------------------------------------------------------------------
- | httpd.conf								|
- ------------------------------------------------------------------------
+in file httpd.conf write the next string:
+```
+Listen 127.0.0.1:80
+```
 
- write the next string
- ------------------------------------------------------------------------
- | Listen 127.0.0.1:80							|
- ------------------------------------------------------------------------
+then uncomment the next string:
+```
+Include /usr/local/apache2/conf/extra/httpd-vhosts.conf
+```
 
- then uncomment the next string
- ------------------------------------------------------------------------
- | Include /usr/local/apache2/conf/extra/httpd-vhosts.conf		|
- ------------------------------------------------------------------------
+write the next strings:
+```
+<VirtualHost localhost:80>
+  ServerName localhost
+  DocumentRoot "/usr/local/apache2/htdocs/localhost"
+</VirtualHost>
 
- write the next strings
- ------------------------------------------------------------------------
- | <VirtualHost localhost:80>						|
- |	ServerName localhost						|
- |	DocumentRoot "/usr/local/apache2/htdocs/localhost"		|
- | </VirtualHost>							|
- |									|
- | <VirtualHost host1:80>						|
- |	ServerName host1						|
- |	DocumentRoot "/usr/local/apache2/htdocs/host1"			|
- | </VirtualHost>							|
- |									|
- | <VirtualHost host2:80>						|
- |	ServerName host2						|
- |	DocumentRoot "/usr/local/apache2/htdocs/host2"			|
- | </VirtualHost>							|
- |									|
- | <VirtualHost host3:80>						|
- |	ServerName host3						|
- |	DocumentRoot "/usr/local/apache2/htdocs/host3"			|
- | </VirtualHost>							|
- ------------------------------------------------------------------------
+<VirtualHost host1:80>
+  ServerName host1
+ DocumentRoot "/usr/local/apache2/htdocs/host1"
+</VirtualHost>
 
-In file "etc/hosts"
+<VirtualHost host2:80>
+  ServerName host2
+  DocumentRoot "/usr/local/apache2/htdocs/host2"
+</VirtualHost>
 
-----------------
+<VirtualHost host3:80>
+  ServerName host3						|
+  DocumentRoot "/usr/local/apache2/htdocs/host3"
+</VirtualHost>
+```
+
+In file "etc/hosts" write:
+```
 127.0.0.1	localhost host1 host2 host3
---------------------
+```
 then restart the server
+
