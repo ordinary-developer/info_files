@@ -1,26 +1,26 @@
 # apache install
-
- ------------------------------------------------------------------------
- | $sudo ./configure --prefix=/usr/local/apache2			|
- |		     --enable-cache 					|
- |		     --enable-file-cache         	    		|
- |            	     --enable-disk-cache  				|
- |                   --enable-mem-cache 				|
- |         	     --enable-deflate 					|
- | 	             --enable-expires 					|
- |         	     --enable-headers 					|
- | 	             --enable-usertrack 				|
- | 	             --enable-ssl 					|
- |		     --with-ssl=/local/usr/openssl			|
- |	             --enable-cgi    					|	
- |	             --enable-vhost-alias 				|
- |	             --enable-rewrite 					|
- |	             --enable-so 					|
- |		     --with-pcre=/usr/local/pcre			|
- |		     --with-included-apr (not necessaryli)		|
- |	             --with-apr=/local/usr/apr				|
- |	             --with-apr-util=/usr/local/apr-util		|
- ------------------------------------------------------------------------		     
+to install apache run the 'configure' script:
+```sh
+$ sudo ./configure --prefix=/usr/local/
+                   --enable-cache 
+                   --enable-file-cache 
+                   --enable-disk-cache
+                   --enable-mem-cache
+                   --enable-deflate
+                   --enable-expires
+                   --enable-headers 
+                   --enable-usertrack 
+                   --enable-ssl 
+                   --with-ssl=/local/usr/openssl
+                   --enable-cgi
+                   --enable-vhost-alias 
+                   --enable-rewrite 
+                   --enable-so 
+                   --with-pcre=/usr/local/pcre
+                   --with-included-apr (not necessaryli)
+                   --with-apr=/local/usr/apr
+                   --with-apr-util=/usr/local/apr-util
+```
 
  You can use additional entries:
                      --enable-authn-anon 
