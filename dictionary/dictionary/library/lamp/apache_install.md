@@ -22,29 +22,32 @@ $ sudo ./configure --prefix=/usr/local/
                    --with-apr-util=/usr/local/apr-util
 ```
 
- You can use additional entries:
-                     --enable-authn-anon 
-                     --enable-v4-mapped 
-                     --enable-authz-owner 
-                     --enable-auth-digest 
-                     --disable-imagemap 
-                     --enable-dav 
-                     --enable-dav-fs 
-                     --enable-dav-lock       
-                     --enable-info 
-                     --enable-mime-magic 
-                     --enable-proxy 
-                     --enable-proxy-ajp 
-                     --enable-proxy-http 
-                     --enable-proxy-ftp 
-                     --enable-proxy-balancer 
-                     --enable-proxy-connect 
-                     --enable-suexec 
-                     --enable-rewrite            
-	             --disable-userdir 	
-	             --with-mpm=prefork 
+You can use additional entries such as:
+```sh
+--enable-authn-anon 
+--enable-v4-mapped 
+--enable-authz-owner 
+--enable-auth-digest 
+--disable-imagemap 
+--enable-dav 
+--enable-dav-fs 
+--enable-dav-lock       
+--enable-info 
+--enable-mime-magic 
+--enable-proxy 
+--enable-proxy-ajp 
+--enable-proxy-http 
+--enable-proxy-ftp 
+--enable-proxy-balancer 
+--enable-proxy-connect 
+--enable-suexec 
+--enable-rewrite            
+le-userdir 	
+--with-mpm=prefork 
+```
 
-
-
-   --with-port=[PORT_NUMBER] - install with a special port
+to install a special port you can use:
+```sh
+--with-port=[PORT_NUMBER]
+```
 
