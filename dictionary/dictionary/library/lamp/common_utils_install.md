@@ -1,6 +1,4 @@
- ############################
- COMMON LIBRARIES FOR APACHE
- ############################
+# common lib for apache
 
  prerequisites 
  -------------
