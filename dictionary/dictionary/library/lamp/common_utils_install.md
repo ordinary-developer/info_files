@@ -1,12 +1,11 @@
 # common lib for apache
 
 ## prerequisites 
- Sometimes it is necessary to install base utils
- ------------------------------------------------------------------------
- | $sudo apt-get install build-essential autconf cmake			|
- ------------------------------------------------------------------------
+sometimes it is necessary to install base utils:
+```sh
+$ sudo apt-get install build-essential autconf cmake
+```
  
-
 
  openssl
  -------
