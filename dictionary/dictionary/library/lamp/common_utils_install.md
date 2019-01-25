@@ -7,8 +7,7 @@ $ sudo apt-get install build-essential autconf cmake
 ```
  
 
- openssl
- -------
+## openssl
  official site - https://www.openssl.org/
  ------------------------------------------------------------------------
  | $tar -xvzf openssl.tar.gz						|					               
