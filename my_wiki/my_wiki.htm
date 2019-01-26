@@ -6504,16 +6504,35 @@ The website/company twitter account
 
 </pre>
 </div>
-<div created="20170528140320628" modified="20190104140351646" tags="pelican python" title="pelican-creating_a_blog">
+<div created="20170528140320628" modified="20190126151234822" tags="pelican python" title="pelican-creating_a_blog">
 <pre>&lt;h3&gt;&lt;b&gt;Installing Pelican&lt;/b&gt;&lt;/h3&gt;
 First you must install Pelican on your system. The best way is to install it in a separate virtual environment.
 
 In Bash - for creating a virtual env
 
+enter the python sandbox directory
+
 ```
-# enter the python sandbox directory
 $ cd  ~/sandboxes/python
+```
+
+create  a virtual env:
+
+for python 3.6 and later
+
+```
+$ python -m venv pelican
+```
+
+for older python:
+
+```
 $ python pyenv pelican
+```
+
+the install the markdown package:
+
+```
 $ pip install pelican markdown
 ```
 
