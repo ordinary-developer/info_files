@@ -8,18 +8,19 @@ $ sudo apt-get install build-essential autconf cmake
  
 
 ## openssl
- official site - https://www.openssl.org/
- ------------------------------------------------------------------------
- | $tar -xvzf openssl.tar.gz						|					               
- | $sudo ./configure --prefix=/usr/local/openssl 			|
- |                   --openssldir=/usr/local/openssl (not necessarily)	|
- |                     shared 						|
- |                     no-ssl2 						|
- | $sudo make depend							|
- | $sudo make -j 2							|
- | $sudo make install							|
- ------------------------------------------------------------------------
- openssl is now situated in /usr/local/openssl
+official site - https://www.openssl.org/
+```sh
+$ tar -xvzf openssl.tar.gz
+$ sudo ./configure --prefix=/usr/local/openssl 
+                   --openssldir=/usr/local/openssl (not necessarily)
+                   shared 
+                   no-ssl2 
+$ sudo make depend
+$ sudo make -j 2
+$ sudo make install
+```
+
+openssl is now situated in /usr/local/openssl
 
 
  apr
