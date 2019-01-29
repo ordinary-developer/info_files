@@ -24,17 +24,18 @@ openssl is now situated in /usr/local/openssl
 
 
 ## apr
- official site - http://apr.apache.org/
- ------------------------------------------------------------------------
- | $tar -xvzf apr.tar.gz						|
- | $sudo ./configure --prefix=/usr/local/apr 				|
- |                   --enable-shared 					|
- |	             --enable-threads 					|
- |	             --enable-other-child				|
- | $sudo make -j 2							|
- | $sudo make install						   	|
- ------------------------------------------------------------------------
- apr is now situated in /usr/local/apr
+official site - http://apr.apache.org/
+```sh
+$ tar -xvzf apr.tar.gz
+$ sudo ./configure --prefix=/usr/local/apr 
+                   --enable-shared
+                   --enable-threads 
+                   --enable-other-child
+$ sudo make -j 2
+$ sudo make install	
+```
+
+apr is now situated in /usr/local/apr
 
 
  apr-iconv
