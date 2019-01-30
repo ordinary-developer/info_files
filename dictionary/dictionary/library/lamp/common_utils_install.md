@@ -38,17 +38,16 @@ $ sudo make install
 apr is now situated in /usr/local/apr
 
 
- apr-iconv
- ---------
- official site - http://apr.apache.org/
- ------------------------------------------------------------------------
- | $tar -xvzf apr-iconv.tar.gz						|
- | $sudo ./configure --prefix=/usr/local/apr-iconv			|
- | 	             --with-apr=/usr/local/apr				|
- | $sudo make -j 2							|
- | $sudo make install						   	|
- ------------------------------------------------------------------------
- apr-iconv is now situated in /usr/local/apr-iconv
+## apr-iconv
+official site - http://apr.apache.org/
+```sh
+$ tar -xvzf apr-iconv.tar.gz
+$ sudo ./configure --prefix=/usr/local/apr-iconv
+                   --with-apr=/usr/local/apr
+$ sudo make -j 2
+$ sudo make install
+```
+apr-iconv is now located in /usr/local/apr-iconv
 
 
  apr-util
