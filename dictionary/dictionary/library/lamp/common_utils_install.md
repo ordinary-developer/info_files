@@ -50,22 +50,21 @@ $ sudo make install
 apr-iconv is now located in /usr/local/apr-iconv
 
 
- apr-util
- --------
- official site - http://apr.apache.org/
- ------------------------------------------------------------------------
- | $tar -xvzf apr-util.tar.gz						|
- | $sudo ./configure --prefix=/usr/local/apr-util			|
-                     --with-apr=/usr/local/apr				|
- |                   --with-iconv=/usr/local/apr-iconv		        |
- |                   --with-mysql=/usr/local/mysql 			|
- |                   --with-sqlite3  					|
- | $sudo make -j 2							|
- | $sudo make install						   	|
- ------------------------------------------------------------------------ 
- apr-util is now situated in /usr/local/apr-util 
- * May be it is necessary to type
-   --with-sqlite=[PATH]
+## apr-util
+official site - http://apr.apache.org/
+```sh
+$ tar -xvzf apr-util.tar.gz
+$ sudo ./configure --prefix=/usr/local/apr-util
+                   --with-apr=/usr/local/apr
+                   --with-iconv=/usr/local/apr-iconv
+                   --with-mysql=/usr/local/mysql
+                   --with-sqlite3 
+$ sudo make -j 2
+$ sudo make install
+```
+
+apr-util is now located in /usr/local/apr-util 
+*Remark* May be it is necessary to type `--with-sqlite=[PATH]`
  
 
  pcre
