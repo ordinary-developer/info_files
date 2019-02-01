@@ -67,17 +67,18 @@ apr-util is now located in /usr/local/apr-util
 *Remark* May be it is necessary to type `--with-sqlite=[PATH]`
  
 
- pcre
- ----
- official site - http://www.pcre.org/
- ------------------------------------------------------------------------
- | $tar -xvzf pcre.tar.gz						|
- | $sudo ./configure --prefix=/usr/local/pcre  				|
- |                   --enable-unicode-properties 			|
- | $sudo make -j 2							|
- | $sudo make install							|
- ------------------------------------------------------------------------
- pcre is now situated in /usr/local/pcre
+## pcre
+official site - http://www.pcre.org/
+```sh
+$ tar -xvzf pcre.tar.gz
+$ sudo ./configure --prefix=/usr/local/pcre 
+                   --enable-unicode-properties
+$ sudo make -j 2
+$ sudo make install	
+```
+
+pcre is now located in /usr/local/pcre
+
 
  ############################
  COMMON LIBRARIES FOR PHP
