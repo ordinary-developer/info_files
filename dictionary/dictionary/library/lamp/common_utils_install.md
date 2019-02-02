@@ -80,21 +80,19 @@ $ sudo make install
 pcre is now located in /usr/local/pcre
 
 
- ############################
- COMMON LIBRARIES FOR PHP
- ############################
+# common libs for php
 
- curl
- -----
- official site - http://curl.haxx.se/
- ------------------------------------------------------------------------
- | $tar -xvzf curl.tar.gz						|
- | $sudo ./configure --prefix=/usr/local/curl 				|
- |		     --with-ssl=/usr/local/openssl			|
- | $sudo make -j 2							|
- | $sudo make install							|
- ------------------------------------------------------------------------
- curl is now situated in /usr/local/curl
+## curl
+official site - http://curl.haxx.se/:
+```sh
+$ tar -xvzf curl.tar.gz	
+$ sudo ./configure --prefix=/usr/local/curl 
+                   --with-ssl=/usr/local/openssl
+$ sudo make -j 2
+$ sudo make install
+```
+
+curl is now located in /usr/local/curl
 
  
  zlib
