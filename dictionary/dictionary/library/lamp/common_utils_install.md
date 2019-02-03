@@ -95,20 +95,21 @@ $ sudo make install
 curl is now located in /usr/local/curl
 
  
- zlib
- -----
- official site - http://www.zlib.net/
- ------------------------------------------------------------------------
- | $tar -xvzf zlib.tar.gz						|
- | $sudo ./configure --prefix=/usr/local/zlib (or /usr/local)		| 
- | $sudo make -j 2							|
- | $sudo make install							|
- ------------------------------------------------------------------------
- zlib is now situated in /usr/local/zlib
- * You can install zlib by using a package manager
- ------------------------------------------------------------------------
- | $sudo apt-get install zlib-bin zlib1g zlib1g-dev			| 
- ------------------------------------------------------------------------
+## zlib
+official site - http://www.zlib.net/
+```sh
+$ tar -xvzf zlib.tar.gz
+$ sudo ./configure --prefix=/usr/local/zlib (or /usr/local)
+$ sudo make -j 2
+$ sudo make install
+```
+
+zlib is now located in /usr/local/zlib
+
+*Remark* You can install zlib by using a package manage:
+```sh
+$ sudo apt-get install zlib-bin zlib1g zlib1g-dev
+```        
 
 
  bz2
