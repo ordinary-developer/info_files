@@ -112,15 +112,14 @@ $ sudo apt-get install zlib-bin zlib1g zlib1g-dev
 ```        
 
 
- bz2
- ---
- official site - http://bzip.org/
- ------------------------------------------------------------------------
- | $tar -xvzf bz2.tar.gz						|
- | $sudo make -j 2							|
- | $sudo make install PREFIX=/usr/local/bz2				|
- ------------------------------------------------------------------------
- bz2 is now situated in /usr/local/bz2
+## bz2
+official site - http://bzip.org/
+```sh
+$ tar -xvzf bz2.tar.gz
+$ sudo make -j 2
+$ sudo make install PREFIX=/usr/local/bz2
+```
+bz2 is now located in /usr/local/bz2
  
 
  libjpeg
