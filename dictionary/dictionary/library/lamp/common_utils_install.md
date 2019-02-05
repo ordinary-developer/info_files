@@ -122,16 +122,15 @@ $ sudo make install PREFIX=/usr/local/bz2
 bz2 is now located in /usr/local/bz2
  
 
- libjpeg
- -------
- official site -  http://jpegclub.org/support/
- ------------------------------------------------------------------------
- | $tar -xvzf jpegsrc.v8d1.tar.gz					|
- | $sudo ./configure --prefix=/usr/local/jpeglib			| 
- | $sudo make -j 2							|
- | $sudo make install							|
- ------------------------------------------------------------------------
- jpeglib is now situated in /usr/local/jpeglib
+## libjpeg
+official site -  http://jpegclub.org/support/
+```sh
+$ tar -xvzf jpegsrc.v8d1.tar.gz	
+$ sudo ./configure --prefix=/usr/local/jpeglib
+$ sudo make -j 2
+$ sudo make install
+```
+jpeglib is now located in /usr/local/jpeglib
 
  
  libpng
