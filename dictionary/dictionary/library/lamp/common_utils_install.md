@@ -133,16 +133,16 @@ $ sudo make install
 jpeglib is now located in /usr/local/jpeglib
 
  
- libpng
- ------
- official site -  http://www.libpng.org/
- ------------------------------------------------------------------------
- | $tar -xvzf pnglib.tar.gz						|
- | $sudo ./configure --prefix=/usr/local/pnglib				|	 
- | $sudo make -j 2							|
- | $sudo make install							|
- ------------------------------------------------------------------------
- pnglib is now situated in /usr/local/pnglib
+## libpng
+official site -  http://www.libpng.org/
+```sh
+$ tar -xvzf pnglib.tar.gz
+$ sudo ./configure --prefix=/usr/local/pnglib
+$ sudo make -j 2
+$ sudo make install
+```
+
+pnglib is now located in /usr/local/pnglib
 
  
  freetype2
