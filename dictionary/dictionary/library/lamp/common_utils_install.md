@@ -145,13 +145,13 @@ $ sudo make install
 pnglib is now located in /usr/local/pnglib
 
  
- freetype2
- ---------
- official site -  http://www.freetype.org/
- ------------------------------------------------------------------------
- | $tar -xvzf pnglib.tar.gz						|
- | $sudo ./configure --prefix=/usr/local/freetype2lib			|	 
- | $sudo make -j 2							|
- | $sudo make install							|
- ------------------------------------------------------------------------
- pnglib is now situated in /usr/local/freetype2lib 
+## freetype2
+official site -  http://www.freetype.org/
+```sh
+$ tar -xvzf pnglib.tar.gz
+$ sudo ./configure --prefix=/usr/local/freetype2lib	
+$ sudo make -j 2
+$ sudo make install
+```
+
+pnglib is now located in /usr/local/freetype2lib 
