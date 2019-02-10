@@ -1,7 +1,5 @@
- ########################
- MYSQL CONFIG
- ########################
- 
+# MySQL config
+
  script configuration
  ---------------------
  Enter the mysql directory (usually /usr/local/mysql)
