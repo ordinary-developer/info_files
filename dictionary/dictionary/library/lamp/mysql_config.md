@@ -1,31 +1,30 @@
 # MySQL config
 
- script configuration
- ---------------------
- Enter the mysql directory (usually /usr/local/mysql)
+## script config
+Enter the mysql directory (usually /usr/local/mysql)
 
- You can turn your mysql by script or manually.
- We must consider both two variants
- 
- run your script
- (remember, you must run your server)
- ------------------------------------------------------------------------
- | $ sudo bin/mysql_secure_installation         			|	 
- ------------------------------------------------------------------------
- your answers will be
- 
- 1. Skip root passwowrd for root
-    simply press enter (you have no your root passowrd yes)
- 2. Install a new password ro for root [y/n]
-    y
- 3. Do remove an anonymous user [y/n]
-    y
- 4. Do not disallow remote connections [y/n]
-    y
- 5. do remove a test database [y/n]
-    y
- 6. Do reload the privileges [y/n]
-    y
+You can turn your mysql by script or manually.
+We must consider both two variants
+
+run your script:
+(remember, you must run your server)
+```sh
+$ sudo bin/mysql_secure_installation
+```
+
+your answers will be:
+1. Skip root passwowrd for root
+   simply press enter (you have no your root passowrd yes)
+2. Install a new password ro for root [y/n]
+   y
+3. Do remove an anonymous user [y/n]
+   y
+4. Do not disallow remote connections [y/n]
+   y
+5. do remove a test database [y/n]
+   y
+6. Do reload the privileges [y/n]
+   y
 
 
  manual configuration
