@@ -1,6 +1,4 @@
- ########################
- MYSQL INSTALL
- ########################
+# mysql install
 
  prerequisites 
  --------------
