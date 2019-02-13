@@ -27,16 +27,14 @@ your answers will be:
    y
 
 
- manual configuration
- --------------------
- Enter the mysql base directory 
- you can find it by
- ------------------------------------------------------------------------
- | $sudo mysqld --verbose --help   					|
- ------------------------------------------------------------------------
+## manual config
+Enter the mysql base directory you can find it by the next command:
+```sh
+$ sudo mysqld --verbose --help 
+```
 
- and the find the word basedir
- the word datadir shows your paths to databases
+and the find the word basedir
+the word datadir shows your paths to databases
  
 
  root config
