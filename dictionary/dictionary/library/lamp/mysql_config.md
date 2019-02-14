@@ -37,61 +37,60 @@ and the find the word basedir
 the word datadir shows your paths to databases
  
 
- root config
- -----------
- we must update root password
- -------------------------------------------------------------------------
- | $ mysql -uroot -pyour_password					 |
- -------------------------------------------------------------------------
+## root user config
+we must update root password:
+```sh
+$ mysql -uroot -pyour_password
+```
 
- Then type
- ------------------------------------------------------------------------
- | mysql> USE mysql;					    		|
- | mysql> UPDATE user SET Password=PASSWORD('new_password)'  		|
- |        WHERE user='root'				    		|
- | mysql> FLUSH PRIVILEGES;           		    			|
- ------------------------------------------------------------------------
- or you can type
- ------------------------------------------------------------------------
- | mysql> SET PASSWORD FOR 'root'@'localhost' = PASSWORD('security');   |
- | mysql> SET PASSWORD FOR 'root'@'localhost.localdomain' 		|
- |		= PASSWORD('security');   				|
- | mysql> SET PASSWORD FOR 'root'@'127.0.0.1' = PASSWORD('security');   |
- ------------------------------------------------------------------------
+Then type:
+```
+mysql> USE mysql;
+mysql> UPDATE user SET Password=PASSWORD('new_password)' 
+       WHERE user='root'
+mysql> FLUSH PRIVILEGES;        
+```
 
- for creating a new user from localhost you can type 
- (you must be in your mysql database)
- ------------------------------------------------------------------------
- | mysql> CREATE USER 'project_user'@'localhost' 			|
- |        IDENTIFIED BY 'some_pass';					|
- ------------------------------------------------------------------------
+or you can type:
+```
+mysql> SET PASSWORD FOR 'root'@'localhost' = PASSWORD('security'); 
+mysql> SET PASSWORD FOR 'root'@'localhost.localdomain' 
+         = PASSWORD('security'); 
+mysql> SET PASSWORD FOR 'root'@'127.0.0.1' = PASSWORD('security');
+``` 
+
+for creating a new user from localhost you can type 
+(you must be in your mysql database)
+```
+mysql> CREATE USER 'project_user'@'localhost' 
+           IDENTIFIED BY 'some_pass';
  
- for creating a new user from any host you can type
- (you must be in your mysql database)
- ------------------------------------------------------------------------
- | mysql> CREATE USER 'project_user'@'%' IDENTIFIED BY 'some_pass'	|
- ------------------------------------------------------------------------
+for creating a new user from any host you can type
+(you must be in your mysql database)
+```
+mysql> CREATE USER 'project_user'@'%' IDENTIFIED BY 'some_pass'
+```
 
-   then you can use grant to add prvisegies
- ------------------------------------------------------------------------
- | mysql> GRANT ALL PRIVILEGES ON *.* TO admin@localhost   		|
- | mysql> IDENTIFIED BY 'some_password' WITH GRANT OPTION  		|
- ------------------------------------------------------------------------
- user admin can connect only from localhost and can do everything
+then you can use grant to add prvisegies:
+```
+mysql> GRANT ALL PRIVILEGES ON *.* TO admin@localhost 
+mysql> IDENTIFIED BY 'some_password' WITH GRANT OPTION 
+```
 
- for connecting from other hosts type
-   
- ------------------------------------------------------------------------
- | mysql> GRANT ALL PRIVILEGES ON *.* TO admin@"%"         		|
- | mysql> IDENTIFIED BY 'some_password' WITH GRANT OPTION  		|
- ------------------------------------------------------------------------
+user admin can connect only from localhost and can do everything
 
- for advanced user you can type
- ------------------------------------------------------------------------
- | mysql> GRANT SELECT, INSERT, UPDATE, DELETE, INDEX, CREATE, DROP	| 
- |        ON *.* TO 'project_user'@'%' IDENTIFIED BY 'user_password' 	|
- |        WITH GRANT OPTION						|
- ------------------------------------------------------------------------
+for connecting from other hosts type:
+```
+mysql> GRANT ALL PRIVILEGES ON *.* TO admin@"%"       
+mysql> IDENTIFIED BY 'some_password' WITH GRANT OPTION 
+```
+
+for advanced user you can type:
+```
+mysql> GRANT SELECT, INSERT, UPDATE, DELETE, INDEX, CREATE, DROP
+       ON *.* TO 'project_user'@'%' IDENTIFIED BY 'user_password'
+       WITH GRANT OPTION
+```
 
 
  Anonymous config
