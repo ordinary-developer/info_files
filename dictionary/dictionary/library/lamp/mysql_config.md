@@ -93,26 +93,25 @@ mysql> GRANT SELECT, INSERT, UPDATE, DELETE, INDEX, CREATE, DROP
 ```
 
 
- Anonymous config
- ----------------
- (you must be in "mysql" database)
- you can set a password for anonymous account
- ------------------------------------------------------------------------
- | mysql> UPDATE user SET Password = PASSWORD('new_password')      	|
- |        WHERE User = '';                                              |
-  -----------------------------------------------------------------------
- or you can
- ------------------------------------------------------------------------
- | mysql> SET PASSWORD FOR ''@'localhost' = PASSWORD('newpwd');   	| 
- |  mysql> SET PASSWORD FOR ''@'host_name' = PASSWORD('newpwd');  	|
- ------------------------------------------------------------------------
+## anonymous user config
+(you must be in "mysql" database)
+you can set a password for anonymous account:
+```
+mysql> UPDATE user SET Password = PASSWORD('new_password')
+       WHERE User = ''; 
+```
+or you can
+```
+mysql> SET PASSWORD FOR ''@'localhost' = PASSWORD('newpwd');
+mysql> SET PASSWORD FOR ''@'host_name' = PASSWORD('newpwd');
+```
 
-    you can drop your anonymous user 
- ------------------------------------------------------------------------
- | mysql> DROP USER ''@'localhost';	            			|
- | mysql> DROP USER ''@'localhost.localdomain';   			|
- | mysql> DROP USER ''@'host_name';               			|
- ------------------------------------------------------------------------
+you can drop your anonymous user:
+```
+mysql> DROP USER ''@'localhost';
+mysql> DROP USER ''@'localhost.localdomain';
+mysql> DROP USER ''@'host_name';
+```
 
 
  Securing database
