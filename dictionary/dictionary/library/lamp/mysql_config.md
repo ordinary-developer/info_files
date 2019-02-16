@@ -64,6 +64,7 @@ for creating a new user from localhost you can type
 ```
 mysql> CREATE USER 'project_user'@'localhost' 
            IDENTIFIED BY 'some_pass';
+```
  
 for creating a new user from any host you can type
 (you must be in your mysql database)
@@ -114,19 +115,18 @@ mysql> DROP USER ''@'host_name';
 ```
 
 
- Securing database
- -----------------
- Secure test database
- ------------------------------------------------------------------------
- | $ mysql -u root -p					    		|
- | mysql> DELETE FROM mysql.db WHERE Db LIKE 'test%';	    		|
- | mysql> FLUSH PRIVILEGES;				    		|
- ------------------------------------------------------------------------
+## securing database
+secure a test database:
+```sh
+$ mysql -u root -p
+mysql> DELETE FROM mysql.db WHERE Db LIKE 'test%';
+mysql> FLUSH PRIVILEGES;
+```
 
- You can drope your test database 
- ------------------------------------------------------------------------
- | mysql> DROP DATABASE test;						|
- ------------------------------------------------------------------------
+you can drope your test database:
+```
+mysql> DROP DATABASE test;
+```
  
 
   
