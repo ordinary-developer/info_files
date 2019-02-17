@@ -127,54 +127,59 @@ you can drope your test database:
 ```
 mysql> DROP DATABASE test;
 ```
- 
 
-  
- file config
- -----------
- edit file /etc/my.cnf and edit codepage
- ------------------------------------------------------------------------
- | [mysqld]							  	|
- | init_connect = 'SET collation_connection = utf8_unicode_ci'   	|
- | character-set-server = utf8					  	|
- | collation-server = utf8_unicode_ci				  	|
- |								  	|
- | [client] 							  	| 
- | default-character-set = utf8				  		|
-  -----------------------------------------------------------------------
 
- /etc/my.cnf
- -------------
- [client]
- port = 3306
- socket = /tmp/mysql.sock
- [mysqld]
- port = 3306
- socket = /tmp/mysql.sock
- skip-locking
- key_buffer = 16K
- max_allowed_packet = 1M
- table_cache = 4
- sort_buffer_size = 64K
- net_buffer_length = 2K
- thread_stack = 64K
- skip-networking
- server-id = 1
- [mysqldump]
- quick
- max_allowed_packet = 16M
- [mysql]
- no-auto-rehash
- [isamchk]
- key_buffer = 8M
- sort_buffer_size = 8M
- [myisamchk]
- key_buffer = 8M
- sort_buffer_size = 8M
- [mysqlhotcopy]
- interactive-timeout
+## file config
+edit file '/etc/my.cnf' and edit codepage
+```
+[mysqld]
+init_connect = 'SET collation_connection = utf8_unicode_ci'
+character-set-server = utf8
+collation-server = utf8_unicode_ci
 
- 
+[client]
+default-character-set = utf8
+```
+
+the contents of '/etc/my.cnf'
+```
+[client]
+port = 3306
+socket = /tmp/mysql.sock
+
+[mysqld]
+port = 3306
+socket = /tmp/mysql.sock
+skip-locking
+key_buffer = 16K
+max_allowed_packet = 1M
+table_cache = 4
+sort_buffer_size = 64K
+net_buffer_length = 2K
+thread_stack = 64K
+skip-networking
+server-id = 1
+
+[mysqldump]
+quick
+max_allowed_packet = 16M
+
+[mysql]
+no-auto-rehash
+
+[isamchk]
+key_buffer = 8M
+sort_buffer_size = 8M
+
+[myisamchk]
+key_buffer = 8M
+sort_buffer_size = 8M
+
+[mysqlhotcopy]
+interactive-timeout
+```
+
+
  other
  -----
  You can config your IPv6 locahost(@::1) (you must be in mysql database)
