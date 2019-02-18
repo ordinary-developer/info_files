@@ -180,19 +180,17 @@ interactive-timeout
 ```
 
 
- other
- -----
- You can config your IPv6 locahost(@::1) (you must be in mysql database)
- ------------------------------------------------------------------------
- | mysql> SET PASSWORD FOR 'root'@'::1 = PASSWORD(<password>);  	|
- ------------------------------------------------------------------------
+# other stuff
+You can config your IPv6 locahost(@::1) (you must be in mysql database)
+```
+mysql> SET PASSWORD FOR 'root'@'::1 = PASSWORD(<password>); 
+```
 
- opening ports
- ------------------------------------------------------------------------
- | $ sudo iptables -I INPUT -p tcp --dport 3306 -m state 		|
- |                 --state NEW,ESTABLISHED -j ACCEPT  			|
- | $ sudo iptables -I OUTPUT -p tcp --sport 3306 -m state 		|
- |                 --state ESTABLISHED -j ACCEPT    			|
- ------------------------------------------------------------------------
+to open ports:
+```sh
+$ sudo iptables -I INPUT -p tcp --dport 3306 -m state 
+                --state NEW,ESTABLISHED -j ACCEPT 
+$ sudo iptables -I OUTPUT -p tcp --sport 3306 -m state 
+                --state ESTABLISHED -j ACCEPT 
+```
 
-   
