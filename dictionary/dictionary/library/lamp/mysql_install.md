@@ -1,17 +1,14 @@
 # mysql install
 
- prerequisites 
- --------------
+## prerequisites 
 
- 
- pre-installation
- ----------------
- ------------------------------------------------------------------------
- | $sudo groupadd mysql							|
- | $sudo useradd -g mysql mysql						|
- ------------------------------------------------------------------------
+## pre-install
+```sh
+$ sudo groupadd mysql
+$ sudo useradd -g mysql mysql
+```
 
- 
+
  installation
  -----------------
  unpack your mysql archive.
