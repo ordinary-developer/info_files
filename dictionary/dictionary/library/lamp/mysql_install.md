@@ -9,34 +9,33 @@ $ sudo useradd -g mysql mysql
 ```
 
 
- installation
- -----------------
- unpack your mysql archive.
- ------------------------------------------------------------------------
- | $sudo tar zxvf mysql-VERSION.tar.gz					|
- | $cd mysql-VERSION							|
- ------------------------------------------------------------------------
+## install
+unpack your mysql archive:
+```sh
+$ sudo tar zxvf mysql-VERSION.tar.gz
+$ cd mysql-VERSION
+```
 
- if your mysql-distributive has cmake install option you
- must install cmake and then run cmake .
- (the file CMakeLists.txt must be in the same directory)
- ------------------------------------------------------------------------
- | $sudo apt-get install cmake						|
- | $sudo cmake .							|
- ------------------------------------------------------------------------ 
+if your mysql-distributive has cmake install option you
+must install cmake and then run cmake. 
+(the file CMakeLists.txt must be in the same directory)
+```sh
+$ sudo apt-get install cmake
+$ sudo cmake 
+```
 
- otherwise (your mysql distributive has no CMakeLists.txt)
- ------------------------------------------------------------------------ 
- | $ sudo ./configure --prefix=usr/local/mysql				|
- |		      --with-unix-sock-path=/tmp/mysql.sock	   	|
- |	              --with-charset=utf8				|
- ------------------------------------------------------------------------
- 
- then type
- ------------------------------------------------------------------------ 
- | $ sudo make -j 2							|
- | $ sudo make install							|
- ------------------------------------------------------------------------
+otherwise (your mysql distributive has no CMakeLists.txt):
+```sh
+$ sudo ./configure --prefix=usr/local/mysql
+       --with-unix-sock-path=/tmp/mysql.sock
+       --with-charset=utf8
+```
+
+then type:
+```sh
+$ sudo make -j 2
+$ sudo make install
+```
 
 
  post-installation
