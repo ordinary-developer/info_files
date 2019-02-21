@@ -38,30 +38,31 @@ $ sudo make install
 ```
 
 
- post-installation
- ------------------
- type the next commands
- (remember, you must enter /usr/local/mysql (or you working mysql directory))
- ------------------------------------------------------------------------ 
- | $ sudo chown -R mysql .						|
- | $ sudo chgrp -R mysql .						|
- | $ sudo scripts/mysql_install_db --user=mysql				|
- | $ sudo chown -R root .						|
- | $ sudo chown -R mysql data						|
- | $ sudo chown -R mysql .						|
- ------------------------------------------------------------------------
- 
- Copy your config file
- ------------------------------------------------------------------------ 
- | $ sudo cp support-files/my-default.cnf /etc/my.cnf			|
- ------------------------------------------------------------------------
+post-install:
+type the next commands
+(remember, you must enter /usr/local/mysql
+(or you working mysql directory))
+```sh
+$ sudo chown -R mysql 
+$ sudo chgrp -R mysql .
+$ sudo scripts/mysql_install_db --user=mysql
+$ sudo chown -R root 
+$ sudo chown -R mysql data
+$ sudo chown -R mysql .
+``
 
-  Optionally you can put your mysql script to autoload
- ------------------------------------------------------------------------
- | $ sudo cp support-files/mysql.server /etc/init.d/mysql.server    	|
- ------------------------------------------------------------------------
+Copy your config file:
+```sh
+$ sudo cp support-files/my-default.cnf /etc/my.cnf
+```
 
- start server
- ------------------------------------------------------------------------
- | $ sudo /usr/local/mysql/bin/mysqld_safe --user=mysql & 		|
- ------------------------------------------------------------------------ 
+Optionally you can put your mysql script to autoload:
+```sh
+$ sudo cp support-files/mysql.server /etc/init.d/mysql.server
+```
+
+start server:
+```sh
+$ sudo /usr/local/mysql/bin/mysqld_safe --user=mysql & 
+```
+
