@@ -1,21 +1,21 @@
 # php install
  
- Prerequisites
- --------------- 
- ------------------------------------------------------------------------
- | $httpd -l								|
- ------------------------------------------------------------------------ 
- module mod_so.c must be installed
+# prerequisites
+```sh
+$ httpd -l
+```
 
- ------------------------------------------------------------------------
- | $find / -name apxs							|
- ------------------------------------------------------------------------ 
- apxs utility must be find
+module mod_so.c must be installed
 
- ------------------------------------------------------------------------
- | $httpd -v								|
- ------------------------------------------------------------------------ 
-  the appache version must be recent
+```sh
+$ find / -name apxs
+```
+apxs utility must be find
+
+```sh
+$ httpd -v
+```
+the appache version must be recent
 
 
  pre-installation
