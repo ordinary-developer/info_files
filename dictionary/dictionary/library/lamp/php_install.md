@@ -18,14 +18,13 @@ $ httpd -v
 the appache version must be recent
 
 
- pre-installation
- ----------------
- Sometimes it is neccessary to install libxml2 libraries
- ------------------------------------------------------------------------ 
- | #apt-get install libxml2 libxml2-dev 				|
- ------------------------------------------------------------------------ 
+#pre-install
+Sometimes it is neccessary to install libxml2 libraries:
+```sh
+# apt-get install libxml2 libxml2-dev
+```
 
- It is also necessary to install XDEBUG.so extension (see in my Wiki)
+It is also necessary to install XDEBUG.so extension (see in my Wiki).
 
  Installation
  ------------
