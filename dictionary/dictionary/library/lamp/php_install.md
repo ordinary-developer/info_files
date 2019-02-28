@@ -80,10 +80,10 @@ other options:
 --with-bz2=[PATH] (/usr/local/bz2 or /usr/local)
 ```
 
- others
- -------
+
+## aux
  
-  you can install necessary libs in debian way
- ------------------------------------------------------------------------ 
- | $sudo apt-get install curl libcurl3 libcurl3-dev php5-curl php5-mcrypt |				
- ------------------------------------------------------------------------ 
+you can install necessary libs in debian way:
+```sh
+$ sudo apt-get install curl libcurl3 libcurl3-dev php5-curl php5-mcrypt
+```
