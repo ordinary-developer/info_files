@@ -1,6 +1,4 @@
- ############################
- POSTGRESQL CONFIG
- ############################
+# postresql config
 
  base-config
  ------------
