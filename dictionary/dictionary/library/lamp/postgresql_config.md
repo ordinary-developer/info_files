@@ -1,25 +1,23 @@
 # postresql config
 
- base-config
- ------------
- 
- Create postresSQL user account
- ------------------------------------------------------------------------
- | $sudo adduser postgres						|
- | $sudo passwd postgres						|
- ------------------------------------------------------------------------
+## base config
+Create postresSQL user account:
+```sh
+$ sudo adduser postgres	
+$ sudo passwd postgres
+```
 
- Create postreSQL data directory
- ------------------------------------------------------------------------
- | $sudo mkdir /usr/local/postresql/data				|
- | $sudo chown postgres:postgres /usr/local/postgresql/data		|
- ------------------------------------------------------------------------
+Create postreSQL data directory:
+```sh
+$ sudo mkdir /usr/local/postresql/data
+$ sudo chown postgres:postgres /usr/local/postgresql/data
+```
 
- Initialize postgreSQL data directory
- ------------------------------------------------------------------------
- | $su - postgres							|
- | $/usr/local/postgresql/bin/initdb -D /usr/local/posgresql/data	|
- ------------------------------------------------------------------------
+Initialize postgreSQL data directory:
+```sh
+$ su - postgres
+$ /usr/local/postgresql/bin/initdb -D /usr/local/posgresql/data
+```
  
  workflow
  ---------
