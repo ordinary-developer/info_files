@@ -19,59 +19,57 @@ $ su - postgres
 $ /usr/local/postgresql/bin/initdb -D /usr/local/posgresql/data
 ```
  
- workflow
- ---------
+## workflow
+Start postgresql database:
+```sh
+$ /usr/local/postgresql/bin/postmaster -D /usr/local/postgresql/data
+                                          > logfile 2>&1 &	
+```
+or 
+```sh
+$ /home/szymon/postgres/bin/postgres -D /home/szymon/postgres/data/  
+```
+(you must run it under your postgres user)
 
- Start postgresql database
- ------------------------------------------------------------------------
- | $ /usr/local/postgresql/bin/postmaster -D /usr/local/postgresql/data	|
- |                                          > logfile 2>&1 &		|
- ------------------------------------------------------------------------
- or 
- ------------------------------------------------------------------------
- | $ /home/szymon/postgres/bin/postgres -D /home/szymon/postgres/data/  |
- ------------------------------------------------------------------------
- (you must run it under your postgres user)
+start, stop and restart PostgreSQL database:
+```sh
+# postgresql stop
+# postgresql start
+# postgresql restart
+```
 
- start, stop and restart PostgreSQL database
- ------------------------------------------------------------------------
- | # postgresql stop							|
- | # postgresql start							|
- | # postgresql restart							|
- ------------------------------------------------------------------------
-
- to start client psql type
- ------------------------------------------------------------------------ 
- | /usr/local/postgresql/bin/psql -U user password			|
- ------------------------------------------------------------------------ 
+to start client psql type:
+```sh
+$ /usr/local/postgresql/bin/psql -U user password
+```
  
+Create postgresql db and test the installation:`
+```sh
+$ /usr/local/postgresql/bin/createdb test
+$ /usr/local/postgresql/bin/psql test
+```
+(psql - is a postgresql command prompt)
 
- Create postgresql db and test the installation
- ------------------------------------------------------------------------
- | $ /usr/local/postgresql/bin/createdb test				|
- | $ /usr/local/postgresql/bin/psql test 				|
- ------------------------------------------------------------------------
- (psql - is a postgresql command prompt)
+change PostgreSQL root user password :
+```sh
+$ /usr/local/postgresql/bin/psql postgres postgres
+Password: (oldpassword)
+# ALTER USER postgres WITH PASSWORD 'tmppassword';
+$ /usr/local/pgsql/bin/psql postgres postgres
+Password: (tmppassword)
+```
 
- change PostgreSQL root user password 
- ------------------------------------------------------------------------
- | $ /usr/local/postgresql/bin/psql postgres postgres			|
- | Password: (oldpassword)						|
- | # ALTER USER postgres WITH PASSWORD 'tmppassword';			|	
- | $/usr/local/pgsql/bin/psql postgres postgres				|
- | Password: (tmppassword)						|
- ------------------------------------------------------------------------
+create a PostgreSQL user:
+Method 1: Creating the user in the PSQL prompt, with CREATE USER command
+```sh
+# CREATE USER ramesh WITH password 'tmppassword';
+```
 
- create a PostgreSQL user
- Method 1: Creating the user in the PSQL prompt, with CREATE USER command
- ------------------------------------------------------------------------
- | # CREATE USER ramesh WITH password 'tmppassword';			|
- ------------------------------------------------------------------------
+Method 2: Creating the user in the shell prompt, with createuser command
+```sh
+$ /usr/local/pgsql/bin/createuser sathiya
+```
 
- Method 2: Creating the user in the shell prompt, with createuser command.
- ------------------------------------------------------------------------
- | $ /usr/local/pgsql/bin/createuser sathiya				|
- ------------------------------------------------------------------------
 
  others
  -----
