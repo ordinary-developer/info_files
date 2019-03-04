@@ -71,10 +71,9 @@ $ /usr/local/pgsql/bin/createuser sathiya
 ```
 
 
- others
- -----
- All configuration files are stored in the data directory: ~/postgres/data. 
- If you want to run multiple Postgres versions on the same machine, 
- they must have different data directories and different ports. 
- The port number can be changed in ~/postgres/data/postgresql.conf.
+## aux
+All configuration files are stored in the data directory: ~/postgres/data. 
+If you want to run multiple Postgres versions on the same machine, 
+they must have different data directories and different ports. 
+The port number can be changed in ~/postgres/data/postgresql.conf.
 
