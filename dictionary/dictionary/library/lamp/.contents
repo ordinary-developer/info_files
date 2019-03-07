@@ -1,3 +1,4 @@
+__install_odrder.md   - info about common LAMP installation process
 apache_config.md      - info about apache configuring
 apache_install.md     - info about apache installation
 common_lib_install.md - info about apache pre-installation process
@@ -6,5 +7,4 @@ mysql_install.md      - info about mysql installation process
 php_config.md         - info about php configuration
 php_install.md        - info about php installation process
 postresql_config.md   - info about postresql configuration
-workflow.md           - info about common LAMP installation process
 xamp.md               - info about xamp installation
