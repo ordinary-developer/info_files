@@ -7,4 +7,4 @@ mysql_install.md      - info about mysql installation process
 php_config.md         - info about php configuration
 php_install.md        - info about php installation process
 postresql_config.md   - info about postresql configuration
-xamp.md               - info about xamp installation
+xamp_config.md        - info about xamp config
