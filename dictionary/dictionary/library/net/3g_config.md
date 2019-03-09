@@ -1,6 +1,4 @@
- ############################
- 3G CONFIG
- ############################
+# 3g config
 
  first you must install minicom (for sending commands to the modem)
  -------------------------------------------------------------------------
