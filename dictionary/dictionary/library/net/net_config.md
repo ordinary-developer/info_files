@@ -1,7 +1,6 @@
 # nect config
 
- base config
- ===========
+## base config
 
  To configure network it is necessary write next strings in file
   ------------------------------------------------------------------------
