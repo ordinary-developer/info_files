@@ -1,65 +1,52 @@
 # nect config
 
 ## base config
+to configure network write next strings in file '/etc/network/interafces'
+- for dhcp configuring
+```
+#The loopback network interface 
+auto lo                         
+iface lo inet loopback         
+ 
+#The primary network interface
+allow-hotplug eth0 
+iface eth0 inet dhcp
+```
 
- To configure network it is necessary write next strings in file
-  ------------------------------------------------------------------------
- | /etc/network/interfaces     						 |
- -------------------------------------------------------------------------
-
- - for dhcp configuring
- -------------------------------------------------------------------------
- | #The loopback network interface    					 |
- | auto lo                            					 |
- | iface lo inet loopback             					 |
- |                                    					 |
- | #The primary network interface     					 |
- | allow-hotplug eth0                 					 |
- | iface eth0 inet dhcp               					 |
- -------------------------------------------------------------------------
-
- But dhcp configuring sometimes doesn't work, so it is necessary to configure
+but dhcp configuring sometimes doesn't work, so it is necessary to configure
  the same file to get static ip 
- -------------------------------------------------------------------------
- | /etc/network/interfaces           					 |
- -------------------------------------------------------------------------
  
- But internet can be very small, (perphaps from incorrect DNS configuration)
- so, type in file /etc/resolv.conf
- -------------------------------------------------------------------------
- | nameserver   x.x.x.x               					 |
- | ...                                					 |
- -------------------------------------------------------------------------
- Where x.x.x.x - the address of your DNS server
+But internet can be very small, (perphaps from incorrect DNS configuration)
+so, type in file /etc/resolv.conf
+```
+ nameserver   x.x.x.x 
+```
+Where x.x.x.x - the address of your DNS server
   
- -------------------------------------------------------------------------
- | #The loopback network interface   					 |
- | auto loa                          					 |
- | iface lo inet loopback            					 |
- |                                   					 |
- | #The primary network interface    					 |
- | allow-hotplug eth0                					 |
- | iface eth0 inet static            					 |
- | address 10.88.8.228               					 |
- | netmask 255.255.254.0             					 |
- | subnet                            					 |
- | broadcast                         					 |
- | gateway 10.88.8.1                 					 |
- -------------------------------------------------------------------------
- 
- It is necessary to write next strings into file
- -------------------------------------------------------------------------
- | /etc/resolv.conf          						 |
- -------------------------------------------------------------------------
+```
+#The loopback network interface 
+auto loa 
+iface lo inet loopback 
 
- -------------------------------------------------------------------------
- | domain kursk.puzzle.su                                                |
- | search kursk.puzzle.su                                                |
- | nameserver 176.194.192.1  						 |
- | nameserver 212.1.224.6    						 |
- | nameserver 212.1.244.6						 |
- | nameserver 8.8.8.8							 |
- -------------------------------------------------------------------------
+#The primary network interface
+allow-hotplug eth0 
+iface eth0 inet static 
+address 10.88.8.228
+netmask 255.255.254.0 
+subnet 
+broadcast 
+gateway 10.88.8.1 
+```
+ 
+It is necessary to write next strings into file '/etc/resolv.conf'
+```
+domain kursk.puzzle.su 
+search kursk.puzzle.su 
+nameserver 176.194.192.1 
+nameserver 212.1.224.6 
+nameserver 212.1.244.6
+nameserver 8.8.8.8
+```
 
  auxiliary info
  --------------
