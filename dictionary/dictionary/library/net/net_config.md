@@ -48,9 +48,8 @@ nameserver 212.1.244.6
 nameserver 8.8.8.8
 ```
 
- auxiliary info
- --------------
- 
+
+## aux info
  but sometimes these settings do not work
  so it is necessary to type next command
  -------------------------------------------------------------------------
