@@ -50,34 +50,36 @@ nameserver 8.8.8.8
 
 
 ## aux info
- but sometimes these settings do not work
- so it is necessary to type next command
- -------------------------------------------------------------------------
- | #dhclient eth0             						 |
- -------------------------------------------------------------------------
+but sometimes these settings do not work
+so it is necessary to type next command
+```sh
+# dhclient eth0
+```
 
- this command will get the ip address by dhcp protocol,but sometimes 
- it also don't work so it is necessary to type another 2 commands
- -------------------------------------------------------------------------
- | #ifconfig eth0 10.20.3.58 netmask 255.255.248.0 broadcast 10.20.7.255 | 
- | #route add default gw 10.20.0.3 eth0                                  |
- -------------------------------------------------------------------------
+this command will get the ip address by dhcp protocol,but sometimes 
+it also don't work so it is necessary to type another 2 commands
+```sh
+# ifconfig eth0 10.20.3.58 netmask 255.255.248.0 broadcast 10.20.7.255
+# route add default gw 10.20.0.3 eth0
+```
 
- to set manually loopback interface type next command
- -------------------------------------------------------------------------
- | #ifconfig lo 127.0.0.1          					 |
- -------------------------------------------------------------------------
+to set manually loopback interface type next command:
+```sh
+# ifconfig lo 127.0.0.1
+```
 
- You can also add some string about your dns to your file for 
- your internet speed increasing
-  ------------------------------------------------------------------------
- | /etc/network/interfaces   						 |
- -------------------------------------------------------------------------
- these strings are
- -------------------------------------------------------------------------
- | dns-nameservers 91.226.116.132 8.8.8.8  				 |
- | dns-search kstu.kursk.ru                				 |
- -------------------------------------------------------------------------
+You can also add some string about your dns to your file for 
+your internet speed increasing:
+```sh
+/etc/network/interfaces 
+```
+
+these strings are:
+```sh
+dns-nameservers 91.226.116.132 8.8.8.8
+dns-search kstu.kursk.ru               
+```
+
 
  useful commands
  ---------------
