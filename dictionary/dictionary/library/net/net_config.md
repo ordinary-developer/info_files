@@ -81,9 +81,7 @@ dns-search kstu.kursk.ru
 ```
 
 
- useful commands
- ---------------
-
+## useful commands
  Some useful commands to work with interfaces
  
  to set up an interface 
