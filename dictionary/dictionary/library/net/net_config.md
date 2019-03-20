@@ -82,61 +82,66 @@ dns-search kstu.kursk.ru
 
 
 ## useful commands
- Some useful commands to work with interfaces
+Some useful commands to work with interfaces:
  
- to set up an interface 
- -------------------------------------------------------------------------
- | #ifup eth0              						 |
- -------------------------------------------------------------------------
- to set down interface 
- -------------------------------------------------------------------------
- | #ifdown eth0								 |
- -------------------------------------------------------------------------
- to restart network services
- -------------------------------------------------------------------------
- | #/etc/init.d/networking stop     					 |
- | #/etc/init.d/networking start    					 |
- -------------------------------------------------------------------------
- or 
- -------------------------------------------------------------------------
- | #/etc/init.d/networking restart  					 |
- -------------------------------------------------------------------------
- to see the state of interfaces
- -------------------------------------------------------------------------
- | #ifconfig           							 |
- -------------------------------------------------------------------------
- to ping some host
- -------------------------------------------------------------------------
- | $ping www.yandex.ru -c 3  						 |
- -------------------------------------------------------------------------
+- to set up an interface: 
+```sh
+# ifup eth0
+```
 
- to see routing
- -------------------------------------------------------------------------
- | #route                    						 |
- | #route -n                 						 |
- -------------------------------------------------------------------------	
+- to set down interface: 
+```sh
+# ifdown eth0
+```
 
- to see routing by another commnad
- -------------------------------------------------------------------------
- | #netstat -r              						 |
- -------------------------------------------------------------------------
+- to restart network services:
+```sh
+# /etc/init.d/networking stop
+# /etc/init.d/networking start
+```
+or 
+```sh
+# /etc/init.d/networking restart
+```
 
- to DNS servers you can see the next file
- -------------------------------------------------------------------------
- | /etc/resolv.conf							 |
- -------------------------------------------------------------------------
+- to see the state of interfaces:
+```sh
+# ifconfig
+```
 
- to see messages of the kernel about interfaces
- -------------------------------------------------------------------------
- | #dmesg | grep eth       						 |
- -------------------------------------------------------------------------
+- to ping some host
+```sh
+$ ping www.yandex.ru -c 3
+```
 
- to see information about network adapter in device list 
- -------------------------------------------------------------------------
- | #lspci | grep ether      						 |	 
- | #lspci | grep Ether      						 |	 
- -------------------------------------------------------------------------
+- to see routing:
+```sh
+# route
+# route -n
+```
+
+- to see routing by another commnad:
+```sh
+# netstat -r 
+```
+
+- to DNS servers you can see the next file:
+```
+/etc/resolv.conf
+```
+
+- to see messages of the kernel about interfaces:
+```sh
+# dmesg | grep eth 
+```
+
+- to see information about network adapter in device list:
+```sh
+# lspci | grep ether
+# lspci | grep Ether 
+```
  
+
  addition info
  -------------
  Some useful knowledge for net in Debian
