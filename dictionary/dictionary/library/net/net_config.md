@@ -142,8 +142,7 @@ $ ping www.yandex.ru -c 3
 ```
  
 
- addition info
- -------------
+## addition info
  Some useful knowledge for net in Debian
  
  /etc/hosts - the list of all ip-addresses and names
