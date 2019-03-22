@@ -143,32 +143,36 @@ $ ping www.yandex.ru -c 3
  
 
 ## addition info
- Some useful knowledge for net in Debian
+Some useful knowledge for net in Debian
  
- /etc/hosts - the list of all ip-addresses and names
- /etc/resolv.conf - contains DNS servers
- /etc/network/interfaces - describing of network interfaces
- /proc/sys/net/ipv4/ip_forward - the file for switching on routing between interfaces
- To switch on the routing between interfaces (for switch on NAT)  type
- -------------------------------------------------------------------------
- |  #echo '1'>/proc/sys/net/ipv4/ip_forward   				 |
- -------------------------------------------------------------------------
+/etc/hosts - the list of all ip-addresses and names
+/etc/resolv.conf - contains DNS servers
+/etc/network/interfaces - describing of network interfaces
+/proc/sys/net/ipv4/ip_forward - the file for switching on routing between interfaces
 
- for assigning auxilary address for eth type
-  ------------------------------------------------------------------------
- | #ifconfig eth0:0 172.16.0.1 netmask 255.255.255.0 			 |
-  ------------------------------------------------------------------------
- to temporaly change MAC type
- -------------------------------------------------------------------------
- | #ifconfig eth0 hw ether 00:01:02:03:04:05         			 |
- -------------------------------------------------------------------------
- to change MAC permanently, type if file /etc/net/interfaces
- -------------------------------------------------------------------------
- | ....                                                			 |
- | pre-up ifconfig eth0 hw ether 00:01:02:03:04:05     			 |
- -------------------------------------------------------------------------
+To switch on the routing between interfaces (for switch on NAT) type:
+```sh
+# echo '1'>/proc/sys/net/ipv4/ip_forward
+```
 
- to see the fixed card and its mac you can in file
- -------------------------------------------------------------------------
- | /etc/udev/rules.d/70-persistent-net.rules            		 |
- -------------------------------------------------------------------------
+for assigning auxilary address for eth type:
+```sh
+# ifconfig eth0:0 172.16.0.1 netmask 255.255.255.0
+```
+
+to temporaly change MAC type:
+```sh
+# ifconfig eth0 hw ether 00:01:02:03:04:05 
+```
+
+to change MAC permanently, type if file /etc/net/interfaces:
+```
+....
+pre-up ifconfig eth0 hw ether 00:01:02:03:04:05
+```
+
+to see the fixed card and its mac you can in file:
+```sh
+/etc/udev/rules.d/70-persistent-net.rules
+```
+
