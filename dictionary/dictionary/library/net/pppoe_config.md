@@ -1,3 +1,4 @@
+# pppoe config
 1. in the /etc/network/interfaces must be
 `
 auto eth0
