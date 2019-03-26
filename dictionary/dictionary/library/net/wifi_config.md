@@ -1,8 +1,6 @@
 # wifi config
 
- pre-installation
- ---------------- 
- 
+## pre-install
  to see your wifi device
  ------------------------------------------------------------------------
  | $ lspci -nn | grep 0280						|
