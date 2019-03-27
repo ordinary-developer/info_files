@@ -1,44 +1,46 @@
 # wifi config
 
 ## pre-install
- to see your wifi device
- ------------------------------------------------------------------------
- | $ lspci -nn | grep 0280						|
- ------------------------------------------------------------------------
- or (if your is Atheros (quacomm))
- ------------------------------------------------------------------------
- | $ lspci -nn | grep Atheros						|
- ------------------------------------------------------------------------
+to see your wifi devices:
+```sh
+$ lspci -nn | grep 0280
+```
 
- to make wifi work correctly, first you must install your driver 
- (in my case it is ath9k)
- ------------------------------------------------------------------------
- | # apt-get install linux-headers build-essential			|
- ------------------------------------------------------------------------
+or (if your is Atheros (quacomm)):
+```sh
+$ lspci -nn | grep Atheros
+```
 
- Then you must get backports
- extract them, and then enter the directory with backports
+to make wifi work correctly, first you must install your driver 
+(in my case it is ath9k):
+```sh
+# apt-get install linux-headers build-essential
+```
+
+Then you must get backports
+extract them, and then enter the directory with backports
  
- for configuring type
- Here you must point your driver
- ------------------------------------------------------------------------ 
- | # make oldconfig							|
- | # make menuconfig							|
- ------------------------------------------------------------------------ 
+for configuring type
+Here you must point your driver
+```sh
+# make oldconfig
+# make menuconfig
+```
 
- Or you can directly point your driver
- ------------------------------------------------------------------------ 
- | # make defconfig-ath9k						|
- ------------------------------------------------------------------------ 
+Or you can directly point your driver
+```sh
+# make defconfig-ath9k
+```
 
- After the you must type
- ------------------------------------------------------------------------ 
- | # make								|
- | # make install							|
- ------------------------------------------------------------------------ 
+After the you must type:
+```sh
+# make
+# make install
+```
 
- Sometimes it will be necessary to fix sources for correct compiling.
- Sometime it will be necessary to reboot your system.
+Sometimes it will be necessary to fix sources for correct compiling.
+Sometime it will be necessary to reboot your system.
+
 
  installation
  ------------
