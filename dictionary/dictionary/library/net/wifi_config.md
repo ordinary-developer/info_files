@@ -42,7 +42,7 @@ Sometimes it will be necessary to fix sources for correct compiling.
 Sometime it will be necessary to reboot your system.
 
 
- installation
+## install
  ------------
  to verify your installation type
  ------------------------------------------------------------------------ 
