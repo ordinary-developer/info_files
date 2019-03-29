@@ -43,36 +43,35 @@ Sometime it will be necessary to reboot your system.
 
 
 ## install
- ------------
- to verify your installation type
- ------------------------------------------------------------------------ 
- | # ifconfig -a							|
- ------------------------------------------------------------------------
+to verify your installation type:
+```sh
+# ifconfig -a
+```
 
- You must see your new interface (wlan0 as usually)
+you must see your new interface (wlan0 as usually),
+then you must install the package wpasupplicant:
+```sh
+# apt-get install wpasupplicant
+```
 
- Then you must install the package wpasupplicant
- ------------------------------------------------------------------------
- | # apt-get install wpasupplicant					|
- ------------------------------------------------------------------------
+then we must generate a connection record:
+```sh
+# wpa_passphrase router_name router_password
+```
 
- Then we must generate a connection record
- ------------------------------------------------------------------------
- | # wpa_passphrase router_name router_password				|
- ------------------------------------------------------------------------
+you will receive something like that:
+```
+network={
+  ssid="TP-LINK_985188"	
+  psk=b8530ddba3a3625b9336be805da8cfb5f2d67d0e776d5ffd2f38b3f11b18a404	|
+}
+```
 
- You will receive something like that
- ------------------------------------------------------------------------
- | network={								|
- | ssid="TP-LINK_985188"						|
- | psk=b8530ddba3a3625b9336be805da8cfb5f2d67d0e776d5ffd2f38b3f11b18a404	|
- | }									|
- ------------------------------------------------------------------------
+then we must add this record to the file (if it doesn't exist, create it):
+```
+/etc/wpa_supplicant/wpa_supplicant.conf
+```
 
- Then we must add this record to the file (if it doesn't exist, create it)
- ------------------------------------------------------------------------	
- | /etc/wpa_supplicant/wpa_supplicant.conf 				|
- ------------------------------------------------------------------------	
 
  connection
  ----------
