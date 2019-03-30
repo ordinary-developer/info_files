@@ -73,9 +73,7 @@ then we must add this record to the file (if it doesn't exist, create it):
 ```
 
 
- connection
- ----------
- 
+## connection
  to connect to the internet via wifi type
  ------------------------------------------------------------------------	
  | $ wpa_supplicant -D wext -i wlan0 					|
