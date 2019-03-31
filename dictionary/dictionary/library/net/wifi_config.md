@@ -74,29 +74,28 @@ then we must add this record to the file (if it doesn't exist, create it):
 
 
 ## connection
- to connect to the internet via wifi type
- ------------------------------------------------------------------------	
- | $ wpa_supplicant -D wext -i wlan0 					|
- |                  -c /etc/wpa_supplicant/wpa_supplicant.conf -B	|
- ------------------------------------------------------------------------	
+to connect to the internet via wifi type:
+```sh
+$ wpa_supplicant -D wext -i wlan0 
+                 -c /etc/wpa_supplicant/wpa_supplicant.conf -B
+```
 
- Then you must config your network.
- If you receive your address automatically type
- ------------------------------------------------------------------------	
- | # dhclient wlan0							|
- ------------------------------------------------------------------------
+then you must config your network;
+if you receive your address automatically type:
+```sh
+# dhclient wlan0
+```
 
- else you must print
- ------------------------------------------------------------------------
- | # ifconfig wlan0 ip-address netmask					|
- ------------------------------------------------------------------------
+else you must print:
+```sh
+# ifconfig wlan0 ip-address netmask
+```
 
- and then we must add a gate (not necessarily)
- ------------------------------------------------------------------------
- | # route add default gw 192.168.1.1					|
- ------------------------------------------------------------------------
- ( 192.168.1.1 - usuall address for router, if the address is other
-  you must type it)
+and then we must add a gate (not necessarily):
+```sh
+# route add default gw 192.168.1.1
+```
 
- alternative installation
- ------------------------
+( 192.168.1.1 - usuall address for router, if the address is other
+ you must type it)
+
