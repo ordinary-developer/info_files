@@ -1,5 +1,5 @@
-apt			- info about apt instrument
-aptitude		- info about aptitude instrument
-common			- info about coomon packages info
-dpkg			- info about dpkg command
-package-creating   	- info about package creating
+apt.md              - info about apt instrument
+aptitude.md         - info about aptitude instrument
+apt_config.md       - info about the apt config
+dpkg.md             - info about dpkg command
+package_creating.md - info about package creating
