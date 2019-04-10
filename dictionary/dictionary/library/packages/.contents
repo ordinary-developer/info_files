@@ -1,5 +1,5 @@
 apt.md              - info about apt instrument
-aptitude.md         - info about aptitude instrument
 apt_config.md       - info about the apt config
+aptitude.md         - info about aptitude instrument
 dpkg.md             - info about dpkg command
 package_creating.md - info about package creating
