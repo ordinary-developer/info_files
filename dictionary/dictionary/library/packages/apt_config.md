@@ -1,5 +1,4 @@
-Apt configuring
-===============
+# apt config
 
 to add info about sources add to file **/etc/apt/sources.list**
 the next strings:
@@ -18,14 +17,13 @@ deb-src http://non-us.debian.org/debian-non-US stable/non-US main
 deb http://security.debian.org/ stable/updates main contrib non-free
 ```
  
-For Russia, for example, the server is 
+for Russia, for example, the server is 
 ```
 ftp.ru.debian.org/debian
 ```
 
-After that run:
-```
+after that run:
+```sh
 $ sudo apt-get update
 ```
-
 
