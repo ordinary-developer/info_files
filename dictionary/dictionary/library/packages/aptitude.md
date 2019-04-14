@@ -1,5 +1,6 @@
 # aptitude
- 
+
+## common info
 the file **/etc/apt/sources.list** contains data about packages to install.
 
 this command updates the package repository:
@@ -66,9 +67,10 @@ $ aptitude show package
 the aptitud keeps a trace of executed actions in its logfile: **/var/log/aptitude**
 
 
-  #####################################################
-    sources.list
-  #####################################################
-    ...
+## records in sources.list
+```
+...
     deb http://ftp.debian.org/debian/ wheezy main contrib
-  //deb http://ftp.debian.org/debian/ stable main contrib
+    //deb http://ftp.debian.org/debian/ stable main contrib
+```
+
