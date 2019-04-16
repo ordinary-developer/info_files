@@ -1,8 +1,6 @@
 # dpkg
 
- useful commands
- ===============
-
+## useful commands
  This command will install package_name.deb package 
  (attention: package must be in the same folder)
  ------------------------------------------------------------------------
