@@ -1,6 +1,4 @@
- ############################
- PACKAGE CREATING
- ############################
+# package creating
 
  useful sites
  ============
