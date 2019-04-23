@@ -1,2 +1,2 @@
-wine	 	- info about wine installation and configuration
-tmux        	- info about tmux installation and configuration
+tmux.md - info about tmux installation and configuration
+wine.md - info about wine installation and configuration
