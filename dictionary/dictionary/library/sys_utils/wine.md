@@ -1,17 +1,14 @@
 # wine
+to install wine:
+first run 
+```sh
+$ sudo apt-get install wine
+```
 
- install 
- ===========
+for running x32 applications on the  x64 architecture also type:
+```sh
+$ sudo dpkg --add-architecture i386
+$ sudo apt-get update
+$ sudo apt-get install wine32
+```
 
- to install wine
- first run 
- ------------------------------------------------------------------------
- | $ sudo apt-get install wine						|
- ------------------------------------------------------------------------
-
- for running x32 applications on the  x64 architecture also type
- ------------------------------------------------------------------------
- | $ sudo dpkg --add-architecture i386 					|
- | $ sudo apt-get update						|
- | $ sudo apt-get install wine32					|
- ------------------------------------------------------------------------
