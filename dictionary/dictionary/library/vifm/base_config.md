@@ -20,12 +20,9 @@ colorscheme colorscheme-name
 ```
  
 
- useful tricks
- =============
-
- to show all dot files,
- simply type "zo" without !
- ------------------------------------------------------------------------
- | zo									|
- ------------------------------------------------------------------------
+## useful tricks
+to show all dot files, simply type "zo" in vifm without !
+```
+zo
+```
 
