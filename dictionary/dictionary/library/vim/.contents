@@ -1,5 +1,6 @@
-base-config 	- info about base config of vim
-compilation 	- info about vim compilation
-replace 	- info about replace in vim
-windows-control - info about window control in vim
-vundle 		- info about vundle
+base-config.md      - info about base config of vim
+install.md          - info about vim installation
+replace_cmd.md      - info about the replace command in vim
+vundle.md           - info about vundle
+windows_spliting.md - info about window control in vim
+
