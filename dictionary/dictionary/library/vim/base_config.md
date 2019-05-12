@@ -1,21 +1,17 @@
 # vifm config
- ############################
- VIM COMMON CONFIG
- ############################  
 
- It is useful to copy all plugings and other files to the folder
+## common issues
+it is useful to copy all plugings and other files to the folder
+```
+~/.vim/ 
+```
 
- ------------------------------------------------------------------------
- | ~/.vim/                     						|
- ------------------------------------------------------------------------
-
- To allow properly work of .vimrc file
- It is necessary to create two folders
-
-  ------------------------------------------------------------------------
- | ~/.vim/backup       							 |
- | ~/.vim/tmp          							 |
- -------------------------------------------------------------------------
+to allow properly work of .vimrc file
+it is necessary to create two folders
+```
+~/.vim/backup
+~/.vim/tmp
+```
 
 
  other           
