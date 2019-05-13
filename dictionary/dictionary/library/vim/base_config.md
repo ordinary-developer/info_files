@@ -14,8 +14,7 @@ it is necessary to create two folders
 ```
 
 
- other           
- -----
+# html link highlighting           
  To exclude underlying for links 
  in file
  -------------------------------------------------------------------------
