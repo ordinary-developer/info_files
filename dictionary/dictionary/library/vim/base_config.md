@@ -15,20 +15,22 @@ it is necessary to create two folders
 
 
 # html link highlighting           
- To exclude underlying for links 
- in file
- -------------------------------------------------------------------------
- | ~/.vim/syntax/html.vim   						 |
- -------------------------------------------------------------------------
- find the next string
- -------------------------------------------------------------------------
- | HtmlHiLink htmlLink     Underlined   				 |
- -------------------------------------------------------------------------
- and change it to 
- -------------------------------------------------------------------------
- | HtmlHiLink htmlLink     htmlBold      				 |
- -------------------------------------------------------------------------
- or simple comment it
+to exclude underlying for links in file
+```
+~/.vim/syntax/html.vim 
+```
+
+find the next string:
+```
+HtmlHiLink htmlLink     Underlined 
+```
+
+and change it to:
+```
+HtmlHiLink htmlLink     htmlBold 
+```
+
+or simple comment it
 
 
  plugins         
