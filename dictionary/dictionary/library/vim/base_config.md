@@ -33,9 +33,7 @@ HtmlHiLink htmlLink     htmlBold
 or simple comment it
 
 
- plugins         
- -------
- 
+## plugins         
  #  NERDTree turning
  after unpacking a NERDTree plugig, you have a file
  -------------------------------------------------------------------------
