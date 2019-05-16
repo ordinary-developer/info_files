@@ -34,7 +34,8 @@ or simple comment it
 
 
 ## plugins         
- #  NERDTree turning
+
+### NERDTree 
  after unpacking a NERDTree plugig, you have a file
  -------------------------------------------------------------------------
  | ~/.vim/plugin/NERD_tree.vim   					 |
