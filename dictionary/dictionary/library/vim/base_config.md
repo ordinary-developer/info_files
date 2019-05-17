@@ -36,19 +36,20 @@ or simple comment it
 ## plugins         
 
 ### NERDTree 
- after unpacking a NERDTree plugig, you have a file
- -------------------------------------------------------------------------
- | ~/.vim/plugin/NERD_tree.vim   					 |
- -------------------------------------------------------------------------
+after unpacking a NERDTree plugig, you have a file:
+```
+~/.vim/plugin/NERD_tree.vim 
+```
 
- find there the next strings
- -------------------------------------------------------------------------
- | call s:initVariable("g:NERDTreeWinPos", "left")  			 |
- | call s:initVariable("g:NERDTreeWinSize", 31)     			 |
- -------------------------------------------------------------------------
+find there the next strings:
+```
+call s:initVariable("g:NERDTreeWinPos", "left") 
+call s:initVariable("g:NERDTreeWinSize", 31)
+```
 
- and change them to
- -------------------------------------------------------------------------
- | call s:initVariable("g:NERDTreeWinPos", "right") 			 |
- | call s:initVariable("g:NERDTreeWinSize", 17)     			 |
- -------------------------------------------------------------------------
+and change them to:
+```
+call s:initVariable("g:NERDTreeWinPos", "right")
+call s:initVariable("g:NERDTreeWinSize", 17)
+```
+
