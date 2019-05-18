@@ -1,5 +1,4 @@
-Vim installation
-===========
+# vim install
 
 Prerequisites
 ------------------
