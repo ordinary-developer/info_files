@@ -1,8 +1,6 @@
 # vim install
 
-Prerequisites
-------------------
-
+## prerequisites
 It is neccessary to install "libncursesw5-dev"
 ```sh
 $ sudo apt-get install libncurses5-dev libncursesw5-dev
