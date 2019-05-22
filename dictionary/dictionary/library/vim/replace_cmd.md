@@ -1,9 +1,4 @@
- ############################
- REPLACE 
- ############################
-
- replace
- --------
+# replace command
  Find each occurrence of 'foo' (in all lines), and replace it with 'bar'.
  ------------------------------------------------------------------------
  | :%s/foo/bar/g							|
