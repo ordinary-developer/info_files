@@ -1,7 +1,6 @@
 # vundle
- pre-installation
- ------------------
 
+## prerequisites
  Before using vundle you must have vim and git
  and make backup of your .vimrc and .vim directory
 
