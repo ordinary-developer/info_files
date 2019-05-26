@@ -1,10 +1,10 @@
 # vundle
 
 ## prerequisites
- Before using vundle you must have vim and git
- and make backup of your .vimrc and .vim directory
+before using vundle you must have vim and git
+and make backup of your .vimrc and .vim directory
 
- For all manipulations you must have git installed.
+for all manipulations you must have git installed
 
  installation
  ------------
