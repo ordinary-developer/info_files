@@ -6,9 +6,8 @@ and make backup of your .vimrc and .vim directory
 
 for all manipulations you must have git installed
 
- installation
- ------------
- 
+
+## install
  To install vundle
  ------------------------------------------------------------------------
  |$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle | 
