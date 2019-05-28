@@ -8,50 +8,48 @@ for all manipulations you must have git installed
 
 
 ## install
- To install vundle
- ------------------------------------------------------------------------
- |$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle | 
- ------------------------------------------------------------------------
+to install vundle:
+```sh
+$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle 
+```
 
- Then you must create your .vimrc file
- ------------------------------------------------------------------------
- | set nocompatible							|
- |   filetype off							|
- |  set rtp+=~/.vim/bundle/vundle/					|
- |  call vundle#rc()							|
- |									|
- |  " This is the Vundle package, which can be found on GitHub.		|
- |  " For GitHub repos, you specify plugins using the			|
- |  " 'user/repository' format						|
- |  Bundle 'gmarik/vundle'						|
- |									|
- |   " We could also add repositories with a ".git" extension		|
- |  Bundle 'scrooloose/nerdtree.git'					|
- |									|
- |   " To get plugins from Vim Scripts, you can reference the plugin	|
- |   " by name as it appears on the site				|
- |  Bundle 'CSAprox'							|
- |									|
- |  " Now we can turn our filetype functionality back on		|
- |  "filetype plugin indent on 						|
- |  "because work badly							|
- ------------------------------------------------------------------------
+then you must create your .vimrc file:
+```
+set nocompatible
+  filetype off
+  set rtp+=~/.vim/bundle/vundle/
+  call vundle#rc()
 
-  to add other not github repository you can
- ------------------------------------------------------------------------
- | Bundle 'git://git.wincent.com/command-t.git'    			|
- ------------------------------------------------------------------------
+  " This is the Vundle package, which can be found on GitHub
+  " For GitHub repos, you specify plugins using the
+  " 'user/repository' format
+  Bundle 'gmarik/vundle'
  
- Run vim and type
- ------------------------------------------------------------------------
- | :PluginInstall   							|
- ------------------------------------------------------------------------
- For all manipulation you must have git installed
+ " We could also add repositories with a ".git" extension
+ Bundle 'scrooloose/nerdtree.git'
 
- Exit by
- ------------------------------------------------------------------------
- | :bdelete   								|
- ------------------------------------------------------------------------
+ " To get plugins from Vim Scripts, you can reference the plugin
+ " by name as it appears on the site
+ Bundle 'CSAprox'
+ 
+ " Now we can turn our filetype functionality back on
+ "filetype plugin indent on 
+ "because work badly
+
+to add other not github repository you can run in vim:
+```
+Bundle 'git://git.wincent.com/command-t.git'
+```
+
+run vim and type:
+```
+:PluginInstall 
+```
+
+exit by:
+```
+:bdelete 
+```
 
 
  plugin configuration
