@@ -53,36 +53,38 @@ exit by:
 
 
 ## plugin config
+### to add plugin
+run in vim:
+```
+:Plugins
+```
+or 
+```
+:PluginSearch!
+```
+it will find on the Vim scripts vilf
 
- run in vim
- ------------------------------------------------------------------------
- | :Plugins          							|
- ------------------------------------------------------------------------
-  or 
- ------------------------------------------------------------------------
- | :PluginSearch!      							|
- ------------------------------------------------------------------------
- it will find on the Vim scripts vilf
+for example:
+```
+:PluginSearch markdown
+```
 
- for example
- ------------------------------------------------------------------------
- | :PluginSearch markdown						|
- ------------------------------------------------------------------------
+then choose your markdown plugin from the list and press "i"
 
- Then choose your markdown plugin from the list and press "i";
+exit by:
+```
+:bdelete 
+```
 
- Exit by
- ------------------------------------------------------------------------
- | :bdelete   								|
- ------------------------------------------------------------------------
-  Then edit your .vimrc file and add your plugin
- ------------------------------------------------------------------------
- | ...									|
- | Plugin 'Markdown'							|
- | ...									|
- ------------------------------------------------------------------------
-  
- You can also install plugins from github.
+then edit your .vimrc file and add your plugin:
+```
+...
+Plugin 'Markdown'
+...
+```
+
+you can also install plugins from github
+
 
  To delete a pluging
 
