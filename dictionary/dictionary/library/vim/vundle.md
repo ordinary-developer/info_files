@@ -86,34 +86,34 @@ Plugin 'Markdown'
 you can also install plugins from github
 
 
- To delete a pluging
-
- 1-st version
- run vim, then type
- ------------------------------------------------------------------------
- | :PlugingList      							|
- ------------------------------------------------------------------------
- then select a pluging (by i,k) and press D
- then edit your .vimrc file and delete from there your plugin
+### to delete a pluging
+1-st way:
+run vim, then type:
+```
+:PluginList
+```
+then select a plugin (by i,k) and press D,
+then edit your .vimrc file and delete from there your plugin
   
- 2-nd version
- remove your plugin (plugin name, of course) first from .vimrc
- then run vim and type
- ------------------------------------------------------------------------
- | :PluginClean      							|
- ------------------------------------------------------------------------
- Then you must confirm your intent
+2-nd way:
+remove your plugin (plugin name, of course) first from .vimrc
+then run vim and type:
+```
+:PluginClean
+```
+then you must confirm your intent
 
- 
- To remove a pluging
- ------------------------------------------------------------------------
- | $ rm -rf ~/.vim/bundle/plugin1	  				|
- ------------------------------------------------------------------------		
+to physically remove a plugin:
+```sh
+$ rm -rf ~/.vim/bundle/plugin_name
+```
 
- ***
- Instead of word 'Plugin' you can use word 'Bundle'
+_remarks_
+instead of word 'Plugin' you can use word 'Bundle'
+
 
 ## Aux
  a useful link:
 https://habr.com/post/148549/
+
 
