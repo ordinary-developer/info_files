@@ -112,8 +112,6 @@ _remarks_
 instead of word 'Plugin' you can use word 'Bundle'
 
 
-## Aux
- a useful link:
-https://habr.com/post/148549/
-
+## aux info
+[useful link](https://habr.com/post/148549/)
 
