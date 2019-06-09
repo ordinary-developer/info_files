@@ -1,15 +1,13 @@
 # virtual box (vbox)
 
-Index
-------
-
-1. Configure apt.
-2. Install sudo.
-3. Install base compilation environment.
-4. Install Xorg.
-5. Install virtual box support.
-6. Install and configure vim.
-7. Install and configure vifm.
+## necessary actions
+1. configure apt
+2. install sudo
+3. install base compilation environment
+4. install Xorg
+5. install virtual box support
+6. install and configure vim
+7. install and configure vifm
 
 
 5. Install virtual box support
