@@ -10,9 +10,7 @@
 7. install and configure vifm
 
 
-5. Install virtual box support
----------------------------------------
-
+## [5] install virtual box support
 Install Linux headers:
 ```sh
 $ apt-get install linux-headers-$(uname -r)
