@@ -1,7 +1,6 @@
 # vmware
 
- install 
- ===========
+## install 
 
  to install vmware-tools
  first run 
