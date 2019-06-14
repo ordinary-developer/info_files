@@ -1,33 +1,29 @@
 # vmware
 
-## install 
+## install vmware-tools
+first run:
+```
+"VM->Install VMware tools ..."
+```
 
- to install vmware-tools
- first run 
- ------------------------------------------------------------------------
- | "VM->Install VMware tools ..."					|
- ------------------------------------------------------------------------
- then mount this disk 
- ------------------------------------------------------------------------
- | mount /media/cdrom							|
- ------------------------------------------------------------------------
- (/dev/sr0 - it is a disk)
+then mount this disk:
+```sh
+$ mount /media/cdrom
+```
+(/dev/sr0 - it is a disk)
 
- then in your files unpack your files
- first you must install
- ------------------------------------------------------------------------
- | linux-headers							|
- | make									|
- | gcc									|
- | perl									|
- ------------------------------------------------------------------------
- 
- you can install linux headers
- ------------------------------------------------------------------------
- | sudo apt-get install headers-3.16.0-4-amd64				|
- ------------------------------------------------------------------------
- and then rul .pl file
+then in your files unpack your files
+first you must install:
+- linux-headers
+- make
+- gcc
+- perl
 
+you can install linux headers:
+```sh
+$ sudo apt-get install headers-3.16.0-4-amd64
+```
+and then run the .pl file
 
 
  alternative installation
