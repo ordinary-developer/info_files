@@ -1,7 +1,7 @@
 # xorg config
 
 ## prerequisites
- Sometimes it is necessary your user to be in the "video" group.
+sometimes it is necessary your user to be in the "video" group
  
  installation
  ------------ 
