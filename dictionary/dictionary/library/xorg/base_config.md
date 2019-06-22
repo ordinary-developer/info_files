@@ -3,8 +3,8 @@
 ## prerequisites
 sometimes it is necessary your user to be in the "video" group
  
- installation
- ------------ 
+
+## install
  To install xorg-server you must type
  ------------------------------------------------------------------------
  | $ sudo apt-get install xserver-xorg					|
