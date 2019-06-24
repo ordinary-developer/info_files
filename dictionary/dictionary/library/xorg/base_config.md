@@ -43,8 +43,7 @@ $ sudo chmod u+s /usr/bin/Xorg
 ```
 
 
- postrequisites
- --------------
+## postrequisites
  If something fail, you can watch log files
  ------------------------------------------------------------------------
  | var/log/Xorg.0.log							|
