@@ -44,10 +44,8 @@ $ sudo chmod u+s /usr/bin/Xorg
 
 
 ## postrequisites
- If something fail, you can watch log files
- ------------------------------------------------------------------------
- | var/log/Xorg.0.log							|
- ------------------------------------------------------------------------
+if something failed, you can watch log files `var/log/Xorg.0.log`
+
 
  other
  -----
