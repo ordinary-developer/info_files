@@ -47,8 +47,7 @@ $ sudo chmod u+s /usr/bin/Xorg
 if something failed, you can watch log files `var/log/Xorg.0.log`
 
 
- other
- -----
+## auxiliary 
  For LCD Panel you can write something next in file
  ------------------------------------------------------------------------
  | /etc/X11/xorg.conf 							|
