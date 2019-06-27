@@ -48,29 +48,25 @@ if something failed, you can watch log files `var/log/Xorg.0.log`
 
 
 ## auxiliary 
- For LCD Panel you can write something next in file
- ------------------------------------------------------------------------
- | /etc/X11/xorg.conf 							|
- ------------------------------------------------------------------------
- the next strings
- ------------------------------------------------------------------------
- | ...                                					|
- | Section "Monitor"                  					|
- |   Identifier ...                   					|
- |   VendorName ...                   					|
- |   ModelName  ...                   					|
- |   ModelLine  ...                   					|
- |   HorizSync  31.5 - 48.5           					|
- |   VertRefresh 40.0 - 70.0          					|
- |   ....                             					|
- | Screen                             					|
- |   ...                              					|
- |   DefaultDepth 24                  					|
- |   SubSection "Display"             					|
- |         Viewport   0 0              					|
- |         Depth      24               					|
- |         Modes      "1920x1080_60.0" 					|
- |   EndSubSection							|
- |   ...								|
- | ...									|
- ------------------------------------------------------------------------
+for LCD Panel you can write something next in file `/etc/X11/xorg.conf`
+the next strings:
+```
+... 
+  Section "Monitor"
+    Identifier ...
+    VendorName ...
+    ModelName  ...
+    ModelLine  ...
+    HorizSync  31.5 - 48.5 
+    VertRefresh 40.0 - 70.0
+    .... 
+  Screen
+    ... 
+    DefaultDepth 24
+    SubSection "Display"
+          Viewport   0 0
+          Depth      24
+          Modes      "1920x1080_60.0"
+    EndSubSection
+```
+
