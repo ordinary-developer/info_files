@@ -1,7 +1,6 @@
 # fluxbox
 
- prerequisites
- --------------- 
+## prerequisites
  You must have correctly worked xorg-server, xinit and xdm.
  
  Installation
