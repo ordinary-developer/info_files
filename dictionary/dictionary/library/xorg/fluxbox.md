@@ -4,8 +4,7 @@
 you must have correctly worked xorg-server, xinit and xdm
 
  
- Installation
- ------------ 
+## install
  To install fluxbox you must type
  ------------------------------------------------------------------------
  | $ sudo apt-get install fluxbox					|
