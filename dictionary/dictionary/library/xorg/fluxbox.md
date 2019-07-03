@@ -11,8 +11,7 @@ $ sudo apt-get install fluxbox
 ```
 
 
- postrequisites
- --------------
+## postrequisites
  It is necessary to type the next command
  ------------------------------------------------------------------------
  | $ echo "exec fluxbox" > /home/artur/.xinitrc				|
