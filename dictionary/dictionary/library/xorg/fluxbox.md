@@ -12,15 +12,17 @@ $ sudo apt-get install fluxbox
 
 
 ## postrequisites
- It is necessary to type the next command
- ------------------------------------------------------------------------
- | $ echo "exec fluxbox" > /home/artur/.xinitrc				|
- ------------------------------------------------------------------------
+it is necessary to type the next command:
+```sh
+$ echo "exec fluxbox" > /home/artur/.xinitrc
+```
 
- Then you can type to start fluxbox
- ------------------------------------------------------------------------
- | $ Xorg								|
- ------------------------------------------------------------------------
+then you can type to start fluxbox:
+```sh
+$ Xorg
+```
  
- * but if you have xinit and xdm installed, fluxbox must run automatically 
-   after rebooting.
+*remark*
+but if you have xinit and xdm installed,
+fluxbox must run automatically after rebooting
+
