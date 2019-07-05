@@ -1,21 +1,22 @@
 # xfce
 
- To install xfce, type
- ------------------------------------------------------------------------
- | #apt-get install xfce4      						|
- ------------------------------------------------------------------------
+to install xfce, type:
+```sh
+# apt-get install xfce4
+```
 
- You can also add additional programs
- ------------------------------------------------------------------------
- | #apt-get install xfce4-goodies   					|
- ------------------------------------------------------------------------
+you can also add additional packages:
+```sh
+# apt-get install xfce4-goodies
+```
  
- Then, add to file '~/.xinit.rc"
- ------------------------------------------------------------------------
- | exec ck-launch-session startxfce4   					|
- ------------------------------------------------------------------------
+then, add to file `~/.xinit.rc`
+```
+exec ck-launch-session startxfce4
+```
 
-  Then you can start X with XFCE only by typing 
- ------------------------------------------------------------------------
- | startx                         					|
- ------------------------------------------------------------------------
+then you can start X with XFCE only by typing: 
+```sh
+startx
+```
+
