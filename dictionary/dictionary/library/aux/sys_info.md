@@ -69,7 +69,7 @@ $ uptime
 
 system loading info:
 ```sh
-$ dmesg (system loading information)
+$ dmesg
 ```
 
 
