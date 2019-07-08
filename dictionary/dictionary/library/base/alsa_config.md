@@ -1,6 +1,6 @@
 # alsa config 
 
-to identify the model of sound driver, in the file
+to identify the model of the sound driver, in the file
 `/etc/modprobe.d/alsa-base.conf` write something next (for my card):
 ```sh
 .... 
