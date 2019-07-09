@@ -37,7 +37,7 @@ $ tar xvf package-name.tar
 
 
 ## .xz unpacking
-for unpcaking a file with an .xz extension:
+for unpacking a file with the .xz extension:
 ```sh
 $ apt-get install xz
 $ zx --decompress package-name.xz
