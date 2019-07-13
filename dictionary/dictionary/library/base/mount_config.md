@@ -35,18 +35,17 @@ to mount only your flashes in your folders:
 $ sudo blkid /dev/sdb1                                               
 ```
 
-for example the result will be
+for example the result will be:  
 /dev/sdb1: UUID="7A82-1B89" TYPE="vfat"
 
-now write in '/etc/fstab'
-```sh
+now write in `/etc/fstab`:
+```
 UUID=7A82-1B89  /media/flash1  vfat  user,noauto,noatime,flush  0  0 
 ```
 here user may be your user ("ivan" and e.t.c)
 remember that in the end of you fstab file must be a new line
 
 then simply run:
-
 - to mount:   `$ mount /media/flash1`
 - to unmount: `$ umount /media/flash1`
 
@@ -115,12 +114,12 @@ to mount manually:
 $ sudo mount -o git=users, fmask=133, dmask=002 /dev/sda1 /mnt/flash 
 ```
 
-or you can add the next string to /etc/fstab:
-```sh
+or you can add the next string to `/etc/fstab`:
+```
 /dev/sda1 /mnt/flash vfat user,noauto,noatime,flush 0 0 
 ```
 or
-```sh
+```
 /dev/sda1 /mnt/flash vfat users,noauto,uid=ivan,gid=users 0 0 
 ```
  
