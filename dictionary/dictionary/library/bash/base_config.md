@@ -1,7 +1,7 @@
 # bash base config
 
 ## .bashrc
-to add supporting multicoloring add to your '.bashrc' file
+to add supporting multicoloring add to your `.bashrc` file:
 ```
 TERM=xterm-256color
 ```
@@ -55,7 +55,7 @@ $ export PS1="$ "
 and you will get:
 *$*
 
-after that you can add this string to your ~/.bashrc file manually
+after that you can add this string to your `~/.bashrc` file manually
 or by the next command:
 ```sh
 $ echo PS1="$ "
