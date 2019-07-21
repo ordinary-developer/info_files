@@ -9,12 +9,10 @@ in out case it is '~/libraries/boost_NNN'
 
 
 ## headers-only install
-To install headeers only
+to install headeers only:
 - download bootstrap
 - unpack it to for example ~/libraries
 
-Now you can use it
-(because in many cases it is sufficient to have only header files)
 then you can use it:
 ```sh
 $ c++ -I path/to/boost yourfile.cpp -o your_application	
