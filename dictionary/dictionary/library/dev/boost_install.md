@@ -25,7 +25,7 @@ $ g++ -I path/to/boost yourfile.cpp -o your_application
 
 
 ## full install
-Some files in boost (e.g. testing libraries) required building.
+some files in boost (e.g. testing libraries) required building
 
 go to the directory "tools/build" (in boost_root (distr package)):
 ```sh
@@ -42,7 +42,7 @@ the compile into a temp directory:
 $ b2 -j4 install --prefix=~/tmp/build-boost
 ```
 
-then add PREFIX/bin to your PATH environment variable:
+then add "PREFIX/bin" to your PATH environment variable:
 ```sh
 $ PATH=$PATH:~/tmp/build-boost                                       
 ```
@@ -61,12 +61,12 @@ $ b2 -j4 --build-dir=/tmp/build-boost toolset=gcc stage
 where all bin libraries will be placed)
 
 that will build static and shared non-debug multi-threaded variants
-of the libraries.
-To build all variants, pass the additional option *"--build-type=complete"*
+of the libraries;
+to build all variants, pass the additional option *"--build-type=complete"*
 
-Building the special stage target places Boost library binaries
+building the special stage target places Boost library binaries
  in the *"stage/lib/"* subdirectory of the Boost tree. 
-To use a different directory
+to use a different directory
 pass the *"--stagedir=directory"* option to b2.
 
  
