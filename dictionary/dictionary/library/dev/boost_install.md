@@ -70,35 +70,35 @@ to use a different directory
 pass the *"--stagedir=directory"* option to b2.
 
  
-## using builded libs
-There are two main challenges associated with linking:
+## using built libs
+there are two main challenges associated with linking:
 - tool configuration, 
   e.g. choosing command-line options or IDE settings;
 - identifying the library binary,
   among all the build variants, 
   whose compile configuration is compatible 
-  with the rest of your project.
+  with the rest of your project
 
-There are two main ways to link to libraries:
-- You can specify the full path to each library:
-```sh
-$ c++ -I path/to/boost_1_59_0 example.cpp -o example \               
+there are two main ways to link to libraries:
+- you can specify the full path to each library:
+  ```sh
+  $ c++ -I path/to/boost_1_59_0 example.cpp -o example \               
     ~/boost/stage/lib/libboost_regex-gcc34-mt-d-1_36.a          
-```
+  ```
  
--You can separately specify a directory to search
- (with -Ldirectory) and a library name to search for 
- (with -llibrary,2 dropping the filename's leading lib
- and trailing suffix (.a in this case):
-```sh
-$ c++ -I path/to/boost_1_59_0 example.cpp -o example \            
+- you can separately specify a directory to search
+  (with -Ldirectory) and a library name to search for 
+  (with -llibrary,2 dropping the filename's leading lib
+  and trailing suffix (.a in this case):
+  ```sh
+  $ c++ -I path/to/boost_1_59_0 example.cpp -o example \            
       -L~/boost/stage/lib/ -lboost_regex-gcc34-mt-d-1_36     
-```
+  ```
 
-This method is just as terse as method A for one library; 
+this method is just as terse as method A for one library; 
 it really pays off when you're using multiple libraries 
-from the same directory. 
-Note, however, that if you use this method with a library 
+from the same directory; 
+note, however, that if you use this method with a library 
 that has both static (.a) and dynamic (.so) builds,
 the system may choose one automatically for you
 unless you pass a special option
