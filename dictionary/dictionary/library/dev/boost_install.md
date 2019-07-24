@@ -106,9 +106,9 @@ such as -static on the command line.
 
  
 ## aux build
-Your headers must be for example in ~/libraries
+your headers must be for example in ~/libraries
 then copy your boost distrib to for example ~/sources
-and from there
+and from there:
 ```sh
 $ cd ~/sources
 $ ./boostrap.sh --prefix=path/to/installation/prefix
@@ -128,7 +128,7 @@ $ c++ -I path/to/boost_1_59_0 example.cpp -o example \
       ~/boost/stage/lib/libboost_regex-gcc34-mt-d-1_36.a
 ```
 
-You can separately specify a directory to search (with -Ldirectory)
+you can separately specify a directory to search (with -Ldirectory)
 and a library name to search for 
 (with -llibrary,2 dropping the filename's leading lib 
 and trailing suffix) (.a in this case):
