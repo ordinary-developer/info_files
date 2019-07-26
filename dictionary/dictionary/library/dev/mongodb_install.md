@@ -1,16 +1,17 @@
 # mongodb install
 
 ## pre install
-It is neccessary to install some packages (scons, gcc, python 2.7)
+it is neccessary to install some packages (scons, gcc, python 2.7)
 
 
 ## install
-To install run in your unpacked directory (for x64 architecture)
+to install run in your unpacked directory (for x64 architecture)
 (may be the first command is with sudo)
 ```sh
-$ scons --jobs 4 --64 --ssl all					
-$ sudo scons --jobs 4 --64 --ssl --prefix=/usr/install		
+$ scons --jobs 4 --64 --ssl all
+$ sudo scons --jobs 4 --64 --ssl --prefix=/usr/install
 ```
+
 
 ## aux info
 [A usful site]
