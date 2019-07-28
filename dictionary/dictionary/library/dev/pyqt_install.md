@@ -16,7 +16,7 @@
   here instead of ~/dev ... must be /usr/local/stow
 
 ## aux info
-[Site about pyqt install](http://habrahabr.ru/post/248189/)
+[site about pyqt install](http://habrahabr.ru/post/248189/)
 
 virtual env config:
 ```sh
