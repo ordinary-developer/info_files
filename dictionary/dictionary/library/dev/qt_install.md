@@ -1,25 +1,25 @@
 # qt install
 
 ## install from sources
-To build from sources enter your temp directory:
+to build from sources enter your temp directory:
 ```sh
 $ git clone git://gitorious.org/qt/qt5.git    
-$ cd qt5								                                 
-$ sudo ./init-repository						                         
-$ sudo ./configure -prefix $PWD/qtbase -opnesource			         
-$ sudo make -j 4							                             
-$ sudo make install							                         
+$ cd qt5
+$ sudo ./init-repository
+$ sudo ./configure -prefix $PWD/qtbase -opnesource
+$ sudo make -j 4
+$ sudo make install                         
 ```
 
 ## install from binaries
-Copy from qt-project online installer
+copy from qt-project online installer
 then type (may be under root):
 ```sh
-$ chmod +x qt-linux-opensource-1.4.0-x86-online.ru			         
+$ chmod +x qt-linux-opensource-1.4.0-x86-online.ru
 $ ./qt-linux-opensource-1.4.0-x86-online.ru				             
 ``
 
-May be you need to install
+may be you need to install
 ```sh
 $ sudo apt-get install make g++ libglu1-mesa-dev
 ```
@@ -48,7 +48,7 @@ to compile a qt project you need
    make
    ```
 
-_notes_:
+*remarks*:
 - may be it will be necessary in your source code 
   change "<QtGui/WidgetName>" to "<QtWidget/WidgetName>"
 - now <QtApplication> is located in <QtWidgets>
