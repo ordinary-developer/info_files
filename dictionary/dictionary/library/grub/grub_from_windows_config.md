@@ -1,5 +1,5 @@
 # windows grub config
-To start simultaneosly 3 OS (WindowsXP, Windows7, Linux_Debian)
+to start simultaneosly 3 OS (WindowsXP, Windows7, Linux_Debian)
 it is necessary to edit file `/boot/grub/grub.cfg` 
 and to add 2 lines for each "window" item:
 - for "WindowsXP" item:
@@ -138,3 +138,4 @@ if [ -f  $prefix/custom.cfg ]; then
 fi
 ### END /etc/grub.d/41_custom ###
 ```
+
