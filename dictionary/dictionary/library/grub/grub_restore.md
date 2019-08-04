@@ -1,5 +1,5 @@
 # grub restore
-To restore grub loader you must load your LiveCD:
+to restore grub loader you must load your LiveCD:
  
 for identifying hard disks:
 ```sh
@@ -15,14 +15,14 @@ $ sudo mount --bind /sys /mnt/disk/sys
 $ sudo mount --bind /proc /mnt/disk/proc 
 ```
 
-Then change your root envirenment:
+then change your root envirenment:
 ```sh
 $ sudo chroot /mnt/disk                 
 ``` 
 
-Instead of the last five commands you cat just type
+instead of the last five commands you cat just type
 ```sh
-$ sudo grub-install --root-directory=/mnt/disk /dev/sdXY )
+$ sudo grub-install --root-directory=/mnt/disk /dev/sdXY
 ```
 
 then update grub:
