@@ -1,8 +1,7 @@
 # Chrome installation
 
-## Common notes
-
-These notes are applicable only for 64-x chrome versions.
+## common
+these notes are applicable only for 64-x chrome versions
 
 ## Installation with ppa
 
