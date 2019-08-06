@@ -3,29 +3,27 @@
 ## common
 these notes are applicable only for 64-x chrome versions
 
-## Installation with ppa
-
-1. Download a key and install it:
+## install via ppa
+1. download a key and install it:
    ```sh
    $ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | Sudo apt-key add -
    ```
 
-2. Add the chrome repository to sources:
+2. add the chrome repository to sources:
    ```sh
    $ sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
    ```
 
-3. Update the apt cache:
+3. update the apt cache:
    ```sh
    $ sudo apt-get update
    ```
 
-4. Install the stable version:
+4. install the stable version:
    ```sh
    $ sudo apt-get install google-chrome-stable
    ```
-
-   For the beta version use `google-chrome-beta`, for the unstable - `google-chrom-unstable`
+   for the beta version use `google-chrome-beta`, for the unstable - `google-chrom-unstable`
 
 
 ## Installation with a deb-package
