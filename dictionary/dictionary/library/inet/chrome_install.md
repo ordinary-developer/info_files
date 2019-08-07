@@ -26,19 +26,18 @@ these notes are applicable only for 64-x chrome versions
    for the beta version use `google-chrome-beta`, for the unstable - `google-chrom-unstable`
 
 
-## Installation with a deb-package
-
-1. Download the package:
+## install via a deb-package
+1. download the package:
    ```sh
    $ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
    ```
 
-2. Install the package:
+2. install the package:
    ```sh
    $ sudo dpkg -i google-chrome-stable_current_amd64.deb
    ```
 
-3. Run google-chrome under a regular user:
+3. run google-chrome under a regular user:
    ```sh
    $ google-chrome-stable
    ```
