@@ -26,7 +26,8 @@ to disconnect:
 sudo poff                                                       
 ```
  
-remark: also a module "pppld" must be in the memory; 
+*remark*
+also a module "pppld" must be in the memory; 
 (here troubles can be)
 or may be rp-pppoe.so module - a kernel module must be in the memory)
  
