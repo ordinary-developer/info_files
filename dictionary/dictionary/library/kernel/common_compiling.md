@@ -1,4 +1,5 @@
-## kernel installation unix way
+## unix way kernel install
+main steps are:
 - update lists of packets
   ```sh
   # apt-get update 
