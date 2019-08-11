@@ -1,4 +1,4 @@
-## unix way kernel install
+## unix way kernel compiling
 main steps are:
 - update lists of packets
   ```sh
