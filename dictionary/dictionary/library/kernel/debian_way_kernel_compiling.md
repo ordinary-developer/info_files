@@ -1,6 +1,5 @@
-# kernel compiling debian way 
+# debian way kernel compiling
 traditional way of kernel installation:
-
 - update lists of packets
   ```sh
   # apt-get update 
@@ -98,3 +97,4 @@ and rebooting
 - /var/log/syslog
 - /var/log/kernel
 - /var/log/dmesg
+
