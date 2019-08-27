@@ -14,7 +14,7 @@ to configure settings of console type:
 ```sh
 # dpkg-reconfigure concole-setup 
 ```
-of course, these packages must be already installed in the system.
+of course, these packages must be already installed in the system
 
 to configure alt-shift toggle between layouts print:
 ```sh
