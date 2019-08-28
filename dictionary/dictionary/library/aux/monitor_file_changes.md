@@ -1,20 +1,19 @@
 # monitor filesystem changes
 
-## software installing
-before installing type:
+## software installation
+before installation:
 ```sh
 # find / | grep -v -e ^/proc -e ^/tmp -e ^/dev > joe_preinstall.list 
 ```
 
-after installing type:
+after installation:
 ```sh
 # find / | grep -v -e ^/proc -e ^/tmp -e ^/dev > joe_postinstall.list
 ```
 
-then type:
+then:
 ```sh
 $ diff joe-preinstall.list joe-postinstall.list > joe-installed.list 
 ```
 
-*Here the program joe was used*. 
-
+*here the program "joe" was used* 
