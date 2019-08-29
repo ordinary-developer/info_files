@@ -1,6 +1,6 @@
 # common info
 
-## common building
+## common building from src
 for common building you must install the next packages (in Debian):
 ```sh
 $ apt-get install 
