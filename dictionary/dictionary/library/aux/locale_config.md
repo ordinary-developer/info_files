@@ -5,7 +5,7 @@ to configure locales you must type:
 # dpkg-reconfigure locales
 ```
 
-to configure cyrillic in console type:
+to configure cyrillic symbols in console type:
 ```sh
 # dpkg-reconfigure console-cyrillic
 ```
