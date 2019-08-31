@@ -19,20 +19,19 @@ info about processes:
 ```sh
 $ top 
 ```
+or 
+```
+$ ps -aux 
+```
+
+info about the process with a specified pid:
+```sh
+$ pmap -d <pidnumber>
+```
 
 tree for processes:
 ```sh
 $ pstree
-```
-
-info about processes:
-```sh
-$ ps -aux
-```
-
-info about the process with the specified pid:
-```sh
-$ pmap -d <pidnumber>
 ```
 
 
@@ -148,4 +147,3 @@ scanning all the net on the port 23 and showing where it is open:
 ```sh
 $ nmap -n -p 23 10.0.0.1-254 | grep open -A 2 -B 3
 ```
-
