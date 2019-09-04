@@ -1,7 +1,7 @@
 # archive commands
 
 ## common unpacking
-for unpacking it is usefull to use the next script:
+to unpack it is usefull to use the next script:
 ```sh
 unpack () {
   if [ -f $1 ] ; then
@@ -30,16 +30,15 @@ unpack () {
 
 
 ## tar unpacking
-for unpacking a simple tar acrhive use the next command:
+to unpack a simple tar acrhive:
 ```sh
 $ tar xvf package-name.tar
 ```
 
 
 ## .xz unpacking
-for unpacking a file with the .xz extension:
+to unpack an .xz archive:
 ```sh
 $ apt-get install xz
 $ zx --decompress package-name.xz
 ```
- 
