@@ -1,7 +1,7 @@
 # mount config
 
 ## manual mounting
-to mount flash it is necessary to type next command:
+to mount a usb-stick (flash-disk):
 ```sh
 # mount -t vfat /dev/sdc1 /media/flash -o iocharset=koi8-r,codepage=866 
 ```
@@ -30,7 +30,7 @@ $ sudo mount -t vfat -o uid=ivan,gid=ivan /dev/sdb1 ~/flash          |
 
 
 ## auto mounting
-to mount only your flashes in your folders:
+to mount only your flash-disks in your folders:
 ```sh
 $ sudo blkid /dev/sdb1                                               
 ```
@@ -74,7 +74,7 @@ but remember if your filesystem is not mounted then the kill procedure
 will begin to kill all (e.g ROOT FILE SYSTEM), so you must be carefull
 and you must always check "mountpoint"
 
-the next script I think will be more polite
+the next script will be more polite
 polite script:
 ```sh
 #!/bin/sh                                                            
@@ -128,4 +128,3 @@ and type in bash:
 $ mount /mnt/flash                                                   |
 ```
 and all must be mount automatically
-
