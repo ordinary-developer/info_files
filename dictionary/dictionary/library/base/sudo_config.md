@@ -6,7 +6,7 @@ to install sudo:
 #apt-get install sudo 
 ```
 
-then in the file */etc/sudoers* write:
+then in the file `/etc/sudoers` write:
 ```sh
 %sudo ALL=(ALL) ALL 
 ivan ALL=(ALL) ALL    
@@ -120,4 +120,3 @@ the format of the config file is following:
 user	host = (user)	command
 ivan	ALL  = (ALL)    ALL
 ```
-
