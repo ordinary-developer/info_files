@@ -1,10 +1,7 @@
 alsa_config.md      - info about alsa configuration
 arch_cmds.md        - info about archives using
-build_env.md        - info about making build environment
 chroot_use.md       - info about chroot using
 font_install.md     - info about font installation
-locale_config.md    - info about locale configuration
 mount-config.md     - info about mounting systems
 sudo_config.md      - info about sudo configuring
 useful_bas_hcmds.md - info about useful commands
-
