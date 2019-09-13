@@ -1,4 +1,4 @@
-# bash base config
+# bash config
 
 ## .bashrc
 to add supporting multicoloring add to your `.bashrc` file:
@@ -60,4 +60,3 @@ or by the next command:
 ```sh
 $ echo PS1="$ "
 ```
-
