@@ -1,4 +1,3 @@
 base_config.md  - info about bash config
-tmux.md         - info about tmux config
+tmux_config.md  - info about tmux config
 xterm_config.md - info about xterm config
-
