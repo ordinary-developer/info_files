@@ -1,7 +1,7 @@
 # gcc install
 
 ## gcc-4.9 install
-It is not easy to compile your gcc without any compiler,
+it is not easy to compile your gcc without any compiler,
 so it is easier to install gcc (c compiler) from packages 
 (your version may be not the same)
 ```sh
@@ -24,24 +24,24 @@ $ make links from /usr/bin/g++-4.9 to ~/shorcuts/g++
 
 
 ## g++-7.0/g++-8.0 installation 
-To install g++-7.0 or g++-8.0 in Debian 9 (Stretch):
-1. Add the next line to the */etc/apt/sources.list*:
+to install g++-7.0 or g++-8.0 in Debian 9 (Stretch):
+1. add the next line to the */etc/apt/sources.list*:
    ```sh
    deb http://mirror.yandex.ru/debian testing main contrib non-free
    ```
    (you can include an other mirror for the experimental branch).
 
-2. Update the apt cache:
+2. update the apt cache:
    ```sh
    $ sudo apt-get update
    ```
 
-3. To see if the package can be installed
+3. to see if the package can be installed
    ```sh
    $ apt-cache pkgnames g++-8
    ```
  
-4. Install the package
+4. install the package
    ```sh
    $ sudo apt-get install -t testing g++-8
    ```
@@ -51,4 +51,3 @@ or type in the shell:
 ```sh
 $ g++-8
 ```
-
