@@ -14,12 +14,11 @@ $ sudo scons --jobs 4 --64 --ssl --prefix=/usr/install
 
 
 ## aux info
-[A usful site]
+[useful site]
 http://gravitronic.com/compiling-mongodb-with-ssl-support-on-ubuntu-12-04-lts/
 
 [Debian way installation]
 (http://docs.mongodb.org/master/tutorial/install-mongodb-on-debian/?_ga=1.84720666.2094401186.1433601836)
 
-[Simple debian way installation]
+[simple debian way install]
 (http://docs.mongodb.org/manual/tutorial/install-mongodb-on-linux/?_ga=1.60307374.2094401186.1433601836)
-
