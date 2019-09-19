@@ -6,7 +6,7 @@ may be it is necessary to install the next packages:
 $ sudo apt-get install libxslt-dev libxml2-dev libevent-dev 
 ```
 
-for correct installation it is neccessary to install some packages:
+for correct installation it is necessary to install some packages:
 ```sh
 $ sudo apt-get install
     libreadline-dev openssl libssl-dev libsqlite3-dev sqlite3
@@ -139,4 +139,3 @@ $ sudo apt-get install build-essential libncursesw5-dev
     libc6-dev libsqlite3-dev tk-dev zlib1g-dev 
     liblzma-dev
 ```
-
