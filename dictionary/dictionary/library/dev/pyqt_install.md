@@ -25,7 +25,7 @@ $ python /usr/local/bin/pyvenv project_env ~/sandboxes/python/pyqt5
 $ source ~/sandboxes/python/pyqt5/bin/activate
 ```
 
-stow ALLWAYS will put output files to /usr/local/stow 
+stow ALWAYS will put output files to /usr/local/stow 
 and if you even do not specify the path
 by the prefix notation in the configure script.
 
