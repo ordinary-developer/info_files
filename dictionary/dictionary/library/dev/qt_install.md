@@ -19,13 +19,13 @@ $ chmod +x qt-linux-opensource-1.4.0-x86-online.ru
 $ ./qt-linux-opensource-1.4.0-x86-online.ru				             
 ``
 
-may be you need to install
+may be you need to install aux packages:
 ```sh
 $ sudo apt-get install make g++ libglu1-mesa-dev
 ```
 or
 ```sh
-$ sudo apt-get install libgl1-mesa-dev			                	 
+$ sudo apt-get install libgl1-mesa-dev 
 ```
 
 ## creating qt apps
@@ -82,4 +82,3 @@ stop
 qmake *.pro								                             
 make									                                 
 ```
-
