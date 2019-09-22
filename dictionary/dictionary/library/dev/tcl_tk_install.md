@@ -25,4 +25,3 @@ to install tk from packages:
 ```sh
 $ sudo apt-get install tk tk-dev
 ```
-
