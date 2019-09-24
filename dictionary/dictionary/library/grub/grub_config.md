@@ -1,4 +1,5 @@
 # grub info
+
 for installing your linux version above the Windows OS
 you must have the next options in your BIOS:
 ```
@@ -22,4 +23,3 @@ then you must print in the shell
 ```sh
 # update-grub            
 ```
-
