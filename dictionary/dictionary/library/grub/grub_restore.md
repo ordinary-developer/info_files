@@ -1,4 +1,5 @@
 # grub restore
+
 to restore grub loader you must load your LiveCD:
  
 for identifying hard disks:
@@ -30,4 +31,3 @@ then update grub:
 $ sudo update-grub  
 ```
 and then reboot
-
