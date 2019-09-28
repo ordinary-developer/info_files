@@ -35,4 +35,3 @@ then copy this file to local firefox config folder:
 ```sh
 $ cp libflashplayer ~/.mozilla
 ```
-
