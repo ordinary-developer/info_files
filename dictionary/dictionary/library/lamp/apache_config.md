@@ -93,7 +93,7 @@ DocumentRoot "/home/www"
 </Directory>
 ```
  
-And dissalow clients to access .htaccess:
+and dissalow clients to access .htaccess:
 ```
 <Files ~ "^.ht">
     Order allow,deny
@@ -153,9 +153,8 @@ write the next strings:
 </VirtualHost>
 ```
 
-In file "etc/hosts" write:
+in file "etc/hosts" write:
 ```
 127.0.0.1	localhost host1 host2 host3
 ```
 then restart the server
-
