@@ -22,7 +22,7 @@ $ sudo ./configure --prefix=/usr/local/
                    --with-apr-util=/usr/local/apr-util
 ```
 
-You can use additional entries such as:
+you can use additional entries such as:
 ```sh
 --enable-authn-anon 
 --enable-v4-mapped 
@@ -50,4 +50,3 @@ to install a special port you can use:
 ```sh
 --with-port=[PORT_NUMBER]
 ```
-
