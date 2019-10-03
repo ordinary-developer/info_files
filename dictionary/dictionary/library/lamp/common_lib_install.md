@@ -64,7 +64,7 @@ $ sudo make install
 ```
 
 apr-util is now located in /usr/local/apr-util 
-*Remark* May be it is necessary to type `--with-sqlite=[PATH]`
+*remark* May be it is necessary to type `--with-sqlite=[PATH]`
  
 
 ## pcre
@@ -106,7 +106,7 @@ $ sudo make install
 
 zlib is now located in /usr/local/zlib
 
-*Remark* You can install zlib by using a package manage:
+*remark* You can install zlib by using a package manage:
 ```sh
 $ sudo apt-get install zlib-bin zlib1g zlib1g-dev
 ```        
