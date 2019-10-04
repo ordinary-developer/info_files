@@ -1,10 +1,10 @@
 # MySQL config
 
 ## script config
-Enter the mysql directory (usually /usr/local/mysql)
+enter the mysql directory (usually /usr/local/mysql)
 
-You can turn your mysql by script or manually.
-We must consider both two variants
+you can turn your mysql by script or manually;
+we must consider both two variants
 
 run your script:
 (remember, you must run your server)
@@ -13,22 +13,22 @@ $ sudo bin/mysql_secure_installation
 ```
 
 your answers will be:
-1. Skip root passwowrd for root
+1. skip root passwowrd for root
    simply press enter (you have no your root passowrd yes)
-2. Install a new password ro for root [y/n]
+2. install a new password ro for root [y/n]
    y
-3. Do remove an anonymous user [y/n]
+3. do remove an anonymous user [y/n]
    y
-4. Do not disallow remote connections [y/n]
+4. do not disallow remote connections [y/n]
    y
 5. do remove a test database [y/n]
    y
-6. Do reload the privileges [y/n]
+6. do reload the privileges [y/n]
    y
 
 
 ## manual config
-Enter the mysql base directory you can find it by the next command:
+enter the mysql base directory you can find it by the next command:
 ```sh
 $ sudo mysqld --verbose --help 
 ```
@@ -43,7 +43,7 @@ we must update root password:
 $ mysql -uroot -pyour_password
 ```
 
-Then type:
+then type:
 ```
 mysql> USE mysql;
 mysql> UPDATE user SET Password=PASSWORD('new_password)' 
@@ -181,7 +181,7 @@ interactive-timeout
 
 
 # other stuff
-You can config your IPv6 locahost(@::1) (you must be in mysql database)
+you can config your IPv6 locahost(@::1) (you must be in mysql database)
 ```
 mysql> SET PASSWORD FOR 'root'@'::1 = PASSWORD(<password>); 
 ```
@@ -193,4 +193,3 @@ $ sudo iptables -I INPUT -p tcp --dport 3306 -m state
 $ sudo iptables -I OUTPUT -p tcp --sport 3306 -m state 
                 --state ESTABLISHED -j ACCEPT 
 ```
-
