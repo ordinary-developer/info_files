@@ -51,12 +51,12 @@ $ sudo chown -R mysql data
 $ sudo chown -R mysql .
 ``
 
-Copy your config file:
+copy your config file:
 ```sh
 $ sudo cp support-files/my-default.cnf /etc/my.cnf
 ```
 
-Optionally you can put your mysql script to autoload:
+optionally you can put your mysql script to autoload:
 ```sh
 $ sudo cp support-files/mysql.server /etc/init.d/mysql.server
 ```
@@ -65,4 +65,3 @@ start server:
 ```sh
 $ sudo /usr/local/mysql/bin/mysqld_safe --user=mysql & 
 ```
-
