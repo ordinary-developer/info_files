@@ -19,12 +19,12 @@ the appache version must be recent
 
 
 #pre-install
-Sometimes it is neccessary to install libxml2 libraries:
+sometimes it is neccessary to install libxml2 libraries:
 ```sh
 # apt-get install libxml2 libxml2-dev
 ```
 
-It is also necessary to install XDEBUG.so extension (see in my Wiki).
+it is also necessary to install XDEBUG.so extension (see in my Wiki)
 
 ## install
 official site - www.php.net  
@@ -61,7 +61,7 @@ $ sudo ./configure --prefix=/usr/local/php
 # make test //(not necessary)
 ```
 
-You also can append your configure command
+you also can append your configure command
 ```sh
 --with-pgsql[=DIR] 
 ```
@@ -82,7 +82,6 @@ other options:
 
 
 ## aux
- 
 you can install necessary libs in debian way:
 ```sh
 $ sudo apt-get install curl libcurl3 libcurl3-dev php5-curl php5-mcrypt
