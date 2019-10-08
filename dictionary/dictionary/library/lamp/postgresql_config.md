@@ -1,26 +1,26 @@
 # postresql config
 
 ## base config
-Create postresSQL user account:
+create postresSQL user account:
 ```sh
 $ sudo adduser postgres	
 $ sudo passwd postgres
 ```
 
-Create postreSQL data directory:
+create postreSQL data directory:
 ```sh
 $ sudo mkdir /usr/local/postresql/data
 $ sudo chown postgres:postgres /usr/local/postgresql/data
 ```
 
-Initialize postgreSQL data directory:
+initialize postgreSQL data directory:
 ```sh
 $ su - postgres
 $ /usr/local/postgresql/bin/initdb -D /usr/local/posgresql/data
 ```
  
 ## workflow
-Start postgresql database:
+start postgresql database:
 ```sh
 $ /usr/local/postgresql/bin/postmaster -D /usr/local/postgresql/data
                                           > logfile 2>&1 &	
@@ -43,7 +43,7 @@ to start client psql type:
 $ /usr/local/postgresql/bin/psql -U user password
 ```
  
-Create postgresql db and test the installation:`
+create postgresql db and test the installation:`
 ```sh
 $ /usr/local/postgresql/bin/createdb test
 $ /usr/local/postgresql/bin/psql test
@@ -60,20 +60,19 @@ Password: (tmppassword)
 ```
 
 create a PostgreSQL user:
-Method 1: Creating the user in the PSQL prompt, with CREATE USER command
+method 1: Creating the user in the PSQL prompt, with CREATE USER command
 ```sh
 # CREATE USER ramesh WITH password 'tmppassword';
 ```
 
-Method 2: Creating the user in the shell prompt, with createuser command
+method 2: Creating the user in the shell prompt, with createuser command
 ```sh
 $ /usr/local/pgsql/bin/createuser sathiya
 ```
 
 
 ## aux
-All configuration files are stored in the data directory: ~/postgres/data. 
-If you want to run multiple Postgres versions on the same machine, 
-they must have different data directories and different ports. 
-The port number can be changed in ~/postgres/data/postgresql.conf.
-
+all configuration files are stored in the data directory: ~/postgres/data;
+if you want to run multiple Postgres versions on the same machine, 
+they must have different data directories and different ports; 
+the port number can be changed in ~/postgres/data/postgresql.conf
