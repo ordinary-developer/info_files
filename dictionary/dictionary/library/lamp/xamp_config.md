@@ -10,4 +10,3 @@ comment the next strings
     ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
 </LocationMatch>
 ```
- 
