@@ -2,6 +2,7 @@
 
 ## base config
 to configure network write next strings in file '/etc/network/interafces'
+
 - for dhcp configuring
 ```
 #The loopback network interface 
@@ -16,12 +17,12 @@ iface eth0 inet dhcp
 but dhcp configuring sometimes doesn't work, so it is necessary to configure
  the same file to get static ip 
  
-But internet can be very small, (perphaps from incorrect DNS configuration)
+but internet can be very small, (perphaps from incorrect DNS configuration)
 so, type in file /etc/resolv.conf
 ```
  nameserver   x.x.x.x 
 ```
-Where x.x.x.x - the address of your DNS server
+where x.x.x.x - the address of your DNS server
   
 ```
 #The loopback network interface 
@@ -38,7 +39,7 @@ broadcast
 gateway 10.88.8.1 
 ```
  
-It is necessary to write next strings into file '/etc/resolv.conf'
+it is necessary to write next strings into file '/etc/resolv.conf'
 ```
 domain kursk.puzzle.su 
 search kursk.puzzle.su 
@@ -82,7 +83,7 @@ dns-search kstu.kursk.ru
 
 
 ## useful commands
-Some useful commands to work with interfaces:
+some useful commands to work with interfaces:
  
 - to set up an interface: 
 ```sh
@@ -143,7 +144,7 @@ $ ping www.yandex.ru -c 3
  
 
 ## addition info
-Some useful knowledge for net in Debian
+some useful knowledge for net in Debian
  
 /etc/hosts - the list of all ip-addresses and names
 /etc/resolv.conf - contains DNS servers
@@ -175,4 +176,3 @@ to see the fixed card and its mac you can in file:
 ```sh
 /etc/udev/rules.d/70-persistent-net.rules
 ```
-
