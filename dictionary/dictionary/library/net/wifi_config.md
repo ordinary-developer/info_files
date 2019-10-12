@@ -17,29 +17,29 @@ to make wifi work correctly, first you must install your driver
 # apt-get install linux-headers build-essential
 ```
 
-Then you must get backports
+then you must get backports
 extract them, and then enter the directory with backports
  
 for configuring type
-Here you must point your driver
+here you must point your driver
 ```sh
 # make oldconfig
 # make menuconfig
 ```
 
-Or you can directly point your driver
+or you can directly point your driver
 ```sh
 # make defconfig-ath9k
 ```
 
-After the you must type:
+after the you must type:
 ```sh
 # make
 # make install
 ```
 
-Sometimes it will be necessary to fix sources for correct compiling.
-Sometime it will be necessary to reboot your system.
+sometimes it will be necessary to fix sources for correct compiling;
+sometime it will be necessary to reboot your system
 
 
 ## install
@@ -98,4 +98,3 @@ and then we must add a gate (not necessarily):
 
 ( 192.168.1.1 - usuall address for router, if the address is other
  you must type it)
-
