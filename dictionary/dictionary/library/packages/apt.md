@@ -10,4 +10,3 @@ the next command will simmulate your installation:
 ```sh
 $ sudo apt-get install -s package-name
 ```
- 
