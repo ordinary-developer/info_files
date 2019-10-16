@@ -26,4 +26,3 @@ after that run:
 ```sh
 $ sudo apt-get update
 ```
-
