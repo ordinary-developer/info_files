@@ -73,4 +73,3 @@ the aptitud keeps a trace of executed actions in its logfile: **/var/log/aptitud
     deb http://ftp.debian.org/debian/ wheezy main contrib
     //deb http://ftp.debian.org/debian/ stable main contrib
 ```
-
