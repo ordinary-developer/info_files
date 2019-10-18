@@ -7,7 +7,7 @@ this command will install package_name.deb package
 $ dpkg --install package_name.deb
 ```
 
-Simply installing process can be reduced to 2 manual actions: 
+simply installing process can be reduced to 2 manual actions: 
 unpacking and configuring. 
 this command will unpack the package:
 ```sh
@@ -63,4 +63,3 @@ this command displays the headers of Debian package:
 ```sh
 $ dpkg --info file.deb 
 ```
-
