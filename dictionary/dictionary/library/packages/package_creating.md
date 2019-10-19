@@ -17,4 +17,3 @@ $ sudo ./configure --prefix=/usr/local --exec-prefix=/usr/local
 $ sudo checkinstall -D
 $ sudo dkpg -i pocket_name.db
 ```
-
