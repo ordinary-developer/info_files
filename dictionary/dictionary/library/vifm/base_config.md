@@ -1,7 +1,6 @@
 # vifm
 
 ## vifm colorschemes
-
 for supporting colorschemes:
 ```sh
 $ export TERM=xterm-256color
@@ -25,4 +24,3 @@ to show all dot files, simply type "zo" in vifm without !
 ```
 zo
 ```
-
