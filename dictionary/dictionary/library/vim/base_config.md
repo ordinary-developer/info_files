@@ -52,4 +52,3 @@ and change them to:
 call s:initVariable("g:NERDTreeWinPos", "right")
 call s:initVariable("g:NERDTreeWinSize", 17)
 ```
-
