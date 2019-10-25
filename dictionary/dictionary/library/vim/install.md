@@ -16,4 +16,3 @@ $ ./configure --with-features=huge --enable-gui --with-x
 $ sudo make
 $ sudo install
 ```
-
