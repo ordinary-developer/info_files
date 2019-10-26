@@ -30,4 +30,3 @@ this may be wanted after using :set ignorecase to make searches case insensitive
 ```
 :%s/foo/bar/gcI
 ```
-
