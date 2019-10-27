@@ -35,6 +35,7 @@ set nocompatible
  " Now we can turn our filetype functionality back on
  "filetype plugin indent on 
  "because work badly
+```
 
 to add other not github repository you can run in vim:
 ```
@@ -114,4 +115,3 @@ instead of word 'Plugin' you can use word 'Bundle'
 
 ## aux info
 [useful link](https://habr.com/post/148549/)
-
