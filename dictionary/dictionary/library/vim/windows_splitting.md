@@ -17,4 +17,3 @@ to create an empty vertical window:
 ```
 :vne
 ```
- 
