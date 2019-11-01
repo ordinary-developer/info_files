@@ -55,4 +55,3 @@ $ sudo mount --type vmhgfs .host:/shared_folder /mnt/hgfs
 ```
 (where "shared_folder" here is the name of your shared folder
  in VM settings)
-
