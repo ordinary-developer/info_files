@@ -69,4 +69,3 @@ the next strings:
           Modes      "1920x1080_60.0"
     EndSubSection
 ```
-
