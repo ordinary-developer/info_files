@@ -25,4 +25,3 @@ $ Xorg
 *remark*
 but if you have xinit and xdm installed,
 fluxbox must run automatically after rebooting
-
