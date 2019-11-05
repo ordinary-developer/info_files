@@ -19,4 +19,3 @@ then you can start X with XFCE only by typing:
 ```sh
 startx
 ```
-
