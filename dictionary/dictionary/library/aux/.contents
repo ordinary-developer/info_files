@@ -1,4 +1,3 @@
-base_utils.md           - info about base utils
 locale_config.md        - info about locales in Linux
 monitor_file_changes.md - info about monitoring filesystem changes
 src_build.md            - info about building from sources
