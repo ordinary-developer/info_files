@@ -1,4 +1,4 @@
 locale_config.md        - locale config in Linux
-monitor_file_changes.md - info about monitoring filesystem changes
+monitor_file_changes.md - detecting fs changes (after app installation)
 src_build.md            - info about building from sources
 sys_info.md             - info about the system
