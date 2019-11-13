@@ -1,6 +1,6 @@
 alsa_config.md      - alsa config
 arch_cmds.md        - archive packing/unpacking from the console
-chroot_use.md       - info about chroot using
+chroot_use.md       - the "chroot" util using
 font_install.md     - info about font installation
 mount_config.md     - info about mounting systems
 sudo_config.md      - info about sudo configuring
