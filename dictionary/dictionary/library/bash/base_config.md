@@ -1,7 +1,7 @@
 # bash config
 
 ## .bashrc
-to add supporting multicoloring add to your `.bashrc` file:
+for multicoloring support add to your `.bashrc` file:
 ```
 TERM=xterm-256color
 ```
@@ -18,7 +18,7 @@ to permanently have a variable:
 $ echo 'GMOCK="/home/ivan/gmock-1.6"' >> ~/.bashrc
 ```
 
-to change the path variable:
+to change the `PATH` variable:
 ```sh
 export PATH=$PATH:your/path/for/program
 ```
