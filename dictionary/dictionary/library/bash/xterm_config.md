@@ -1,7 +1,5 @@
 # xterm config
-
-## common
-to configure XTerm create the file '~/XTerm'
+to configure XTerm create the file `~/XTerm`
 and add there the next strings:
 ```
 XTerm*background: white
