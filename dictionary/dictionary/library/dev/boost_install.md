@@ -1,7 +1,7 @@
 # boost install
 
 ## common
-first you must speficy in mind your boost_dir 
+first you must specify your boost_dir 
 (where unpacked boost packages will be placed
  and where final boost libraries will be placed).
  
