@@ -9,18 +9,18 @@ in out case it is '~/libraries/boost_NNN'
 
 
 ## headers-only install
-to install headeers only:
+to install headers only:
 - download bootstrap
-- unpack it to for example ~/libraries
+- unpack it to (for example) ~/libraries
 
 then you can use it:
 ```sh
-$ c++ -I path/to/boost yourfile.cpp -o your_application	
+$ c++ -I path/to/boost yourfile.cpp -o your_application
 ```
 
 for gcc:
 ```sh
-$ g++ -I path/to/boost yourfile.cpp -o your_application	
+$ g++ -I path/to/boost yourfile.cpp -o your_application
 ```
 
 
