@@ -65,7 +65,7 @@ of the libraries;
 to build all variants, pass the additional option *"--build-type=complete"*
 
 building the special stage target places Boost library binaries
- in the *"stage/lib/"* subdirectory of the Boost tree. 
+ in the *"stage/lib/"* subdirectory of the Boost tree; 
 to use a different directory
 pass the *"--stagedir=directory"* option to b2.
 
