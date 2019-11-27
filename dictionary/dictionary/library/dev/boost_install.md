@@ -136,4 +136,3 @@ and trailing suffix) (.a in this case):
 $ c++ -I path/to/boost_1_59_0 example.cpp -o example \
       -L~/boost/stage/lib/ -lboost_regex-gcc34-mt-d-1_36
 ```
-
