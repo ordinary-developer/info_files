@@ -1,15 +1,12 @@
 # gcc install
 
-## gcc-4.9 install
-it is not easy to compile your gcc without any compiler,
-so it is easier to install gcc (c compiler) from packages 
-(your version may be not the same)
+## gcc-4.9 install from packages
+to install gcc from packages (in Debian) (for gcc-4.9)
 ```sh
  $ sudo apt-get install gcc-4.9
 ```
 
 to install g++ (c++ compiler)
-(your version may be not the same):
 ```sh
 $ sudo apt-get install g++-4.9
 ```    
