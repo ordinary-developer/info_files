@@ -20,7 +20,7 @@ $ make links from /usr/bin/g++-4.9 to ~/shorcuts/g++
 ```
 
 
-## g++-7.0/g++-8.0 installation 
+## g++-7.0/g++-8.0 install
 to install g++-7.0 or g++-8.0 in Debian 9 (Stretch):
 1. add the next line to the */etc/apt/sources.list*:
    ```sh
