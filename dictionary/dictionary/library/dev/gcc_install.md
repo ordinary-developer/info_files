@@ -33,12 +33,12 @@ to install g++-7.0 or g++-8.0 in Debian 9 (Stretch):
    $ sudo apt-get update
    ```
 
-3. to see if the package can be installed
+3. to see if the package can be installed:
    ```sh
    $ apt-cache pkgnames g++-8
    ```
  
-4. install the package
+4. install the package:
    ```sh
    $ sudo apt-get install -t testing g++-8
    ```
