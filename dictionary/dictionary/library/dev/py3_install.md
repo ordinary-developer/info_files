@@ -1,13 +1,13 @@
 # Python3 install
 
 ## pre-install
-may be it is necessary to install the next packages:
+(may be) it is necessary to install the next packages:
 ```sh
 $ sudo apt-get install libxslt-dev libxml2-dev libevent-dev 
 ```
 
-for correct installation it is necessary to install some packages:
-```sh
+necessary packages:
+```
 $ sudo apt-get install
     libreadline-dev openssl libssl-dev libsqlite3-dev sqlite3
 ```
@@ -68,7 +68,6 @@ and you must AUGMENT THIS PATH, if you have installed your sqlite manually.
 
 
 ## install
-
 to compile python:
 ```sh
 $ sudo ./configure --prefix=/usr/local --exec-prefix=/usr/local	
