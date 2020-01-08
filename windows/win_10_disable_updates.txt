@@ -1,0 +1,13 @@
+﻿# 1-st way
+
+1. Win-R->"services.msc"
+2. find the service with "Window Update" keywords, double click on it
+3. Press "Stop" and all install the field "startup type" the value "disabled"
+
+# 2-nd wasy - Only for pro and enterprise
+
+1. Win-R -> "gpedit.msc"
+2. co to "Computer Configuration" -> "Administrativnye shablony" -> "Componenty windows" -> "Center obnovelniya windows", selet the item "Nastroyka of automatic updates" or "zapretit ispolzovanie lyubyx sredstv centra obnovleniay" and doucle clik on t, in the "config" windows set "Otklichno"
+
+# 3-d way
+https://www.easeus.com/todo-backup-resource/how-to-stop-windows-10-from-automatically-update.html
