@@ -1,0 +1,65 @@
+ DOM (document object model)
+ ###########################
+
+
+ MOVING THROUGH THE TREE
+ =======================
+ each node has the next methods for moving
+
+ parentNode	- a property that returns the parent node
+ childNodes	- an array-like property that points to children
+ firstChild	- a property that points to the first child
+ lastChild	- a property that points to the last child
+ previousSibling - a property that points to the previous adjacent node
+ nextSibling	- a property that points to the next adjacent node
+
+ properties like the "childNodes" are LIVE.
+ It means that they are updated as the documnet changes.
+
+
+ FINDING ELEMENTS
+ ================
+ "document" or "document.body" has the next methods
+
+ getElementsByTagName(tagName)		- returns an array-like object
+ getElementById				- returns an element (or null)
+ getElementsByClassName(className)	- returns an array-like object
+
+ All returned objects are LIVE.
+ It means that they are updated as the documnet changes.
+ 
+
+ CHANGING THE DOCUMENT
+ =====================
+ "document" or "document.body" has the next methods
+
+ removeChild() 					- removes the given child from the documnet
+ appendChild(element)				- adds the given element to the node
+ insertBefore(element_to_insert, base_elment)	- inserts an element 
+ replaceChild(new_child, child_to_replace) 	- replaces the children
+
+ 
+ CREATING NODES
+ ==============
+ the "document" has the next methods for creating nodes
+ 
+ createTextNode(textContent)	- returns a text node with the textContet
+ createElement(tagName)		- returns a new empty node of the given type.
+
+ 
+ ATTRIBUTES
+ ==========
+ each node may have the next method
+ 
+ getAttribute(attrName) 	- returns an attribute object with attrName (often it is a text value)
+ setAttribute			- set an sattribute value
+
+ 
+ QUERY SELECTORS
+ ===============
+ the document has the next methods
+ 
+ querySelectorAll(selectorValue) 	- takes a selector string and returns an array-like object
+     					  containing all the elements that it matches
+ querySelect(selectorValue) 		- returns only the first element
+  
