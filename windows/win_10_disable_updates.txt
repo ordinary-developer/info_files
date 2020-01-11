@@ -1,13 +1,11 @@
-﻿# 1-st way
+﻿1. Win-R->"services.msc"
+2. Найдите в списке службу «Центр обновления Windows» (Windows Update), дважды кликните по ней.
+3. Нажмите «Остановить». Также установите в поле «Тип запуска» значение «Отключена», примените настройки. 
 
-1. Win-R->"services.msc"
-2. find the service with "Window Update" keywords, double click on it
-3. Press "Stop" and all install the field "startup type" the value "disabled"
 
-# 2-nd wasy - Only for pro and enterprise
+Only for pro and enterprise
 
-1. Win-R -> "gpedit.msc"
-2. co to "Computer Configuration" -> "Administrativnye shablony" -> "Componenty windows" -> "Center obnovelniya windows", selet the item "Nastroyka of automatic updates" or "zapretit ispolzovanie lyubyx sredstv centra obnovleniay" and doucle clik on t, in the "config" windows set "Otklichno"
-
-# 3-d way
-https://www.easeus.com/todo-backup-resource/how-to-stop-windows-10-from-automatically-update.html
+1. Запустите редактор локальной групповой политики (нажать Win+R, ввести gpedit.msc)
+2. Перейдите к разделу «Конфигурация компьютера» — «Административные шаблоны» — «Компоненты Windows» — «Центр обновления Windows». 
+Найдите пункт «Настройка автоматического обновления» или "запретить использование любых средств центра обновления" и дважды кликните по нему. 
+В окне настройки установите «Отключено» для того, чтобы Windows 10 никогда не проверяла и не устанавливала обновления. 
