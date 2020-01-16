@@ -1,4 +1,4 @@
-# monitor filesystem changes
+# watch filesystem changes
 
 ## software installation
 before installation:
@@ -17,3 +17,4 @@ $ diff joe-preinstall.list joe-postinstall.list > joe-installed.list
 ```
 
 *here the program "joe" was used* 
+
