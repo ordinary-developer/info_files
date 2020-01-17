@@ -20,7 +20,7 @@ info about processes:
 $ top 
 ```
 or 
-```
+```sh
 $ ps -aux 
 ```
 
@@ -147,3 +147,4 @@ scanning all the net on the port 23 and showing where it is open:
 ```sh
 $ nmap -n -p 23 10.0.0.1-254 | grep open -A 2 -B 3
 ```
+
