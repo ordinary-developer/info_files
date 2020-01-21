@@ -1,9 +1,8 @@
 # alsa config 
-
 to identify the model of the sound driver, in the file
 `/etc/modprobe.d/alsa-base.conf` write (for my card):
 ```sh
-.... 
+... 
  options snd-hda intel model=auto 
 ``` 
  
@@ -19,3 +18,4 @@ $ sudo rm /var/lib/alsa/asound.state
 $ sudo aumix 
 $ sudo alsactl store 
 ```
+
