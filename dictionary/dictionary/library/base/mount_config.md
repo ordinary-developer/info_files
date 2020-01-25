@@ -50,7 +50,7 @@ then simply run:
 - to unmount: `$ umount /media/flash1`
 
 instead of /media/flash1 you can use /home/ivan/flash1
-for receving rights to writing.
+for receving rights to writing
 
 also some options can be usefull: `codepage=866, iocharset=koi8-r`
 
@@ -128,3 +128,4 @@ and type in bash:
 $ mount /mnt/flash                                                   |
 ```
 and all must be mount automatically
+
