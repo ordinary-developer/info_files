@@ -32,11 +32,11 @@ examples are:
   ivan ALL=/bin/more /var/log/messages
   ```
 
-- ivan can perform by <username> on only server command 'sudo -u username
-/bin/ls /home/username'
-```
-ivan server=(username) /bin/ls /home/username 
-```
+- ivan can perform by <username>
+  on only server command 'sudo -u username /bin/ls /home/username'
+  ```
+  ivan server=(username) /bin/ls /home/username 
+  ```
 
 
 ## aux info
@@ -48,21 +48,21 @@ in the file `/etc/sudoers` says
 that all user variables (HOME,PATH etc.) (for a concrete user) are forbided,
 only root variables are availiable,
 security level is higher, 
-but sometimes it can be some prombles with compatibility.
+but sometimes it can be some prombles with compatibility
 
 if it is necessary to add such a feature you can write in the config file:
 ```
 Defaults: %admin !env_reset 
 ```
-where is 'admin' - is the group for which you want to add some priviledges
-and '!env_reset' allows to use user varialbes
+where is "admin" - is the group for which you want to add some priviledges
+and "!env_reset" allows to use user varialbes
 
 you also can write something following:
 ```
 Defaults: user env_keep=TZ 
 ```
-where 'user' - is the name of user
-'env_keep=TZ' allow to use TZ variable for this user
+where "user" - is the name of user
+"env_keep=TZ" allow to use TZ variable for this user
 
 
 the next string allow to use sudo for the command `/bin/kill` without the password:
@@ -81,8 +81,8 @@ next, the string:
 ```
 Defaults: user timestamp_timeout=0 
 ```
-allows not to remember the password for the user `user`
-and so user must all times enter his password;
+allows not to remember the password for the user "user"
+and so user must all times enter his password
 
 sometimes it is usefull to use aliaces:
 ```
@@ -120,3 +120,4 @@ the format of the config file is following:
 user	host = (user)	command
 ivan	ALL  = (ALL)    ALL
 ```
+
