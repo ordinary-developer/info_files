@@ -1,7 +1,8 @@
 alsa_config.md      - alsa config
 arch_cmds.md        - archive packing/unpacking from the console
-chroot_use.md       - the "chroot" util using
-font_install.md     - font installation
+base_unix_cmds.md   - useful console utils
+chroot.md           - the "chroot" util using
+font_setup.md       - font installation
 mount_config.md     - mounting filesystems
 sudo_config.md      - the "sudo" util config
-useful_bash_cmds.md - useful console utils
+
