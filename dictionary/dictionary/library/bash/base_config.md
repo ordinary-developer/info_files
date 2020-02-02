@@ -60,3 +60,4 @@ or by the next command:
 ```sh
 $ echo PS1="$ "
 ```
+
