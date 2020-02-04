@@ -7,3 +7,4 @@ XTerm*foreground: black
 XTerm*faceName: DroidSansMono
 XTerm*faceSize: 11
 ```
+
