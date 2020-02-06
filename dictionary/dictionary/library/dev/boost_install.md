@@ -3,9 +3,9 @@
 ## common
 first you must specify your boost_dir 
 (where unpacked boost packages will be placed
- and where final boost libraries will be placed).
+ and where final boost libraries will be placed)
  
-in out case it is '~/libraries/boost_NNN'
+in out case it is "~/libraries/boost_NNN"
 
 
 ## headers-only install
@@ -67,13 +67,13 @@ to build all variants, pass the additional option *"--build-type=complete"*
 building the special stage target places Boost library binaries
  in the *"stage/lib/"* subdirectory of the Boost tree; 
 to use a different directory
-pass the *"--stagedir=directory"* option to b2.
+pass the *"--stagedir=directory"* option to b2
 
  
 ## using built libs
 there are two main challenges associated with linking:
 - tool configuration, 
-  e.g. choosing command-line options or IDE settings;
+  e.g. choosing command-line options or IDE settings
 - identifying the library binary,
   among all the build variants, 
   whose compile configuration is compatible 
@@ -102,7 +102,7 @@ note, however, that if you use this method with a library
 that has both static (.a) and dynamic (.so) builds,
 the system may choose one automatically for you
 unless you pass a special option
-such as -static on the command line.
+such as -static on the command line
 
  
 ## aux build
@@ -136,3 +136,4 @@ and trailing suffix) (.a in this case):
 $ c++ -I path/to/boost_1_59_0 example.cpp -o example \
       -L~/boost/stage/lib/ -lboost_regex-gcc34-mt-d-1_36
 ```
+
