@@ -1,12 +1,12 @@
 # gcc install
 
 ## gcc-4.9 install from packages
-to install gcc from packages (in Debian) (for gcc-4.9)
+to install gcc from packages (in Debian) (for gcc-4.9):
 ```sh
  $ sudo apt-get install gcc-4.9
 ```
 
-to install g++ (c++ compiler)
+to install g++ (c++ compiler):
 ```sh
 $ sudo apt-get install g++-4.9
 ```    
@@ -48,3 +48,4 @@ or type in the shell:
 ```sh
 $ g++-8
 ```
+
