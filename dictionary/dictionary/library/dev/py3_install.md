@@ -7,7 +7,7 @@ $ sudo apt-get install libxslt-dev libxml2-dev libevent-dev
 ```
 
 necessary packages:
-```
+```sh
 $ sudo apt-get install
     libreadline-dev openssl libssl-dev libsqlite3-dev sqlite3
 ```
@@ -138,3 +138,4 @@ $ sudo apt-get install build-essential libncursesw5-dev
     libc6-dev libsqlite3-dev tk-dev zlib1g-dev 
     liblzma-dev
 ```
+
