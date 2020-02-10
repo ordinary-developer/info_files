@@ -2,12 +2,12 @@
 
 ## install
 - qt without sources
-- install in your virtualenv
+- install in your virtualenv:
   ```sh
   $ pip install sip
   $ pip install pyqt
   ```
-- install pyqt
+- install pyqt:
   ```sh
   $ python configure.py --destdir \
      ~/dev/envs/pyqt5/lib/python3.4/site-packages/ \
@@ -27,5 +27,5 @@ $ source ~/sandboxes/python/pyqt5/bin/activate
 
 stow ALWAYS will put output files to /usr/local/stow 
 and if you even do not specify the path
-by the prefix notation in the configure script.
+by the prefix notation in the configure script
 
