@@ -17,7 +17,7 @@ then type (may be under root):
 ```sh
 $ chmod +x qt-linux-opensource-1.4.0-x86-online.ru
 $ ./qt-linux-opensource-1.4.0-x86-online.ru				             
-``
+```
 
 may be you need to install aux packages:
 ```sh
@@ -30,20 +30,20 @@ $ sudo apt-get install libgl1-mesa-dev
 
 ## creating qt apps
 to compile a qt project you need
-1. run 
+1. run:
    ```sh
    qmake -project
    ```
-2. open the .pro file after its creation and add at the end of the file
+2. open the .pro file after its creation and add at the end of the file:
    ```
    CONFIG = qt     
    QT += widgets
    ```
-3. run 
+3. run:
    ```sh
    qmake Project.pro
    ```
-4. run 
+4. run: 
    ```sh
    make
    ```
@@ -74,11 +74,12 @@ you put this in ".." and run it from the project's directory:
 
 for editing .pro file:
 ```sh
-qmake -project				                            			 
-cat >> *.pro <<-stop							                         
-CONFIG=qt								                             
-QT += widgets							                             
-stop									                                 
-qmake *.pro								                             
-make									                                 
+qmake -project
+cat >> *.pro <<-stop
+CONFIG=qt
+QT += widgets
+stop
+qmake *.pro
+make
 ```
+
