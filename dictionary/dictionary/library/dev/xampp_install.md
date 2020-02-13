@@ -49,3 +49,4 @@ Allow from ::1 192.168.255.1
 or some other ip 
 
 to put the files to server use the `/opt/lampp/htdocs` folder
+
