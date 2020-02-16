@@ -1,5 +1,4 @@
 # grub info
-
 for installing your linux version above the Windows OS
 you must have the next options in your BIOS:
 ```
@@ -14,12 +13,13 @@ Legacy    Enabled
 but after installing your linux you must put it enabled.
 
 to edit a timeout you must open the `/etc/default/grub` file
-and print something like
+and print something like:
 ```
 GRUB_TIMEOUT=60 
 ```
 
-then you must print in the shell
+then you must print in the shell:
 ```sh
 # update-grub            
 ```
+
