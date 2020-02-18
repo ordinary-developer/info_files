@@ -31,3 +31,4 @@ then update grub:
 $ sudo update-grub  
 ```
 and then reboot
+
