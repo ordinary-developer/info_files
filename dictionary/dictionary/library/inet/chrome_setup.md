@@ -1,4 +1,4 @@
-# Chrome install
+# Chrome setup
 
 ## common
 these notes are applicable only for 64-x chrome versions
@@ -41,3 +41,4 @@ these notes are applicable only for 64-x chrome versions
    ```sh
    $ google-chrome-stable
    ```
+
