@@ -1,4 +1,4 @@
-# flash player install
+# flash player setup
 
 ## chromium
 to install flash plaeyer for google chomium first
@@ -35,3 +35,4 @@ then copy this file to local firefox config folder:
 ```sh
 $ cp libflashplayer ~/.mozilla
 ```
+
