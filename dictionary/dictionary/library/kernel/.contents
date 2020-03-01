@@ -1,3 +1,4 @@
-common_compiling.md            - info about kernel compiling
-debian_way_kernel_compiling.md - info about debian-way compiling
-true_debian_way_compiling.md   - true debian way to compile the kernel
+debian_way_cmpl.md      - info about debian-way compiling
+true_debian_way_cmpl.md - info debian way to compile the kernel
+unix_way_cmpl.md        - info about kernel compiling
+
