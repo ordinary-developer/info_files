@@ -42,7 +42,7 @@ you can use additional entries such as:
 --enable-proxy-connect 
 --enable-suexec 
 --enable-rewrite            
-le-userdir 	
+--enable-userdir 	
 --with-mpm=prefork 
 ```
 
@@ -50,3 +50,4 @@ to install a special port you can use:
 ```sh
 --with-port=[PORT_NUMBER]
 ```
+
