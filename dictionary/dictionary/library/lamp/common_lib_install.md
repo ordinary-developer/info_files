@@ -47,6 +47,7 @@ $ sudo ./configure --prefix=/usr/local/apr-iconv
 $ sudo make -j 2
 $ sudo make install
 ```
+
 apr-iconv is now located in /usr/local/apr-iconv
 
 
@@ -119,6 +120,7 @@ $ tar -xvzf bz2.tar.gz
 $ sudo make -j 2
 $ sudo make install PREFIX=/usr/local/bz2
 ```
+
 bz2 is now located in /usr/local/bz2
  
 
@@ -130,6 +132,7 @@ $ sudo ./configure --prefix=/usr/local/jpeglib
 $ sudo make -j 2
 $ sudo make install
 ```
+
 jpeglib is now located in /usr/local/jpeglib
 
  
@@ -155,3 +158,4 @@ $ sudo make install
 ```
 
 pnglib is now located in /usr/local/freetype2lib 
+
