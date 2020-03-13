@@ -193,3 +193,4 @@ $ sudo iptables -I INPUT -p tcp --dport 3306 -m state
 $ sudo iptables -I OUTPUT -p tcp --sport 3306 -m state 
                 --state ESTABLISHED -j ACCEPT 
 ```
+
