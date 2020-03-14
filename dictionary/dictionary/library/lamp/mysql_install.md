@@ -1,6 +1,6 @@
 # mysql install
 
-## prerequisites 
+## prerequisites
 
 ## pre-install
 ```sh
@@ -38,7 +38,7 @@ $ sudo make install
 ```
 
 
-post-install:
+## post-install:
 type the next commands
 (remember, you must enter /usr/local/mysql
 (or you working mysql directory))
@@ -65,3 +65,4 @@ start server:
 ```sh
 $ sudo /usr/local/mysql/bin/mysqld_safe --user=mysql & 
 ```
+
