@@ -26,6 +26,7 @@ sometimes it is neccessary to install libxml2 libraries:
 
 it is also necessary to install XDEBUG.so extension (see in my Wiki)
 
+
 ## install
 official site - www.php.net  
 ```sh
@@ -86,3 +87,4 @@ you can install necessary libs in debian way:
 ```sh
 $ sudo apt-get install curl libcurl3 libcurl3-dev php5-curl php5-mcrypt
 ```
+
