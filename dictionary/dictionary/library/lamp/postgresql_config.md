@@ -19,6 +19,7 @@ $ su - postgres
 $ /usr/local/postgresql/bin/initdb -D /usr/local/posgresql/data
 ```
  
+
 ## workflow
 start postgresql database:
 ```sh
@@ -76,3 +77,4 @@ all configuration files are stored in the data directory: ~/postgres/data;
 if you want to run multiple Postgres versions on the same machine, 
 they must have different data directories and different ports; 
 the port number can be changed in ~/postgres/data/postgresql.conf
+
