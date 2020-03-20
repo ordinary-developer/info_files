@@ -65,3 +65,4 @@ for switch on the flag "AUTORUN.FLG":
 ```sh
 AT+ZCDRUN=9\r\n
 ```
+
