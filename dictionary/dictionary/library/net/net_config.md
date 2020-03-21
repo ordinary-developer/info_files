@@ -176,3 +176,4 @@ to see the fixed card and its mac you can in file:
 ```sh
 /etc/udev/rules.d/70-persistent-net.rules
 ```
+
