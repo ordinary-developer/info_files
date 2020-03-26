@@ -1,4 +1,4 @@
-# nect config
+# nec config
 
 ## base config
 to configure network write next strings in file '/etc/network/interafces'
