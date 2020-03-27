@@ -1,5 +1,5 @@
 # pppoe config
-To config pppoe you follow the next steps:
+to config pppoe you follow the next steps:
 
 1. in the /etc/network/interfaces must be
 ```
@@ -17,10 +17,10 @@ sudo apt-get update && sudo apt-get install pppoeconf
 sudo pppoeconf
 ```
 
-4. Answer that always keep connection (not necessary)
-I will promt to enter the name of connection , Enter it.
+4. answer that always keep connection (not necessary)
+i will promt to enter the name of connection , enter it.
 
-Then you can start the connection
+then you can start the connection
 ```
 sudo pon connection-name
 ```
