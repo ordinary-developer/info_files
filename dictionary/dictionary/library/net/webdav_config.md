@@ -8,7 +8,7 @@ $ sudo apt-get install davfs2
 
 
 ## common mounting scenario
-to mount an arbitrary cloud disk  as local folder
+to mount an arbitrary cloud disk  as local folder:
 
 1. create the local folder:
 ```sh
@@ -83,3 +83,4 @@ $ sudo mount -t davfs -o uid=1000,gid=1000
 ```sh
 $ df -h ~/mnt/cloud/onedrive.disk
 ```
+
