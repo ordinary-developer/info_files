@@ -11,8 +11,8 @@ or (if your is Atheros (quacomm)):
 $ lspci -nn | grep Atheros
 ```
 
-to make wifi work correctly, first you must install your driver 
-(in my case it is ath9k):
+to make wifi work correctly, first you must install your driver:
+(in my case it is ath9k)
 ```sh
 # apt-get install linux-headers build-essential
 ```
@@ -21,7 +21,7 @@ then you must get backports
 extract them, and then enter the directory with backports
  
 for configuring type
-here you must point your driver
+here you must point your driver:
 ```sh
 # make oldconfig
 # make menuconfig
@@ -98,3 +98,4 @@ and then we must add a gate (not necessarily):
 
 ( 192.168.1.1 - usuall address for router, if the address is other
  you must type it)
+
