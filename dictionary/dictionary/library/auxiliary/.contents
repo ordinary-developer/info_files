@@ -1,5 +1,5 @@
 locale_config.md      - locale config in Linux
 build_from_src.md     - building apps from sources
 sys_info.md           - console utils for sys info
-watch_file_changes.md - detecting fs changes (after app installation)
+watch_fs_changes.md   - detecting filesystem changes (after app installation)
 
