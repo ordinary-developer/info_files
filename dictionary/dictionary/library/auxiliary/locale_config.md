@@ -1,45 +1,45 @@
-# local config
+# locale config
 
 ## base config
-to see all locales:
+to see all locales type in the console:
 ```sh
 $ locale -a
 ```
 
-to config ru_RU.utf8:
-1. type:
+to config *ru_RU.utf8*:
+1. type in the console:
    ```sh
    $ sudo apt-get install locales
    ```
 
    then open the file `/etc/environment` and add the string:
-   ```sh
+   ```
    LANG="ru_RU.UTF-8"
    ```
 
-   then edit the file `/etc/locale.gen'
+   then edit the file `/etc/locale.gen`
    and before the record "ru_RU.UTF-8 UTF-8" delete the "#" sign
 
-   then run the command for a locale generation:
+   then type in the terminal the command for locale generation:
    ```sh
    $ locale-gen
    ```
 
-2. type:
+2. type in the console:
    ```sh
    $ dpkg-reconfigure locales
    ```
 
    and select "ru-RU.UTF-8"
 
-3. in the file `/etc/default/locale` type:
+3. in the file `/etc/default/locale` add the next strings:
    ```
    LANG="en_US.UTF-8"
    LANGUAGE="en_US.UTF-8"
    ```
 
-4. type: 
-   ```
+4. type in the console: 
+   ```sh
    $ sudo apt-get install locales-all
    ```
 
