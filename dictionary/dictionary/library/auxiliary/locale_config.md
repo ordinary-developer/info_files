@@ -1,11 +1,13 @@
 # locale config
 
-## base config
+## base commands
 to see all locales type in the console:
 ```sh
 $ locale -a
 ```
 
+
+## config ru-utf8
 to config *ru_RU.utf8*:
 1. type in the console:
    ```sh
