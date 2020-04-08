@@ -47,23 +47,24 @@ to config *ru_RU.utf8*:
 
 
 ## aux locale config
-to configure locales you must type:
+to configure (reconfigure) locales you must type in the console:
 ```sh
 # dpkg-reconfigure locales
 ```
 
-to configure cyrillic symbols in console type:
+to configure cyrillic symbols in the console output type in the console:
 ```sh
 # dpkg-reconfigure console-cyrillic
 ```
 
-to configure settings of console type:
+to configure settings of the console output type in the console:
 ```sh
-# dpkg-reconfigure concole-setup 
+# dpkg-reconfigure console-setup 
 ```
-of course, these packages must be already installed in the system
+these packages (*locales*, *console-cyrillic*, *console-setup*)
+must be already installed in the system
 
-to configure alt-shift toggle between layouts print:
+to configure the *alt-shift* toggling between layouts type in the console:
 ```sh
 # setxkbmap "us,ru" -option "grp:alt_shift_toggle" 
 ```
