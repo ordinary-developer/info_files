@@ -15,7 +15,7 @@ $ free -mt
 $ free -gt
 ```
 
-info about processes:
+process info:
 ```sh
 $ top 
 ```
@@ -24,7 +24,7 @@ or
 $ ps -aux 
 ```
 
-info about the process with a specified pid:
+process with a specified pid info:
 ```sh
 $ pmap -d <pidnumber>
 ```
