@@ -1,4 +1,5 @@
 # system info
+assuming that all further commands are typed in the console
 
 ## memory
 common info:
