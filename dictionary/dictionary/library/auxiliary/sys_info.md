@@ -54,15 +54,15 @@ $ uname -a
 linux distrib info:
 ```sh
 $ lsb_release -a
-$ cat /etc/*release*
+$ cat /etc/<release>
 ```
 
-info about user:
+user info:
 ```sh
 $ id <username> 
 ```
 
-info about system uptime:
+system uptime info:
 ```sh
 $ uptime 
 ```
