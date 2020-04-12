@@ -92,17 +92,17 @@ $ lsblk
 
 
 ## hard drives
-info about disks:
+disk info:
 ```sh
 $ fdisk -l
 ```
 
-info about disk usage:
+disk usage info:
 ```sh
 $ du -hs /home
 ```
 
-info about free space:
+free space info:
 ```sh
 $ df -h
 ```
