@@ -123,28 +123,30 @@ lsmod
 
 
 ## net
-info about ip routes:
+ip routes info:
 ```sh
 $ ip route show
 ```
 
-info about open tcp and udp ports:
+open tcp and udp ports info:
 ```sh
 $ netstat -a
 $ netstat -apn | grep 80
 ```
 
-scanning all hosts for open ports:
+
+## aux net cmds
+to scan all hosts for open ports:
 ```sh
 $ nmap 192.168.1.1
 ```
 
-scanning all hosts:
+to scan all hosts:
 ```sh
 $ nmap -sP 192.168.1.1-200 
 ```
 
-scanning all the net on the port 23 and showing where it is open:
+to scan all the net on the port 23 and showing where it is open:
 ```sh
 $ nmap -n -p 23 10.0.0.1-254 | grep open -A 2 -B 3
 ```
