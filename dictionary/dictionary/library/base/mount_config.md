@@ -1,5 +1,11 @@
 # mount config
 
+## base mounting
+to mount under a regular (current) user with writing permissions:
+```sh
+$ sudo mount --type vfat -o rw,users,umask=000 /dev/sdb1 /mnt/flash
+```
+
 ## manual mounting
 to mount a usb-stick (flash-disk):
 ```sh
@@ -25,7 +31,7 @@ $ sudo mount --type vfat --option umask=000 /dev/sdb1 /mnt/flash1
 
 or just for your options:
 ```sh
-$ sudo mount -t vfat -o uid=ivan,gid=ivan /dev/sdb1 ~/flash          |
+$ sudo mount -t vfat -o uid=ivan,gid=ivan /dev/sdb1 ~/flash
 ```
 
 
