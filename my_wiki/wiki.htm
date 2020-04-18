@@ -249,7 +249,7 @@ Error message and password prompt
 
 <li>MySQL client running</li>
 
-<li>one physical git repo for both windows and linux</li>
+<li>one physical git repo for windows and linux</li>
 
 <li>pelican soder theme</li>
 
@@ -5334,7 +5334,7 @@ Error message and password prompt
 <div modified="20191202150400974" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div modified="20200417192513555" title="$:/state/sidebar">
+<div modified="20200418170103290" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div modified="20190929160958181" title="$:/state/tab--1498284803">
@@ -5355,7 +5355,7 @@ Error message and password prompt
 <div modified="20191202150243386" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/More</pre>
 </div>
-<div list="[[one physical git repo for both windows and linux]] [[git repo both for Windows and Linux]] GettingStarted" title="$:/StoryList">
+<div list="[[git repo both for Windows and Linux]] [[one physical git repo for windows and linux]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -5375,8 +5375,8 @@ Error message and password prompt
 <div created="20141203080017635" modified="20200417192035169" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
-<div created="20150712080825559" modified="20200417191936889" title="$:/temp/search">
-<pre>git</pre>
+<div created="20150712080825559" modified="20200418155431917" title="$:/temp/search">
+<pre>git </pre>
 </div>
 <div modified="20141126100317098" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
@@ -6750,8 +6750,69 @@ For running a script file type:
 mysql -u user -p password &lt; script.sql
 ```</pre>
 </div>
-<div created="20200417192006556" modified="20200417192512020" tags="git" title="one physical git repo for both windows and linux">
-<pre>&lt;h3&gt;trouble fixing&lt;/h3&gt;
+<div created="20200417192006556" modified="20200418170101737" tags="git" title="one physical git repo for windows and linux">
+<pre>&lt;h3&gt;repo creation&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;clone the repository from the server or create the repository;&lt;/li&gt;
+  &lt;li&gt;edit the &lt;code&gt;.git/config&lt;/code&gt; file, the file must be the next:
+&lt;pre&gt;[core]
+    repositoryformatversion = 0
+    filemode = false
+    bare = false
+    logallrefupdates = true
+    autocrlf = false
+[user]
+    name = ordinary-developer
+    email = merely.ordinary-developer@gmail.com
+    editor = vim
+[remote &quot;origin&quot;]
+    url = https://github.com/your-users/you-repo
+    fetch = +refs/heads/*:refs/remotes/origin/*
+[branch &quot;master&quot;]
+    remote = origin
+    merge = refs/heads/master
+&lt;/pre&gt;
+after that no commits are necessary (as you edit the file system specific settinsg);
+  &lt;/li&gt;
+  &lt;li&gt;edit the &lt;code&gt;.gitattributes&lt;/code&gt; file (if it doesn't exist, create it), the file must be something like this:
+&lt;pre&gt;# base settings
+* text eol = lf
+
+# settings for microsoft projects (c++, c#)
+*.sln text eol=crlf
+*.vcxproj text eol=crlf
+*.vcxproj.filters text eol=crlf
+*.cs text eol=crlf
+*.csproj text eol=crlf
+
+# settings for bin files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.bmp binary
+&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;commit the changes to the &lt;code&gt;.gitattributes&lt;/code&gt; file:
+&lt;pre&gt;$ git add .gitattributes
+$ git commit
+&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;add all your changed files back and normalize the line endings:
+&lt;pre&gt;$ git add &amp;#45;&amp;#45;renormalize .&lt;/pre&gt;
+see the status:
+&lt;pre&gt;$ git status&lt;/pre&gt;
+and commit the changes:
+&lt;pre&gt;$ git add *
+$ git commit
+&lt;/pre&gt;
+  &lt;i&gt;if there is nothing to commit (for example after multiple renormalizations) so don't commit anything&lt;/i&gt;;
+  &lt;/li&gt;
+  &lt;li&gt;copy the resulting repo to a flash (or cloud storage or something else), and you can use this physical repo both in windows and linux;&lt;br&gt;
+  &lt;i&gt;it is better to copy the repo folder with the &lt;code&gt;mc&lt;/code&gt; application with the DISABLED option &lt;code&gt;Save attributes&lt;/code&gt;&lt;/i&gt;.
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;trouble fixing&lt;/h3&gt;
 &lt;p&gt;sometimes (especially after commits in linux) when you want push to master in windows you can have the next error:
 &lt;blockquote&gt;
 Fatal: Master cannot be resolve to branch ...
