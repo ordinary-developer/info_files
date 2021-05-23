@@ -46,3 +46,5 @@ To build a simple console project with Qt from scratch:
    ```
    > mingw32-make
    ```
+
+After that a "debug" subdirectory will binary files (inside a project directory) will be created.
