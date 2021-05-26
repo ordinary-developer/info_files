@@ -6,3 +6,6 @@
 
 # Site with abbreviations
 [Abbreviations](https://www.abbreviations.com/)
+
+# C++ blogs
+[Developer note](https://developernote.com/)
