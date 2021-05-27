@@ -8,4 +8,6 @@
 [Abbreviations](https://www.abbreviations.com/)
 
 # C++ blogs
+[Fluent C++ (Jonathan Boccara)](https://www.fluentcpp.com)  
+[Marius Bancila's Blog](https://mariusbancila.ro)  
 [Developer note](https://developernote.com/)
