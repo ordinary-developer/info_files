@@ -8,6 +8,7 @@
 [Abbreviations](https://www.abbreviations.com/)
 
 # C++ blogs
+[C++ iso committee](https://isocpp.org/)  
 [Fluent C++ (Jonathan Boccara)](https://www.fluentcpp.com)  
 [Marius Bancila's Blog](https://mariusbancila.ro)  
 [Developer note](https://developernote.com/)
