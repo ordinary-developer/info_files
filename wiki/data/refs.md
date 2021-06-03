@@ -11,4 +11,5 @@
 [C++ iso committee](https://isocpp.org/)  
 [Fluent C++ (Jonathan Boccara)](https://www.fluentcpp.com)  
 [Marius Bancila's Blog](https://mariusbancila.ro)  
+[Bartlomiej Filipek's site](https://www.cppstories.com/)  
 [Developer note](https://developernote.com/)
