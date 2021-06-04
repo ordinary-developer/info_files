@@ -12,6 +12,7 @@
 [C++ ISO blog digest](https://isocpp.org/blog)  
 [Herb Sutter's blog](https://herbsutter.com/)  
 [Fluent C++ (Jonathan Boccara)](https://www.fluentcpp.com)  
+[Andrzej's C++ blog](https://akrzemi1.wordpress.com/)  
 [Marius Bancila's Blog](https://mariusbancila.ro)  
 [Bartlomiej Filipek's site](https://www.cppstories.com/)  
 [Developer note](https://developernote.com/)
