@@ -8,7 +8,9 @@
 [Abbreviations](https://www.abbreviations.com/)
 
 # C++ blogs
-[C++ iso committee](https://isocpp.org/)  
+[C++ ISO committee](https://isocpp.org/)  
+[C++ ISO blog digest](https://isocpp.org/blog)  
+[Herb Sutter's blog](https://herbsutter.com/)  
 [Fluent C++ (Jonathan Boccara)](https://www.fluentcpp.com)  
 [Marius Bancila's Blog](https://mariusbancila.ro)  
 [Bartlomiej Filipek's site](https://www.cppstories.com/)  
