@@ -10,6 +10,7 @@
 # C++ blogs
 [C++ ISO committee](https://isocpp.org/)  
 [C++ ISO blog digest](https://isocpp.org/blog)  
+[Reddit C++](https://www.reddit.com/r/cpp/)  
 [Herb Sutter's blog](https://herbsutter.com/)  
 [Fluent C++ (Jonathan Boccara)](https://www.fluentcpp.com)  
 [Andrzej's C++ blog](https://akrzemi1.wordpress.com/)  
