@@ -17,3 +17,7 @@
 [Marius Bancila's Blog](https://mariusbancila.ro)  
 [Bartlomiej Filipek's site](https://www.cppstories.com/)  
 [Developer note](https://developernote.com/)
+
+
+# Other blogs and personal pages  
+[Bartosz Sypytkowski](https://stackoverflow.com/story/bartosz-sypytkowski)  
