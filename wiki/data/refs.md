@@ -10,14 +10,9 @@
 # C++ blogs
 [C++ ISO committee](https://isocpp.org/)  
 [C++ ISO blog digest](https://isocpp.org/blog)  
-[Reddit C++](https://www.reddit.com/r/cpp/)  
-[Herb Sutter's blog](https://herbsutter.com/)  
-[Fluent C++ (Jonathan Boccara)](https://www.fluentcpp.com)  
-[Andrzej's C++ blog](https://akrzemi1.wordpress.com/)  
-[Marius Bancila's Blog](https://mariusbancila.ro)  
-[Bartlomiej Filipek's site](https://www.cppstories.com/)  
-[Developer note](https://developernote.com/)
+[C++ ISO drafts](http://www.open-std.org/jtc1/sc22/wg21)  
 
 
 # Other blogs and personal pages  
 [Bartosz Sypytkowski](https://stackoverflow.com/story/bartosz-sypytkowski)  
+[Slava Bezborodov's site](https://slavabezborodov.com)  
