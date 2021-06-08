@@ -11,8 +11,3 @@
 [C++ ISO committee](https://isocpp.org/)  
 [C++ ISO blog digest](https://isocpp.org/blog)  
 [C++ ISO drafts](http://www.open-std.org/jtc1/sc22/wg21)  
-
-
-# Other blogs and personal pages  
-[Bartosz Sypytkowski](https://stackoverflow.com/story/bartosz-sypytkowski)  
-[Slava Bezborodov's site](https://slavabezborodov.com)  
