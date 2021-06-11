@@ -7,7 +7,11 @@
 # Site with abbreviations
 [Abbreviations](https://www.abbreviations.com/)
 
+# Symbol official names
+[Symbol official names](https://www.prepressure.com/fonts/basics/character-names)  
+
 # C++ blogs
 [C++ ISO committee](https://isocpp.org/)  
 [C++ ISO blog digest](https://isocpp.org/blog)  
 [C++ ISO drafts](http://www.open-std.org/jtc1/sc22/wg21)  
+[CppReference](https://cppreference.com/)
