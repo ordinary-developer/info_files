@@ -9,3 +9,6 @@
 
 # Symbol official names
 [Symbol official names](https://www.prepressure.com/fonts/basics/character-names)  
+
+# questions signs in the console
+[ref to StackOverflow](https://stackoverflow.com/questions/5255104/ascii-character-problem-on-mac-cant-print-the-black-squarewhich-is-char219)
