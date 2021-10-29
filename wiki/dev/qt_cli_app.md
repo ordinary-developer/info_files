@@ -1,5 +1,5 @@
-# Windows with MinGw-compiler
-To build a simple console project with Qt from scratch:
+# CLI app with MinGW-compiler
+To build a simple console (CLI) app with Qt from scratch:
 
 1. set the environment variables:  
     ```
@@ -19,7 +19,6 @@ To build a simple console project with Qt from scratch:
    TARGET = prj
    INCLUDEPATH += .
    CONFIG += console debug
-   QT += widgets
    QMAKE_CXXFLAGS += -std=c++17 -Wall -Wextra -pedantic
 
    # The following define makes your compiler warn you if you use any
@@ -37,14 +36,30 @@ To build a simple console project with Qt from scratch:
    SOURCES += main.cpp
    ```
 
-4. build a makefile:
+4. create the `main.cpp` file with something like this:
+   ```
+   #include <iostream>
+   
+   int main() {
+       std::cout << "qt console app" << std::endl;
+
+       return 0;
+   }
+   ```
+
+5. build a makefile:
    ```
    > qmake
    ```
    
-5. compile:
+6. compile:
    ```
    > mingw32-make
    ```
 
-After that a "debug" subdirectory will binary files (inside a project directory) will be created.
+After that debug mode binary files will be created.in the "debug" subdirectory (inside a project directory).
+
+To build the application in a release mode use the next option:
+```
+CONFIG += console release
+```
