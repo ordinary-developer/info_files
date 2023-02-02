@@ -21,3 +21,4 @@
 
 ## Code editing
 `<Ctrl> + /` - comment/uncomment selected code
+`<Alt> + Y, <Alt> + Y` - use/unuse FakeVim
