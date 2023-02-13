@@ -20,5 +20,6 @@
 
 
 ## Code editing
-`<Ctrl> + /` - comment/uncomment selected code
-`<Alt> + Y, <Alt> + Y` - use/unuse FakeVim
+`<Ctrl> + /` - comment/uncomment selected code  
+`<Alt> + Y, <Alt> + Y` - use/unuse FakeVim  
+`<Ctrl> + E, <Ctrl> + V` - visualize whitespaces  
