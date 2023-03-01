@@ -18,6 +18,8 @@
 
 ## Code Navigation
 ### Common
+`<F4>`                 - switch header/source  
+`<Ctrl> + E, F4>`      - open the corresponding header/source in the next split  
 `<F2>`                 - go to a definition of the item  
 `<Alt> + <Left Arrow>` - go to a previous place  
 
