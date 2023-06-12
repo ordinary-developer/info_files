@@ -4,6 +4,8 @@
 [C++ ISO drafts](http://www.open-std.org/jtc1/sc22/wg21)  
 [CppReference](https://cppreference.com/)
 
+# A list of C++ books
+[A list of cpp books](https://github.com/yuchdev/CppBooks)
 
 # C++ Online Compilers
 - [Judge ide](https://ide.judge0.com/)
