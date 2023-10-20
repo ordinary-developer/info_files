@@ -9,6 +9,9 @@
 `<Ctrl> + <Alt> + <F7>`     - rebuild a solution  
 `<Alt> + <B> + <Alt> + <E>` - rebuild the current project
 
+## Project organization
+`<Shift> + <Alt> + A` - add an existing item
+
 
 ## Code Navigation
 
