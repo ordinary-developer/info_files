@@ -1,8 +1,10 @@
 # Visual Studio 2022 installation
 
-To install **Visual Studio 2022**:
+## C++ only (without an ability to create C++ projects in Visual Studio)
+To install C++ in **Visual Studio 2022**:
   
 - download the online installer  
+- in the "Separate components" page deselect all items
 - on the "Working workloads" select the `Developing classic C++ Apps`
 - in the "Separate components" page select (deselect other components)
   - `InelliCode`
@@ -20,3 +22,13 @@ To install **Visual Studio 2022**:
   - IDE Path: `C:\Users\ivan\AppData\Local\Microsoft Visual Studio\2022\Community`  
   - Cash: `C:\Program Files\Microsoft\VisualStudio\Packages`  
   - Common components: `C:\Users\ivan\AppData\Local\Microsoft Visual Studio\Shared`
+
+
+## C++ full (with ability to create C++ projects in Visual Studio)
+
+- download the online installer  
+- in the "Separate components" page deselect all items
+- on the "Working workloads" select the `Developing classic C++ Apps` don't deselect all items
+- on the "Working workloads" select the `Developing classic C++ Apps` select
+  - `Modules C++ for build tools v 143 (x64 or x86 - experiment version)`  
+

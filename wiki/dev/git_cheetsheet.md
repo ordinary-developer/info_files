@@ -54,3 +54,17 @@ to rebase a branch on the other branch:
 $ git fetch origin
 $ git rebase origin/master
 ```
+
+## rebase conflicts
+If there are conflicts after rebasing:
+1. resolve conflicts (edit conflict files);
+2. use the next command for each conflict file:
+```sh
+$ git add <fileFqn>	
+```
+3. type:
+```sh
+$ git rebase --continue
+```
+
+   
