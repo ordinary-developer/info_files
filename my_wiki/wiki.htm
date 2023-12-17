@@ -189,6 +189,8 @@ Error message and password prompt
 
 <li>Boost installing</li>
 
+<li>C++ howtos</li>
+
 <li>change default user for source safe</li>
 
 <li>cmd tips and tricks</li>
@@ -274,6 +276,8 @@ Error message and password prompt
 <li>python3 virtualenv making</li>
 
 <li>qt application building (with paths)</li>
+
+<li>Qt howtos</li>
 
 <li>Qt installation</li>
 
@@ -5338,7 +5342,7 @@ Error message and password prompt
 <div modified="20191202150400974" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div modified="20231215091550290" title="$:/state/sidebar">
+<div modified="20231217201906124" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div modified="20190929160958181" title="$:/state/tab--1498284803">
@@ -5359,7 +5363,7 @@ Error message and password prompt
 <div modified="20191202150243386" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/More</pre>
 </div>
-<div list="[[QtCreator shortcuts]] GettingStarted" title="$:/StoryList">
+<div list="[[C++ howtos]] GettingStarted" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -5376,11 +5380,11 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20141203080017635" modified="20231211093542412" title="$:/temp/NewTagName">
+<div created="20141203080017635" modified="20231217193734018" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
-<div created="20150712080825559" modified="20231214084842311" title="$:/temp/search">
-<pre>qtCrea</pre>
+<div created="20150712080825559" modified="20231217193907760" title="$:/temp/search">
+<pre>compile</pre>
 </div>
 <div modified="20141126100317098" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
@@ -5885,6 +5889,24 @@ $ cmake -DBOOST_ROOT=/home/ivan/boost_1_53_0
 You cans find some additional information [[here|http://ubuntuforums.org/showthread.php?t=1180792]]
 
 </pre>
+</div>
+<div created="20231217193723920" modified="20231217201904814" tags="C++" title="C++ howtos">
+<pre>&lt;hr/&gt;
+&lt;h2&gt;Compile a file with Visual C++ compiler&lt;/h2&gt;
+&lt;p&gt;To compile a file&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Install the microsoft visual C++ compiler (maybe without Visual Studio)&lt;/li&gt;
+  &lt;li&gt;if VS is installed, run &lt;code&gt;Developer Command Prompt&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;in the command line type (to support module compilation)
+       &lt;pre&gt;cl /std:c++latest /EHsc /experimental:module /MD your-file.cpp&lt;/pre&gt;&lt;/li&gt;  
+&lt;/ul&gt;
+&lt;hr/&gt;
+
+&lt;h2&gt;Visual C++ compilation with modules&lt;/h2&gt;
+&lt;p&gt;see a &lt;a href=&quot;https://github.com/josuttis/cppmodules&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;see &lt;a href=&quot;https://learn.microsoft.com/en-us/cpp/cpp/modules-cpp?view=msvc-170&quot;&gt;supported modules&lt;/a&gt; in Visual C++&lt;/p&gt;
+&lt;p&gt;see an &lt;a href=&quot;https://devblogs.microsoft.com/cppblog/standard-c20-modules-support-with-msvc-in-visual-studio-2019-version-16-8/&quot;&gt;introduction&lt;/a&gt; to the module stuff from a Microsoft person&lt;/p&gt;
+&lt;hr/&gt;</pre>
 </div>
 <div created="20180516102022799" modified="20180516102048169" tags="sourcesafe" title="change default user for source safe">
 <pre>&lt;h3&gt;Chainging the default user for microsoft source safe&lt;/h3&gt;
@@ -7683,6 +7705,35 @@ SOURCES += ExampleWidget.cpp main.cpp
 &lt;/pre&gt;
 &lt;/p&gt;</pre>
 </div>
+<div created="20231217164351414" modified="20231217191634602" tags="qt qmlscene" title="Qt howtos">
+<pre>&lt;hr/&gt;
+&lt;h2&gt;Qmlscene&lt;/h2&gt;
+&lt;p&gt;to run a simple qml app (with only GUI) (to see / to test, etc.) use from the command line:&lt;/p&gt;
+&lt;pre&gt;qml.exe abs-path-to-your-qml.file&lt;/pre&gt;
+
+&lt;p&gt;&lt;i&gt;Note 1: Where &lt;b&gt;qml.exe&lt;/b&gt; is located in the Qt binaries directory.&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;Note 2: the &lt;code&gt;qmlscene&lt;/code&gt; tool is now deprecated.&lt;/i&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2&gt;Text inside an area&lt;/h2&gt;
+&lt;p&gt;To put text inside the area (usually by center), use the next approach:&lt;/p&gt;
+&lt;pre&gt;...
+Rectangle {
+  id: outerWrapper
+  ...
+  Text {
+     anchors.centerIn: parent
+     ...
+   }
+}
+...
+&lt;/pre&gt;
+&lt;hr/&gt;
+&lt;h2&gt;Complex property in Qml&lt;/h2&gt;
+&lt;p&gt;To use a complex property (array, list, etc.) use something like this:&lt;/p&gt;
+&lt;pre&gt;property variant colorArray: [&quot;#00bbe3&quot;, &quot;#67c111&quot;, &quot;#ea7025&quot;]&lt;/pre&gt;
+&lt;hr/&gt;</pre>
+</div>
 <div created="20140228103847107" modified="20150109154213533" tags="C++ Qt" title="Qt installation">
 <pre>&lt;h2&gt;Install from a binary package&lt;/h2&gt;
 
@@ -8036,11 +8087,12 @@ Where 400px and 380px are the width and the height of the image respectively
 &lt;/ul&gt;
 </pre>
 </div>
-<div created="20231211093529544" modified="20231211093711484" tags="C++" title="Usefull C++ refs">
+<div created="20231211093529544" modified="20231217171959668" tags="C++" title="Usefull C++ refs">
 <pre>&lt;h2&gt;Qt related stuff&lt;/h2&gt;
 &lt;p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://qmlonline.kde.org/&quot;&gt;QML online renderer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/mitchcurtis/slate&quot;&gt;A good Qml project&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/p&gt;</pre>
 </div>
