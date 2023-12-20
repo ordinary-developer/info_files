@@ -5350,7 +5350,7 @@ Error message and password prompt
 <div modified="20191202150400974" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div modified="20231218101318378" title="$:/state/sidebar">
+<div modified="20231220180217774" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div modified="20190929160958181" title="$:/state/tab--1498284803">
@@ -5371,7 +5371,7 @@ Error message and password prompt
 <div modified="20191202150243386" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/More</pre>
 </div>
-<div list="[[Visual Studio shortcuts]] [[Notepad++ keyboard shortcuts]] [[C++ howtos]]" title="$:/StoryList">
+<div list="[[Qt howtos]] GettingStarted" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -5391,8 +5391,8 @@ Error message and password prompt
 <div created="20141203080017635" modified="20231218100849450" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
-<div created="20150712080825559" modified="20231218100823650" title="$:/temp/search">
-<pre>VS</pre>
+<div created="20150712080825559" modified="20231220174815174" title="$:/temp/search">
+<pre>qml</pre>
 </div>
 <div modified="20141126100317098" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
@@ -7739,14 +7739,14 @@ SOURCES += ExampleWidget.cpp main.cpp
 &lt;/pre&gt;
 &lt;/p&gt;</pre>
 </div>
-<div created="20231217164351414" modified="20231217191634602" tags="qt qmlscene" title="Qt howtos">
+<div created="20231217164351414" modified="20231220180218980" tags="qt qmlscene" title="Qt howtos">
 <pre>&lt;hr/&gt;
 &lt;h2&gt;Qmlscene&lt;/h2&gt;
 &lt;p&gt;to run a simple qml app (with only GUI) (to see / to test, etc.) use from the command line:&lt;/p&gt;
 &lt;pre&gt;qml.exe abs-path-to-your-qml.file&lt;/pre&gt;
 
 &lt;p&gt;&lt;i&gt;Note 1: Where &lt;b&gt;qml.exe&lt;/b&gt; is located in the Qt binaries directory.&lt;/i&gt;&lt;/p&gt;
-&lt;p&gt;&lt;i&gt;Note 2: the &lt;code&gt;qmlscene&lt;/code&gt; tool is now deprecated.&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;Note 2: the &lt;b&gt;qmlscene&lt;/b&gt; tool is now deprecated.&lt;/i&gt;&lt;/p&gt;
 &lt;hr /&gt;
 
 &lt;h2&gt;Text inside an area&lt;/h2&gt;
@@ -7758,14 +7758,29 @@ Rectangle {
   Text {
      anchors.centerIn: parent
      ...
-   }
+  }
 }
 ...
 &lt;/pre&gt;
+&lt;p&gt;&lt;i&gt;Note:&lt;/i&gt;You can also &lt;code&gt;anchors.fill: parent&lt;/code&gt; not to put the element by center of the parent, but force to get all space.&lt;/p&gt;
 &lt;hr/&gt;
 &lt;h2&gt;Complex property in Qml&lt;/h2&gt;
 &lt;p&gt;To use a complex property (array, list, etc.) use something like this:&lt;/p&gt;
 &lt;pre&gt;property variant colorArray: [&quot;#00bbe3&quot;, &quot;#67c111&quot;, &quot;#ea7025&quot;]&lt;/pre&gt;
+&lt;hr/&gt;
+
+&lt;h2&gt;Add an onClicked event for any component&lt;/h2&gt;
+&lt;p&gt;To add a &lt;code&gt;onClicked&lt;/code&gt; event to any component add `MouseArea` item inside the component. E.g.&lt;/p&gt;
+&lt;pre&gt;Rectangle {
+  ...
+  MouseArea {
+    onClicked: {
+      ...
+    }
+  }
+}
+&lt;/pre&gt;
+
 &lt;hr/&gt;</pre>
 </div>
 <div created="20140228103847107" modified="20150109154213533" tags="C++ Qt" title="Qt installation">
@@ -7871,8 +7886,14 @@ Useful links
 * [[another building manual | http://qmlbook.org/ch02/index.html#installing-qt-5-sdk]]
 </pre>
 </div>
-<div created="20231211093205634" modified="20231215091548092" tags="Qt" title="QtCreator shortcuts">
-<pre>&lt;h2&gt;Code&lt;/h2&gt;
+<div created="20231211093205634" modified="20231220092025220" tags="Qt" title="QtCreator shortcuts">
+<pre>&lt;h2&gt;Debug&lt;/h2&gt;
+&lt;p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;F5&lt;/code&gt; - start with debugging&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Ctrl + R&lt;/code&gt; - start without debugging&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+
+&lt;h2&gt;Code&lt;/h2&gt;
 &lt;p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;code&gt;Ctrl + V / Ctrl + E&lt;/code&gt; - toggle/untoggle showing whitepsaces&lt;/li&gt;
