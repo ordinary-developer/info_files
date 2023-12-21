@@ -5350,7 +5350,7 @@ Error message and password prompt
 <div modified="20191202150400974" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div modified="20231220180217774" title="$:/state/sidebar">
+<div modified="20231221105635656" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div modified="20190929160958181" title="$:/state/tab--1498284803">
@@ -5371,7 +5371,7 @@ Error message and password prompt
 <div modified="20191202150243386" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/More</pre>
 </div>
-<div list="[[Qt howtos]] GettingStarted" title="$:/StoryList">
+<div list="[[Html entities (symbols)]] [[C++ howtos]] [[Qt installation]] [[Simple Google test project]] [[Usefull C++ refs]] [[Compiling a C++ project]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -5391,8 +5391,8 @@ Error message and password prompt
 <div created="20141203080017635" modified="20231218100849450" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
-<div created="20150712080825559" modified="20231220174815174" title="$:/temp/search">
-<pre>qml</pre>
+<div created="20150712080825559" modified="20231221105343752" title="$:/temp/search">
+<pre>html sym</pre>
 </div>
 <div modified="20141126100317098" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
@@ -5898,7 +5898,7 @@ You cans find some additional information [[here|http://ubuntuforums.org/showthr
 
 </pre>
 </div>
-<div created="20231217193723920" modified="20231217201904814" tags="C++" title="C++ howtos">
+<div created="20231217193723920" modified="20231221105329884" tags="C++" title="C++ howtos">
 <pre>&lt;hr/&gt;
 &lt;h2&gt;Compile a file with Visual C++ compiler&lt;/h2&gt;
 &lt;p&gt;To compile a file&lt;/p&gt;
@@ -5914,7 +5914,32 @@ You cans find some additional information [[here|http://ubuntuforums.org/showthr
 &lt;p&gt;see a &lt;a href=&quot;https://github.com/josuttis/cppmodules&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;see &lt;a href=&quot;https://learn.microsoft.com/en-us/cpp/cpp/modules-cpp?view=msvc-170&quot;&gt;supported modules&lt;/a&gt; in Visual C++&lt;/p&gt;
 &lt;p&gt;see an &lt;a href=&quot;https://devblogs.microsoft.com/cppblog/standard-c20-modules-support-with-msvc-in-visual-studio-2019-version-16-8/&quot;&gt;introduction&lt;/a&gt; to the module stuff from a Microsoft person&lt;/p&gt;
-&lt;hr/&gt;</pre>
+&lt;hr/&gt;
+
+&lt;h2&gt;Output vector data to the stream&lt;/h2&gt;
+&lt;p&gt;&lt;b&gt;First variant&lt;/b&gt;
+&lt;pre&gt;#include &amp;lt;algorithm&amp;gt;
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;iterator&amp;gt;
+...
+std::vector&amp;lt;int&amp;gt; data = ...;
+std::copy(path.begin(), path.end(), std::ostream_iterator&amp;lt;int&amp;gt;(std::cout, &quot; &quot;));
+&lt;/pre&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Second variant&lt;/b&gt;
+&lt;pre&gt;#include &amp;lt;algorithm&amp;gt;
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;iterator&amp;gt;
+
+std::vector&amp;lt;int&amp;gt; data = ...;
+std::ranges::copy(data, std::ostream_iterator&amp;lt;char&amp;gt;(std::cout, &quot; &quot;));
+&lt;/pre&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;i&gt;Note:&lt;/i&gt; both variants print the delimiter (&amp;quot;&amp;nbsp;&amp;quot;) after the last item&lt;/p&gt;
+&lt;hr/&gt;
+</pre>
 </div>
 <div created="20180516102022799" modified="20180516102048169" tags="sourcesafe" title="change default user for source safe">
 <pre>&lt;h3&gt;Chainging the default user for microsoft source safe&lt;/h3&gt;
@@ -6741,7 +6766,7 @@ $ g++ -std=c++17 *.cpp -I/usr/local/include -L/usr/local/lib -lgtest -lpthread -
 <div created="20190929162308099" modified="20190929162342654" tags="html" title="html entities">
 <pre>&lt;a href=&quot;https://www.freeformatter.com/html-entities.html&quot;&gt;html entities list&lt;/a&gt;</pre>
 </div>
-<div created="20231218061200818" modified="20231218061243826" tags="html" title="Html entities (symbols)">
+<div created="20231218061200818" modified="20231221105634142" tags="html" title="Html entities (symbols)">
 <pre>&lt;h2&gt;Html entities&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&amp;#35;  &lt;code&gt;&amp;#38;&amp;#35;35;&lt;/code&gt;&lt;/li&gt;
@@ -6749,6 +6774,10 @@ $ g++ -std=c++17 *.cpp -I/usr/local/include -L/usr/local/lib -lgtest -lpthread -
   &lt;li&gt;&amp;#45;  &lt;code&gt;&amp;#38;&amp;#35;45;&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;&amp;#47;  &lt;code&gt;&amp;#38;&amp;#35;47;&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;&amp;#64;  &lt;code&gt;&amp;#38;&amp;#35;64;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;space &lt;code&gt;&amp;#38;&amp;#35;nbsp;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&amp;quot; &lt;code&gt;&amp;#38;quot;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&amp;lt; &lt;code&gt;&amp;#38;lt;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&amp;gt; &lt;code&gt;&amp;#38;gt;&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;</pre>
 </div>
 <div created="20171105141120712" modified="20171106161711420" tags="pelican" title="install new theme for pelican">
