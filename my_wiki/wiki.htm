@@ -5350,7 +5350,7 @@ Error message and password prompt
 <div modified="20191202150400974" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div modified="20231222114502740" title="$:/state/sidebar">
+<div modified="20231225182043742" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div modified="20190929160958181" title="$:/state/tab--1498284803">
@@ -5371,7 +5371,7 @@ Error message and password prompt
 <div modified="20191202150243386" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/More</pre>
 </div>
-<div list="[[Qml howtos]]" title="$:/StoryList">
+<div list="[[Qml howtos]] [[QtCreator shortcuts]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -5391,8 +5391,8 @@ Error message and password prompt
 <div created="20141203080017635" modified="20231218100849450" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
-<div created="20150712080825559" modified="20231222112619112" title="$:/temp/search">
-<pre>qml </pre>
+<div created="20150712080825559" modified="20231225181819710" title="$:/temp/search">
+<pre>qml</pre>
 </div>
 <div modified="20141126100317098" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
@@ -7719,9 +7719,8 @@ to create a simple django project
 (project_env) $ pip freeze &gt; newproject/requirements.txt
 ```</pre>
 </div>
-<div created="20231217164351414" modified="20231222114501652" tags="qt qmlscene" title="Qml howtos">
-<pre>&lt;hr/&gt;
-&lt;h2&gt;Qmlscene&lt;/h2&gt;
+<div created="20231217164351414" modified="20231225182053892" tags="qt qmlscene" title="Qml howtos">
+<pre>&lt;h2&gt;Qmlscene&lt;/h2&gt;
 &lt;p&gt;to run a simple qml app (with only GUI) (to see / to test, etc.) use from the command line:&lt;/p&gt;
 &lt;pre&gt;qml.exe abs-path-to-your-qml.file&lt;/pre&gt;
 
@@ -7789,7 +7788,14 @@ Rectangle {
   ...
 }
 &lt;/pre&gt;
-&lt;hr/&gt;</pre>
+&lt;hr/&gt;
+&lt;h2&gt;Repeater, index and modelData&lt;/h2&gt;
+&lt;p&gt;To use both the `index` and `modelData` use:&lt;/p&gt;
+&lt;pre&gt;Repeater: ... {
+    required property int index
+    required property var modelData
+}
+&lt;/pre&gt;</pre>
 </div>
 <div created="20190929170052750" modified="20200128112436621" tags="Qt" title="qt application building (with paths)">
 <pre>&lt;h2&gt;to build a simple app&lt;/h2&gt;
