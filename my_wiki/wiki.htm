@@ -329,6 +329,8 @@ Error message and password prompt
 
 <li>windows 10 autoupdate disabling</li>
 
+<li>Windows 11 autoupdate disabling</li>
+
 <li>windows naming errors</li>
 
 <li>windows10 long time working disabling</li>
@@ -5352,7 +5354,7 @@ Error message and password prompt
 <div modified="20191202150400974" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div modified="20240101112055758" title="$:/state/sidebar">
+<div modified="20240217183615504" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div modified="20190929160958181" title="$:/state/tab--1498284803">
@@ -5373,7 +5375,7 @@ Error message and password prompt
 <div modified="20191202150243386" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/More</pre>
 </div>
-<div list="[[windows8 autoupdate disabling]] GettingStarted" title="$:/StoryList">
+<div list="[[Windows 11 autoupdate disabling]] GettingStarted" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -5390,11 +5392,11 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20141203080017635" modified="20240101111646862" title="$:/temp/NewTagName">
+<div created="20141203080017635" modified="20240217180338028" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
-<div created="20150712080825559" modified="20240127115325578" title="$:/temp/search">
-<pre>windows 8</pre>
+<div created="20150712080825559" modified="20240217180313164" title="$:/temp/search">
+<pre>wi</pre>
 </div>
 <div modified="20141126100317098" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
@@ -8674,6 +8676,33 @@ After that &lt;i&gt;evgen_t&lt;/i&gt; is a username, and pin will be a password
 &lt;li&gt;find the item &lt;i&gt;Nastroika avtomaticheskogo obnovleniya&lt;/i&gt; and disable it;&lt;/li&gt;
 &lt;li&gt;find the item &lt;i&gt;Zapretit dostup dlya ispolzovania lyubyh sredstv centra obnovlenia windows&lt;/i&gt; and enable it.&lt;/li&gt;
 &lt;/ol&gt;</pre>
+</div>
+<div created="20240217180315658" modified="20240217183613554" tags="windows windows11" title="Windows 11 autoupdate disabling">
+<pre>&lt;h2&gt;1-st way&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;run windows servers (Ctrl + R -&gt; services.msc)&lt;/li&gt;
+&lt;li&gt;Find the &quot;Windows Update&quot; service&lt;/li&gt;
+&lt;li&gt;Under the &quot;General&quot; tab next to the &quot;Startup type&quot; option click the drop-down icon to select &quot;Disabled&quot; option&lt;/li&gt;
+&lt;li&gt;Click apply and ok&lt;/li&gt;
+&lt;li&gt;reboot the system&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;2-nd way&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Press Windows + R, type regedit.exe in the Run dialog to open Registry Editor on Windows 11.&lt;/li&gt;
+&lt;li&gt;Next, you can navigate to the path in the left panel: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU.&lt;/li&gt;
+&lt;li&gt;Right-click the blank space in the right window and click New -&gt; DWORD (32-bit) Value to create a new value named NoAutoUpdate. Double-click the new value and set its value to 1.&lt;/li&gt;
+&lt;li&gt;Save the change and restart your computer to execute the changes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;3-d way Disable Automatic Updates in Windows 11 with Group Policy Editor&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;To quickly open Group Policy Editor, you can press Windows + R, type gpedit.msc, and press Enter.&lt;/li&gt;
+&lt;li&gt;Next, you can click as the following: Local Computer Policy &gt; Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Update &gt; Manage end user experience.&lt;/li&gt;
+&lt;li&gt;Double-click Configure Automatic Updates in the right window and select the Disabled option to disable Windows 11 updates.&lt;/li&gt;
+&lt;/ul&gt;
+
+</pre>
 </div>
 <div created="20191203164432958" modified="20191203164557234" tags="windows" title="windows naming errors">
 <pre>&lt;p&gt;
