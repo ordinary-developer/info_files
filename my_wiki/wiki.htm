@@ -5358,7 +5358,7 @@ Error message and password prompt
 <div modified="20191202150400974" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div modified="20240605121957362" title="$:/state/sidebar">
+<div modified="20240607174729784" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div modified="20190929160958181" title="$:/state/tab--1498284803">
@@ -5379,7 +5379,7 @@ Error message and password prompt
 <div modified="20191202150243386" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/More</pre>
 </div>
-<div list="[[Qml howtos]] [[Usefull C++ refs]] GettingStarted" title="$:/StoryList">
+<div list="[[Qml howtos]] GettingStarted" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -7756,7 +7756,7 @@ to create a simple django project
 (project_env) $ pip freeze &gt; newproject/requirements.txt
 ```</pre>
 </div>
-<div created="20231217164351414" modified="20240605121952752" tags="qt qmlscene" title="Qml howtos">
+<div created="20231217164351414" modified="20240607174726582" tags="qt qmlscene" title="Qml howtos">
 <pre>&lt;h2&gt;Qmlscene&lt;/h2&gt;
 &lt;p&gt;to run a simple qml app (with only GUI) (to see / to test, etc.) use from the command line:&lt;/p&gt;
 &lt;pre&gt;qml.exe abs-path-to-your-qml.file&lt;/pre&gt;
@@ -7767,7 +7767,7 @@ to create a simple django project
 
 &lt;h2&gt;Property Binding&lt;/h2&gt;
 &lt;p&gt;When you assign a value to a property (binded earlier) in a function, you &lt;b&gt;BREAK (!!!)&lt;/b&gt; a binding contract (binding now does'nt work).&lt;/p&gt;
-
+&lt;hr /&gt;
 &lt;h2&gt;Text inside an area&lt;/h2&gt;
 &lt;p&gt;To put text inside the area (usually by center), use the next approach:&lt;/p&gt;
 &lt;pre&gt;...
@@ -7782,7 +7782,7 @@ Rectangle {
 ...
 &lt;/pre&gt;
 &lt;p&gt;&lt;i&gt;Note:&lt;/i&gt;You can also &lt;code&gt;anchors.fill: parent&lt;/code&gt; not to put the element by center of the parent, but force to get all space.&lt;/p&gt;
-&lt;hr/&gt;
+&lt;hr /&gt;
 &lt;h2&gt;Complex property in Qml&lt;/h2&gt;
 &lt;p&gt;To use a complex property (array, list, etc.) use something like this:&lt;/p&gt;
 &lt;pre&gt;property variant colorArray: [&quot;#00bbe3&quot;, &quot;#67c111&quot;, &quot;#ea7025&quot;]&lt;/pre&gt;
@@ -7799,6 +7799,10 @@ Rectangle {
   }
 }
 &lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Make an element focusable&lt;/h2&gt;
+&lt;p&gt;To make an element focusable (for example to allow navigate through `KeyNavigation.tab` your component must be derived from `FocusScope` (or use standard Qml's focusable components (`TextInput` etc.))&lt;/p&gt;
+&lt;hr /&gt;
 &lt;h2&gt;Put an element into a rectangle, but without wrapping (if possible)&lt;/h2&gt;
 &lt;p&gt;Use the next code:&lt;/p&gt;
 &lt;pre&gt;import QtQuick
@@ -7834,6 +7838,7 @@ Rectangle {
   }
 }
 &lt;/pre&gt;
+&lt;p&gt;&lt;i&gt;Notice&lt;/i&gt; The same is true for the parent (or even the root), which must be wrapped, and a wrapper component inside the parent (root).&lt;/p&gt;
 &lt;hr/&gt;
 
 &lt;h2&gt;&amp;quot;Pseudo painted aero&amp;quot; border for a rectangle&lt;/h2&gt;
