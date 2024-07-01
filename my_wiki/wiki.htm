@@ -253,6 +253,8 @@ Error message and password prompt
 
 <li>install new theme for pelican</li>
 
+<li>Installing visual c++ compiler without Visual Studio</li>
+
 <li>line-ending-0a1f43e6-f28b-4e80-8e1a-12a72e24a00f.png</li>
 
 <li>make a new c raw string from the existing one</li>
@@ -5358,7 +5360,7 @@ Error message and password prompt
 <div modified="20191202150400974" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div modified="20240607174729784" title="$:/state/sidebar">
+<div modified="20240701112407304" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div modified="20190929160958181" title="$:/state/tab--1498284803">
@@ -5379,7 +5381,7 @@ Error message and password prompt
 <div modified="20191202150243386" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/More</pre>
 </div>
-<div list="[[Qml howtos]] GettingStarted" title="$:/StoryList">
+<div list="[[Installing visual c++ compiler without Visual Studio]] GettingStarted" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -5396,7 +5398,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20141203080017635" modified="20240217180338028" title="$:/temp/NewTagName">
+<div created="20141203080017635" modified="20240701111527680" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
 <div created="20150712080825559" modified="20240605121800452" title="$:/temp/search">
@@ -6828,6 +6830,19 @@ $ g++ -std=c++17 *.cpp -I/usr/local/include -L/usr/local/lib -lgtest -lpthread -
 &lt;/ul&gt;
 
 </pre>
+</div>
+<div created="20240701111516476" modified="20240701112357794" tags="[[visual cpp]]" title="Installing visual c++ compiler without Visual Studio">
+<pre>&lt;p&gt;To install the visual c++ compiler without Visual studio download &lt;b&gt;Build Tools for Visual Studio 2022&lt;/b&gt; (for example from &lt;a href=&quot;https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2022&quot;&gt;here&lt;/a&gt;) and install them.&lt;/p&gt;
+
+&lt;p&gt;Sometimes you can download the necessary packages by the next command:&lt;/p&gt;
+&lt;pre&gt;setup.exe /layout &amp;lt;path&amp;gt;&lt;/pre&gt;
+&lt;p&gt;The web installer will download them (without installing) to the directory specified.&lt;/p&gt;
+
+
+
+&lt;h2&gt;Alternative way&lt;/h2&gt;
+&lt;p&gt;You can use &lt;code&gt;chocolatey&lt;/code&gt; (yes, you must first install it, good luck) and then type:&lt;/p&gt;
+&lt;pre&gt;choco install visualcpp-build-tools&lt;/pre&gt;</pre>
 </div>
 <div created="20200116090955232" modified="20200116091031804" tags="images" title="line-ending-0a1f43e6-f28b-4e80-8e1a-12a72e24a00f.png" type="image/png">
 <pre>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</pre>
