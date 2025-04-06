@@ -299,6 +299,8 @@ Error message and password prompt
 
 <li>Qt installation</li>
 
+<li>QtCreator initial settings</li>
+
 <li>QtCreator shortcuts</li>
 
 <li>Running JUnit</li>
@@ -328,6 +330,8 @@ Error message and password prompt
 <li>visual studio 6 tips and tricks</li>
 
 <li>visual studio shortcuts</li>
+
+<li>Visual Stuido 2019 shortcuts</li>
 
 <li>vs2017 debug symbols</li>
 
@@ -5364,7 +5368,7 @@ Error message and password prompt
 <div modified="20191202150400974" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div modified="20240917120617092" title="$:/state/sidebar">
+<div modified="20250404092510428" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div modified="20190929160958181" title="$:/state/tab--1498284803">
@@ -5385,7 +5389,7 @@ Error message and password prompt
 <div modified="20191202150243386" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/More</pre>
 </div>
-<div list="[[Notepad keyboard shortcuts]] GettingStarted" title="$:/StoryList">
+<div list="[[Visual Stuido 2019 shortcuts]] GettingStarted" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -5402,11 +5406,11 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20141203080017635" modified="20240909152942642" title="$:/temp/NewTagName">
+<div created="20141203080017635" modified="20250303081356072" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
-<div created="20150712080825559" modified="20240909150725572" title="$:/temp/search">
-<pre>C++</pre>
+<div created="20150712080825559" modified="20250404085321004" title="$:/temp/search">
+<pre>visual stui</pre>
 </div>
 <div modified="20141126100317098" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
@@ -5912,7 +5916,7 @@ You cans find some additional information [[here|http://ubuntuforums.org/showthr
 
 </pre>
 </div>
-<div created="20231217193723920" modified="20231221105329884" tags="C++" title="C++ howtos">
+<div created="20231217193723920" modified="20250303164046526" tags="C++" title="C++ howtos">
 <pre>&lt;hr/&gt;
 &lt;h2&gt;Compile a file with Visual C++ compiler&lt;/h2&gt;
 &lt;p&gt;To compile a file&lt;/p&gt;
@@ -5953,7 +5957,34 @@ std::ranges::copy(data, std::ostream_iterator&amp;lt;char&amp;gt;(std::cout, &qu
 
 &lt;p&gt;&lt;i&gt;Note:&lt;/i&gt; both variants print the delimiter (&amp;quot;&amp;nbsp;&amp;quot;) after the last item&lt;/p&gt;
 &lt;hr/&gt;
-</pre>
+
+&lt;h3&gt;override&lt;/h3&gt;
+&lt;p&gt;In the base class write
+&lt;pre&gt;class Base {
+public:
+  virtual void method();
+};
+&lt;/pre&gt;
+and in the derived class:
+&lt;pre&gt;class Derived : public Base {
+public:
+   void method() override;
+};
+&lt;/pre&gt;
+ (Yes, without virtual)
+Due to the keyword &quot;override&quot; urges the compilier to check signatures for derived methods.
+&lt;/p&gt;
+&lt;hr/&gt;
+&lt;h3&gt;Destructors in the Base and Derived classes&lt;/h3&gt;
+&lt;p&gt;In the base class always declare destructors (even, if they are empty)&lt;/p&gt;
+&lt;pre&gt;class Base {
+public:
+  virtual ~Base() = default;
+};
+&lt;/pre&gt;
+
+&lt;p&gt;In derived classes if destructor is empty there is no necessity to declare it all. If it is empty than declare it&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;i&gt;Maybe:&lt;/i&gt;&lt;/b&gt; it is acceptable to declare the derived destructor with an &quot;override&quot; keyword (and without the &quot;virtual&quot; keyword) (like for any other inherited methods).&lt;/p&gt;</pre>
 </div>
 <div created="20180516102022799" modified="20180516102048169" tags="sourcesafe" title="change default user for source safe">
 <pre>&lt;h3&gt;Chainging the default user for microsoft source safe&lt;/h3&gt;
@@ -8131,22 +8162,59 @@ Useful links
 * [[another building manual | http://qmlbook.org/ch02/index.html#installing-qt-5-sdk]]
 </pre>
 </div>
-<div created="20231211093205634" modified="20231220092025220" tags="Qt" title="QtCreator shortcuts">
-<pre>&lt;h2&gt;Debug&lt;/h2&gt;
+<div created="20250303081341160" modified="20250303081928612" tags="QtCreator" title="QtCreator initial settings" type=" ">
+<pre>&lt;h3&gt;Correct output in QtCreator's console&lt;/h3&gt;
+&lt;p&gt;To allow correct symbols in QtCreator's output window
+&lt;ul&gt;
+  &lt;li&gt;Main Menu -&gt; Tools -&gt; Options&lt;/li&gt;
+  &lt;li&gt;in the window in the right section select &quot;Kits&quot; and select your kit&lt;/li&gt;
+  &lt;li&gt;in the options select `Force UTF-8 MSVC compiler output`&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;h3&gt;Full values in the debugger&lt;/h3&gt;
+&lt;p&gt;To show full values in the debuger 
+&lt;ul&gt;
+  &lt;li&gt;Main Menu -&gt; Tools -&gt; Options&lt;/li&gt;
+  &lt;li&gt;in the window in the right section select &quot;Debugger&quot;&lt;/li&gt;
+  &lt;li&gt;go to the &quot;Local &amp; Expressions &quot; tab&lt;/li&gt;
+  &lt;li&gt;set the `Display string length` equal to `Maximum string length` (for example, 10000)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+</pre>
+</div>
+<div created="20231211093205634" modified="20250304141406562" tags="Qt QtCreator" title="QtCreator shortcuts">
+<pre>&lt;h3&gt;Run&lt;/h3&gt;
 &lt;p&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;F5&lt;/code&gt; - start with debugging&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Ctrl + R&lt;/code&gt; - start without debugging&lt;/li&gt;
 &lt;/ul&gt;&lt;/p&gt;
 
-&lt;h2&gt;Code&lt;/h2&gt;
+&lt;h3&gt;Build&lt;/h3&gt;
+&lt;p&gt;&lt;ul&gt;
+&lt;li&gt;`Alt + B + DownArrow + DownArrow` - rebuild the whole project&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Ctrl + Alt + B&lt;/code&gt; - build the current file&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+
+&lt;h3&gt;Code&lt;/h3&gt;
 &lt;p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;Ctrl + V / Ctrl + E&lt;/code&gt; - toggle/untoggle showing whitepsaces&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;Ctrl + /&lt;/code&gt; - comment/uncomment the selected code&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;F2&lt;/code&gt; - go to a declaration (class, function, etc.)&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;F4&lt;/code&gt; - toggle/untoggle between a header and an impl file&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;Ctrl + E, Ctrl + V&lt;/code&gt; - toggle/untoggle showing whitepsaces&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;Ctrl + /&lt;/code&gt; - comment/uncomment the selected code&lt;/li&gt;  
 &lt;/ul&gt;
 &lt;/p&gt;
 
-&lt;h2&gt;Bookmarks&lt;/h2&gt;
+&lt;h3&gt;Code editing&lt;/h3&gt;
+&lt;p&gt;
+&lt;ul&gt;
+  &lt;li&gt;`Alt + space` - all properties of the qml compoent (in qml)&lt;/li&gt;
+  &lt;li&gt;`Ctrl + space` - all modified properties of the qml compoent (in qml)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;h3&gt;Bookmarks&lt;/h3&gt;
 &lt;p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;code&gt;Ctrl + M&lt;/code&gt; - toggle/untoggle a bookmark&lt;/li&gt;
@@ -8689,6 +8757,55 @@ In a debug mode select the necessary window thread (from the Main menu &lt;b&gt;
   &lt;li&gt;&lt;code&gt;Ctrl + F2&lt;/code&gt; - toggle/untoggle a bookmark&lt;/li&gt;
   &lt;li&gt;&lt;code&gt;F2&lt;/code&gt; - go to the next bookmark&lt;/li&gt;
   &lt;li&gt;&lt;code&gt;Shift + F2&lt;/code&gt; - go to a previous bookmakr&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;</pre>
+</div>
+<div created="20250130122422385" modified="20250404092447446" tags="[[visual studio]]" title="Visual Stuido 2019 shortcuts">
+<pre>&lt;h3&gt;Code naviagtion&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;`Ctrl + K, Ctrl + O` - switch to a header/cpp file&lt;/li&gt;
+&lt;li&gt;`Ctrl + -` - go to the previous place&lt;/li&gt;
+&lt;li&gt;`F12` - go to the declaration of the entity&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Marks&lt;/h3&gt;
+&lt;h4&gt;Base&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;`Ctrl + F2` - toggle a bookmark (or `Ctrl + K, Ctrl + K`)&lt;/li&gt;
+&lt;li&gt;`F2` - next bookmark&lt;/li&gt;
+&lt;li&gt;`Shift + F2` - previous bookmark&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Slightly advanced&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;`Ctrl + Shift + K, Ctrl + Shift + N` - next bookmark in folder&lt;/li&gt;
+&lt;li&gt;`Ctrl + Shift + K, Ctrl + Shift + P` - previous bookmark in folder&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;i&gt;Note:&lt;/i&gt; When there is only one (global) folder, these shortcuts can be used as based.&lt;/p&gt;
+
+
+&lt;h3&gt;Editing&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;`Ctrl + K, Ctrl + C` - comment the block&lt;/li&gt;
+&lt;li&gt;`Ctrl + K, Ctrl + U` - uncomment the block&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;VsVim&lt;/h3&gt;
+&lt;p&gt;To install:
+&lt;ol&gt;
+  &lt;li&gt;start VS 2019&lt;/li&gt;
+  &lt;li&gt;exec the extension file&lt;/li&gt;
+  &lt;li&gt;close Vs 2019&lt;/li&gt;
+  &lt;li&gt;if the installation has not begun, click the &quot;Ent tasks&quot; button in the extension installation app&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;
+
+&lt;p&gt;To use:
+&lt;ul&gt;
+&lt;li&gt;`Ctrl + Shift + F12` - enable/disable the extension&lt;br&gt;
+(but before necessary to go to &quot;Main Menu -&gt; Tools -&gt; Options&quot;, select &quot;VsVim -&gt; KeyBoard&quot;,&lt;br&gt;
+select the &quot;Ctrl + Shift + F12&quot; and select the &quot;Handled by &quot;VsVim&quot;&quot;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/p&gt;</pre>
 </div>
